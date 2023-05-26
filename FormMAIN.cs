@@ -78,7 +78,7 @@ namespace project_TelegraphicTransfer
             // Set the tooltip text for buttons
             toolTip.SetToolTip(btnNewRecord, "Add new TELEGRAPHIC TRANSFER");
             toolTip.SetToolTip(btnConfirmRecord, "Confirm typed TELEGRAPHIC TRANSFER");
-            toolTip.SetToolTip(btnDataBase, "Database Manager");
+            toolTip.SetToolTip(btnDataBaseUser, "Database Manager");
 
             lblFormNameShow.Text = LabelToShowFileName;
             lbl_TTNameShowing.Text = LabelToShowTTName;
