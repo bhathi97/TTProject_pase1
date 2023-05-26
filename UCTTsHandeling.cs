@@ -51,7 +51,7 @@ namespace project_TelegraphicTransfer
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TEST_child WHERE fk_ID = @fid", connsql);
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM TRANSACTION_TABLE WHERE FID = @fid", connsql);
                 cmdItemLoad.Parameters.AddWithValue("@fid", FileId);
 
                 // Execute the query and retrieve the rows
