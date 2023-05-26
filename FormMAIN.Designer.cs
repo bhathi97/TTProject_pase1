@@ -33,7 +33,10 @@
             panelbody = new Panel();
             pnllLoadSpace = new Panel();
             pnlButtons = new Panel();
-            btnDataBase = new FontAwesome.Sharp.IconButton();
+            btn_Logout = new FontAwesome.Sharp.IconButton();
+            btn_DatabaseSender = new FontAwesome.Sharp.IconButton();
+            btnDatabaseBenificiary = new FontAwesome.Sharp.IconButton();
+            btnDataBaseUser = new FontAwesome.Sharp.IconButton();
             btnConfirmRecord = new FontAwesome.Sharp.IconButton();
             btnNewRecord = new FontAwesome.Sharp.IconButton();
             panelheader = new Panel();
@@ -64,7 +67,7 @@
             panelmain.Dock = DockStyle.Fill;
             panelmain.Location = new Point(0, 0);
             panelmain.Name = "panelmain";
-            panelmain.Size = new Size(800, 450);
+            panelmain.Size = new Size(800, 487);
             panelmain.TabIndex = 0;
             // 
             // panelbody
@@ -74,7 +77,7 @@
             panelbody.Dock = DockStyle.Fill;
             panelbody.Location = new Point(0, 65);
             panelbody.Name = "panelbody";
-            panelbody.Size = new Size(800, 385);
+            panelbody.Size = new Size(800, 422);
             panelbody.TabIndex = 2;
             // 
             // pnllLoadSpace
@@ -83,39 +86,93 @@
             pnllLoadSpace.Dock = DockStyle.Fill;
             pnllLoadSpace.Location = new Point(65, 0);
             pnllLoadSpace.Name = "pnllLoadSpace";
-            pnllLoadSpace.Size = new Size(735, 385);
+            pnllLoadSpace.Size = new Size(735, 422);
             pnllLoadSpace.TabIndex = 2;
             // 
             // pnlButtons
             // 
             pnlButtons.BackColor = Color.FromArgb(1, 12, 71);
-            pnlButtons.Controls.Add(btnDataBase);
+            pnlButtons.Controls.Add(btn_Logout);
+            pnlButtons.Controls.Add(btn_DatabaseSender);
+            pnlButtons.Controls.Add(btnDatabaseBenificiary);
+            pnlButtons.Controls.Add(btnDataBaseUser);
             pnlButtons.Controls.Add(btnConfirmRecord);
             pnlButtons.Controls.Add(btnNewRecord);
             pnlButtons.Dock = DockStyle.Left;
             pnlButtons.ForeColor = Color.White;
             pnlButtons.Location = new Point(0, 0);
             pnlButtons.Name = "pnlButtons";
-            pnlButtons.Size = new Size(65, 385);
+            pnlButtons.Size = new Size(65, 422);
             pnlButtons.TabIndex = 1;
             // 
-            // btnDataBase
+            // btn_Logout
             // 
-            btnDataBase.Cursor = Cursors.Hand;
-            btnDataBase.FlatAppearance.BorderSize = 0;
-            btnDataBase.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
-            btnDataBase.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
-            btnDataBase.FlatStyle = FlatStyle.Flat;
-            btnDataBase.IconChar = FontAwesome.Sharp.IconChar.Database;
-            btnDataBase.IconColor = Color.White;
-            btnDataBase.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnDataBase.IconSize = 30;
-            btnDataBase.Location = new Point(0, 137);
-            btnDataBase.Name = "btnDataBase";
-            btnDataBase.Size = new Size(65, 65);
-            btnDataBase.TabIndex = 2;
-            btnDataBase.UseVisualStyleBackColor = true;
-            btnDataBase.Click += btnDataBase_Click;
+            btn_Logout.Cursor = Cursors.Hand;
+            btn_Logout.FlatAppearance.BorderSize = 0;
+            btn_Logout.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btn_Logout.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btn_Logout.FlatStyle = FlatStyle.Flat;
+            btn_Logout.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
+            btn_Logout.IconColor = Color.White;
+            btn_Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Logout.IconSize = 35;
+            btn_Logout.Location = new Point(0, 345);
+            btn_Logout.Name = "btn_Logout";
+            btn_Logout.Size = new Size(65, 65);
+            btn_Logout.TabIndex = 5;
+            btn_Logout.UseVisualStyleBackColor = true;
+            // 
+            // btn_DatabaseSender
+            // 
+            btn_DatabaseSender.Cursor = Cursors.Hand;
+            btn_DatabaseSender.FlatAppearance.BorderSize = 0;
+            btn_DatabaseSender.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btn_DatabaseSender.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btn_DatabaseSender.FlatStyle = FlatStyle.Flat;
+            btn_DatabaseSender.IconChar = FontAwesome.Sharp.IconChar.Building;
+            btn_DatabaseSender.IconColor = Color.White;
+            btn_DatabaseSender.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_DatabaseSender.IconSize = 30;
+            btn_DatabaseSender.Location = new Point(0, 277);
+            btn_DatabaseSender.Name = "btn_DatabaseSender";
+            btn_DatabaseSender.Size = new Size(65, 65);
+            btn_DatabaseSender.TabIndex = 4;
+            btn_DatabaseSender.UseVisualStyleBackColor = true;
+            // 
+            // btnDatabaseBenificiary
+            // 
+            btnDatabaseBenificiary.Cursor = Cursors.Hand;
+            btnDatabaseBenificiary.FlatAppearance.BorderSize = 0;
+            btnDatabaseBenificiary.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btnDatabaseBenificiary.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btnDatabaseBenificiary.FlatStyle = FlatStyle.Flat;
+            btnDatabaseBenificiary.IconChar = FontAwesome.Sharp.IconChar.HandshakeAlt;
+            btnDatabaseBenificiary.IconColor = Color.White;
+            btnDatabaseBenificiary.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDatabaseBenificiary.IconSize = 37;
+            btnDatabaseBenificiary.Location = new Point(0, 208);
+            btnDatabaseBenificiary.Name = "btnDatabaseBenificiary";
+            btnDatabaseBenificiary.Size = new Size(65, 65);
+            btnDatabaseBenificiary.TabIndex = 3;
+            btnDatabaseBenificiary.UseVisualStyleBackColor = true;
+            // 
+            // btnDataBaseUser
+            // 
+            btnDataBaseUser.Cursor = Cursors.Hand;
+            btnDataBaseUser.FlatAppearance.BorderSize = 0;
+            btnDataBaseUser.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btnDataBaseUser.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btnDataBaseUser.FlatStyle = FlatStyle.Flat;
+            btnDataBaseUser.IconChar = FontAwesome.Sharp.IconChar.UserTag;
+            btnDataBaseUser.IconColor = Color.White;
+            btnDataBaseUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDataBaseUser.IconSize = 35;
+            btnDataBaseUser.Location = new Point(0, 137);
+            btnDataBaseUser.Name = "btnDataBaseUser";
+            btnDataBaseUser.Size = new Size(65, 65);
+            btnDataBaseUser.TabIndex = 2;
+            btnDataBaseUser.UseVisualStyleBackColor = true;
+            btnDataBaseUser.Click += btnDataBase_Click;
             // 
             // btnConfirmRecord
             // 
@@ -270,7 +327,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 487);
             Controls.Add(panelmain);
             Name = "FormMAIN";
             Text = "HOME";
@@ -302,10 +359,13 @@
         private PictureBox pbLOGO;
         private Panel pnlUserShowing;
         private FontAwesome.Sharp.IconButton btnConfirmRecord;
-        private FontAwesome.Sharp.IconButton btnDataBase;
+        private FontAwesome.Sharp.IconButton btnDataBaseUser;
         private Label lblFormNameShow;
         private Label lbl_TTNameShowing;
         private Label label1;
         private Label label2;
+        private FontAwesome.Sharp.IconButton btn_Logout;
+        private FontAwesome.Sharp.IconButton btn_DatabaseSender;
+        private FontAwesome.Sharp.IconButton btnDatabaseBenificiary;
     }
 }
