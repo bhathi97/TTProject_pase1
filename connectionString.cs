@@ -16,7 +16,7 @@ namespace project_TelegraphicTransfer
                 //Data Source=DESKTOP-KHI8921;Initial Catalog=aviationProjectDB;Integrated Security=True
                 //randi
 
-                return "Data Source=DESKTOP-KHI8921;Initial Catalog=DB_TELEGRAPHIC_TRANSFER_ORDER_MANAGEMENT_SYSTEM;Integrated Security=True";
+                return "Data Source=DESKTOP-8S284IC;Initial Catalog=cpcProjectDB;Integrated Security=True";
             }
         }
     }
