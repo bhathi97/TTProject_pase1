@@ -51,4 +51,4 @@ namespace project_TelegraphicTransfer
     }
 }
 
-//--------------------
+//--
