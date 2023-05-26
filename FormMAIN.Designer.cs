@@ -115,7 +115,7 @@
             btn_Logout.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
             btn_Logout.IconColor = Color.White;
             btn_Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_Logout.IconSize = 35;
+            btn_Logout.IconSize = 30;
             btn_Logout.Location = new Point(0, 345);
             btn_Logout.Name = "btn_Logout";
             btn_Logout.Size = new Size(65, 65);
