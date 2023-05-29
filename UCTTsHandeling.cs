@@ -1,4 +1,4 @@
-﻿
+
 using System.Data.SqlClient;
 
 
@@ -46,12 +46,44 @@ namespace project_TelegraphicTransfer
             //lblFolderName.Text = FileId.ToString();
             lblFolderName.Text = FileName;
 
+            LoadItems();
+
+
+
+
+
+
+        }
+
+        private void btn_CreateNewFORM_Click(object sender, EventArgs e)
+        {
             try
             {
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void LoadItems()
+        {
+            try
+            {
+                flp_ItemViewver.Controls.Clear();
+
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TEST_child where fk_ID = @fid", connsql);
+
+
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TEST_children WHERE fk_ID = @fid", connsql);
+
                 cmdItemLoad.Parameters.AddWithValue("@fid", FileId);
 
                 // Execute the query and retrieve the rows
@@ -71,8 +103,6 @@ namespace project_TelegraphicTransfer
                 connsql.Close();
 
             }
-
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -81,10 +111,6 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
-
-
-
-
 
         }
     }
