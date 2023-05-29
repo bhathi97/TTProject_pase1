@@ -1,4 +1,4 @@
-﻿using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,7 +66,7 @@ namespace project_TelegraphicTransfer
 
 
 
-        //++++++++++++++++++++++++++++++++ have to implement
+        //++++++++++++++++++++++++++++++++ have to implement    
         public void loadItems()
         {
             try
@@ -74,7 +74,9 @@ namespace project_TelegraphicTransfer
                 flp_fileItemsShowingPanel.Controls.Clear();
                 connsql.Open();
                 // Create a SqlCommand to retrieve the rows
+
                 SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TEST_parents", connsql);
+
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();

@@ -1,4 +1,4 @@
-﻿
+
 using System.Data.SqlClient;
 
 
@@ -80,6 +80,7 @@ namespace project_TelegraphicTransfer
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
+
                 SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TEST_children WHERE fk_ID = @fid", connsql);
                 cmdItemLoad.Parameters.AddWithValue("@fid", FileId);
 
