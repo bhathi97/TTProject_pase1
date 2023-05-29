@@ -14,14 +14,15 @@ namespace project_TelegraphicTransfer
     {
 
         #region properties
-        private string _lblTest;
+
+        private string _lblTest; //to Show Opened Item Name
         public string LblTest
         {
             get { return _lblTest; }
             set
             {
                 _lblTest = value;
-                lblFormNameShow.Text = value;
+                lblFormNameShow.Text = value; // set the value to the Label
             }
         }
 
@@ -45,8 +46,10 @@ namespace project_TelegraphicTransfer
             InitializeComponent();
         }
 
-        //create a property to access anywhere
+        #region Property to show FileName
         public string LabelToShowFileName { get; set; }
+        #endregion
+        //public string LabelToShowFileName { get; set; }
         public string LabelToShowTTName { get; set; }
 
 
