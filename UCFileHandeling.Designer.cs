@@ -129,6 +129,7 @@
             btn_CreateNEwTTs.Text = "New File";
             btn_CreateNEwTTs.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_CreateNEwTTs.UseVisualStyleBackColor = false;
+            btn_CreateNEwTTs.Click += btn_CreateNEwTTs_Click;
             // 
             // label1
             // 
