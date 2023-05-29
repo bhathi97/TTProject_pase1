@@ -75,7 +75,9 @@ namespace project_TelegraphicTransfer
                 connsql.Open();
                 // Create a SqlCommand to retrieve the rows
 
+
                 SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TEST_parents", connsql);
+
 
 
                 // Execute the query and retrieve the rows
