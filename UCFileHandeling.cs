@@ -76,7 +76,7 @@ namespace project_TelegraphicTransfer
                 // Create a SqlCommand to retrieve the rows
 
 
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TEST_parents", connsql);
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_FILE ORDER BY DATE_TIME DESC", connsql);
 
 
 

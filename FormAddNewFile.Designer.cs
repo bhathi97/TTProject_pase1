@@ -155,6 +155,7 @@
             ClientSize = new Size(435, 353);
             Controls.Add(panel1);
             Name = "FormAddNewFile";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Add New File";
             FormClosed += FormAddNewFile_FormClosed;
             Load += FormAddNewFile_Load;
