@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace project_TelegraphicTransfer
+{
+    public partial class FormAddNewForm : Form
+    {
+        #region properties
+        private string _fileName;
+        public string FileName
+        {
+            get { return _fileName; }
+            set
+            {
+                _fileName = value;
+                lbl_fileName.Text = value + "/";
+            }
+        }
+
+        private int _fileID;
+        public int FileID
+        {
+            get { return _fileID; }
+            set
+            {
+                _fileID = value;
+
+            }
+        }
+
+        #endregion
+
+        #region connection
+        SqlConnection connsql = new SqlConnection(connectionString.ConnectionString);
+        #endregion
+
+        public FormAddNewForm()
+        {
+            InitializeComponent();
+        }
+
+        private void FormAddNewForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAddNewForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Enable all previously disabled forms
+            foreach (Form form in Application.OpenForms)
+            {
+                form.Enabled = true;
+            }
+
+        }
+
+        private void btn_addForm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //who ------------------> have to implement
+
+                string formName = tb_formName.Text;
+
+                connsql.Open();
+                SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_TRANSACTION (NAME,DATE_TIME,FID) values (@name,@time,@fid)", connsql);
+                cmdItemInsert.Parameters.AddWithValue("@name", formName);
+                cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
+                cmdItemInsert.Parameters.AddWithValue("@fid",FileID);
+                cmdItemInsert.ExecuteNonQuery();
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connsql.Close();
+                this.Close();
+            }
+        }
+    }
+}

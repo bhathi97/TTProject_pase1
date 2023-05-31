@@ -1,4 +1,4 @@
-﻿using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,9 +71,14 @@ namespace project_TelegraphicTransfer
         {
             try
             {
+                flp_fileItemsShowingPanel.Controls.Clear();
                 connsql.Open();
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM FILE_TABLE", connsql);
+
+
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_FILE ORDER BY DATE_TIME DESC", connsql);
+
+
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -105,7 +110,30 @@ namespace project_TelegraphicTransfer
         {
             loadItems();
 
+        }
 
+        private void btn_CreateNEwTTs_Click(object sender, EventArgs e)
+        {
+            // Create a new instance of FormMain
+            FormAddNewFile newFormAddNewFile = new FormAddNewFile();
+
+            // Disable all other forms
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form != newFormAddNewFile)
+                {
+
+                    form.Enabled = false;
+                }
+            }
+
+
+
+            // Show the new FormMain
+            newFormAddNewFile.ShowDialog();
+
+            //after form closed
+            loadItems();
 
         }
     }

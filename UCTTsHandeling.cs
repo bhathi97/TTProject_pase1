@@ -1,4 +1,4 @@
-﻿
+
 using System.Data.SqlClient;
 
 
@@ -44,14 +44,68 @@ namespace project_TelegraphicTransfer
         private void UCTTsHandeling_Load(object sender, EventArgs e)
         {
             //lblFolderName.Text = FileId.ToString();
-            lblFolderName.Text = FileName;
+            lblFolderName.Text = FileName ;
 
+            LoadItems();
+
+
+
+
+
+
+        }
+
+        private void btn_CreateNewFORM_Click(object sender, EventArgs e)
+        {
             try
             {
+                FormAddNewForm formAddNewForm = new FormAddNewForm();
+                formAddNewForm.FileName = FileName;
+                formAddNewForm.FileID = FileId;
+
+                // Disable all other forms
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form != formAddNewForm)
+                    {
+
+                        form.Enabled = false;
+                    }
+                }
+
+
+
+                // Show the new FormMain
+                formAddNewForm.ShowDialog();
+                //after form closed
+                LoadItems();
+
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void LoadItems()
+        {
+            try
+            {
+                flp_ItemViewver.Controls.Clear();
+
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM TRANSACTION_TABLE WHERE FID = @fid", connsql);
+
+
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TRANSACTION WHERE FID = @fid ORDER BY DATE_TIME DESC", connsql);
+
                 cmdItemLoad.Parameters.AddWithValue("@fid", FileId);
 
                 // Execute the query and retrieve the rows
@@ -60,7 +114,7 @@ namespace project_TelegraphicTransfer
                 while (reader.Read())
                 {
                     UCTTItems uCTTItems = new UCTTItems();
-                    uCTTItems.FileName = reader["Name"].ToString();
+                    uCTTItems.FileName = reader["NAME"].ToString();
                     //MessageBox.Show(FileName);
 
                     // Add UCItems1 control to the panel
@@ -71,8 +125,6 @@ namespace project_TelegraphicTransfer
                 connsql.Close();
 
             }
-
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -81,10 +133,6 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
-
-
-
-
 
         }
     }

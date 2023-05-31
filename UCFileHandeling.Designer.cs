@@ -109,26 +109,30 @@
             // 
             // btn_CreateNEwTTs
             // 
-            this.btn_CreateNEwTTs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.btn_CreateNEwTTs.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_CreateNEwTTs.FlatAppearance.BorderSize = 0;
-            this.btn_CreateNEwTTs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_CreateNEwTTs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
-            this.btn_CreateNEwTTs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CreateNEwTTs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_CreateNEwTTs.ForeColor = System.Drawing.Color.White;
-            this.btn_CreateNEwTTs.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btn_CreateNEwTTs.IconColor = System.Drawing.Color.White;
-            this.btn_CreateNEwTTs.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_CreateNEwTTs.IconSize = 25;
-            this.btn_CreateNEwTTs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CreateNEwTTs.Location = new System.Drawing.Point(33, 10);
-            this.btn_CreateNEwTTs.Name = "btn_CreateNEwTTs";
-            this.btn_CreateNEwTTs.Size = new System.Drawing.Size(103, 37);
-            this.btn_CreateNEwTTs.TabIndex = 1;
-            this.btn_CreateNEwTTs.Text = "New File";
-            this.btn_CreateNEwTTs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_CreateNEwTTs.UseVisualStyleBackColor = false;
+
+
+            btn_CreateNEwTTs.BackColor = Color.FromArgb(76, 175, 80);
+            btn_CreateNEwTTs.Dock = DockStyle.Right;
+            btn_CreateNEwTTs.FlatAppearance.BorderSize = 0;
+            btn_CreateNEwTTs.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 255, 128);
+            btn_CreateNEwTTs.FlatAppearance.MouseOverBackColor = Color.DarkGreen;
+            btn_CreateNEwTTs.FlatStyle = FlatStyle.Flat;
+            btn_CreateNEwTTs.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_CreateNEwTTs.ForeColor = Color.White;
+            btn_CreateNEwTTs.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            btn_CreateNEwTTs.IconColor = Color.White;
+            btn_CreateNEwTTs.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_CreateNEwTTs.IconSize = 25;
+            btn_CreateNEwTTs.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_CreateNEwTTs.Location = new Point(33, 10);
+            btn_CreateNEwTTs.Name = "btn_CreateNEwTTs";
+            btn_CreateNEwTTs.Size = new Size(103, 37);
+            btn_CreateNEwTTs.TabIndex = 1;
+            btn_CreateNEwTTs.Text = "New File";
+            btn_CreateNEwTTs.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_CreateNEwTTs.UseVisualStyleBackColor = false;
+            btn_CreateNEwTTs.Click += btn_CreateNEwTTs_Click;
+
             // 
             // label1
             // 

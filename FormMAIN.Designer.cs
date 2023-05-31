@@ -107,20 +107,23 @@
             // 
             // btn_Logout
             // 
-            this.btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Logout.FlatAppearance.BorderSize = 0;
-            this.btn_Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Logout.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
-            this.btn_Logout.IconColor = System.Drawing.Color.White;
-            this.btn_Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Logout.IconSize = 35;
-            this.btn_Logout.Location = new System.Drawing.Point(0, 345);
-            this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(65, 65);
-            this.btn_Logout.TabIndex = 5;
-            this.btn_Logout.UseVisualStyleBackColor = true;
+
+
+            btn_Logout.Cursor = Cursors.Hand;
+            btn_Logout.FlatAppearance.BorderSize = 0;
+            btn_Logout.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btn_Logout.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btn_Logout.FlatStyle = FlatStyle.Flat;
+            btn_Logout.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
+            btn_Logout.IconColor = Color.White;
+            btn_Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Logout.IconSize = 30;
+            btn_Logout.Location = new Point(0, 345);
+            btn_Logout.Name = "btn_Logout";
+            btn_Logout.Size = new Size(65, 65);
+            btn_Logout.TabIndex = 5;
+            btn_Logout.UseVisualStyleBackColor = true;
+
             // 
             // btn_DatabaseSender
             // 

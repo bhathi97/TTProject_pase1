@@ -49,8 +49,8 @@ namespace project_TelegraphicTransfer
                 FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
 
                 if (formMain != null)
-                {
-                    formMain.LblTTName = FileName; //to display file name
+                { 
+                    formMain.LblTTName = FileName; //to display file name  
 
                     // FormMAIN is open, check for UCFileHandeling user control
                     UCFileHandeling FileHandelingUserControl = formMain.FileHandelingUserControl;
