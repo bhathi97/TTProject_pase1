@@ -34,7 +34,7 @@ namespace project_TelegraphicTransfer
                 form.Enabled = true;
             }
 
-            // Dispose the newFormMain instance
+            
 
         }
 
@@ -43,15 +43,16 @@ namespace project_TelegraphicTransfer
             try
             {
                 connsql.Open();
-               
+
                 string code = cb_code.Text;
                 string number = tb_number.Text;
                 string year = cb_year.Text;
 
                 string fileName = code + "/" + number + "/" + year;
                 //MessageBox.Show(code + "/" + number + "/" + year);
-                SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_TEST_parents (Name) values (@name)", connsql);
-                cmdItemInsert.Parameters.AddWithValue("@name", fileName );
+                SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_FILE (NAME,DATE_TIME) values (@name,@time)", connsql);
+                cmdItemInsert.Parameters.AddWithValue("@name", fileName);
+                cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
                 cmdItemInsert.ExecuteNonQuery();
 
             }

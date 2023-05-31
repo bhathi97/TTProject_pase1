@@ -70,6 +70,8 @@ namespace project_TelegraphicTransfer
             set { _databaseHandelingUserControl = value; }
         }
 
+        //
+
         private void FormMAIN_Load(object sender, EventArgs e)
         {
             //make the Window maximize
