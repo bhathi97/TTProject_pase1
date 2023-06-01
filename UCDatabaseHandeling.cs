@@ -3,18 +3,21 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace project_TelegraphicTransfer
 {
     public partial class UCDatabaseHandeling : UserControl
     {
-        private List<User> userList = new List<User>();
-        private int nextId = 1;
+        #region connection
+        SqlConnection connsql = new SqlConnection(connectionString.ConnectionString);
+        #endregion
         public UCDatabaseHandeling()
         {
             InitializeComponent();
@@ -52,18 +55,11 @@ namespace project_TelegraphicTransfer
 
         private void UserAdd_Click(object sender, EventArgs e)
         {
-            string id = nextId.ToString();
             string name = tbName.Text;
             string password = tbPW.Text;
             string userLevel = cbUL.SelectedItem.ToString();
 
-            User newUser = new User(id, name, password, userLevel);
-            userList.Add(newUser);
-
-            dgvUser.Rows.Add(id, name, password, userLevel);
-
-            // Increment the nextId for the next user
-            nextId++;
+            InsertUserToDatabase(name, password, userLevel);
 
             // Clear the input fields
             tbName.Text = "";
@@ -71,21 +67,36 @@ namespace project_TelegraphicTransfer
             cbUL.SelectedIndex = -1;
         }
 
-        public class User
+        private void InsertUserToDatabase(string name, string password, string userLevel)
         {
-            public string ID { get; set; }
-            public string Name { get; set; }
-            public string Password { get; set; }
-            public string UserLevel { get; set; }
-
-
-            public User(string id, string name, string password, string userLevel)
+            try
             {
-                ID = id;
-                Name = name;
-                Password = password;
-                UserLevel = userLevel;
+
+                connsql.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO tbl_LOGIN_MASTER (NAME, PASSWORD, USER_LEVEL) VALUES (@Name, @Password, @UserLevel);", connsql);
+
+                // Set the parameter values
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Password", password);
+                cmd.Parameters.AddWithValue("@UserLevel", userLevel);
+
+                // Execute the query
+                cmd.ExecuteNonQuery();
+
+                // Display a success message if needed
+                MessageBox.Show("User added successfully!", "User Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while inserting the user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { 
+                connsql.Close(); 
+            }
+
         }
     }
 }
+
+
