@@ -255,5 +255,33 @@ namespace project_TelegraphicTransfer
             }
 
         }
+
+        private void FormMAIN_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                FormLogin formLogin = Application.OpenForms.OfType<FormLogin>().FirstOrDefault();
+                if (formLogin != null)
+                {
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form != formLogin)
+                        {
+                            form.Enabled = false;
+                        }
+                        else
+                        {
+                            form.Show();
+                        }
+                    }
+                }
+                
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

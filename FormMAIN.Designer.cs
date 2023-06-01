@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMAIN));
-
-          
             panelmain = new Panel();
             panelbody = new Panel();
             pnllLoadSpace = new Panel();
@@ -63,58 +61,55 @@
             panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLOGO).BeginInit();
             SuspendLayout();
-
             // 
             // panelmain
             // 
-            this.panelmain.BackColor = System.Drawing.SystemColors.Menu;
-            this.panelmain.Controls.Add(this.panelbody);
-            this.panelmain.Controls.Add(this.panelheader);
-            this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelmain.Location = new System.Drawing.Point(0, 0);
-            this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(800, 487);
-            this.panelmain.TabIndex = 0;
+            panelmain.BackColor = SystemColors.Menu;
+            panelmain.Controls.Add(panelbody);
+            panelmain.Controls.Add(panelheader);
+            panelmain.Dock = DockStyle.Fill;
+            panelmain.Location = new Point(0, 0);
+            panelmain.Name = "panelmain";
+            panelmain.Size = new Size(800, 487);
+            panelmain.TabIndex = 0;
             // 
             // panelbody
             // 
-            this.panelbody.Controls.Add(this.pnllLoadSpace);
-            this.panelbody.Controls.Add(this.pnlButtons);
-            this.panelbody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelbody.Location = new System.Drawing.Point(0, 65);
-            this.panelbody.Name = "panelbody";
-            this.panelbody.Size = new System.Drawing.Size(800, 422);
-            this.panelbody.TabIndex = 2;
+            panelbody.Controls.Add(pnllLoadSpace);
+            panelbody.Controls.Add(pnlButtons);
+            panelbody.Dock = DockStyle.Fill;
+            panelbody.Location = new Point(0, 65);
+            panelbody.Name = "panelbody";
+            panelbody.Size = new Size(800, 422);
+            panelbody.TabIndex = 2;
             // 
             // pnllLoadSpace
             // 
-            this.pnllLoadSpace.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnllLoadSpace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnllLoadSpace.Location = new System.Drawing.Point(65, 0);
-            this.pnllLoadSpace.Name = "pnllLoadSpace";
-            this.pnllLoadSpace.Size = new System.Drawing.Size(735, 422);
-            this.pnllLoadSpace.TabIndex = 2;
+            pnllLoadSpace.Cursor = Cursors.Hand;
+            pnllLoadSpace.Dock = DockStyle.Fill;
+            pnllLoadSpace.Location = new Point(65, 0);
+            pnllLoadSpace.Name = "pnllLoadSpace";
+            pnllLoadSpace.Size = new Size(735, 422);
+            pnllLoadSpace.TabIndex = 2;
             // 
             // pnlButtons
             // 
-            this.pnlButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
-            this.pnlButtons.Controls.Add(this.btn_Logout);
-            this.pnlButtons.Controls.Add(this.btn_DatabaseSender);
-            this.pnlButtons.Controls.Add(this.btnDatabaseBenificiary);
-            this.pnlButtons.Controls.Add(this.btnDataBaseUser);
-            this.pnlButtons.Controls.Add(this.btnConfirmRecord);
-            this.pnlButtons.Controls.Add(this.btnNewRecord);
-            this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlButtons.ForeColor = System.Drawing.Color.White;
-            this.pnlButtons.Location = new System.Drawing.Point(0, 0);
-            this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(65, 422);
-            this.pnlButtons.TabIndex = 1;
+            pnlButtons.BackColor = Color.FromArgb(1, 12, 71);
+            pnlButtons.Controls.Add(btn_Logout);
+            pnlButtons.Controls.Add(btn_DatabaseSender);
+            pnlButtons.Controls.Add(btnDatabaseBenificiary);
+            pnlButtons.Controls.Add(btnDataBaseUser);
+            pnlButtons.Controls.Add(btnConfirmRecord);
+            pnlButtons.Controls.Add(btnNewRecord);
+            pnlButtons.Dock = DockStyle.Left;
+            pnlButtons.ForeColor = Color.White;
+            pnlButtons.Location = new Point(0, 0);
+            pnlButtons.Name = "pnlButtons";
+            pnlButtons.Size = new Size(65, 422);
+            pnlButtons.TabIndex = 1;
             // 
             // btn_Logout
             // 
-
-
             btn_Logout.Cursor = Cursors.Hand;
             btn_Logout.FlatAppearance.BorderSize = 0;
             btn_Logout.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
@@ -129,61 +124,60 @@
             btn_Logout.Size = new Size(65, 65);
             btn_Logout.TabIndex = 5;
             btn_Logout.UseVisualStyleBackColor = true;
-
             // 
             // btn_DatabaseSender
             // 
-            this.btn_DatabaseSender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_DatabaseSender.FlatAppearance.BorderSize = 0;
-            this.btn_DatabaseSender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_DatabaseSender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.btn_DatabaseSender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DatabaseSender.IconChar = FontAwesome.Sharp.IconChar.Building;
-            this.btn_DatabaseSender.IconColor = System.Drawing.Color.White;
-            this.btn_DatabaseSender.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_DatabaseSender.IconSize = 30;
-            this.btn_DatabaseSender.Location = new System.Drawing.Point(0, 277);
-            this.btn_DatabaseSender.Name = "btn_DatabaseSender";
-            this.btn_DatabaseSender.Size = new System.Drawing.Size(65, 65);
-            this.btn_DatabaseSender.TabIndex = 4;
-            this.btn_DatabaseSender.UseVisualStyleBackColor = true;
-            this.btn_DatabaseSender.Click += new System.EventHandler(this.btn_DatabaseSender_Click);
+            btn_DatabaseSender.Cursor = Cursors.Hand;
+            btn_DatabaseSender.FlatAppearance.BorderSize = 0;
+            btn_DatabaseSender.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btn_DatabaseSender.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btn_DatabaseSender.FlatStyle = FlatStyle.Flat;
+            btn_DatabaseSender.IconChar = FontAwesome.Sharp.IconChar.Building;
+            btn_DatabaseSender.IconColor = Color.White;
+            btn_DatabaseSender.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_DatabaseSender.IconSize = 30;
+            btn_DatabaseSender.Location = new Point(0, 277);
+            btn_DatabaseSender.Name = "btn_DatabaseSender";
+            btn_DatabaseSender.Size = new Size(65, 65);
+            btn_DatabaseSender.TabIndex = 4;
+            btn_DatabaseSender.UseVisualStyleBackColor = true;
+            btn_DatabaseSender.Click += btn_DatabaseSender_Click;
             // 
             // btnDatabaseBenificiary
             // 
-            this.btnDatabaseBenificiary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDatabaseBenificiary.FlatAppearance.BorderSize = 0;
-            this.btnDatabaseBenificiary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDatabaseBenificiary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.btnDatabaseBenificiary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatabaseBenificiary.IconChar = FontAwesome.Sharp.IconChar.HandshakeAlt;
-            this.btnDatabaseBenificiary.IconColor = System.Drawing.Color.White;
-            this.btnDatabaseBenificiary.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDatabaseBenificiary.IconSize = 37;
-            this.btnDatabaseBenificiary.Location = new System.Drawing.Point(0, 208);
-            this.btnDatabaseBenificiary.Name = "btnDatabaseBenificiary";
-            this.btnDatabaseBenificiary.Size = new System.Drawing.Size(65, 65);
-            this.btnDatabaseBenificiary.TabIndex = 3;
-            this.btnDatabaseBenificiary.UseVisualStyleBackColor = true;
-            this.btnDatabaseBenificiary.Click += new System.EventHandler(this.btnDatabaseBenificiary_Click);
+            btnDatabaseBenificiary.Cursor = Cursors.Hand;
+            btnDatabaseBenificiary.FlatAppearance.BorderSize = 0;
+            btnDatabaseBenificiary.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btnDatabaseBenificiary.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btnDatabaseBenificiary.FlatStyle = FlatStyle.Flat;
+            btnDatabaseBenificiary.IconChar = FontAwesome.Sharp.IconChar.HandshakeAlt;
+            btnDatabaseBenificiary.IconColor = Color.White;
+            btnDatabaseBenificiary.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDatabaseBenificiary.IconSize = 37;
+            btnDatabaseBenificiary.Location = new Point(0, 208);
+            btnDatabaseBenificiary.Name = "btnDatabaseBenificiary";
+            btnDatabaseBenificiary.Size = new Size(65, 65);
+            btnDatabaseBenificiary.TabIndex = 3;
+            btnDatabaseBenificiary.UseVisualStyleBackColor = true;
+            btnDatabaseBenificiary.Click += btnDatabaseBenificiary_Click;
             // 
             // btnDataBaseUser
             // 
-            this.btnDataBaseUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDataBaseUser.FlatAppearance.BorderSize = 0;
-            this.btnDataBaseUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDataBaseUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.btnDataBaseUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDataBaseUser.IconChar = FontAwesome.Sharp.IconChar.UserTag;
-            this.btnDataBaseUser.IconColor = System.Drawing.Color.White;
-            this.btnDataBaseUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDataBaseUser.IconSize = 35;
-            this.btnDataBaseUser.Location = new System.Drawing.Point(0, 137);
-            this.btnDataBaseUser.Name = "btnDataBaseUser";
-            this.btnDataBaseUser.Size = new System.Drawing.Size(65, 65);
-            this.btnDataBaseUser.TabIndex = 2;
-            this.btnDataBaseUser.UseVisualStyleBackColor = true;
-            this.btnDataBaseUser.Click += new System.EventHandler(this.btnDataBase_Click);
+            btnDataBaseUser.Cursor = Cursors.Hand;
+            btnDataBaseUser.FlatAppearance.BorderSize = 0;
+            btnDataBaseUser.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btnDataBaseUser.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btnDataBaseUser.FlatStyle = FlatStyle.Flat;
+            btnDataBaseUser.IconChar = FontAwesome.Sharp.IconChar.UserTag;
+            btnDataBaseUser.IconColor = Color.White;
+            btnDataBaseUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDataBaseUser.IconSize = 35;
+            btnDataBaseUser.Location = new Point(0, 137);
+            btnDataBaseUser.Name = "btnDataBaseUser";
+            btnDataBaseUser.Size = new Size(65, 65);
+            btnDataBaseUser.TabIndex = 2;
+            btnDataBaseUser.UseVisualStyleBackColor = true;
+            btnDataBaseUser.Click += btnDataBase_Click;
             // 
             // btnConfirmRecord
             // 
@@ -359,13 +353,13 @@
             // 
             // FormMAIN
             // 
-
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 487);
             Controls.Add(panelmain);
             Name = "FormMAIN";
             Text = "HOME";
+            FormClosed += FormMAIN_FormClosed;
             Load += FormMAIN_Load;
             panelmain.ResumeLayout(false);
             panelbody.ResumeLayout(false);
@@ -380,7 +374,6 @@
             panellogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbLOGO).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
