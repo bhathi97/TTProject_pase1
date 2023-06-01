@@ -83,7 +83,27 @@ namespace project_TelegraphicTransfer
             set { _databaseHandelingUserControl = value; }
         }
 
-        //
+
+
+        //BENEFICIARY button
+        private UCBeneficiary _BenificiaryUserControl;
+
+        public UCBeneficiary BenificiaryUserControl
+        {
+            get { return _BenificiaryUserControl; }
+            set { _BenificiaryUserControl = value; }
+        }
+
+        //Sender button
+        private UCSender _SenderUserControl;
+
+        public UCSender SenderUserControl
+        {
+            get { return _SenderUserControl; }
+            set { _SenderUserControl = value; }
+        }
+
+
 
         private void FormMAIN_Load(object sender, EventArgs e)
         {
@@ -168,6 +188,71 @@ namespace project_TelegraphicTransfer
                 MessageBox.Show(ex.Message);
             }
 
+
+        }
+
+        private void btnDatabaseBenificiary_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_BenificiaryUserControl == null)
+                {
+                    BenificiaryUserControl = new UCBeneficiary();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnllLoadSpace.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                BenificiaryUserControl.Show();
+
+                //change the dock property
+                BenificiaryUserControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(BenificiaryUserControl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_DatabaseSender_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_SenderUserControl == null)
+                {
+                    SenderUserControl = new UCSender();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnllLoadSpace.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                SenderUserControl.Show();
+
+                //change the dock property
+                SenderUserControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(SenderUserControl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }
