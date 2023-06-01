@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMAIN));
-
-
             panelmain = new Panel();
             panelbody = new Panel();
             pnllLoadSpace = new Panel();
@@ -44,6 +42,8 @@
             panelheader = new Panel();
             panel1 = new Panel();
             pnlUserShowing = new Panel();
+            panel2 = new Panel();
+            lbl_User = new Label();
             label2 = new Label();
             label1 = new Label();
             lbl_TTNameShowing = new Label();
@@ -57,6 +57,7 @@
             panelheader.SuspendLayout();
             panel1.SuspendLayout();
             pnlUserShowing.SuspendLayout();
+            panel2.SuspendLayout();
             panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLOGO).BeginInit();
             SuspendLayout();
@@ -178,156 +179,178 @@
             // 
             // btnConfirmRecord
             // 
-            this.btnConfirmRecord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmRecord.FlatAppearance.BorderSize = 0;
-            this.btnConfirmRecord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnConfirmRecord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.btnConfirmRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmRecord.IconChar = FontAwesome.Sharp.IconChar.Tags;
-            this.btnConfirmRecord.IconColor = System.Drawing.Color.White;
-            this.btnConfirmRecord.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConfirmRecord.IconSize = 35;
-            this.btnConfirmRecord.Location = new System.Drawing.Point(0, 69);
-            this.btnConfirmRecord.Name = "btnConfirmRecord";
-            this.btnConfirmRecord.Size = new System.Drawing.Size(65, 65);
-            this.btnConfirmRecord.TabIndex = 1;
-            this.btnConfirmRecord.UseVisualStyleBackColor = true;
+            btnConfirmRecord.Cursor = Cursors.Hand;
+            btnConfirmRecord.FlatAppearance.BorderSize = 0;
+            btnConfirmRecord.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btnConfirmRecord.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btnConfirmRecord.FlatStyle = FlatStyle.Flat;
+            btnConfirmRecord.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            btnConfirmRecord.IconColor = Color.White;
+            btnConfirmRecord.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnConfirmRecord.IconSize = 35;
+            btnConfirmRecord.Location = new Point(0, 69);
+            btnConfirmRecord.Name = "btnConfirmRecord";
+            btnConfirmRecord.Size = new Size(65, 65);
+            btnConfirmRecord.TabIndex = 1;
+            btnConfirmRecord.UseVisualStyleBackColor = true;
             // 
             // btnNewRecord
             // 
-            this.btnNewRecord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewRecord.FlatAppearance.BorderSize = 0;
-            this.btnNewRecord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnNewRecord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.btnNewRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewRecord.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
-            this.btnNewRecord.IconColor = System.Drawing.Color.White;
-            this.btnNewRecord.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNewRecord.IconSize = 28;
-            this.btnNewRecord.Location = new System.Drawing.Point(0, 0);
-            this.btnNewRecord.Name = "btnNewRecord";
-            this.btnNewRecord.Size = new System.Drawing.Size(65, 65);
-            this.btnNewRecord.TabIndex = 0;
-            this.btnNewRecord.UseVisualStyleBackColor = true;
-            this.btnNewRecord.Click += new System.EventHandler(this.btnNewRecord_Click);
+            btnNewRecord.Cursor = Cursors.Hand;
+            btnNewRecord.FlatAppearance.BorderSize = 0;
+            btnNewRecord.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
+            btnNewRecord.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
+            btnNewRecord.FlatStyle = FlatStyle.Flat;
+            btnNewRecord.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            btnNewRecord.IconColor = Color.White;
+            btnNewRecord.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnNewRecord.IconSize = 28;
+            btnNewRecord.Location = new Point(0, 0);
+            btnNewRecord.Name = "btnNewRecord";
+            btnNewRecord.Size = new Size(65, 65);
+            btnNewRecord.TabIndex = 0;
+            btnNewRecord.UseVisualStyleBackColor = true;
+            btnNewRecord.Click += btnNewRecord_Click;
             // 
             // panelheader
             // 
-            this.panelheader.BackColor = System.Drawing.Color.White;
-            this.panelheader.Controls.Add(this.panel1);
-            this.panelheader.Controls.Add(this.panellogo);
-            this.panelheader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelheader.Location = new System.Drawing.Point(0, 0);
-            this.panelheader.Name = "panelheader";
-            this.panelheader.Size = new System.Drawing.Size(800, 65);
-            this.panelheader.TabIndex = 0;
+            panelheader.BackColor = Color.White;
+            panelheader.Controls.Add(panel1);
+            panelheader.Controls.Add(panellogo);
+            panelheader.Dock = DockStyle.Top;
+            panelheader.Location = new Point(0, 0);
+            panelheader.Name = "panelheader";
+            panelheader.Size = new Size(800, 65);
+            panelheader.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
-            this.panel1.Controls.Add(this.pnlUserShowing);
-            this.panel1.Controls.Add(this.lblSystemName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.panel1.Location = new System.Drawing.Point(65, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(735, 65);
-            this.panel1.TabIndex = 1;
+            panel1.BackColor = Color.FromArgb(1, 12, 71);
+            panel1.Controls.Add(pnlUserShowing);
+            panel1.Controls.Add(lblSystemName);
+            panel1.Dock = DockStyle.Top;
+            panel1.ImeMode = ImeMode.Off;
+            panel1.Location = new Point(65, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(735, 65);
+            panel1.TabIndex = 1;
             // 
             // pnlUserShowing
             // 
-            this.pnlUserShowing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(239)))));
-            this.pnlUserShowing.Controls.Add(this.label2);
-            this.pnlUserShowing.Controls.Add(this.label1);
-            this.pnlUserShowing.Controls.Add(this.lbl_TTNameShowing);
-            this.pnlUserShowing.Controls.Add(this.lblFormNameShow);
-            this.pnlUserShowing.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlUserShowing.Location = new System.Drawing.Point(0, 40);
-            this.pnlUserShowing.Name = "pnlUserShowing";
-            this.pnlUserShowing.Size = new System.Drawing.Size(735, 25);
-            this.pnlUserShowing.TabIndex = 1;
+            pnlUserShowing.BackColor = Color.FromArgb(194, 194, 239);
+            pnlUserShowing.Controls.Add(panel2);
+            pnlUserShowing.Controls.Add(label2);
+            pnlUserShowing.Controls.Add(label1);
+            pnlUserShowing.Controls.Add(lbl_TTNameShowing);
+            pnlUserShowing.Controls.Add(lblFormNameShow);
+            pnlUserShowing.Dock = DockStyle.Bottom;
+            pnlUserShowing.Location = new Point(0, 40);
+            pnlUserShowing.Name = "pnlUserShowing";
+            pnlUserShowing.Size = new Size(735, 25);
+            pnlUserShowing.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(lbl_User);
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(535, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 25);
+            panel2.TabIndex = 5;
+            // 
+            // lbl_User
+            // 
+            lbl_User.AutoSize = true;
+            lbl_User.BackColor = Color.FromArgb(194, 194, 239);
+            lbl_User.BorderStyle = BorderStyle.FixedSingle;
+            lbl_User.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_User.Location = new Point(15, 4);
+            lbl_User.Name = "lbl_User";
+            lbl_User.Size = new Size(31, 17);
+            lbl_User.TabIndex = 4;
+            lbl_User.Text = "user";
+            lbl_User.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(196, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Active Form :";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(196, 3);
+            label2.Name = "label2";
+            label2.Size = new Size(87, 17);
+            label2.TabIndex = 3;
+            label2.Text = "Active Form :";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(7, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Active File :";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(7, 3);
+            label1.Name = "label1";
+            label1.Size = new Size(79, 17);
+            label1.TabIndex = 2;
+            label1.Text = "Active File :";
             // 
             // lbl_TTNameShowing
             // 
-            this.lbl_TTNameShowing.AutoSize = true;
-            this.lbl_TTNameShowing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(239)))));
-            this.lbl_TTNameShowing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_TTNameShowing.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TTNameShowing.Location = new System.Drawing.Point(287, 4);
-            this.lbl_TTNameShowing.Name = "lbl_TTNameShowing";
-            this.lbl_TTNameShowing.Size = new System.Drawing.Size(2, 17);
-            this.lbl_TTNameShowing.TabIndex = 1;
-            this.lbl_TTNameShowing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbl_TTNameShowing.AutoSize = true;
+            lbl_TTNameShowing.BackColor = Color.FromArgb(194, 194, 239);
+            lbl_TTNameShowing.BorderStyle = BorderStyle.FixedSingle;
+            lbl_TTNameShowing.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_TTNameShowing.Location = new Point(287, 4);
+            lbl_TTNameShowing.Name = "lbl_TTNameShowing";
+            lbl_TTNameShowing.Size = new Size(2, 17);
+            lbl_TTNameShowing.TabIndex = 1;
+            lbl_TTNameShowing.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblFormNameShow
             // 
-            this.lblFormNameShow.AutoSize = true;
-            this.lblFormNameShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(239)))));
-            this.lblFormNameShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFormNameShow.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFormNameShow.Location = new System.Drawing.Point(90, 4);
-            this.lblFormNameShow.Name = "lblFormNameShow";
-            this.lblFormNameShow.Size = new System.Drawing.Size(2, 17);
-            this.lblFormNameShow.TabIndex = 0;
-            this.lblFormNameShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblFormNameShow.AutoSize = true;
+            lblFormNameShow.BackColor = Color.FromArgb(194, 194, 239);
+            lblFormNameShow.BorderStyle = BorderStyle.FixedSingle;
+            lblFormNameShow.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFormNameShow.Location = new Point(90, 4);
+            lblFormNameShow.Name = "lblFormNameShow";
+            lblFormNameShow.Size = new Size(2, 17);
+            lblFormNameShow.TabIndex = 0;
+            lblFormNameShow.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSystemName
             // 
-            this.lblSystemName.AutoSize = true;
-            this.lblSystemName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSystemName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblSystemName.Location = new System.Drawing.Point(6, 11);
-            this.lblSystemName.Name = "lblSystemName";
-            this.lblSystemName.Size = new System.Drawing.Size(685, 21);
-            this.lblSystemName.TabIndex = 0;
-            this.lblSystemName.Text = "TELEGRAPHIC TRANSFER ORDER MANAGEMENT SYSTEM | Ceylon Petroleum Corporation";
-            this.lblSystemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSystemName.AutoSize = true;
+            lblSystemName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSystemName.ForeColor = SystemColors.Window;
+            lblSystemName.Location = new Point(6, 11);
+            lblSystemName.Name = "lblSystemName";
+            lblSystemName.Size = new Size(685, 21);
+            lblSystemName.TabIndex = 0;
+            lblSystemName.Text = "TELEGRAPHIC TRANSFER ORDER MANAGEMENT SYSTEM | Ceylon Petroleum Corporation";
+            lblSystemName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panellogo
             // 
-            this.panellogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
-            this.panellogo.Controls.Add(this.pbLOGO);
-            this.panellogo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panellogo.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.panellogo.Location = new System.Drawing.Point(0, 0);
-            this.panellogo.Name = "panellogo";
-            this.panellogo.Size = new System.Drawing.Size(65, 65);
-            this.panellogo.TabIndex = 0;
+            panellogo.BackColor = Color.FromArgb(1, 12, 71);
+            panellogo.Controls.Add(pbLOGO);
+            panellogo.Dock = DockStyle.Left;
+            panellogo.ImeMode = ImeMode.Off;
+            panellogo.Location = new Point(0, 0);
+            panellogo.Name = "panellogo";
+            panellogo.Size = new Size(65, 65);
+            panellogo.TabIndex = 0;
             // 
             // pbLOGO
             // 
-            this.pbLOGO.Image = ((System.Drawing.Image)(resources.GetObject("pbLOGO.Image")));
-            this.pbLOGO.Location = new System.Drawing.Point(5, 8);
-            this.pbLOGO.Name = "pbLOGO";
-            this.pbLOGO.Padding = new System.Windows.Forms.Padding(5);
-            this.pbLOGO.Size = new System.Drawing.Size(55, 50);
-            this.pbLOGO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLOGO.TabIndex = 0;
-            this.pbLOGO.TabStop = false;
+            pbLOGO.Image = (Image)resources.GetObject("pbLOGO.Image");
+            pbLOGO.Location = new Point(5, 8);
+            pbLOGO.Name = "pbLOGO";
+            pbLOGO.Padding = new Padding(5);
+            pbLOGO.Size = new Size(55, 50);
+            pbLOGO.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLOGO.TabIndex = 0;
+            pbLOGO.TabStop = false;
             // 
             // FormMAIN
             // 
-
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 487);
@@ -343,10 +366,11 @@
             panel1.PerformLayout();
             pnlUserShowing.ResumeLayout(false);
             pnlUserShowing.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             panellogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbLOGO).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
@@ -371,5 +395,7 @@
         private FontAwesome.Sharp.IconButton btn_Logout;
         private FontAwesome.Sharp.IconButton btn_DatabaseSender;
         private FontAwesome.Sharp.IconButton btnDatabaseBenificiary;
+        private Panel panel2;
+        private Label lbl_User;
     }
 }

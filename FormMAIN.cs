@@ -38,6 +38,19 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        private string _lbluser;
+        public string Lbluser
+        {
+            get { return _lbluser; }
+            set
+            {
+                _lbluser = value;
+                lbl_User.Text = value;
+            }
+        }
+
+
+
         #endregion
 
 
