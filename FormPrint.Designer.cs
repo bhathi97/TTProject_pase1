@@ -36,19 +36,22 @@
             iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             iconButton1.IconColor = Color.Black;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(380, 374);
+            iconButton1.Location = new Point(434, 499);
+            iconButton1.Margin = new Padding(3, 4, 3, 4);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(75, 23);
+            iconButton1.Size = new Size(86, 31);
             iconButton1.TabIndex = 0;
             iconButton1.Text = "iconButton1";
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // FormPrint
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(iconButton1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormPrint";
             Text = "FormPrint";
             ResumeLayout(false);
