@@ -71,6 +71,7 @@
             btn_CreateNewFORM.Text = "New Form";
             btn_CreateNewFORM.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_CreateNewFORM.UseVisualStyleBackColor = false;
+            btn_CreateNewFORM.Click += btn_CreateNewFORM_Click;
             // 
             // lblFolderName
             // 

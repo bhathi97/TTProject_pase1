@@ -38,6 +38,29 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        private string _lbluser;
+        public string Lbluser
+        {
+            get { return _lbluser; }
+            set
+            {
+                _lbluser = value;
+                lbl_User.Text = value;
+            }
+        }
+
+        private int _userID;
+        public int UserID
+        {
+            get { return _userID; }
+            set
+            {
+                _userID = value;
+                
+            }
+        }
+
+
         #endregion
 
 
@@ -69,6 +92,28 @@ namespace project_TelegraphicTransfer
             get { return _databaseHandelingUserControl; }
             set { _databaseHandelingUserControl = value; }
         }
+
+
+
+        //BENEFICIARY button
+        private UCBeneficiary _BenificiaryUserControl;
+
+        public UCBeneficiary BenificiaryUserControl
+        {
+            get { return _BenificiaryUserControl; }
+            set { _BenificiaryUserControl = value; }
+        }
+
+        //Sender button
+        private UCSender _SenderUserControl;
+
+        public UCSender SenderUserControl
+        {
+            get { return _SenderUserControl; }
+            set { _SenderUserControl = value; }
+        }
+
+
 
         private void FormMAIN_Load(object sender, EventArgs e)
         {
@@ -154,6 +199,99 @@ namespace project_TelegraphicTransfer
             }
 
 
+        }
+
+        private void btnDatabaseBenificiary_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_BenificiaryUserControl == null)
+                {
+                    BenificiaryUserControl = new UCBeneficiary();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnllLoadSpace.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                BenificiaryUserControl.Show();
+
+                //change the dock property
+                BenificiaryUserControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(BenificiaryUserControl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_DatabaseSender_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_SenderUserControl == null)
+                {
+                    SenderUserControl = new UCSender();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnllLoadSpace.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                SenderUserControl.Show();
+
+                //change the dock property
+                SenderUserControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(SenderUserControl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void FormMAIN_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                FormLogin formLogin = Application.OpenForms.OfType<FormLogin>().FirstOrDefault();
+                if (formLogin != null)
+                {
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form != formLogin)
+                        {
+                            form.Enabled = false;
+                        }
+                        else
+                        {
+                            form.Show();
+                        }
+                    }
+                }
+                
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
