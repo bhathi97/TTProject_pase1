@@ -40,7 +40,6 @@
             label6=new Label();
             label7=new Label();
             label8=new Label();
-            textBox1=new TextBox();
             label9=new Label();
             textBox2=new TextBox();
             textBox3=new TextBox();
@@ -94,6 +93,8 @@
             textBox12=new TextBox();
             textBox13=new TextBox();
             textBox14=new TextBox();
+            label36=new Label();
+            label50=new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -204,14 +205,6 @@
             label8.TabIndex=8;
             label8.Text="More Terms and Conditions apply";
             // 
-            // textBox1
-            // 
-            textBox1.Location=new Point(568, 5);
-            textBox1.MaximumSize=new Size(140, 20);
-            textBox1.Name="textBox1";
-            textBox1.Size=new Size(140, 20);
-            textBox1.TabIndex=9;
-            // 
             // label9
             // 
             label9.Location=new Point(20, 359);
@@ -225,7 +218,7 @@
             textBox2.Location=new Point(543, 406);
             textBox2.MaximumSize=new Size(100, 15);
             textBox2.Name="textBox2";
-            textBox2.Size=new Size(100, 15);
+            textBox2.Size=new Size(100, 23);
             textBox2.TabIndex=0;
             textBox2.TextChanged+=textBox2_TextChanged;
             // 
@@ -234,7 +227,7 @@
             textBox3.Location=new Point(337, 406);
             textBox3.MaximumSize=new Size(100, 15);
             textBox3.Name="textBox3";
-            textBox3.Size=new Size(100, 15);
+            textBox3.Size=new Size(100, 23);
             textBox3.TabIndex=11;
             // 
             // label10
@@ -639,10 +632,28 @@
             textBox14.Size=new Size(136, 15);
             textBox14.TabIndex=59;
             // 
+            // label36
+            // 
+            label36.AutoSize=true;
+            label36.Location=new Point(305, 10);
+            label36.Name="label36";
+            label36.Size=new Size(0, 15);
+            label36.TabIndex=60;
+            // 
+            // label50
+            // 
+            label50.Location=new Point(571, 10);
+            label50.Name="label50";
+            label50.Size=new Size(128, 15);
+            label50.TabIndex=61;
+            label50.Text="label50";
+            // 
             // USPage2
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
+            Controls.Add(label50);
+            Controls.Add(label36);
             Controls.Add(textBox14);
             Controls.Add(textBox7);
             Controls.Add(textBox13);
@@ -696,7 +707,6 @@
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(label9);
-            Controls.Add(textBox1);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -729,7 +739,6 @@
         private TextBox textBox2;
         private Label label7;
         private Label label8;
-        private TextBox textBox1;
         private Label label9;
         private TextBox textBox3;
         private Label label10;
@@ -782,5 +791,7 @@
         private TextBox textBox12;
         private TextBox textBox13;
         private TextBox textBox14;
+        private Label label36;
+        private Label label50;
     }
 }

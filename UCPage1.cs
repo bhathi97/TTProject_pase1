@@ -85,5 +85,10 @@ namespace project_TelegraphicTransfer
         {
 
         }
+
+        private void lbl18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

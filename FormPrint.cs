@@ -35,8 +35,8 @@ namespace project_TelegraphicTransfer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 f2 = newform2()
-            f2.show();
+           // Form2 f2 = new form2();
+            //f2.show();
  ;
         }
     }
