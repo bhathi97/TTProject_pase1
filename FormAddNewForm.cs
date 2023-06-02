@@ -36,6 +36,19 @@ namespace project_TelegraphicTransfer
             }
         }
 
+
+        private int _creatorID;
+        public int CreatorID
+        {
+            get { return _creatorID; }
+            set
+            {
+                _creatorID = value;
+
+            }
+        }
+           
+
         #endregion
 
         #region connection

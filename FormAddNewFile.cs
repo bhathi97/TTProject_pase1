@@ -9,6 +9,20 @@ namespace project_TelegraphicTransfer
         SqlConnection connsql = new SqlConnection(connectionString.ConnectionString);
         #endregion
 
+
+        #region properties
+        private int _creatorID;
+        public int CreatorID
+        {
+            get { return _creatorID; }
+            set
+            {
+                _creatorID = value;
+
+            }
+        }
+        #endregion
+
         public FormAddNewFile()
         {
             InitializeComponent();
@@ -48,11 +62,13 @@ namespace project_TelegraphicTransfer
                 string number = tb_number.Text;
                 string year = cb_year.Text;
 
+
                 string fileName = code + "/" + number + "/" + year;
                 //MessageBox.Show(code + "/" + number + "/" + year);
-                SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_FILE (NAME,DATE_TIME) values (@name,@time)", connsql);
+                SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_FILE (NAME,DATE_TIME,EDITOR) values (@name,@time,@editor)", connsql);
                 cmdItemInsert.Parameters.AddWithValue("@name", fileName);
                 cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
+                cmdItemInsert.Parameters.AddWithValue(@"editor", CreatorID);
                 cmdItemInsert.ExecuteNonQuery();
 
             }

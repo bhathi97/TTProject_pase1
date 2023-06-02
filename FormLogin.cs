@@ -28,7 +28,7 @@ namespace project_TelegraphicTransfer
             try
             {
                 //check the fields are empty or not
-                if(string.IsNullOrEmpty(tb_userName.Text))
+                if (string.IsNullOrEmpty(tb_userName.Text))
                 {
                     MessageBox.Show("User Name Is Required");
                     tb_userName.Focus();
@@ -48,10 +48,10 @@ namespace project_TelegraphicTransfer
                     connsql.Open();
                     SqlCommand cmdLogin = new SqlCommand("select count(*) from tbl_LOGIN_MASTER where [NAME] = @name and PASSWORD = @pw", connsql);
                     cmdLogin.Parameters.AddWithValue("@name", userName);
-                    cmdLogin.Parameters.AddWithValue ("@pw", password);
+                    cmdLogin.Parameters.AddWithValue("@pw", password);
                     int count = Convert.ToInt32(cmdLogin.ExecuteScalar());
 
-                    if(count > 0)
+                    if (count > 0)
                     {
                         SqlCommand cmdUser = new SqlCommand("select * from tbl_LOGIN_MASTER where [NAME] = @name and PASSWORD = @pw", connsql);
                         cmdUser.Parameters.AddWithValue("@name", userName);
@@ -66,6 +66,7 @@ namespace project_TelegraphicTransfer
 
                             FormMAIN formMAIN = new FormMAIN();
                             formMAIN.Lbluser = nameShow;
+                            formMAIN.UserID = idShow;
                             formMAIN.Show();
 
                             this.tb_userName.Text = "";
@@ -74,7 +75,7 @@ namespace project_TelegraphicTransfer
 
                         }
 
-                        
+
                     }
 
 
@@ -82,14 +83,16 @@ namespace project_TelegraphicTransfer
                 }
 
 
-                
 
-            }catch (Exception ex)
+
+            }
+            catch (Exception ex)
             {
 
-            }finally 
+            }
+            finally
             {
-                connsql.Close(); 
+                connsql.Close();
             }
         }
     }
