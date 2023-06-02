@@ -32,8 +32,8 @@
             label1 = new Label();
             tb_userName = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            label2 = new Label();
             tb_password = new TextBox();
+            label2 = new Label();
             chb_showPassword = new CheckBox();
             btn_login = new FontAwesome.Sharp.IconButton();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -76,13 +76,20 @@
             tableLayoutPanel1.Controls.Add(tb_password, 1, 1);
             tableLayoutPanel1.Controls.Add(tb_userName, 1, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
-            tableLayoutPanel1.Location = new Point(70, 151);
+            tableLayoutPanel1.Location = new Point(63, 167);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(436, 60);
             tableLayoutPanel1.TabIndex = 2;
+            // 
+            // tb_password
+            // 
+            tb_password.Location = new Point(123, 33);
+            tb_password.Name = "tb_password";
+            tb_password.Size = new Size(310, 23);
+            tb_password.TabIndex = 3;
             // 
             // label2
             // 
@@ -95,19 +102,12 @@
             label2.TabIndex = 2;
             label2.Text = "PASSWORD :";
             // 
-            // tb_password
-            // 
-            tb_password.Location = new Point(123, 33);
-            tb_password.Name = "tb_password";
-            tb_password.Size = new Size(310, 23);
-            tb_password.TabIndex = 3;
-            // 
             // chb_showPassword
             // 
             chb_showPassword.AutoSize = true;
             chb_showPassword.BackColor = Color.FromArgb(11, 12, 71);
             chb_showPassword.ForeColor = SystemColors.ButtonHighlight;
-            chb_showPassword.Location = new Point(70, 217);
+            chb_showPassword.Location = new Point(63, 233);
             chb_showPassword.Name = "chb_showPassword";
             chb_showPassword.Size = new Size(108, 19);
             chb_showPassword.TabIndex = 3;
@@ -119,7 +119,7 @@
             btn_login.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_login.IconColor = Color.Black;
             btn_login.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_login.Location = new Point(340, 217);
+            btn_login.Location = new Point(333, 233);
             btn_login.Name = "btn_login";
             btn_login.Size = new Size(166, 23);
             btn_login.TabIndex = 4;
@@ -169,7 +169,7 @@
             // 
             panel1.BackColor = Color.FromArgb(11, 12, 71);
             panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Location = new Point(59, 124);
+            panel1.Location = new Point(52, 140);
             panel1.Name = "panel1";
             panel1.Size = new Size(470, 143);
             panel1.TabIndex = 5;
@@ -177,7 +177,7 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
@@ -188,13 +188,13 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.Black;
-            label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(193, 400);
+            label5.BackColor = Color.Transparent;
+            label5.ForeColor = SystemColors.ActiveCaptionText;
+            label5.Location = new Point(211, 400);
             label5.Name = "label5";
-            label5.Size = new Size(172, 15);
+            label5.Size = new Size(169, 15);
             label5.TabIndex = 7;
-            label5.Text = "Ceylon Petroleum Corporation ";
+            label5.Text = "Ceylon Petroleum Corporation";
             // 
             // FormLogin
             // 

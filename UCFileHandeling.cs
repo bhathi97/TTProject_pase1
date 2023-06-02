@@ -78,8 +78,6 @@ namespace project_TelegraphicTransfer
 
                 SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_FILE ORDER BY DATE_TIME DESC", connsql);
 
-
-
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
 
@@ -114,26 +112,44 @@ namespace project_TelegraphicTransfer
 
         private void btn_CreateNEwTTs_Click(object sender, EventArgs e)
         {
-            // Create a new instance of FormMain
-            FormAddNewFile newFormAddNewFile = new FormAddNewFile();
-
-            // Disable all other forms
-            foreach (Form form in Application.OpenForms)
+            try
             {
-                if (form != newFormAddNewFile)
+                //find user
+                FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
+
+                if (formMain != null)
                 {
+                    // Create a new instance of FormMain
+                    FormAddNewFile newFormAddNewFile = new FormAddNewFile();
+                    newFormAddNewFile.CreatorID = formMain.UserID;
 
-                    form.Enabled = false;
+                    // Disable all other forms
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form != newFormAddNewFile)
+                        {
+                            form.Enabled = false;
+                        }
+                    }
+
+                    // Show the new FormMain
+                    newFormAddNewFile.ShowDialog();
+
+
+
                 }
+
+
             }
-
-
-
-            // Show the new FormMain
-            newFormAddNewFile.ShowDialog();
-
-            //after form closed
-            loadItems();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //after form closed
+                loadItems();
+            }
 
         }
     }

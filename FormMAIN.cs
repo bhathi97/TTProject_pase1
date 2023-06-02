@@ -49,6 +49,16 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        private int _userID;
+        public int UserID
+        {
+            get { return _userID; }
+            set
+            {
+                _userID = value;
+                
+            }
+        }
 
 
         #endregion

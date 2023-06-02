@@ -23,6 +23,9 @@ namespace project_TelegraphicTransfer
             get { return _fileId; }
             set { _fileId = value; }
         }
+
+       
+
         #endregion
 
         private void UCItems1_Load(object sender, EventArgs e)
