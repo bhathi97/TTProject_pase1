@@ -47,10 +47,47 @@ namespace project_TelegraphicTransfer
         {
             // Set up the DataGridView columns
             dgvUser.ColumnCount = 4;
-            dgvUser.Columns[0].Name = "ID";
-            dgvUser.Columns[1].Name = "Name";
-            dgvUser.Columns[2].Name = "Password";
-            dgvUser.Columns[3].Name = "User Level";
+            dgvUser.Columns[0].Name = "id";
+            dgvUser.Columns[1].Name = "name";
+            dgvUser.Columns[2].Name = "PW";
+            dgvUser.Columns[3].Name = "UL";
+
+            // Load data from the database
+            LoadUserData();
+        }
+
+        private void LoadUserData()
+        {
+            try
+            {
+                connsql.Open();
+                SqlCommand cmd = new SqlCommand("SELECT ID, NAME, PASSWORD, USER_LEVEL FROM tbl_LOGIN_MASTER;", connsql);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                // Clear existing data in DataGridView
+                dgvUser.Rows.Clear();
+
+                // Loop through the data reader and add rows to the DataGridView
+                while (reader.Read())
+                {
+                    string id = reader["ID"].ToString();
+                    string name = reader["NAME"].ToString();
+                    string password = reader["PASSWORD"].ToString();
+                    string userLevel = reader["USER_LEVEL"].ToString();
+
+                    dgvUser.Rows.Add(id, name, password, userLevel);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connsql.Close();
+            }
         }
 
         private void UserAdd_Click(object sender, EventArgs e)
@@ -60,6 +97,9 @@ namespace project_TelegraphicTransfer
             string userLevel = cbUL.SelectedItem.ToString();
 
             InsertUserToDatabase(name, password, userLevel);
+
+            // Refresh the DataGridView with updated data
+            LoadUserData();
 
             // Clear the input fields
             tbName.Text = "";
