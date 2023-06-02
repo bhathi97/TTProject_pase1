@@ -61,7 +61,6 @@
             label41=new Label();
             label39=new Label();
             tableLayoutPanel5=new TableLayoutPanel();
-            textBox20=new TextBox();
             label42=new Label();
             label30=new Label();
             label31=new Label();
@@ -75,34 +74,26 @@
             label25=new Label();
             tableLayoutPanel1=new TableLayoutPanel();
             label29=new Label();
-            textBox1=new TextBox();
-            textBox2=new TextBox();
-            textBox3=new TextBox();
-            textBox4=new TextBox();
-            textBox5=new TextBox();
-            textBox6=new TextBox();
-            textBox7=new TextBox();
-            textBox8=new TextBox();
             label32=new Label();
-            textBox9=new TextBox();
-            textBox10=new TextBox();
-            textBox11=new TextBox();
-            textBox12=new TextBox();
-            textBox13=new TextBox();
-            textBox14=new TextBox();
-            textBox15=new TextBox();
-            textBox16=new TextBox();
-            textBox17=new TextBox();
-            textBox18=new TextBox();
-            textBox19=new TextBox();
-            textBox21=new TextBox();
-            textBox22=new TextBox();
-            textBox23=new TextBox();
-            textBox24=new TextBox();
-            textBox25=new TextBox();
-            textBox26=new TextBox();
-            textBox27=new TextBox();
-            textBox28=new TextBox();
+            lbl1=new Label();
+            lbl3=new Label();
+            lbl2=new Label();
+            lbl4=new Label();
+            lbl5=new Label();
+            lbl6=new Label();
+            lbl7=new Label();
+            lbl8=new Label();
+            lbl9=new Label();
+            lbl10=new Label();
+            lbl11=new Label();
+            lbl12=new Label();
+            lbl13=new Label();
+            lbl14=new Label();
+            lbl15=new Label();
+            lbl16=new Label();
+            lbl17=new Label();
+            lbl18=new Label();
+            lbl19=new Label();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -434,7 +425,6 @@
             tableLayoutPanel5.ColumnCount=1;
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel5.Controls.Add(textBox20, 0, 1);
             tableLayoutPanel5.Controls.Add(label42, 0, 0);
             tableLayoutPanel5.Location=new Point(27, 771);
             tableLayoutPanel5.Name="tableLayoutPanel5";
@@ -445,19 +435,14 @@
             tableLayoutPanel5.TabIndex=26;
             tableLayoutPanel5.Paint+=tableLayoutPanel5_Paint;
             // 
-            // textBox20
-            // 
-            textBox20.Location=new Point(4, 23);
-            textBox20.Name="textBox20";
-            textBox20.Size=new Size(632, 23);
-            textBox20.TabIndex=47;
-            // 
             // label42
             // 
+            label42.Anchor=AnchorStyles.Top|AnchorStyles.Bottom|AnchorStyles.Left|AnchorStyles.Right;
             label42.AutoSize=true;
+            label42.BorderStyle=BorderStyle.FixedSingle;
             label42.Location=new Point(4, 1);
             label42.Name="label42";
-            label42.Size=new Size(266, 15);
+            label42.Size=new Size(632, 18);
             label42.TabIndex=0;
             label42.Text="SPECIAL INSTRUCTIONS AND REMARKS TO SEND";
             label42.TextAlign=ContentAlignment.MiddleCenter;
@@ -594,71 +579,6 @@
             label29.Size=new Size(0, 15);
             label29.TabIndex=10;
             // 
-            // textBox1
-            // 
-            textBox1.Location=new Point(216, 197);
-            textBox1.MaximumSize=new Size(450, 18);
-            textBox1.Name="textBox1";
-            textBox1.Size=new Size(450, 18);
-            textBox1.TabIndex=27;
-            textBox1.TextChanged+=textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location=new Point(195, 219);
-            textBox2.MaximumSize=new Size(470, 18);
-            textBox2.Name="textBox2";
-            textBox2.Size=new Size(470, 18);
-            textBox2.TabIndex=28;
-            // 
-            // textBox3
-            // 
-            textBox3.Location=new Point(196, 269);
-            textBox3.MaximumSize=new Size(470, 18);
-            textBox3.Name="textBox3";
-            textBox3.Size=new Size(470, 18);
-            textBox3.TabIndex=29;
-            // 
-            // textBox4
-            // 
-            textBox4.Location=new Point(235, 245);
-            textBox4.MaximumSize=new Size(430, 18);
-            textBox4.Name="textBox4";
-            textBox4.Size=new Size(430, 18);
-            textBox4.TabIndex=30;
-            // 
-            // textBox5
-            // 
-            textBox5.Location=new Point(215, 295);
-            textBox5.MaximumSize=new Size(450, 18);
-            textBox5.Name="textBox5";
-            textBox5.Size=new Size(450, 18);
-            textBox5.TabIndex=31;
-            textBox5.TextChanged+=textBox5_TextChanged;
-            // 
-            // textBox6
-            // 
-            textBox6.Location=new Point(216, 322);
-            textBox6.MaximumSize=new Size(450, 18);
-            textBox6.Name="textBox6";
-            textBox6.Size=new Size(450, 18);
-            textBox6.TabIndex=32;
-            // 
-            // textBox7
-            // 
-            textBox7.Location=new Point(236, 349);
-            textBox7.MaximumSize=new Size(430, 18);
-            textBox7.Name="textBox7";
-            textBox7.Size=new Size(430, 18);
-            textBox7.TabIndex=33;
-            // 
-            // textBox8
-            // 
-            textBox8.Location=new Point(200, 379);
-            textBox8.Name="textBox8";
-            textBox8.Size=new Size(465, 23);
-            textBox8.TabIndex=34;
-            // 
             // label32
             // 
             label32.Location=new Point(30, 455);
@@ -667,151 +587,139 @@
             label32.TabIndex=35;
             label32.Text="FOR SERVICE PAYMENTS ONLY   PAYMENT ACCCORDANCE WITH THE AGREEMENT YES/NO";
             // 
-            // textBox9
+            // lbl1
             // 
-            textBox9.Location=new Point(202, 424);
-            textBox9.Name="textBox9";
-            textBox9.Size=new Size(465, 23);
-            textBox9.TabIndex=36;
+            lbl1.Location=new Point(202, 198);
+            lbl1.Name="lbl1";
+            lbl1.Size=new Size(461, 18);
+            lbl1.TabIndex=36;
             // 
-            // textBox10
+            // lbl3
             // 
-            textBox10.Location=new Point(295, 459);
-            textBox10.Name="textBox10";
-            textBox10.Size=new Size(371, 23);
-            textBox10.TabIndex=37;
+            lbl3.Location=new Point(231, 245);
+            lbl3.Name="lbl3";
+            lbl3.Size=new Size(432, 18);
+            lbl3.TabIndex=37;
             // 
-            // textBox11
+            // lbl2
             // 
-            textBox11.Location=new Point(266, 737);
-            textBox11.MaximumSize=new Size(400, 18);
-            textBox11.Name="textBox11";
-            textBox11.Size=new Size(400, 18);
-            textBox11.TabIndex=38;
+            lbl2.Location=new Point(111, 219);
+            lbl2.Name="lbl2";
+            lbl2.Size=new Size(552, 14);
+            lbl2.TabIndex=38;
             // 
-            // textBox12
+            // lbl4
             // 
-            textBox12.Location=new Point(336, 711);
-            textBox12.MaximumSize=new Size(330, 18);
-            textBox12.Name="textBox12";
-            textBox12.Size=new Size(330, 18);
-            textBox12.TabIndex=39;
+            lbl4.Location=new Point(111, 269);
+            lbl4.Name="lbl4";
+            lbl4.Size=new Size(552, 18);
+            lbl4.TabIndex=39;
             // 
-            // textBox13
+            // lbl5
             // 
-            textBox13.Location=new Point(217, 676);
-            textBox13.MaximumSize=new Size(450, 18);
-            textBox13.Name="textBox13";
-            textBox13.Size=new Size(450, 18);
-            textBox13.TabIndex=40;
+            lbl5.Location=new Point(202, 296);
+            lbl5.Name="lbl5";
+            lbl5.Size=new Size(461, 18);
+            lbl5.TabIndex=40;
             // 
-            // textBox14
+            // lbl6
             // 
-            textBox14.Location=new Point(211, 647);
-            textBox14.Name="textBox14";
-            textBox14.Size=new Size(133, 23);
-            textBox14.TabIndex=41;
-            textBox14.Text="s";
+            lbl6.Location=new Point(186, 322);
+            lbl6.Name="lbl6";
+            lbl6.Size=new Size(478, 18);
+            lbl6.TabIndex=41;
             // 
-            // textBox15
+            // lbl7
             // 
-            textBox15.Location=new Point(211, 622);
-            textBox15.Name="textBox15";
-            textBox15.Size=new Size(133, 23);
-            textBox15.TabIndex=42;
-            textBox15.TextChanged+=textBox15_TextChanged;
+            lbl7.Location=new Point(186, 351);
+            lbl7.Name="lbl7";
+            lbl7.Size=new Size(477, 18);
+            lbl7.TabIndex=42;
             // 
-            // textBox16
+            // lbl8
             // 
-            textBox16.Location=new Point(212, 599);
-            textBox16.Name="textBox16";
-            textBox16.Size=new Size(133, 23);
-            textBox16.TabIndex=43;
+            lbl8.Location=new Point(202, 377);
+            lbl8.Name="lbl8";
+            lbl8.Size=new Size(460, 45);
+            lbl8.TabIndex=43;
             // 
-            // textBox17
+            // lbl9
             // 
-            textBox17.Location=new Point(213, 574);
-            textBox17.Name="textBox17";
-            textBox17.Size=new Size(133, 23);
-            textBox17.TabIndex=44;
+            lbl9.Location=new Point(202, 430);
+            lbl9.Name="lbl9";
+            lbl9.Size=new Size(460, 18);
+            lbl9.TabIndex=44;
             // 
-            // textBox18
+            // lbl10
             // 
-            textBox18.Location=new Point(200, 544);
-            textBox18.Name="textBox18";
-            textBox18.Size=new Size(467, 23);
-            textBox18.TabIndex=45;
+            lbl10.Location=new Point(297, 459);
+            lbl10.Name="lbl10";
+            lbl10.Size=new Size(365, 26);
+            lbl10.TabIndex=45;
             // 
-            // textBox19
+            // lbl11
             // 
-            textBox19.Location=new Point(200, 520);
-            textBox19.Name="textBox19";
-            textBox19.Size=new Size(467, 23);
-            textBox19.TabIndex=46;
+            lbl11.Location=new Point(192, 521);
+            lbl11.Name="lbl11";
+            lbl11.Size=new Size(474, 21);
+            lbl11.TabIndex=46;
             // 
-            // textBox21
+            // lbl12
             // 
-            textBox21.Location=new Point(301, 39);
-            textBox21.MaximumSize=new Size(100, 18);
-            textBox21.Name="textBox21";
-            textBox21.Size=new Size(100, 23);
-            textBox21.TabIndex=0;
+            lbl12.Location=new Point(99, 545);
+            lbl12.Name="lbl12";
+            lbl12.Size=new Size(565, 21);
+            lbl12.TabIndex=47;
             // 
-            // textBox22
+            // lbl13
             // 
-            textBox22.Location=new Point(301, 63);
-            textBox22.MaximumSize=new Size(100, 18);
-            textBox22.Name="textBox22";
-            textBox22.Size=new Size(100, 23);
-            textBox22.TabIndex=47;
+            lbl13.Location=new Point(154, 572);
+            lbl13.Name="lbl13";
+            lbl13.Size=new Size(512, 21);
+            lbl13.TabIndex=48;
             // 
-            // textBox23
+            // lbl14
             // 
-            textBox23.Location=new Point(301, 110);
-            textBox23.MaximumSize=new Size(100, 18);
-            textBox23.Name="textBox23";
-            textBox23.Size=new Size(100, 23);
-            textBox23.TabIndex=48;
+            lbl14.Location=new Point(118, 600);
+            lbl14.Name="lbl14";
+            lbl14.Size=new Size(547, 21);
+            lbl14.TabIndex=49;
             // 
-            // textBox24
+            // lbl15
             // 
-            textBox24.Location=new Point(301, 87);
-            textBox24.MaximumSize=new Size(100, 18);
-            textBox24.Name="textBox24";
-            textBox24.Size=new Size(100, 23);
-            textBox24.TabIndex=49;
+            lbl15.Location=new Point(99, 623);
+            lbl15.Name="lbl15";
+            lbl15.Size=new Size(566, 21);
+            lbl15.TabIndex=50;
             // 
-            // textBox25
+            // lbl16
             // 
-            textBox25.Location=new Point(553, 111);
-            textBox25.MaximumSize=new Size(100, 18);
-            textBox25.Name="textBox25";
-            textBox25.Size=new Size(100, 23);
-            textBox25.TabIndex=50;
+            lbl16.Location=new Point(175, 647);
+            lbl16.Name="lbl16";
+            lbl16.Size=new Size(489, 21);
+            lbl16.TabIndex=51;
             // 
-            // textBox26
+            // lbl17
             // 
-            textBox26.Location=new Point(552, 65);
-            textBox26.MaximumSize=new Size(100, 18);
-            textBox26.Name="textBox26";
-            textBox26.Size=new Size(100, 23);
-            textBox26.TabIndex=51;
+            lbl17.Location=new Point(202, 679);
+            lbl17.Name="lbl17";
+            lbl17.Size=new Size(461, 21);
+            lbl17.TabIndex=52;
             // 
-            // textBox27
+            // lbl18
             // 
-            textBox27.Location=new Point(553, 43);
-            textBox27.MaximumSize=new Size(100, 18);
-            textBox27.Name="textBox27";
-            textBox27.Size=new Size(100, 23);
-            textBox27.TabIndex=52;
+            lbl18.Location=new Point(330, 709);
+            lbl18.Name="lbl18";
+            lbl18.Size=new Size(333, 21);
+            lbl18.TabIndex=53;
+            lbl18.Click+=lbl18_Click;
             // 
-            // textBox28
+            // lbl19
             // 
-            textBox28.Location=new Point(552, 88);
-            textBox28.MaximumSize=new Size(100, 18);
-            textBox28.Name="textBox28";
-            textBox28.Size=new Size(100, 23);
-            textBox28.TabIndex=53;
+            lbl19.Location=new Point(271, 737);
+            lbl19.Name="lbl19";
+            lbl19.Size=new Size(392, 21);
+            lbl19.TabIndex=54;
             // 
             // UCPage2
             // 
@@ -819,35 +727,27 @@
             AutoScaleMode=AutoScaleMode.Font;
             AutoScroll=true;
             AutoScrollMargin=new Size(0, 100);
-            Controls.Add(textBox22);
-            Controls.Add(textBox21);
-            Controls.Add(textBox28);
-            Controls.Add(textBox27);
-            Controls.Add(textBox26);
-            Controls.Add(textBox25);
-            Controls.Add(textBox24);
-            Controls.Add(textBox23);
+            Controls.Add(lbl19);
+            Controls.Add(lbl18);
+            Controls.Add(lbl17);
+            Controls.Add(lbl16);
+            Controls.Add(lbl15);
+            Controls.Add(lbl14);
+            Controls.Add(lbl13);
+            Controls.Add(lbl12);
+            Controls.Add(lbl11);
+            Controls.Add(lbl10);
+            Controls.Add(lbl9);
+            Controls.Add(lbl8);
+            Controls.Add(lbl7);
+            Controls.Add(lbl6);
+            Controls.Add(lbl5);
+            Controls.Add(lbl4);
+            Controls.Add(lbl2);
+            Controls.Add(lbl3);
+            Controls.Add(lbl1);
             Controls.Add(label8);
-            Controls.Add(textBox19);
-            Controls.Add(textBox18);
-            Controls.Add(textBox17);
-            Controls.Add(textBox16);
-            Controls.Add(textBox15);
-            Controls.Add(textBox14);
-            Controls.Add(textBox13);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
-            Controls.Add(textBox9);
             Controls.Add(label32);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(tableLayoutPanel5);
             Controls.Add(tableLayoutPanel4);
             Controls.Add(tableLayoutPanel1);
@@ -873,7 +773,7 @@
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
             RightToLeft=RightToLeft.No;
-            Size=new Size(684, 885);
+            Size=new Size(682, 924);
             Load+=UCPage1_Load;
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
@@ -933,34 +833,25 @@
         private Label label25;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label29;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
         private Label label32;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
-        private TextBox textBox19;
-        private TextBox textBox20;
-        private TextBox textBox21;
-        private TextBox textBox22;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
-        private TextBox textBox28;
+        private Label lbl1;
+        private Label lbl3;
+        private Label lbl2;
+        private Label lbl4;
+        private Label lbl5;
+        private Label lbl6;
+        private Label lbl7;
+        private Label lbl8;
+        private Label lbl9;
+        private Label lbl10;
+        private Label lbl11;
+        private Label lbl12;
+        private Label lbl13;
+        private Label lbl14;
+        private Label lbl15;
+        private Label lbl16;
+        private Label lbl17;
+        private Label lbl18;
+        private Label lbl19;
     }
 }

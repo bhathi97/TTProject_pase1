@@ -32,6 +32,7 @@
             tableLayoutPanel2=new TableLayoutPanel();
             tableLayoutPanel3=new TableLayoutPanel();
             tableLayoutPanel4=new TableLayoutPanel();
+            label8=new Label();
             tableLayoutPanel5=new TableLayoutPanel();
             tableLayoutPanel6=new TableLayoutPanel();
             tableLayoutPanel7=new TableLayoutPanel();
@@ -47,17 +48,38 @@
             label5=new Label();
             label6=new Label();
             label7=new Label();
-            label8=new Label();
             label9=new Label();
             label10=new Label();
             label11=new Label();
             tableLayoutPanel8=new TableLayoutPanel();
             tableLayoutPanel12=new TableLayoutPanel();
+            label16=new Label();
             tableLayoutPanel14=new TableLayoutPanel();
+            label17=new Label();
             label12=new Label();
             label13=new Label();
             label14=new Label();
+            label15=new Label();
+            tableLayoutPanel15=new TableLayoutPanel();
+            label18=new Label();
+            tableLayoutPanel17=new TableLayoutPanel();
+            label19=new Label();
+            tableLayoutPanel18=new TableLayoutPanel();
+            label20=new Label();
+            label21=new Label();
+            label22=new Label();
+            label23=new Label();
+            tableLayoutPanel19=new TableLayoutPanel();
+            tableLayoutPanel20=new TableLayoutPanel();
+            tableLayoutPanel21=new TableLayoutPanel();
+            tableLayoutPanel22=new TableLayoutPanel();
+            tableLayoutPanel23=new TableLayoutPanel();
             tableLayoutPanel4.SuspendLayout();
+            tableLayoutPanel19.SuspendLayout();
+            tableLayoutPanel20.SuspendLayout();
+            tableLayoutPanel21.SuspendLayout();
+            tableLayoutPanel22.SuspendLayout();
+            tableLayoutPanel23.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -146,6 +168,15 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.Size=new Size(99, 120);
             tableLayoutPanel4.TabIndex=3;
+            // 
+            // label8
+            // 
+            label8.AutoSize=true;
+            label8.Location=new Point(-161, 1);
+            label8.Name="label8";
+            label8.Size=new Size(38, 15);
+            label8.TabIndex=0;
+            label8.Text="label8";
             // 
             // tableLayoutPanel5
             // 
@@ -246,9 +277,9 @@
             // tableLayoutPanel13
             // 
             tableLayoutPanel13.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel13.ColumnCount=11;
+            tableLayoutPanel13.ColumnCount=10;
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 53F));
+            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 13F));
@@ -257,25 +288,36 @@
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
             tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
-            tableLayoutPanel13.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
-            tableLayoutPanel13.Location=new Point(357, 286);
+            tableLayoutPanel13.Location=new Point(503, 285);
             tableLayoutPanel13.Name="tableLayoutPanel13";
-            tableLayoutPanel13.RowCount=1;
+            tableLayoutPanel13.RowCount=2;
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.Size=new Size(346, 52);
+            tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel13.Size=new Size(200, 53);
             tableLayoutPanel13.TabIndex=6;
             // 
             // tableLayoutPanel16
             // 
             tableLayoutPanel16.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel16.ColumnCount=2;
+            tableLayoutPanel16.ColumnCount=10;
             tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 31F));
-            tableLayoutPanel16.Location=new Point(92, 433);
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 19F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 19F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel16.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
+            tableLayoutPanel16.Location=new Point(109, 412);
             tableLayoutPanel16.Name="tableLayoutPanel16";
-            tableLayoutPanel16.RowCount=1;
+            tableLayoutPanel16.RowCount=4;
             tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel16.Size=new Size(266, 96);
+            tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel16.Size=new Size(249, 102);
             tableLayoutPanel16.TabIndex=9;
             // 
             // label1
@@ -338,15 +380,6 @@
             label7.TabIndex=15;
             label7.Text="Serial No.";
             // 
-            // label8
-            // 
-            label8.AutoSize=true;
-            label8.Location=new Point(-161, 1);
-            label8.Name="label8";
-            label8.Size=new Size(38, 15);
-            label8.TabIndex=0;
-            label8.Text="label8";
-            // 
             // label9
             // 
             label9.Location=new Point(17, 189);
@@ -387,9 +420,9 @@
             // tableLayoutPanel12
             // 
             tableLayoutPanel12.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel12.ColumnCount=11;
+            tableLayoutPanel12.ColumnCount=10;
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 53F));
+            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 13F));
@@ -398,20 +431,28 @@
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
             tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
-            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
-            tableLayoutPanel12.Location=new Point(357, 338);
+            tableLayoutPanel12.Location=new Point(503, 337);
             tableLayoutPanel12.Name="tableLayoutPanel12";
-            tableLayoutPanel12.RowCount=1;
+            tableLayoutPanel12.RowCount=2;
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel12.Size=new Size(346, 50);
+            tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
+            tableLayoutPanel12.Size=new Size(200, 55);
             tableLayoutPanel12.TabIndex=7;
+            // 
+            // label16
+            // 
+            label16.Location=new Point(4, 1);
+            label16.Name="label16";
+            label16.Size=new Size(112, 40);
+            label16.TabIndex=23;
+            label16.Text="Telegraphic Transfer";
             // 
             // tableLayoutPanel14
             // 
             tableLayoutPanel14.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
-            tableLayoutPanel14.ColumnCount=11;
+            tableLayoutPanel14.ColumnCount=10;
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 53F));
+            tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 13F));
@@ -420,13 +461,21 @@
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
             tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
-            tableLayoutPanel14.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
-            tableLayoutPanel14.Location=new Point(357, 387);
+            tableLayoutPanel14.Location=new Point(503, 389);
             tableLayoutPanel14.Name="tableLayoutPanel14";
-            tableLayoutPanel14.RowCount=1;
+            tableLayoutPanel14.RowCount=2;
             tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.Size=new Size(346, 49);
+            tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel14.Size=new Size(200, 47);
             tableLayoutPanel14.TabIndex=8;
+            // 
+            // label17
+            // 
+            label17.Location=new Point(4, 1);
+            label17.Name="label17";
+            label17.Size=new Size(84, 16);
+            label17.TabIndex=23;
+            label17.Text="Travel Card";
             // 
             // label12
             // 
@@ -452,10 +501,202 @@
             label14.TabIndex=21;
             label14.Text="Purpose";
             // 
+            // label15
+            // 
+            label15.Location=new Point(4, 1);
+            label15.Name="label15";
+            label15.Size=new Size(84, 16);
+            label15.TabIndex=22;
+            label15.Text="Bank Draft";
+            // 
+            // tableLayoutPanel15
+            // 
+            tableLayoutPanel15.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel15.ColumnCount=10;
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 13F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel15.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel15.Location=new Point(503, 435);
+            tableLayoutPanel15.Name="tableLayoutPanel15";
+            tableLayoutPanel15.RowCount=2;
+            tableLayoutPanel15.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel15.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel15.Size=new Size(200, 50);
+            tableLayoutPanel15.TabIndex=24;
+            // 
+            // label18
+            // 
+            label18.Location=new Point(4, 1);
+            label18.Name="label18";
+            label18.Size=new Size(112, 16);
+            label18.TabIndex=23;
+            label18.Text="Other (specify)";
+            // 
+            // tableLayoutPanel17
+            // 
+            tableLayoutPanel17.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel17.ColumnCount=10;
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 13F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 14F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel17.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel17.Location=new Point(503, 484);
+            tableLayoutPanel17.Name="tableLayoutPanel17";
+            tableLayoutPanel17.RowCount=2;
+            tableLayoutPanel17.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel17.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel17.Size=new Size(199, 52);
+            tableLayoutPanel17.TabIndex=25;
+            // 
+            // label19
+            // 
+            label19.Location=new Point(4, 1);
+            label19.Name="label19";
+            label19.Size=new Size(112, 16);
+            label19.TabIndex=23;
+            label19.Text="Currency issuance";
+            // 
+            // tableLayoutPanel18
+            // 
+            tableLayoutPanel18.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel18.ColumnCount=1;
+            tableLayoutPanel18.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel18.Location=new Point(14, 413);
+            tableLayoutPanel18.Name="tableLayoutPanel18";
+            tableLayoutPanel18.RowCount=1;
+            tableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel18.Size=new Size(95, 100);
+            tableLayoutPanel18.TabIndex=26;
+            // 
+            // label20
+            // 
+            label20.Location=new Point(16, 423);
+            label20.Name="label20";
+            label20.Size=new Size(92, 62);
+            label20.TabIndex=27;
+            label20.Text="Applied Foreign Exchange Amount";
+            // 
+            // label21
+            // 
+            label21.AutoSize=true;
+            label21.Location=new Point(121, 418);
+            label21.Name="label21";
+            label21.Size=new Size(29, 15);
+            label21.TabIndex=28;
+            label21.Text="USD";
+            // 
+            // label22
+            // 
+            label22.AutoSize=true;
+            label22.Location=new Point(119, 442);
+            label22.Name="label22";
+            label22.Size=new Size(28, 15);
+            label22.TabIndex=29;
+            label22.Text="EUR";
+            // 
+            // label23
+            // 
+            label23.AutoSize=true;
+            label23.Location=new Point(118, 466);
+            label23.Name="label23";
+            label23.Size=new Size(29, 15);
+            label23.TabIndex=30;
+            label23.Text="GBP";
+            // 
+            // tableLayoutPanel19
+            // 
+            tableLayoutPanel19.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel19.ColumnCount=1;
+            tableLayoutPanel19.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel19.Controls.Add(label15, 0, 0);
+            tableLayoutPanel19.Location=new Point(357, 286);
+            tableLayoutPanel19.Name="tableLayoutPanel19";
+            tableLayoutPanel19.RowCount=1;
+            tableLayoutPanel19.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel19.Size=new Size(148, 52);
+            tableLayoutPanel19.TabIndex=31;
+            // 
+            // tableLayoutPanel20
+            // 
+            tableLayoutPanel20.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel20.ColumnCount=1;
+            tableLayoutPanel20.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel20.Controls.Add(label16, 0, 0);
+            tableLayoutPanel20.Location=new Point(357, 337);
+            tableLayoutPanel20.Name="tableLayoutPanel20";
+            tableLayoutPanel20.RowCount=1;
+            tableLayoutPanel20.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel20.Size=new Size(147, 53);
+            tableLayoutPanel20.TabIndex=32;
+            // 
+            // tableLayoutPanel21
+            // 
+            tableLayoutPanel21.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel21.ColumnCount=1;
+            tableLayoutPanel21.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel21.Controls.Add(label17, 0, 0);
+            tableLayoutPanel21.Location=new Point(357, 389);
+            tableLayoutPanel21.Name="tableLayoutPanel21";
+            tableLayoutPanel21.RowCount=1;
+            tableLayoutPanel21.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel21.Size=new Size(147, 47);
+            tableLayoutPanel21.TabIndex=33;
+            // 
+            // tableLayoutPanel22
+            // 
+            tableLayoutPanel22.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel22.ColumnCount=1;
+            tableLayoutPanel22.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel22.Controls.Add(label18, 0, 0);
+            tableLayoutPanel22.Location=new Point(357, 435);
+            tableLayoutPanel22.Name="tableLayoutPanel22";
+            tableLayoutPanel22.RowCount=1;
+            tableLayoutPanel22.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel22.Size=new Size(147, 50);
+            tableLayoutPanel22.TabIndex=33;
+            // 
+            // tableLayoutPanel23
+            // 
+            tableLayoutPanel23.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel23.ColumnCount=1;
+            tableLayoutPanel23.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel23.Controls.Add(label19, 0, 0);
+            tableLayoutPanel23.Location=new Point(357, 484);
+            tableLayoutPanel23.Name="tableLayoutPanel23";
+            tableLayoutPanel23.RowCount=1;
+            tableLayoutPanel23.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel23.Size=new Size(147, 52);
+            tableLayoutPanel23.TabIndex=34;
+            // 
             // UCPage3
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
+            Controls.Add(tableLayoutPanel23);
+            Controls.Add(tableLayoutPanel22);
+            Controls.Add(tableLayoutPanel21);
+            Controls.Add(tableLayoutPanel20);
+            Controls.Add(tableLayoutPanel19);
+            Controls.Add(label23);
+            Controls.Add(label22);
+            Controls.Add(label21);
+            Controls.Add(label20);
+            Controls.Add(tableLayoutPanel18);
+            Controls.Add(tableLayoutPanel17);
+            Controls.Add(tableLayoutPanel15);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
@@ -485,10 +726,15 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
             Name="UCPage3";
-            Size=new Size(737, 603);
+            Size=new Size(750, 782);
             Load+=UCPage3_Load;
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
+            tableLayoutPanel19.ResumeLayout(false);
+            tableLayoutPanel20.ResumeLayout(false);
+            tableLayoutPanel21.ResumeLayout(false);
+            tableLayoutPanel22.ResumeLayout(false);
+            tableLayoutPanel23.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -524,5 +770,22 @@
         private Label label12;
         private Label label13;
         private Label label14;
+        private Label label16;
+        private Label label17;
+        private Label label15;
+        private TableLayoutPanel tableLayoutPanel15;
+        private Label label18;
+        private TableLayoutPanel tableLayoutPanel17;
+        private Label label19;
+        private TableLayoutPanel tableLayoutPanel18;
+        private Label label20;
+        private Label label21;
+        private Label label22;
+        private Label label23;
+        private TableLayoutPanel tableLayoutPanel19;
+        private TableLayoutPanel tableLayoutPanel20;
+        private TableLayoutPanel tableLayoutPanel21;
+        private TableLayoutPanel tableLayoutPanel22;
+        private TableLayoutPanel tableLayoutPanel23;
     }
 }
