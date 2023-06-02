@@ -19,7 +19,7 @@ namespace project_TelegraphicTransfer
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            //
         }
     }
 }
