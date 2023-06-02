@@ -36,7 +36,9 @@
             label8=new Label();
             tableLayoutPanel5=new TableLayoutPanel();
             tableLayoutPanel6=new TableLayoutPanel();
+            label26=new Label();
             tableLayoutPanel7=new TableLayoutPanel();
+            label27=new Label();
             tableLayoutPanel9=new TableLayoutPanel();
             tableLayoutPanel10=new TableLayoutPanel();
             tableLayoutPanel11=new TableLayoutPanel();
@@ -77,8 +79,6 @@
             tableLayoutPanel23=new TableLayoutPanel();
             label24=new Label();
             label25=new Label();
-            label26=new Label();
-            label27=new Label();
             label28=new Label();
             label29=new Label();
             label30=new Label();
@@ -97,6 +97,12 @@
             tableLayoutPanel28=new TableLayoutPanel();
             label39=new Label();
             label40=new Label();
+            label41=new Label();
+            label42=new Label();
+            label43=new Label();
+            label44=new Label();
+            label45=new Label();
+            label46=new Label();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
             tableLayoutPanel7.SuspendLayout();
@@ -162,9 +168,9 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 19F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 18F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
@@ -240,6 +246,14 @@
             tableLayoutPanel6.TabIndex=2;
             tableLayoutPanel6.Paint+=tableLayoutPanel6_Paint;
             // 
+            // label26
+            // 
+            label26.Location=new Point(4, 48);
+            label26.Name="label26";
+            label26.Size=new Size(88, 17);
+            label26.TabIndex=37;
+            label26.Text="Country Code";
+            // 
             // tableLayoutPanel7
             // 
             tableLayoutPanel7.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
@@ -258,6 +272,15 @@
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 23F));
             tableLayoutPanel7.Size=new Size(192, 50);
             tableLayoutPanel7.TabIndex=3;
+            // 
+            // label27
+            // 
+            label27.Location=new Point(4, 1);
+            label27.Name="label27";
+            label27.Size=new Size(90, 17);
+            label27.TabIndex=38;
+            label27.Text="Purpose Code";
+            label27.Click+=label27_Click;
             // 
             // tableLayoutPanel9
             // 
@@ -726,23 +749,6 @@
             label25.TabIndex=36;
             label25.Text="Branch Code";
             // 
-            // label26
-            // 
-            label26.Location=new Point(4, 48);
-            label26.Name="label26";
-            label26.Size=new Size(88, 17);
-            label26.TabIndex=37;
-            label26.Text="Country Code";
-            // 
-            // label27
-            // 
-            label27.Location=new Point(4, 1);
-            label27.Name="label27";
-            label27.Size=new Size(90, 17);
-            label27.TabIndex=38;
-            label27.Text="Purpose Code";
-            label27.Click+=label27_Click;
-            // 
             // label28
             // 
             label28.Location=new Point(514, 213);
@@ -815,6 +821,7 @@
             tableLayoutPanel25.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel25.Size=new Size(344, 94);
             tableLayoutPanel25.TabIndex=44;
+            tableLayoutPanel25.Paint+=tableLayoutPanel25_Paint;
             // 
             // tableLayoutPanel26
             // 
@@ -896,7 +903,7 @@
             // 
             // label39
             // 
-            label39.Location=new Point(16, 717);
+            label39.Location=new Point(16, 729);
             label39.Name="label39";
             label39.Size=new Size(38, 24);
             label39.TabIndex=53;
@@ -904,16 +911,70 @@
             // 
             // label40
             // 
-            label40.Location=new Point(68, 710);
+            label40.Location=new Point(68, 716);
             label40.Name="label40";
-            label40.Size=new Size(622, 61);
+            label40.Size=new Size(622, 55);
             label40.TabIndex=54;
             label40.Text=resources.GetString("label40.Text");
+            // 
+            // label41
+            // 
+            label41.AutoSize=true;
+            label41.Location=new Point(66, 661);
+            label41.Name="label41";
+            label41.Size=new Size(0, 15);
+            label41.TabIndex=0;
+            // 
+            // label42
+            // 
+            label42.Location=new Point(130, 661);
+            label42.Name="label42";
+            label42.Size=new Size(82, 15);
+            label42.TabIndex=55;
+            label42.Text=".........................";
+            // 
+            // label43
+            // 
+            label43.Location=new Point(242, 660);
+            label43.Name="label43";
+            label43.Size=new Size(103, 15);
+            label43.TabIndex=56;
+            label43.Text="..............................";
+            // 
+            // label44
+            // 
+            label44.Location=new Point(63, 661);
+            label44.Name="label44";
+            label44.Size=new Size(72, 17);
+            label44.TabIndex=57;
+            label44.Text="................";
+            // 
+            // label45
+            // 
+            label45.Location=new Point(45, 577);
+            label45.Name="label45";
+            label45.Size=new Size(72, 17);
+            label45.TabIndex=58;
+            label45.Text="................";
+            // 
+            // label46
+            // 
+            label46.Location=new Point(223, 574);
+            label46.Name="label46";
+            label46.Size=new Size(103, 17);
+            label46.TabIndex=59;
+            label46.Text=".............................";
             // 
             // UCPage3
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
+            Controls.Add(label46);
+            Controls.Add(label45);
+            Controls.Add(label44);
+            Controls.Add(label42);
+            Controls.Add(label43);
+            Controls.Add(label41);
             Controls.Add(label40);
             Controls.Add(label39);
             Controls.Add(tableLayoutPanel28);
@@ -1060,5 +1121,11 @@
         private TableLayoutPanel tableLayoutPanel28;
         private Label label39;
         private Label label40;
+        private Label label41;
+        private Label label42;
+        private Label label43;
+        private Label label44;
+        private Label label45;
+        private Label label46;
     }
 }
