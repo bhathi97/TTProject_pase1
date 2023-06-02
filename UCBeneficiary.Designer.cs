@@ -88,16 +88,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1727, 43);
+            this.panel1.Size = new System.Drawing.Size(1727, 40);
             this.panel1.TabIndex = 0;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(87, 11);
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(25, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(189, 21);
+            this.label10.Size = new System.Drawing.Size(527, 21);
             this.label10.TabIndex = 0;
             this.label10.Text = "BENIFICIARY HANDLING";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -105,7 +106,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 43);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 40);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -116,7 +117,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dGVbenificiary);
-            this.splitContainer1.Size = new System.Drawing.Size(1727, 921);
+            this.splitContainer1.Size = new System.Drawing.Size(1727, 924);
             this.splitContainer1.SplitterDistance = 735;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -125,25 +126,25 @@
             this.panel4.Controls.Add(this.btnBDelete);
             this.panel4.Controls.Add(this.btnBUpdate);
             this.panel4.Controls.Add(this.BTNbAdd);
-            this.panel4.Location = new System.Drawing.Point(227, 435);
+            this.panel4.Location = new System.Drawing.Point(25, 404);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 145);
+            this.panel4.Size = new System.Drawing.Size(527, 49);
             this.panel4.TabIndex = 7;
             // 
             // btnBDelete
             // 
-            this.btnBDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnBDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
             this.btnBDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnBDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBDelete.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBDelete.ForeColor = System.Drawing.Color.White;
             this.btnBDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnBDelete.IconColor = System.Drawing.Color.White;
             this.btnBDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnBDelete.IconSize = 20;
-            this.btnBDelete.Location = new System.Drawing.Point(3, 99);
+            this.btnBDelete.Location = new System.Drawing.Point(371, 4);
             this.btnBDelete.Name = "btnBDelete";
-            this.btnBDelete.Size = new System.Drawing.Size(197, 42);
+            this.btnBDelete.Size = new System.Drawing.Size(153, 42);
             this.btnBDelete.TabIndex = 2;
             this.btnBDelete.Text = "DELETE";
             this.btnBDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,16 +153,16 @@
             // 
             // btnBUpdate
             // 
-            this.btnBUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.btnBUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.btnBUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBUpdate.ForeColor = System.Drawing.Color.White;
             this.btnBUpdate.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.btnBUpdate.IconColor = System.Drawing.Color.White;
             this.btnBUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnBUpdate.IconSize = 20;
-            this.btnBUpdate.Location = new System.Drawing.Point(3, 51);
+            this.btnBUpdate.Location = new System.Drawing.Point(188, 4);
             this.btnBUpdate.Name = "btnBUpdate";
-            this.btnBUpdate.Size = new System.Drawing.Size(197, 42);
+            this.btnBUpdate.Size = new System.Drawing.Size(153, 42);
             this.btnBUpdate.TabIndex = 1;
             this.btnBUpdate.Text = "  UPDATE";
             this.btnBUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -170,16 +171,16 @@
             // 
             // BTNbAdd
             // 
-            this.BTNbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.BTNbAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BTNbAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.BTNbAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BTNbAdd.ForeColor = System.Drawing.Color.White;
             this.BTNbAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.BTNbAdd.IconColor = System.Drawing.Color.White;
             this.BTNbAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BTNbAdd.IconSize = 20;
-            this.BTNbAdd.Location = new System.Drawing.Point(3, 3);
+            this.BTNbAdd.Location = new System.Drawing.Point(0, 4);
             this.BTNbAdd.Name = "BTNbAdd";
-            this.BTNbAdd.Size = new System.Drawing.Size(197, 42);
+            this.BTNbAdd.Size = new System.Drawing.Size(153, 42);
             this.BTNbAdd.TabIndex = 0;
             this.BTNbAdd.Text = "  ADD";
             this.BTNbAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -188,6 +189,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.65275F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.34725F));
@@ -209,7 +211,7 @@
             this.tableLayoutPanel2.Controls.Add(this.tBSC, 1, 7);
             this.tableLayoutPanel2.Controls.Add(this.tBIN, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(73, 22);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 9;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -236,7 +238,7 @@
             // 
             // TBnic
             // 
-            this.TBnic.Location = new System.Drawing.Point(154, 3);
+            this.TBnic.Location = new System.Drawing.Point(153, 3);
             this.TBnic.Name = "TBnic";
             this.TBnic.Size = new System.Drawing.Size(318, 23);
             this.TBnic.TabIndex = 9;
@@ -313,56 +315,56 @@
             // 
             // TBname
             // 
-            this.TBname.Location = new System.Drawing.Point(154, 41);
+            this.TBname.Location = new System.Drawing.Point(153, 41);
             this.TBname.Name = "TBname";
             this.TBname.Size = new System.Drawing.Size(318, 23);
             this.TBname.TabIndex = 10;
             // 
             // TBaddress
             // 
-            this.TBaddress.Location = new System.Drawing.Point(154, 79);
+            this.TBaddress.Location = new System.Drawing.Point(153, 79);
             this.TBaddress.Name = "TBaddress";
             this.TBaddress.Size = new System.Drawing.Size(318, 23);
             this.TBaddress.TabIndex = 11;
             // 
             // tBbn
             // 
-            this.tBbn.Location = new System.Drawing.Point(154, 119);
+            this.tBbn.Location = new System.Drawing.Point(153, 119);
             this.tBbn.Name = "tBbn";
             this.tBbn.Size = new System.Drawing.Size(318, 23);
             this.tBbn.TabIndex = 12;
             // 
             // tbbrN
             // 
-            this.tbbrN.Location = new System.Drawing.Point(154, 166);
+            this.tbbrN.Location = new System.Drawing.Point(153, 166);
             this.tbbrN.Name = "tbbrN";
             this.tbbrN.Size = new System.Drawing.Size(318, 23);
             this.tbbrN.TabIndex = 13;
             // 
             // tbC
             // 
-            this.tbC.Location = new System.Drawing.Point(154, 214);
+            this.tbC.Location = new System.Drawing.Point(153, 214);
             this.tbC.Name = "tbC";
             this.tbC.Size = new System.Drawing.Size(318, 23);
             this.tbC.TabIndex = 14;
             // 
             // tBAN
             // 
-            this.tBAN.Location = new System.Drawing.Point(154, 256);
+            this.tBAN.Location = new System.Drawing.Point(153, 256);
             this.tBAN.Name = "tBAN";
             this.tBAN.Size = new System.Drawing.Size(318, 23);
             this.tBAN.TabIndex = 15;
             // 
             // tBSC
             // 
-            this.tBSC.Location = new System.Drawing.Point(154, 302);
+            this.tBSC.Location = new System.Drawing.Point(153, 302);
             this.tBSC.Name = "tBSC";
             this.tBSC.Size = new System.Drawing.Size(318, 23);
             this.tBSC.TabIndex = 16;
             // 
             // tBIN
             // 
-            this.tBIN.Location = new System.Drawing.Point(154, 344);
+            this.tBIN.Location = new System.Drawing.Point(153, 344);
             this.tBIN.Name = "tBIN";
             this.tBIN.Size = new System.Drawing.Size(318, 23);
             this.tBIN.TabIndex = 17;
@@ -516,7 +518,6 @@
             this.Size = new System.Drawing.Size(1727, 964);
             this.Load += new System.EventHandler(this.UCBeneficiary_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
