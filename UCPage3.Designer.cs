@@ -317,7 +317,7 @@
             tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
             tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
             tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
-            tableLayoutPanel16.Size=new Size(248, 102);
+            tableLayoutPanel16.Size=new Size(249, 102);
             tableLayoutPanel16.TabIndex=9;
             // 
             // label1
@@ -648,11 +648,11 @@
             tableLayoutPanel21.ColumnCount=1;
             tableLayoutPanel21.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel21.Controls.Add(label17, 0, 0);
-            tableLayoutPanel21.Location=new Point(358, 389);
+            tableLayoutPanel21.Location=new Point(357, 389);
             tableLayoutPanel21.Name="tableLayoutPanel21";
             tableLayoutPanel21.RowCount=1;
             tableLayoutPanel21.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel21.Size=new Size(146, 47);
+            tableLayoutPanel21.Size=new Size(147, 47);
             tableLayoutPanel21.TabIndex=33;
             // 
             // tableLayoutPanel22
