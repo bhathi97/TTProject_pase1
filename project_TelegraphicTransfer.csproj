@@ -9,12 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resourses\boc.png" />
     <None Remove="resourses\login.jpg" />
+
     <None Remove="resourses\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
+
+    <Content Include="resourses\boc.png">
+
     <Content Include="resourses\login.jpg">
+
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resourses\logo.png">
@@ -24,7 +30,9 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.56" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
