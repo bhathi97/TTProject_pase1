@@ -128,7 +128,7 @@
             this.panel4.Controls.Add(this.btnBDelete);
             this.panel4.Controls.Add(this.btnBUpdate);
             this.panel4.Controls.Add(this.BTNbAdd);
-            this.panel4.Location = new System.Drawing.Point(25, 440);
+            this.panel4.Location = new System.Drawing.Point(25, 449);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(565, 49);
             this.panel4.TabIndex = 7;
