@@ -61,5 +61,10 @@ namespace project_TelegraphicTransfer
         {
 
         }
+
+        private void tableLayoutPanel25_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

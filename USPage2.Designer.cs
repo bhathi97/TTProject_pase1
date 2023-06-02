@@ -41,8 +41,6 @@
             label7=new Label();
             label8=new Label();
             label9=new Label();
-            textBox2=new TextBox();
-            textBox3=new TextBox();
             label10=new Label();
             label11=new Label();
             label12=new Label();
@@ -81,20 +79,27 @@
             label46=new Label();
             label47=new Label();
             label48=new Label();
-            textBox4=new TextBox();
-            textBox6=new TextBox();
-            textBox7=new TextBox();
             label49=new Label();
-            textBox9=new TextBox();
             textBox8=new TextBox();
             textBox5=new TextBox();
             textBox10=new TextBox();
             textBox11=new TextBox();
             textBox12=new TextBox();
             textBox13=new TextBox();
-            textBox14=new TextBox();
             label36=new Label();
             label50=new Label();
+            label51=new Label();
+            label52=new Label();
+            label53=new Label();
+            label54=new Label();
+            label55=new Label();
+            label56=new Label();
+            label57=new Label();
+            label58=new Label();
+            label59=new Label();
+            label60=new Label();
+            label61=new Label();
+            label62=new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -143,7 +148,7 @@
             tableLayoutPanel3.Name="tableLayoutPanel3";
             tableLayoutPanel3.RowCount=1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size=new Size(688, 565);
+            tableLayoutPanel3.Size=new Size(685, 603);
             tableLayoutPanel3.TabIndex=1;
             // 
             // label1
@@ -212,23 +217,6 @@
             label9.Size=new Size(688, 75);
             label9.TabIndex=10;
             label9.Text=resources.GetString("label9.Text");
-            // 
-            // textBox2
-            // 
-            textBox2.Location=new Point(543, 406);
-            textBox2.MaximumSize=new Size(100, 15);
-            textBox2.Name="textBox2";
-            textBox2.Size=new Size(100, 23);
-            textBox2.TabIndex=0;
-            textBox2.TextChanged+=textBox2_TextChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.Location=new Point(337, 406);
-            textBox3.MaximumSize=new Size(100, 15);
-            textBox3.Name="textBox3";
-            textBox3.Size=new Size(100, 23);
-            textBox3.TabIndex=11;
             // 
             // label10
             // 
@@ -412,21 +400,21 @@
             // 
             label32.Location=new Point(22, 940);
             label32.Name="label32";
-            label32.Size=new Size(581, 21);
+            label32.Size=new Size(581, 34);
             label32.TabIndex=30;
             label32.Text="14. FOREIGN CURRENCY account only :: Credited SWIFT CHARGES RECOVERED ACCOUNT(52401053) Cost Center 087 for LKR";
             // 
             // label33
             // 
-            label33.Location=new Point(22, 958);
+            label33.Location=new Point(22, 974);
             label33.Name="label33";
-            label33.Size=new Size(581, 21);
+            label33.Size=new Size(586, 34);
             label33.TabIndex=31;
-            label33.Text="15. FOREIGN CURRENCY BFCA account only :: Credited COM ACC TRAVEL AND REMITTANCES(52302001) Cost";
+            label33.Text="15. FOREIGN CURRENCY BFCA account only :: Credited COM ACC TRAVEL AND REMITTANCES(52302001) Cost Center 087 for LKR";
             // 
             // label34
             // 
-            label34.Location=new Point(23, 978);
+            label34.Location=new Point(23, 1008);
             label34.Name="label34";
             label34.Size=new Size(581, 60);
             label34.TabIndex=32;
@@ -434,7 +422,7 @@
             // 
             // label35
             // 
-            label35.Location=new Point(347, 1054);
+            label35.Location=new Point(347, 1080);
             label35.Name="label35";
             label35.Size=new Size(130, 23);
             label35.TabIndex=33;
@@ -442,7 +430,7 @@
             // 
             // label37
             // 
-            label37.Location=new Point(36, 1081);
+            label37.Location=new Point(36, 1109);
             label37.Name="label37";
             label37.Size=new Size(112, 23);
             label37.TabIndex=35;
@@ -450,9 +438,9 @@
             // 
             // label38
             // 
-            label38.Location=new Point(348, 1085);
+            label38.Location=new Point(348, 1110);
             label38.Name="label38";
-            label38.Size=new Size(232, 23);
+            label38.Size=new Size(112, 23);
             label38.TabIndex=36;
             label38.Text="Signature No:                                                     ";
             // 
@@ -536,45 +524,13 @@
             label48.TabIndex=45;
             label48.Text="YES/NO                                              ";
             // 
-            // textBox4
-            // 
-            textBox4.Location=new Point(159, 1082);
-            textBox4.MaximumSize=new Size(150, 20);
-            textBox4.Name="textBox4";
-            textBox4.Size=new Size(150, 20);
-            textBox4.TabIndex=46;
-            // 
-            // textBox6
-            // 
-            textBox6.Location=new Point(479, 1053);
-            textBox6.MaximumSize=new Size(150, 20);
-            textBox6.Name="textBox6";
-            textBox6.Size=new Size(150, 20);
-            textBox6.TabIndex=48;
-            // 
-            // textBox7
-            // 
-            textBox7.Location=new Point(159, 1052);
-            textBox7.MaximumSize=new Size(150, 20);
-            textBox7.Name="textBox7";
-            textBox7.Size=new Size(150, 20);
-            textBox7.TabIndex=49;
-            // 
             // label49
             // 
-            label49.Location=new Point(36, 1052);
+            label49.Location=new Point(36, 1079);
             label49.Name="label49";
             label49.Size=new Size(112, 23);
             label49.TabIndex=51;
             label49.Text="Signature Class A*:                                                     ";
-            // 
-            // textBox9
-            // 
-            textBox9.Location=new Point(480, 1082);
-            textBox9.MaximumSize=new Size(150, 20);
-            textBox9.Name="textBox9";
-            textBox9.Size=new Size(150, 20);
-            textBox9.TabIndex=52;
             // 
             // textBox8
             // 
@@ -624,14 +580,6 @@
             textBox13.Size=new Size(17, 15);
             textBox13.TabIndex=58;
             // 
-            // textBox14
-            // 
-            textBox14.Location=new Point(300, 389);
-            textBox14.MaximumSize=new Size(150, 15);
-            textBox14.Name="textBox14";
-            textBox14.Size=new Size(136, 15);
-            textBox14.TabIndex=59;
-            // 
             // label36
             // 
             label36.AutoSize=true;
@@ -646,26 +594,130 @@
             label50.Name="label50";
             label50.Size=new Size(128, 15);
             label50.TabIndex=61;
-            label50.Text="label50";
+            label50.Text="......................................";
+            // 
+            // label51
+            // 
+            label51.Location=new Point(305, 390);
+            label51.Name="label51";
+            label51.Size=new Size(132, 18);
+            label51.TabIndex=62;
+            label51.Text="..........................................";
+            // 
+            // label52
+            // 
+            label52.Location=new Point(341, 406);
+            label52.Name="label52";
+            label52.Size=new Size(96, 15);
+            label52.TabIndex=63;
+            label52.Text="..............................";
+            // 
+            // label53
+            // 
+            label53.Location=new Point(544, 405);
+            label53.Name="label53";
+            label53.Size=new Size(98, 15);
+            label53.TabIndex=64;
+            label53.Text="................................";
+            // 
+            // label54
+            // 
+            label54.Location=new Point(131, 990);
+            label54.Name="label54";
+            label54.Size=new Size(108, 18);
+            label54.TabIndex=0;
+            label54.Text=".............................";
+            // 
+            // label55
+            // 
+            label55.Location=new Point(129, 955);
+            label55.Name="label55";
+            label55.Size=new Size(108, 19);
+            label55.TabIndex=65;
+            label55.Text=".............................";
+            // 
+            // label56
+            // 
+            label56.Location=new Point(288, 1025);
+            label56.Name="label56";
+            label56.Size=new Size(118, 23);
+            label56.TabIndex=66;
+            label56.Text=".....................................";
+            // 
+            // label57
+            // 
+            label57.Location=new Point(291, 1040);
+            label57.Name="label57";
+            label57.Size=new Size(118, 23);
+            label57.TabIndex=67;
+            label57.Text=".....................................";
+            // 
+            // label58
+            // 
+            label58.Location=new Point(85, 1041);
+            label58.Name="label58";
+            label58.Size=new Size(63, 23);
+            label58.TabIndex=68;
+            label58.Text="....................";
+            label58.Click+=label58_Click;
+            // 
+            // label59
+            // 
+            label59.Location=new Point(154, 1085);
+            label59.Name="label59";
+            label59.Size=new Size(130, 23);
+            label59.TabIndex=69;
+            label59.Text="........................................";
+            // 
+            // label60
+            // 
+            label60.Location=new Point(154, 1107);
+            label60.Name="label60";
+            label60.Size=new Size(130, 23);
+            label60.TabIndex=70;
+            label60.Text="........................................";
+            // 
+            // label61
+            // 
+            label61.Location=new Point(469, 1110);
+            label61.Name="label61";
+            label61.Size=new Size(130, 23);
+            label61.TabIndex=71;
+            label61.Text="........................................";
+            // 
+            // label62
+            // 
+            label62.Location=new Point(466, 1085);
+            label62.Name="label62";
+            label62.Size=new Size(130, 23);
+            label62.TabIndex=72;
+            label62.Text="........................................";
             // 
             // USPage2
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
+            Controls.Add(label62);
+            Controls.Add(label61);
+            Controls.Add(label60);
+            Controls.Add(label59);
+            Controls.Add(label58);
+            Controls.Add(label57);
+            Controls.Add(label56);
+            Controls.Add(label54);
+            Controls.Add(label55);
+            Controls.Add(label53);
+            Controls.Add(label52);
+            Controls.Add(label51);
             Controls.Add(label50);
             Controls.Add(label36);
-            Controls.Add(textBox14);
-            Controls.Add(textBox7);
             Controls.Add(textBox13);
             Controls.Add(textBox12);
             Controls.Add(textBox11);
             Controls.Add(textBox10);
             Controls.Add(textBox5);
             Controls.Add(textBox8);
-            Controls.Add(textBox9);
             Controls.Add(label49);
-            Controls.Add(textBox6);
-            Controls.Add(textBox4);
             Controls.Add(label48);
             Controls.Add(label47);
             Controls.Add(label46);
@@ -704,8 +756,6 @@
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -718,7 +768,7 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
             Name="USPage2";
-            Size=new Size(732, 1167);
+            Size=new Size(717, 1192);
             Load+=USPage2_Load;
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -736,11 +786,9 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox2;
         private Label label7;
         private Label label8;
         private Label label9;
-        private TextBox textBox3;
         private Label label10;
         private Label label11;
         private Label label12;
@@ -779,19 +827,26 @@
         private Label label46;
         private Label label47;
         private Label label48;
-        private TextBox textBox4;
-        private TextBox textBox6;
-        private TextBox textBox7;
         private Label label49;
-        private TextBox textBox9;
         private TextBox textBox8;
         private TextBox textBox5;
         private TextBox textBox10;
         private TextBox textBox11;
         private TextBox textBox12;
         private TextBox textBox13;
-        private TextBox textBox14;
         private Label label36;
         private Label label50;
+        private Label label51;
+        private Label label52;
+        private Label label53;
+        private Label label54;
+        private Label label55;
+        private Label label56;
+        private Label label57;
+        private Label label58;
+        private Label label59;
+        private Label label60;
+        private Label label61;
+        private Label label62;
     }
 }

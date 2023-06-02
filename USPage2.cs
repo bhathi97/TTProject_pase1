@@ -51,5 +51,10 @@ namespace project_TelegraphicTransfer
         {
 
         }
+
+        private void label58_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

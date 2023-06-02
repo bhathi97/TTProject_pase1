@@ -144,18 +144,20 @@ namespace project_TelegraphicTransfer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UCPage2 uCPage1 = new UCPage2();
-            uCPage1.Show();
-            uCPage1.Dock = DockStyle.Fill;
-            pnlt.Controls.Add(uCPage1);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
             UCPage2 uCPage2 = new UCPage2();
             uCPage2.Show();
             uCPage2.Dock = DockStyle.Fill;
             pnlt.Controls.Add(uCPage2);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pnlt.Controls.Clear();
+            USPage2 uSPage2 = new USPage2();
+            uSPage2.Show();
+            uSPage2.Dock = DockStyle.Fill;
+            pnlt.Controls.Add(uSPage2);
         }
 
         private void button3_Click(object sender, EventArgs e)
