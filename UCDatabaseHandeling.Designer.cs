@@ -81,7 +81,7 @@
             this.dgvUser.Location = new System.Drawing.Point(570, 0);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowTemplate.Height = 25;
-            this.dgvUser.Size = new System.Drawing.Size(631, 346);
+            this.dgvUser.Size = new System.Drawing.Size(631, 204);
             this.dgvUser.TabIndex = 1;
             // 
             // id
