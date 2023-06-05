@@ -124,7 +124,7 @@
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(5, 5);
             panel4.Name = "panel4";
-            panel4.Size = new Size(136, 79);
+            panel4.Size = new Size(136, 82);
             panel4.TabIndex = 3;
             // 
             // panel5
@@ -132,11 +132,11 @@
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(btn_search);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(56, 33);
+            panel5.Location = new Point(0, 36);
             panel5.Name = "panel5";
             panel5.Padding = new Padding(5);
-            panel5.Size = new Size(80, 46);
-            panel5.TabIndex = 1;
+            panel5.Size = new Size(136, 46);
+            panel5.TabIndex = 3;
             // 
             // panel6
             // 
@@ -145,7 +145,7 @@
             panel6.Location = new Point(5, 5);
             panel6.Name = "panel6";
             panel6.Padding = new Padding(5);
-            panel6.Size = new Size(37, 36);
+            panel6.Size = new Size(93, 36);
             panel6.TabIndex = 3;
             // 
             // tb_search
@@ -153,7 +153,7 @@
             tb_search.Dock = DockStyle.Fill;
             tb_search.Location = new Point(5, 5);
             tb_search.Name = "tb_search";
-            tb_search.Size = new Size(27, 23);
+            tb_search.Size = new Size(83, 23);
             tb_search.TabIndex = 1;
             // 
             // btn_search
@@ -164,7 +164,7 @@
             btn_search.IconColor = Color.Black;
             btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_search.IconSize = 28;
-            btn_search.Location = new Point(42, 5);
+            btn_search.Location = new Point(98, 5);
             btn_search.Name = "btn_search";
             btn_search.Size = new Size(33, 36);
             btn_search.TabIndex = 2;
@@ -175,12 +175,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Dock = DockStyle.Left;
+            label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(56, 30);
-            label1.TabIndex = 0;
+            label1.TabIndex = 2;
             label1.Text = "Files";
             // 
             // panel3
@@ -303,18 +303,18 @@
         private SplitContainer splitContainerToShowFiles;
         private Panel panel1;
         private FontAwesome.Sharp.IconButton btn_CreateNEwTTs;
-        private Label label1;
         private Panel pnlFilesShow;
         private FlowLayoutPanel flp_fileItemsShowingPanel;
         private SplitContainer splitContainerTTHandleing;
         private Label lblTest;
         private Panel panel2;
         private Label label2;
-        private Panel panel4;
         private Panel panel3;
+        private Panel panel4;
         private Panel panel5;
         private Panel panel6;
-        private FontAwesome.Sharp.IconButton btn_search;
         private TextBox tb_search;
+        private FontAwesome.Sharp.IconButton btn_search;
+        private Label label1;
     }
 }

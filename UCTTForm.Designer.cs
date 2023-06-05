@@ -252,7 +252,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
@@ -269,7 +269,7 @@
             // 
             lbl_beCorrespondingBank.BackColor = Color.White;
             lbl_beCorrespondingBank.BorderStyle = BorderStyle.FixedSingle;
-            lbl_beCorrespondingBank.Location = new Point(214, 340);
+            lbl_beCorrespondingBank.Location = new Point(214, 370);
             lbl_beCorrespondingBank.Name = "lbl_beCorrespondingBank";
             lbl_beCorrespondingBank.Size = new Size(463, 23);
             lbl_beCorrespondingBank.TabIndex = 30;
@@ -279,7 +279,7 @@
             // 
             lbl_beSwiftCode.BackColor = Color.White;
             lbl_beSwiftCode.BorderStyle = BorderStyle.FixedSingle;
-            lbl_beSwiftCode.Location = new Point(214, 310);
+            lbl_beSwiftCode.Location = new Point(214, 340);
             lbl_beSwiftCode.Name = "lbl_beSwiftCode";
             lbl_beSwiftCode.Size = new Size(463, 23);
             lbl_beSwiftCode.TabIndex = 28;
@@ -289,7 +289,7 @@
             // 
             lbl_beSort.BackColor = Color.White;
             lbl_beSort.BorderStyle = BorderStyle.FixedSingle;
-            lbl_beSort.Location = new Point(214, 275);
+            lbl_beSort.Location = new Point(214, 305);
             lbl_beSort.Name = "lbl_beSort";
             lbl_beSort.Size = new Size(463, 23);
             lbl_beSort.TabIndex = 26;
@@ -299,7 +299,7 @@
             // 
             lbl_beAcc.BackColor = Color.White;
             lbl_beAcc.BorderStyle = BorderStyle.FixedSingle;
-            lbl_beAcc.Location = new Point(214, 245);
+            lbl_beAcc.Location = new Point(214, 275);
             lbl_beAcc.Name = "lbl_beAcc";
             lbl_beAcc.Size = new Size(463, 23);
             lbl_beAcc.TabIndex = 24;
@@ -311,7 +311,7 @@
             lbl_amountInWords.BorderStyle = BorderStyle.FixedSingle;
             lbl_amountInWords.Location = new Point(214, 125);
             lbl_amountInWords.Name = "lbl_amountInWords";
-            lbl_amountInWords.Size = new Size(463, 23);
+            lbl_amountInWords.Size = new Size(463, 48);
             lbl_amountInWords.TabIndex = 19;
             lbl_amountInWords.Text = "label22";
             // 
@@ -363,7 +363,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(8, 155);
+            label19.Location = new Point(8, 185);
             label19.Name = "label19";
             label19.Size = new Size(81, 15);
             label19.TabIndex = 5;
@@ -372,7 +372,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(8, 185);
+            label20.Location = new Point(8, 215);
             label20.Name = "label20";
             label20.Size = new Size(61, 15);
             label20.TabIndex = 6;
@@ -381,7 +381,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(8, 215);
+            label21.Location = new Point(8, 245);
             label21.Name = "label21";
             label21.Size = new Size(67, 15);
             label21.TabIndex = 7;
@@ -393,6 +393,7 @@
             tb_beAmount.Name = "tb_beAmount";
             tb_beAmount.Size = new Size(463, 23);
             tb_beAmount.TabIndex = 11;
+            tb_beAmount.TextChanged += tb_beAmount_TextChanged;
             // 
             // tb_beName
             // 
@@ -423,7 +424,7 @@
             // 
             lbl_beBankname.BackColor = Color.White;
             lbl_beBankname.BorderStyle = BorderStyle.FixedSingle;
-            lbl_beBankname.Location = new Point(214, 155);
+            lbl_beBankname.Location = new Point(214, 185);
             lbl_beBankname.Name = "lbl_beBankname";
             lbl_beBankname.Size = new Size(463, 23);
             lbl_beBankname.TabIndex = 20;
@@ -433,7 +434,7 @@
             // 
             lbl_Branchname.BackColor = Color.White;
             lbl_Branchname.BorderStyle = BorderStyle.FixedSingle;
-            lbl_Branchname.Location = new Point(214, 185);
+            lbl_Branchname.Location = new Point(214, 215);
             lbl_Branchname.Name = "lbl_Branchname";
             lbl_Branchname.Size = new Size(463, 23);
             lbl_Branchname.TabIndex = 21;
@@ -443,7 +444,7 @@
             // 
             lbl_beBankCountry.BackColor = Color.White;
             lbl_beBankCountry.BorderStyle = BorderStyle.FixedSingle;
-            lbl_beBankCountry.Location = new Point(214, 215);
+            lbl_beBankCountry.Location = new Point(214, 245);
             lbl_beBankCountry.Name = "lbl_beBankCountry";
             lbl_beBankCountry.Size = new Size(463, 23);
             lbl_beBankCountry.TabIndex = 22;
@@ -452,7 +453,7 @@
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(8, 245);
+            label22.Location = new Point(8, 275);
             label22.Name = "label22";
             label22.Size = new Size(146, 15);
             label22.TabIndex = 23;
@@ -461,7 +462,7 @@
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(8, 275);
+            label23.Location = new Point(8, 305);
             label23.Name = "label23";
             label23.Size = new Size(199, 30);
             label23.TabIndex = 25;
@@ -470,7 +471,7 @@
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(8, 310);
+            label24.Location = new Point(8, 340);
             label24.Name = "label24";
             label24.Size = new Size(82, 15);
             label24.TabIndex = 27;
@@ -479,7 +480,7 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(8, 340);
+            label25.Location = new Point(8, 370);
             label25.Name = "label25";
             label25.Size = new Size(189, 30);
             label25.TabIndex = 29;
@@ -488,7 +489,7 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(8, 375);
+            label26.Location = new Point(8, 405);
             label26.Name = "label26";
             label26.Size = new Size(174, 30);
             label26.TabIndex = 31;
@@ -497,7 +498,7 @@
             // rb_beApplicant
             // 
             rb_beApplicant.AutoSize = true;
-            rb_beApplicant.Location = new Point(214, 378);
+            rb_beApplicant.Location = new Point(214, 408);
             rb_beApplicant.Name = "rb_beApplicant";
             rb_beApplicant.Size = new Size(87, 19);
             rb_beApplicant.TabIndex = 32;
@@ -508,9 +509,9 @@
             // rb_beBenificiary
             // 
             rb_beBenificiary.AutoSize = true;
-            rb_beBenificiary.Location = new Point(214, 408);
+            rb_beBenificiary.Location = new Point(214, 438);
             rb_beBenificiary.Name = "rb_beBenificiary";
-            rb_beBenificiary.Size = new Size(95, 19);
+            rb_beBenificiary.Size = new Size(95, 14);
             rb_beBenificiary.TabIndex = 33;
             rb_beBenificiary.TabStop = true;
             rb_beBenificiary.Text = "BENEFICIARY";

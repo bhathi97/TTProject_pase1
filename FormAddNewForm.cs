@@ -47,7 +47,9 @@ namespace project_TelegraphicTransfer
 
             }
         }
-           
+
+      
+     
 
         #endregion
 
@@ -79,16 +81,27 @@ namespace project_TelegraphicTransfer
         {
             try
             {
-                //who ------------------> have to implement
 
-                string formName = tb_formName.Text;
+                FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
+                if (formMain != null)
+                {
 
-                connsql.Open();
-                SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_TRANSACTION (NAME,DATE_TIME,FID) values (@name,@time,@fid)", connsql);
-                cmdItemInsert.Parameters.AddWithValue("@name", formName);
-                cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
-                cmdItemInsert.Parameters.AddWithValue("@fid",FileID);
-                cmdItemInsert.ExecuteNonQuery();
+                    string formName = tb_formName.Text;
+                    int editorID = formMain.UserID;
+
+                    connsql.Open();
+                    SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_TRANSACTION (NAME,DATE_TIME,FID,EDITOR) values (@name,@time,@fid,@edit)", connsql);
+                    cmdItemInsert.Parameters.AddWithValue("@name", formName);
+                    cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
+                    cmdItemInsert.Parameters.AddWithValue("@fid", FileID);
+                    cmdItemInsert.Parameters.AddWithValue("@edit", editorID);
+                    cmdItemInsert.ExecuteNonQuery();
+
+
+                }
+
+
+
 
 
             }

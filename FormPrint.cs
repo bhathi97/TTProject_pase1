@@ -26,11 +26,13 @@ namespace project_TelegraphicTransfer
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+
             try
             {
                 using(SaveFileDialog sfd =new SaveFileDialog()) 
                 {
                     sfd.Filter = "pdf fils (*.pdf)|*.pdf"; //filter pdf .pdf extension
+
 
                     if(sfd.ShowDialog() == DialogResult.OK )
                     {
@@ -140,6 +142,7 @@ namespace project_TelegraphicTransfer
             { 
              MessageBox.Show(ex.Message);   
             }
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -147,6 +150,7 @@ namespace project_TelegraphicTransfer
             UCPage2 uCPage2 = new UCPage2();
             uCPage2.Show();
             uCPage2.Dock = DockStyle.Fill;
+
             pnlt.Controls.Add(uCPage2);
 
         }
@@ -158,13 +162,11 @@ namespace project_TelegraphicTransfer
             uSPage2.Show();
             uSPage2.Dock = DockStyle.Fill;
             pnlt.Controls.Add(uSPage2);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-           // Form2 f2 = new form2();
-            //f2.show();
- ;
 
         }
     }
