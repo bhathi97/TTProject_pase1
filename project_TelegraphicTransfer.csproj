@@ -16,11 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-
-    <Content Include="resourses\boc.png">
-
+	  <Content Include="resourses\boc.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
     <Content Include="resourses\login.jpg">
-
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resourses\logo.png">
