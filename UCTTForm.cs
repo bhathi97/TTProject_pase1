@@ -38,6 +38,18 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        private string _fileName;
+        public string FileName
+        {
+            get { return _fileName; }
+            set
+            {
+                _fileName = value;
+                
+            }
+        }
+
+
 
         #endregion
 
@@ -50,6 +62,8 @@ namespace project_TelegraphicTransfer
         {
 
         }
+
+        #region amount Convert
 
         string[] zeroToNine = { "ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE" };
 
@@ -141,8 +155,8 @@ namespace project_TelegraphicTransfer
         {
             int firstPart = value / 1000000;
             int secAndThirdPart = value % 1000000;
-           // int secoundPart = secAndThirdPart % 1000;
-          //  int thirdPart = value % 1000;
+            // int secoundPart = secAndThirdPart % 1000;
+            //  int thirdPart = value % 1000;
 
             if (secAndThirdPart == 0)
             {
@@ -267,9 +281,9 @@ namespace project_TelegraphicTransfer
 
                     }
 
-                    else if(priceCent != 0) //when there is cens
+                    else if (priceCent != 0) //when there is cens
                     {
-                        
+
 
                         string cents = " and " + getbelowHundradValues(priceCent) + " cents Only";
 
@@ -331,6 +345,77 @@ namespace project_TelegraphicTransfer
 
 
 
+        }
+
+        #endregion
+
+        //add table to the database
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
+
+                if (formMain != null)
+                {
+                    string editor = formMain.Lbluser;
+                    string fileName = FileName;
+                    DateTime date = dtp_date.Value;
+                    string purpose = tb_purpose.Text;
+                    string inv = tb_inv.Text;
+                    string description = tb_description.Text;
+                    string terms = tb_terms.Text;
+                    string goods = cb_goods.SelectedItem.ToString();
+                    string hcCode = tb_hc.Text;
+                    string cutrior = tb_curierNo.Text;
+                    string applName = lbl_seName.Text;
+                    string applAddress = lbl_seAddress.Text;
+                    string applMail = cb_email1.SelectedItem.ToString() + "," + cb_email2.SelectedItem.ToString();
+                    string applPhone = lbl_sePhone.Text;
+                    string beName = tb_beName.Text;
+                    string beAddress = lbl_beAddress.Text;
+                    string beCurrType = cb_beCurrency.SelectedItem.ToString();
+                    decimal roundedAmount = decimal.Parse(tb_beAmount.Text);
+                    decimal beAmount = Math.Round(roundedAmount, 2); //---->
+                    string beAmountInWords = lbl_amountInWords.Text;
+                    string bebankName = lbl_beBankname.Text;
+                    string beBranchName = lbl_Branchname.Text;
+                    string beCountry = lbl_beBankCountry.Text;
+                    string beAccountNo = lbl_beAcc.Text;
+                    string beBranchCode = lbl_beSort.Text;
+                    string beswiftCode = lbl_beSwiftCode.Text;
+                    string beInterBank = lbl_beCorrespondingBank.Text;
+
+                    if (rb_beApplicant.Checked)
+                    {
+                        string charges = "Applicant";
+                    }
+                    else if (rb_beBenificiary.Checked)
+                    {
+                        string charges = "Benificiary";
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
+            
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

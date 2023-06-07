@@ -56,7 +56,7 @@ namespace project_TelegraphicTransfer
             set
             {
                 _userID = value;
-                
+
             }
         }
 
@@ -78,12 +78,24 @@ namespace project_TelegraphicTransfer
 
         //to save usercontrols **********************************
         //FileHandeling button
+
+        #region userControl
         private UCFileHandeling _fileHandelingUserControl;
         public UCFileHandeling FileHandelingUserControl
         {
             get { return _fileHandelingUserControl; }
             set { _fileHandelingUserControl = value; }
         }
+
+
+        private UCConfirmHandeling _confirmHandelingUserControl;
+        public UCConfirmHandeling ConfirmHandelingUserControl
+        {
+            get { return _confirmHandelingUserControl; }
+            set { _confirmHandelingUserControl = value; }
+        }
+
+
         //databaseHAndeling button
         private UCDatabaseHandeling _databaseHandelingUserControl;
 
@@ -112,6 +124,13 @@ namespace project_TelegraphicTransfer
             get { return _SenderUserControl; }
             set { _SenderUserControl = value; }
         }
+
+
+
+
+
+
+        #endregion
 
 
 
@@ -286,13 +305,46 @@ namespace project_TelegraphicTransfer
                         }
                     }
                 }
-                
+
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnConfirmRecord_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_confirmHandelingUserControl == null)
+                {
+                    ConfirmHandelingUserControl = new UCConfirmHandeling();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnllLoadSpace.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                ConfirmHandelingUserControl.Show();
+
+                //change the dock property
+                ConfirmHandelingUserControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(ConfirmHandelingUserControl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

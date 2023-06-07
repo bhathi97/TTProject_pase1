@@ -195,6 +195,7 @@
             btnConfirmRecord.Size = new Size(65, 65);
             btnConfirmRecord.TabIndex = 1;
             btnConfirmRecord.UseVisualStyleBackColor = true;
+            btnConfirmRecord.Click += btnConfirmRecord_Click;
             // 
             // btnNewRecord
             // 

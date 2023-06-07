@@ -51,10 +51,6 @@ namespace project_TelegraphicTransfer
             LoadItems();
 
 
-
-
-
-
         }
 
         private void btn_CreateNewFORM_Click(object sender, EventArgs e)
@@ -107,7 +103,6 @@ namespace project_TelegraphicTransfer
 
 
                 SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TRANSACTION WHERE FID = @fid ORDER BY DATE_TIME DESC", connsql);
-
                 cmdItemLoad.Parameters.AddWithValue("@fid", FileId);
 
                 // Execute the query and retrieve the rows
@@ -117,6 +112,7 @@ namespace project_TelegraphicTransfer
                 {
                     UCTTItems uCTTItems = new UCTTItems();
                     uCTTItems.FileName = reader["NAME"].ToString();
+                    uCTTItems.FName = FileName;
                     //MessageBox.Show(FileName);
 
                     // Add UCItems1 control to the panel

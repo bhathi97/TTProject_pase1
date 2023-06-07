@@ -27,6 +27,17 @@ namespace project_TelegraphicTransfer
             get { return _fileId; }
             set { _fileId = value; }
         }
+
+
+        private string _fName;
+        public string FName
+        {
+            get { return _fName; }
+            set { _fName = value; }
+        }
+
+
+
         #endregion
 
 
@@ -67,6 +78,7 @@ namespace project_TelegraphicTransfer
                         uCForms = new UCTTForm();
                         uCForms.LblFormName = FileName;
                         uCForms.LblFormID = FileId;
+                        uCForms.FileName = FName;
                         uCForms.Show();
                         uCForms.Dock = DockStyle.Fill;
 
