@@ -39,6 +39,7 @@
             // 
             // iconButton1
             // 
+
             iconButton1.IconChar=FontAwesome.Sharp.IconChar.None;
             iconButton1.IconColor=Color.Black;
             iconButton1.IconFont=FontAwesome.Sharp.IconFont.Auto;
@@ -109,6 +110,8 @@
             Name="FormPrint";
             Text="FormPrint";
             panel2.ResumeLayout(false);
+
+          
             ResumeLayout(false);
         }
 

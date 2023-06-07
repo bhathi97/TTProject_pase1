@@ -31,5 +31,10 @@ namespace project_TelegraphicTransfer
         {
 
         }
+
+        private void tBIN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
