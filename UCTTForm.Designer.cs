@@ -150,7 +150,7 @@
             panel4.BackColor = Color.FromArgb(194, 194, 239);
             panel4.Controls.Add(tb_spNote);
             panel4.Controls.Add(label33);
-            panel4.Location = new Point(7, 931);
+            panel4.Location = new Point(7, 976);
             panel4.Name = "panel4";
             panel4.Size = new Size(700, 100);
             panel4.TabIndex = 20;
@@ -158,7 +158,7 @@
             // tb_spNote
             // 
             tb_spNote.BorderStyle = BorderStyle.FixedSingle;
-            tb_spNote.Location = new Point(14, 31);
+            tb_spNote.Location = new Point(14, 32);
             tb_spNote.Name = "tb_spNote";
             tb_spNote.Size = new Size(670, 55);
             tb_spNote.TabIndex = 4;
@@ -180,19 +180,20 @@
             btn_add.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_add.IconColor = Color.Black;
             btn_add.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_add.Location = new Point(467, 1046);
+            btn_add.Location = new Point(467, 1091);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(168, 45);
             btn_add.TabIndex = 19;
             btn_add.Text = "ADD";
             btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += btn_add_Click;
             // 
             // btn_delete
             // 
             btn_delete.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_delete.IconColor = Color.Black;
             btn_delete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_delete.Location = new Point(278, 1046);
+            btn_delete.Location = new Point(278, 1091);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(168, 45);
             btn_delete.TabIndex = 18;
@@ -204,7 +205,7 @@
             btn_edit.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_edit.IconColor = Color.Black;
             btn_edit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_edit.Location = new Point(90, 1046);
+            btn_edit.Location = new Point(90, 1091);
             btn_edit.Name = "btn_edit";
             btn_edit.Size = new Size(168, 45);
             btn_edit.TabIndex = 17;
@@ -262,7 +263,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(701, 436);
+            tableLayoutPanel2.Size = new Size(701, 473);
             tableLayoutPanel2.TabIndex = 16;
             // 
             // lbl_beCorrespondingBank
@@ -511,7 +512,7 @@
             rb_beBenificiary.AutoSize = true;
             rb_beBenificiary.Location = new Point(214, 438);
             rb_beBenificiary.Name = "rb_beBenificiary";
-            rb_beBenificiary.Size = new Size(95, 14);
+            rb_beBenificiary.Size = new Size(95, 19);
             rb_beBenificiary.TabIndex = 33;
             rb_beBenificiary.TabStop = true;
             rb_beBenificiary.Text = "BENEFICIARY";
