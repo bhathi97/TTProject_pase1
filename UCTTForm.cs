@@ -386,6 +386,17 @@ namespace project_TelegraphicTransfer
                     string beswiftCode = lbl_beSwiftCode.Text;
                     string beInterBank = lbl_beCorrespondingBank.Text;
 
+                    if (rb_beApplicant.Checked)
+                    {
+                        string charges = "Applicant";
+                    }
+                    else if (rb_beBenificiary.Checked)
+                    {
+                        string charges = "Benificiary";
+                    }
+
+
+
 
 
 
