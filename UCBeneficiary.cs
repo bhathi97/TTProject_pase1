@@ -59,6 +59,15 @@ namespace project_TelegraphicTransfer
 
                     UCItemToShowBenificieries itms = new UCItemToShowBenificieries();
                     itms.Name = reader["NAME"].ToString();
+                    itms.NicName = reader["NIC_NAME"].ToString();
+                    itms.Address = reader["ADDRESS"].ToString();
+                    itms.Country = reader["COUNTRY"].ToString();
+                    itms.BankName = reader["BANK_NAME"].ToString();
+                    itms.Acc = reader["ACC_NO"].ToString();
+                    itms.BranchCode = reader["BRANCH_CODE"].ToString();
+                    itms.BranchName = reader["BRANCH_NAME"].ToString();
+                    itms.Swift = reader["SWIFT_CODE"].ToString();
+                    itms.CorBank = reader["INTERMEDIATE_BANK"].ToString();
 
                     // Add UCItems1 control to the panel
                     flp_LoadItems.Controls.Add(itms);
