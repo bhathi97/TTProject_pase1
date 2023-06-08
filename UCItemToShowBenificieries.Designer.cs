@@ -28,10 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            lbl_name = new Label();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // lbl_name
+            // 
+            lbl_name.AutoSize = true;
+            lbl_name.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_name.ForeColor = Color.White;
+            lbl_name.Location = new Point(51, 11);
+            lbl_name.Name = "lbl_name";
+            lbl_name.Size = new Size(57, 21);
+            lbl_name.TabIndex = 0;
+            lbl_name.Text = "label1";
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.FromArgb(11, 12, 71);
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.HandsHelping;
+            iconPictureBox1.IconColor = Color.White;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.Location = new Point(13, 11);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(32, 32);
+            iconPictureBox1.TabIndex = 1;
+            iconPictureBox1.TabStop = false;
+            // 
+            // UCItemToShowBenificieries
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            BackColor = Color.FromArgb(11, 12, 71);
+            Controls.Add(iconPictureBox1);
+            Controls.Add(lbl_name);
+            Name = "UCItemToShowBenificieries";
+            Size = new Size(636, 164);
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lbl_name;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
