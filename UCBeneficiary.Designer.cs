@@ -63,8 +63,6 @@
             label16 = new Label();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             panel4 = new Panel();
-            btnBDelete = new FontAwesome.Sharp.IconButton();
-            btnBUpdate = new FontAwesome.Sharp.IconButton();
             btn_AddNew = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -468,8 +466,6 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(btnBDelete);
-            panel4.Controls.Add(btnBUpdate);
             panel4.Controls.Add(btn_AddNew);
             panel4.Dock = DockStyle.Bottom;
             panel4.Location = new Point(0, 525);
@@ -477,58 +473,24 @@
             panel4.Size = new Size(536, 133);
             panel4.TabIndex = 7;
             // 
-            // btnBDelete
-            // 
-            btnBDelete.BackColor = Color.FromArgb(11, 12, 71);
-            btnBDelete.FlatAppearance.MouseDownBackColor = Color.Red;
-            btnBDelete.FlatAppearance.MouseOverBackColor = Color.Red;
-            btnBDelete.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBDelete.ForeColor = Color.White;
-            btnBDelete.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            btnBDelete.IconColor = Color.White;
-            btnBDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            btnBDelete.IconSize = 20;
-            btnBDelete.Location = new Point(327, 63);
-            btnBDelete.Name = "btnBDelete";
-            btnBDelete.Size = new Size(201, 42);
-            btnBDelete.TabIndex = 2;
-            btnBDelete.Text = "DELETE";
-            btnBDelete.TextAlign = ContentAlignment.MiddleRight;
-            btnBDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnBUpdate
-            // 
-            btnBUpdate.BackColor = Color.FromArgb(11, 12, 71);
-            btnBUpdate.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBUpdate.ForeColor = Color.White;
-            btnBUpdate.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            btnBUpdate.IconColor = Color.White;
-            btnBUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            btnBUpdate.IconSize = 20;
-            btnBUpdate.Location = new Point(109, 63);
-            btnBUpdate.Name = "btnBUpdate";
-            btnBUpdate.Size = new Size(201, 42);
-            btnBUpdate.TabIndex = 1;
-            btnBUpdate.Text = "  UPDATE";
-            btnBUpdate.TextAlign = ContentAlignment.MiddleRight;
-            btnBUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBUpdate.UseVisualStyleBackColor = false;
-            // 
             // btn_AddNew
             // 
             btn_AddNew.BackColor = Color.FromArgb(11, 12, 71);
+            btn_AddNew.FlatAppearance.BorderSize = 0;
+            btn_AddNew.FlatAppearance.MouseDownBackColor = Color.White;
+            btn_AddNew.FlatAppearance.MouseOverBackColor = Color.Green;
+            btn_AddNew.FlatStyle = FlatStyle.Flat;
             btn_AddNew.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             btn_AddNew.ForeColor = Color.White;
             btn_AddNew.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             btn_AddNew.IconColor = Color.White;
             btn_AddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_AddNew.IconSize = 20;
-            btn_AddNew.Location = new Point(327, 15);
+            btn_AddNew.Location = new Point(98, 48);
             btn_AddNew.Name = "btn_AddNew";
-            btn_AddNew.Size = new Size(201, 42);
+            btn_AddNew.Size = new Size(340, 42);
             btn_AddNew.TabIndex = 0;
-            btn_AddNew.Text = "  ADD";
+            btn_AddNew.Text = "ADD NEW BENIFICIARY TO THE DATABASE";
             btn_AddNew.TextAlign = ContentAlignment.MiddleRight;
             btn_AddNew.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_AddNew.UseVisualStyleBackColor = false;
@@ -683,8 +645,6 @@
         private SplitContainer splitContainer1;
         private Panel panel3;
         private Panel panel4;
-        private FontAwesome.Sharp.IconButton btnBDelete;
-        private FontAwesome.Sharp.IconButton btnBUpdate;
         private FontAwesome.Sharp.IconButton btn_AddNew;
         private Panel panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;

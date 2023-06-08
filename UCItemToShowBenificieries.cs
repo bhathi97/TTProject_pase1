@@ -31,6 +31,107 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        private string _nicName;
+        public string NicName
+        {
+            get { return _nicName; }
+            set
+            {
+                _nicName = value;
+                lbl_nicName.Text = value;
+            }
+        }
+
+        private string _address;
+        public string Address
+        {
+            get { return _address; }
+            set
+            {
+                _address = value;
+                lbl_addr.Text = value;
+            }
+        }
+
+        private string _country;
+        public string Country
+        {
+            get { return _country; }
+            set
+            {
+                _country = value;
+                lbl_country.Text = value;
+            }
+        }
+
+        private string _bankName;
+        public string BankName
+        {
+            get { return _bankName; }
+            set
+            {
+                _bankName = value;
+                lbl_bankName.Text = "BANK NAME : " + value;
+            }
+        }
+
+        private string _acc;
+        public string Acc
+        {
+            get { return _acc; }
+            set
+            {
+                _acc = value;
+                lbl_accNo.Text = "BANK ACCOUNT : " + value;
+            }
+        }
+
+        private string _branchName;
+        public string BranchName
+        {
+            get { return _branchName; }
+            set
+            {
+                _branchName = value;
+                lbl_branchName.Text = "BRANCH NAME : " + value;
+            }
+        }
+
+        private string _branchCode;
+        public string BranchCode
+        {
+            get { return _branchCode; }
+            set
+            {
+                _branchCode = value;
+                lbl_branchCode.Text = "SORT/ROUTING/FEDWIRE/ABA/BSB/BANK-BRANCH CODE : " + value;
+            }
+        }
+
+
+        private string _swift;
+        public string Swift
+        {
+            get { return _swift; }
+            set
+            {
+                _swift = value;
+                lbl_swift.Text = "SWIFT CODE : " + value;
+            }
+        }
+
+        private string _corBank;
+        public string CorBank
+        {
+            get { return _corBank; }
+            set
+            {
+                _corBank = value;
+                lbl_corBank.Text = "CORRESPONDING / INTERMEDIATE BANK : " + value;
+            }
+        }
+
+
 
         #endregion
 
