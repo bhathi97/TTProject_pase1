@@ -12,6 +12,9 @@ namespace project_TelegraphicTransfer
 {
     public partial class UCItemsToConfirm : UserControl
     {
+
+
+
         public UCItemsToConfirm()
         {
             InitializeComponent();
