@@ -45,8 +45,8 @@
             pnlHead.Dock = DockStyle.Top;
             pnlHead.Location = new Point(0, 0);
             pnlHead.Name = "pnlHead";
-            pnlHead.Padding = new Padding(10);
-            pnlHead.Size = new Size(222, 129);
+            pnlHead.Padding = new Padding(10, 10, 10, 5);
+            pnlHead.Size = new Size(222, 105);
             pnlHead.TabIndex = 0;
             // 
             // btn_CreateNewFORM
@@ -64,7 +64,7 @@
             btn_CreateNewFORM.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_CreateNewFORM.IconSize = 25;
             btn_CreateNewFORM.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_CreateNewFORM.Location = new Point(10, 82);
+            btn_CreateNewFORM.Location = new Point(10, 63);
             btn_CreateNewFORM.Name = "btn_CreateNewFORM";
             btn_CreateNewFORM.Size = new Size(202, 37);
             btn_CreateNewFORM.TabIndex = 2;
@@ -76,11 +76,11 @@
             // lblFolderName
             // 
             lblFolderName.AutoSize = true;
-            lblFolderName.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFolderName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             lblFolderName.ForeColor = SystemColors.ActiveCaptionText;
-            lblFolderName.Location = new Point(8, 62);
+            lblFolderName.Location = new Point(10, 38);
             lblFolderName.Name = "lblFolderName";
-            lblFolderName.Size = new Size(42, 17);
+            lblFolderName.Size = new Size(43, 17);
             lblFolderName.TabIndex = 0;
             lblFolderName.Text = "name";
             // 
@@ -89,10 +89,10 @@
             pnlBody.BackColor = SystemColors.Control;
             pnlBody.Controls.Add(flp_ItemViewver);
             pnlBody.Dock = DockStyle.Fill;
-            pnlBody.Location = new Point(0, 129);
+            pnlBody.Location = new Point(0, 105);
             pnlBody.Name = "pnlBody";
             pnlBody.Padding = new Padding(5);
-            pnlBody.Size = new Size(222, 341);
+            pnlBody.Size = new Size(222, 365);
             pnlBody.TabIndex = 1;
             // 
             // flp_ItemViewver
@@ -102,7 +102,7 @@
             flp_ItemViewver.Dock = DockStyle.Fill;
             flp_ItemViewver.Location = new Point(5, 5);
             flp_ItemViewver.Name = "flp_ItemViewver";
-            flp_ItemViewver.Size = new Size(212, 331);
+            flp_ItemViewver.Size = new Size(212, 355);
             flp_ItemViewver.TabIndex = 0;
             // 
             // UCTTsHandeling

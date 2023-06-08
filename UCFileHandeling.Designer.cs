@@ -33,11 +33,13 @@
             flp_fileItemsShowingPanel = new FlowLayoutPanel();
             panel1 = new Panel();
             panel4 = new Panel();
+            panel7 = new Panel();
+            btn_loadAll = new FontAwesome.Sharp.IconButton();
+            label1 = new Label();
             panel5 = new Panel();
             panel6 = new Panel();
             tb_search = new TextBox();
             btn_search = new FontAwesome.Sharp.IconButton();
-            label1 = new Label();
             panel3 = new Panel();
             btn_CreateNEwTTs = new FontAwesome.Sharp.IconButton();
             splitContainerTTHandleing = new SplitContainer();
@@ -51,6 +53,7 @@
             pnlFilesShow.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
+            panel7.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
             panel3.SuspendLayout();
@@ -119,69 +122,102 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(panel7);
             panel4.Controls.Add(panel5);
-            panel4.Controls.Add(label1);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(5, 5);
             panel4.Name = "panel4";
             panel4.Size = new Size(136, 82);
             panel4.TabIndex = 3;
             // 
+            // panel7
+            // 
+            panel7.Controls.Add(btn_loadAll);
+            panel7.Controls.Add(label1);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(136, 35);
+            panel7.TabIndex = 4;
+            // 
+            // btn_loadAll
+            // 
+            btn_loadAll.BackColor = Color.FromArgb(224, 224, 224);
+            btn_loadAll.Dock = DockStyle.Right;
+            btn_loadAll.FlatAppearance.BorderSize = 0;
+            btn_loadAll.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 64, 64);
+            btn_loadAll.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_loadAll.FlatStyle = FlatStyle.Flat;
+            btn_loadAll.IconChar = FontAwesome.Sharp.IconChar.Globe;
+            btn_loadAll.IconColor = Color.Black;
+            btn_loadAll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_loadAll.IconSize = 30;
+            btn_loadAll.Location = new Point(96, 0);
+            btn_loadAll.Name = "btn_loadAll";
+            btn_loadAll.Size = new Size(40, 35);
+            btn_loadAll.TabIndex = 4;
+            btn_loadAll.UseVisualStyleBackColor = false;
+            btn_loadAll.Click += btn_loadAll_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Left;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 30);
+            label1.TabIndex = 4;
+            label1.Text = "Files";
+            // 
             // panel5
             // 
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(btn_search);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 36);
+            panel5.Location = new Point(0, 41);
             panel5.Name = "panel5";
-            panel5.Padding = new Padding(5);
-            panel5.Size = new Size(136, 46);
+            panel5.Size = new Size(136, 41);
             panel5.TabIndex = 3;
             // 
             // panel6
             // 
             panel6.Controls.Add(tb_search);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(5, 5);
+            panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
-            panel6.Padding = new Padding(5);
-            panel6.Size = new Size(93, 36);
+            panel6.Padding = new Padding(0, 0, 5, 5);
+            panel6.Size = new Size(96, 41);
             panel6.TabIndex = 3;
             // 
             // tb_search
             // 
             tb_search.Dock = DockStyle.Fill;
-            tb_search.Location = new Point(5, 5);
+            tb_search.Location = new Point(0, 0);
             tb_search.Name = "tb_search";
-            tb_search.Size = new Size(83, 23);
+            tb_search.Size = new Size(91, 23);
             tb_search.TabIndex = 1;
             // 
             // btn_search
             // 
+            btn_search.BackColor = Color.FromArgb(11, 12, 71);
             btn_search.Dock = DockStyle.Right;
+            btn_search.FlatAppearance.BorderSize = 0;
+            btn_search.FlatAppearance.MouseDownBackColor = Color.White;
+            btn_search.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 192);
             btn_search.FlatStyle = FlatStyle.Flat;
+            btn_search.ForeColor = Color.White;
             btn_search.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            btn_search.IconColor = Color.Black;
+            btn_search.IconColor = Color.White;
             btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_search.IconSize = 28;
-            btn_search.Location = new Point(98, 5);
+            btn_search.Location = new Point(96, 0);
             btn_search.Name = "btn_search";
-            btn_search.Size = new Size(33, 36);
+            btn_search.Size = new Size(40, 41);
             btn_search.TabIndex = 2;
             btn_search.TextAlign = ContentAlignment.BottomCenter;
             btn_search.TextImageRelation = TextImageRelation.ImageAboveText;
-            btn_search.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 30);
-            label1.TabIndex = 2;
-            label1.Text = "Files";
+            btn_search.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -248,13 +284,13 @@
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Padding = new Padding(5);
-            panel2.Size = new Size(146, 57);
+            panel2.Size = new Size(146, 40);
             panel2.TabIndex = 0;
             // 
             // label2
             // 
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(10, 17);
+            label2.Location = new Point(8, 9);
             label2.Name = "label2";
             label2.Size = new Size(223, 31);
             label2.TabIndex = 0;
@@ -284,7 +320,8 @@
             pnlFilesShow.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
@@ -315,6 +352,8 @@
         private Panel panel6;
         private TextBox tb_search;
         private FontAwesome.Sharp.IconButton btn_search;
+        private FontAwesome.Sharp.IconButton btn_loadAll;
+        private Panel panel7;
         private Label label1;
     }
 }

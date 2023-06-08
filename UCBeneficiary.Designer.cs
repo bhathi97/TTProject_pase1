@@ -40,35 +40,40 @@
             panel3 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             label1 = new Label();
-            TBnic = new TextBox();
+            tb_nic = new TextBox();
             label3 = new Label();
             label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            TBname = new TextBox();
-            TBaddress = new TextBox();
-            tBbn = new TextBox();
-            tbbrN = new TextBox();
-            tBAN = new TextBox();
+            tb_name = new TextBox();
+            tb_address = new TextBox();
+            tb_bank = new TextBox();
+            tb_branchName = new TextBox();
             label12 = new Label();
-            cbC = new ComboBox();
-            label9 = new Label();
-            tBIN = new TextBox();
-            label8 = new Label();
-            tBSC = new TextBox();
-            label15 = new Label();
-            tbBranchCode = new TextBox();
             label11 = new Label();
+            label6 = new Label();
+            cb_country = new ComboBox();
+            label7 = new Label();
+            tb_accountNo = new TextBox();
+            label15 = new Label();
+            tb_sort = new TextBox();
+            label8 = new Label();
+            tb_swiftCode = new TextBox();
+            label9 = new Label();
+            tb_corBank = new TextBox();
             panel5 = new Panel();
             label16 = new Label();
             iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             panel4 = new Panel();
             btnBDelete = new FontAwesome.Sharp.IconButton();
             btnBUpdate = new FontAwesome.Sharp.IconButton();
-            BTNbAdd = new FontAwesome.Sharp.IconButton();
+            btn_AddNew = new FontAwesome.Sharp.IconButton();
             panel2 = new Panel();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             flp_LoadItems = new FlowLayoutPanel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            btn_loadAll = new FontAwesome.Sharp.IconButton();
+            tb_search = new TextBox();
+            btn_search = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -83,6 +88,8 @@
             panel4.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -187,6 +194,7 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(flp_LoadItems);
+            splitContainer1.Panel2.Controls.Add(panel6);
             splitContainer1.Size = new Size(1210, 662);
             splitContainer1.SplitterDistance = 540;
             splitContainer1.TabIndex = 5;
@@ -210,25 +218,25 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.51992F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 61.48008F));
             tableLayoutPanel2.Controls.Add(label1, 0, 2);
-            tableLayoutPanel2.Controls.Add(TBnic, 1, 0);
+            tableLayoutPanel2.Controls.Add(tb_nic, 1, 0);
             tableLayoutPanel2.Controls.Add(label3, 0, 3);
             tableLayoutPanel2.Controls.Add(label5, 0, 4);
-            tableLayoutPanel2.Controls.Add(label6, 0, 5);
-            tableLayoutPanel2.Controls.Add(label7, 0, 6);
-            tableLayoutPanel2.Controls.Add(TBname, 1, 1);
-            tableLayoutPanel2.Controls.Add(TBaddress, 1, 2);
-            tableLayoutPanel2.Controls.Add(tBbn, 1, 3);
-            tableLayoutPanel2.Controls.Add(tbbrN, 1, 4);
-            tableLayoutPanel2.Controls.Add(tBAN, 1, 6);
+            tableLayoutPanel2.Controls.Add(tb_name, 1, 1);
+            tableLayoutPanel2.Controls.Add(tb_address, 1, 2);
+            tableLayoutPanel2.Controls.Add(tb_bank, 1, 3);
+            tableLayoutPanel2.Controls.Add(tb_branchName, 1, 4);
             tableLayoutPanel2.Controls.Add(label12, 0, 1);
-            tableLayoutPanel2.Controls.Add(cbC, 1, 5);
-            tableLayoutPanel2.Controls.Add(label9, 0, 9);
-            tableLayoutPanel2.Controls.Add(tBIN, 1, 9);
-            tableLayoutPanel2.Controls.Add(label8, 0, 8);
-            tableLayoutPanel2.Controls.Add(tBSC, 1, 8);
-            tableLayoutPanel2.Controls.Add(label15, 0, 7);
-            tableLayoutPanel2.Controls.Add(tbBranchCode, 1, 7);
             tableLayoutPanel2.Controls.Add(label11, 0, 0);
+            tableLayoutPanel2.Controls.Add(label6, 0, 5);
+            tableLayoutPanel2.Controls.Add(cb_country, 1, 5);
+            tableLayoutPanel2.Controls.Add(label7, 0, 6);
+            tableLayoutPanel2.Controls.Add(tb_accountNo, 1, 6);
+            tableLayoutPanel2.Controls.Add(label15, 0, 7);
+            tableLayoutPanel2.Controls.Add(tb_sort, 1, 7);
+            tableLayoutPanel2.Controls.Add(label8, 0, 8);
+            tableLayoutPanel2.Controls.Add(tb_swiftCode, 1, 8);
+            tableLayoutPanel2.Controls.Add(label9, 0, 9);
+            tableLayoutPanel2.Controls.Add(tb_corBank, 1, 9);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.ForeColor = SystemColors.ActiveCaptionText;
             tableLayoutPanel2.Location = new Point(0, 33);
@@ -241,186 +249,188 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 55F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
-            tableLayoutPanel2.Size = new Size(536, 467);
+            tableLayoutPanel2.Size = new Size(536, 492);
             tableLayoutPanel2.TabIndex = 9;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(5, 96);
             label1.Name = "label1";
-            label1.Size = new Size(63, 17);
+            label1.Size = new Size(64, 17);
             label1.TabIndex = 1;
             label1.Text = "ADDRESS";
             // 
-            // TBnic
+            // tb_nic
             // 
-            TBnic.Location = new Point(211, 5);
-            TBnic.Name = "TBnic";
-            TBnic.Size = new Size(319, 23);
-            TBnic.TabIndex = 9;
+            tb_nic.Location = new Point(211, 5);
+            tb_nic.Name = "tb_nic";
+            tb_nic.Size = new Size(319, 23);
+            tb_nic.TabIndex = 9;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(5, 158);
             label3.Name = "label3";
-            label3.Size = new Size(82, 17);
+            label3.Size = new Size(85, 17);
             label3.TabIndex = 3;
             label3.Text = "BANK NAME";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(5, 210);
             label5.Name = "label5";
-            label5.Size = new Size(99, 17);
+            label5.Size = new Size(103, 17);
             label5.TabIndex = 4;
             label5.Text = "BRANCH NAME";
             // 
-            // label6
+            // tb_name
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(5, 262);
-            label6.Name = "label6";
-            label6.Size = new Size(67, 17);
-            label6.TabIndex = 5;
-            label6.Text = "COUNTRY";
+            tb_name.Location = new Point(211, 37);
+            tb_name.Multiline = true;
+            tb_name.Name = "tb_name";
+            tb_name.Size = new Size(319, 54);
+            tb_name.TabIndex = 10;
             // 
-            // label7
+            // tb_address
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(5, 299);
-            label7.Name = "label7";
-            label7.Size = new Size(157, 17);
-            label7.TabIndex = 6;
-            label7.Text = "ACCOUNT NO / IBAN NO";
+            tb_address.Location = new Point(211, 99);
+            tb_address.Multiline = true;
+            tb_address.Name = "tb_address";
+            tb_address.Size = new Size(319, 54);
+            tb_address.TabIndex = 11;
             // 
-            // TBname
+            // tb_bank
             // 
-            TBname.Location = new Point(211, 37);
-            TBname.Multiline = true;
-            TBname.Name = "TBname";
-            TBname.Size = new Size(319, 54);
-            TBname.TabIndex = 10;
+            tb_bank.Location = new Point(211, 161);
+            tb_bank.Multiline = true;
+            tb_bank.Name = "tb_bank";
+            tb_bank.Size = new Size(319, 41);
+            tb_bank.TabIndex = 12;
             // 
-            // TBaddress
+            // tb_branchName
             // 
-            TBaddress.Location = new Point(211, 99);
-            TBaddress.Multiline = true;
-            TBaddress.Name = "TBaddress";
-            TBaddress.Size = new Size(319, 54);
-            TBaddress.TabIndex = 11;
-            // 
-            // tBbn
-            // 
-            tBbn.Location = new Point(211, 161);
-            tBbn.Multiline = true;
-            tBbn.Name = "tBbn";
-            tBbn.Size = new Size(319, 41);
-            tBbn.TabIndex = 12;
-            // 
-            // tbbrN
-            // 
-            tbbrN.Location = new Point(211, 213);
-            tbbrN.Multiline = true;
-            tbbrN.Name = "tbbrN";
-            tbbrN.Size = new Size(319, 41);
-            tbbrN.TabIndex = 13;
-            // 
-            // tBAN
-            // 
-            tBAN.Location = new Point(211, 302);
-            tBAN.Name = "tBAN";
-            tBAN.Size = new Size(319, 23);
-            tBAN.TabIndex = 15;
+            tb_branchName.Location = new Point(211, 213);
+            tb_branchName.Multiline = true;
+            tb_branchName.Name = "tb_branchName";
+            tb_branchName.Size = new Size(319, 41);
+            tb_branchName.TabIndex = 13;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label12.Location = new Point(5, 34);
             label12.Name = "label12";
-            label12.Size = new Size(45, 17);
+            label12.Size = new Size(46, 17);
             label12.TabIndex = 2;
             label12.Text = "NAME";
-            // 
-            // cbC
-            // 
-            cbC.FormattingEnabled = true;
-            cbC.Location = new Point(211, 265);
-            cbC.Name = "cbC";
-            cbC.Size = new Size(319, 23);
-            cbC.TabIndex = 18;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(5, 410);
-            label9.Name = "label9";
-            label9.Size = new Size(132, 34);
-            label9.TabIndex = 8;
-            label9.Text = "CORRESPONDING / INTERMEDIATE BANK";
-            // 
-            // tBIN
-            // 
-            tBIN.Location = new Point(211, 413);
-            tBIN.Multiline = true;
-            tBIN.Name = "tBIN";
-            tBIN.Size = new Size(319, 44);
-            tBIN.TabIndex = 17;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(5, 373);
-            label8.Name = "label8";
-            label8.Size = new Size(81, 17);
-            label8.TabIndex = 7;
-            label8.Text = "SWIFT CODE";
-            // 
-            // tBSC
-            // 
-            tBSC.Location = new Point(211, 376);
-            tBSC.Name = "tBSC";
-            tBSC.Size = new Size(319, 23);
-            tBSC.TabIndex = 16;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(5, 336);
-            label15.Name = "label15";
-            label15.Size = new Size(198, 30);
-            label15.TabIndex = 19;
-            label15.Text = "SORT / ROUTING / FEDWIRE / ABA / BSB / BANK-BRANCH CODE";
-            // 
-            // tbBranchCode
-            // 
-            tbBranchCode.Location = new Point(211, 339);
-            tbBranchCode.Name = "tbBranchCode";
-            tbBranchCode.Size = new Size(319, 23);
-            tbBranchCode.TabIndex = 20;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label11.Location = new Point(5, 2);
             label11.Name = "label11";
-            label11.Size = new Size(70, 17);
+            label11.Size = new Size(72, 17);
             label11.TabIndex = 0;
             label11.Text = "NIC NAME";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(5, 262);
+            label6.Name = "label6";
+            label6.Size = new Size(68, 17);
+            label6.TabIndex = 5;
+            label6.Text = "COUNTRY";
+            // 
+            // cb_country
+            // 
+            cb_country.FormattingEnabled = true;
+            cb_country.Items.AddRange(new object[] { "United States", "Canada", "United Kingdom", "Germany", "France", "Italy", "Spain", "Australia", "Japan", "China", "India", "Brazil", "Mexico", "Argentina", "South Korea", "Russia", "Netherlands", "Switzerland", "Sweden", "South Africa" });
+            cb_country.Location = new Point(211, 265);
+            cb_country.Name = "cb_country";
+            cb_country.Size = new Size(319, 23);
+            cb_country.TabIndex = 18;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(5, 299);
+            label7.Name = "label7";
+            label7.Size = new Size(161, 17);
+            label7.TabIndex = 6;
+            label7.Text = "ACCOUNT NO / IBAN NO";
+            // 
+            // tb_accountNo
+            // 
+            tb_accountNo.Location = new Point(211, 302);
+            tb_accountNo.Name = "tb_accountNo";
+            tb_accountNo.Size = new Size(319, 23);
+            tb_accountNo.TabIndex = 15;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(5, 336);
+            label15.Name = "label15";
+            label15.Size = new Size(191, 51);
+            label15.TabIndex = 19;
+            label15.Text = "SORT / ROUTING / FEDWIRE / ABA / BSB / BANK-BRANCH CODE";
+            // 
+            // tb_sort
+            // 
+            tb_sort.Location = new Point(211, 339);
+            tb_sort.Name = "tb_sort";
+            tb_sort.Size = new Size(319, 23);
+            tb_sort.TabIndex = 20;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(5, 393);
+            label8.Name = "label8";
+            label8.Size = new Size(84, 17);
+            label8.TabIndex = 7;
+            label8.Text = "SWIFT CODE";
+            // 
+            // tb_swiftCode
+            // 
+            tb_swiftCode.Location = new Point(211, 396);
+            tb_swiftCode.Name = "tb_swiftCode";
+            tb_swiftCode.Size = new Size(319, 23);
+            tb_swiftCode.TabIndex = 16;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(5, 430);
+            label9.Name = "label9";
+            label9.Size = new Size(137, 34);
+            label9.TabIndex = 8;
+            label9.Text = "CORRESPONDING / INTERMEDIATE BANK";
+            // 
+            // tb_corBank
+            // 
+            tb_corBank.Location = new Point(211, 433);
+            tb_corBank.Multiline = true;
+            tb_corBank.Name = "tb_corBank";
+            tb_corBank.Size = new Size(319, 32);
+            tb_corBank.TabIndex = 17;
             // 
             // panel5
             // 
@@ -460,11 +470,11 @@
             // 
             panel4.Controls.Add(btnBDelete);
             panel4.Controls.Add(btnBUpdate);
-            panel4.Controls.Add(BTNbAdd);
+            panel4.Controls.Add(btn_AddNew);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 500);
+            panel4.Location = new Point(0, 525);
             panel4.Name = "panel4";
-            panel4.Size = new Size(536, 158);
+            panel4.Size = new Size(536, 133);
             panel4.TabIndex = 7;
             // 
             // btnBDelete
@@ -478,7 +488,7 @@
             btnBDelete.IconColor = Color.White;
             btnBDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
             btnBDelete.IconSize = 20;
-            btnBDelete.Location = new Point(327, 100);
+            btnBDelete.Location = new Point(327, 63);
             btnBDelete.Name = "btnBDelete";
             btnBDelete.Size = new Size(201, 42);
             btnBDelete.TabIndex = 2;
@@ -496,7 +506,7 @@
             btnBUpdate.IconColor = Color.White;
             btnBUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
             btnBUpdate.IconSize = 20;
-            btnBUpdate.Location = new Point(327, 52);
+            btnBUpdate.Location = new Point(109, 63);
             btnBUpdate.Name = "btnBUpdate";
             btnBUpdate.Size = new Size(201, 42);
             btnBUpdate.TabIndex = 1;
@@ -505,23 +515,24 @@
             btnBUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnBUpdate.UseVisualStyleBackColor = false;
             // 
-            // BTNbAdd
+            // btn_AddNew
             // 
-            BTNbAdd.BackColor = Color.FromArgb(11, 12, 71);
-            BTNbAdd.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            BTNbAdd.ForeColor = Color.White;
-            BTNbAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            BTNbAdd.IconColor = Color.White;
-            BTNbAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            BTNbAdd.IconSize = 20;
-            BTNbAdd.Location = new Point(327, 4);
-            BTNbAdd.Name = "BTNbAdd";
-            BTNbAdd.Size = new Size(201, 42);
-            BTNbAdd.TabIndex = 0;
-            BTNbAdd.Text = "  ADD";
-            BTNbAdd.TextAlign = ContentAlignment.MiddleRight;
-            BTNbAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
-            BTNbAdd.UseVisualStyleBackColor = false;
+            btn_AddNew.BackColor = Color.FromArgb(11, 12, 71);
+            btn_AddNew.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_AddNew.ForeColor = Color.White;
+            btn_AddNew.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            btn_AddNew.IconColor = Color.White;
+            btn_AddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_AddNew.IconSize = 20;
+            btn_AddNew.Location = new Point(327, 15);
+            btn_AddNew.Name = "btn_AddNew";
+            btn_AddNew.Size = new Size(201, 42);
+            btn_AddNew.TabIndex = 0;
+            btn_AddNew.Text = "  ADD";
+            btn_AddNew.TextAlign = ContentAlignment.MiddleRight;
+            btn_AddNew.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_AddNew.UseVisualStyleBackColor = false;
+            btn_AddNew.Click += btn_AddNew_Click;
             // 
             // panel2
             // 
@@ -553,10 +564,73 @@
             flp_LoadItems.AutoScrollMargin = new Size(0, 200);
             flp_LoadItems.BackColor = SystemColors.Control;
             flp_LoadItems.Dock = DockStyle.Fill;
-            flp_LoadItems.Location = new Point(0, 0);
+            flp_LoadItems.Location = new Point(0, 61);
             flp_LoadItems.Name = "flp_LoadItems";
-            flp_LoadItems.Size = new Size(662, 658);
-            flp_LoadItems.TabIndex = 3;
+            flp_LoadItems.Size = new Size(662, 597);
+            flp_LoadItems.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(panel7);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(662, 61);
+            panel6.TabIndex = 4;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(btn_loadAll);
+            panel7.Controls.Add(tb_search);
+            panel7.Controls.Add(btn_search);
+            panel7.Dock = DockStyle.Right;
+            panel7.Location = new Point(177, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(485, 61);
+            panel7.TabIndex = 3;
+            // 
+            // btn_loadAll
+            // 
+            btn_loadAll.BackColor = Color.FromArgb(224, 224, 224);
+            btn_loadAll.FlatAppearance.BorderSize = 0;
+            btn_loadAll.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 64, 64);
+            btn_loadAll.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_loadAll.FlatStyle = FlatStyle.Flat;
+            btn_loadAll.IconChar = FontAwesome.Sharp.IconChar.Globe;
+            btn_loadAll.IconColor = Color.Black;
+            btn_loadAll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_loadAll.IconSize = 30;
+            btn_loadAll.Location = new Point(435, 9);
+            btn_loadAll.Name = "btn_loadAll";
+            btn_loadAll.Size = new Size(40, 40);
+            btn_loadAll.TabIndex = 2;
+            btn_loadAll.UseVisualStyleBackColor = false;
+            // 
+            // tb_search
+            // 
+            tb_search.Cursor = Cursors.IBeam;
+            tb_search.Location = new Point(25, 19);
+            tb_search.Name = "tb_search";
+            tb_search.Size = new Size(352, 23);
+            tb_search.TabIndex = 0;
+            // 
+            // btn_search
+            // 
+            btn_search.BackColor = Color.FromArgb(11, 12, 71);
+            btn_search.Cursor = Cursors.Hand;
+            btn_search.FlatAppearance.BorderSize = 0;
+            btn_search.FlatAppearance.MouseDownBackColor = Color.Red;
+            btn_search.FlatAppearance.MouseOverBackColor = Color.Maroon;
+            btn_search.FlatStyle = FlatStyle.Flat;
+            btn_search.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btn_search.IconColor = Color.White;
+            btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_search.IconSize = 30;
+            btn_search.Location = new Point(389, 9);
+            btn_search.Name = "btn_search";
+            btn_search.Size = new Size(40, 40);
+            btn_search.TabIndex = 1;
+            btn_search.UseVisualStyleBackColor = false;
             // 
             // UCBeneficiary
             // 
@@ -586,6 +660,9 @@
             panel4.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            panel6.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -608,33 +685,38 @@
         private Panel panel4;
         private FontAwesome.Sharp.IconButton btnBDelete;
         private FontAwesome.Sharp.IconButton btnBUpdate;
-        private FontAwesome.Sharp.IconButton BTNbAdd;
+        private FontAwesome.Sharp.IconButton btn_AddNew;
         private Panel panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FlowLayoutPanel flp_LoadItems;
         private Panel panel5;
         private Label label16;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private TableLayoutPanel tableLayoutPanel2;
         private Label label1;
-        private TextBox TBnic;
+        private TextBox tb_nic;
         private Label label3;
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox TBname;
-        private TextBox TBaddress;
-        private TextBox tBbn;
-        private TextBox tbbrN;
-        private TextBox tBAN;
+        private TextBox tb_name;
+        private TextBox tb_address;
+        private TextBox tb_bank;
+        private TextBox tb_branchName;
+        private TextBox tb_accountNo;
         private Label label12;
-        private ComboBox cbC;
+        private ComboBox cb_country;
         private Label label9;
-        private TextBox tBIN;
+        private TextBox tb_corBank;
         private Label label8;
-        private TextBox tBSC;
+        private TextBox tb_swiftCode;
         private Label label15;
-        private TextBox tbBranchCode;
+        private TextBox tb_sort;
         private Label label11;
+        private Panel panel6;
+        private FontAwesome.Sharp.IconButton btn_search;
+        private TextBox tb_search;
+        private FontAwesome.Sharp.IconButton btn_loadAll;
+        private FlowLayoutPanel flp_LoadItems;
+        private Panel panel7;
     }
 }
