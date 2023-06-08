@@ -46,7 +46,7 @@ namespace project_TelegraphicTransfer
         private void UCTTsHandeling_Load(object sender, EventArgs e)
         {
             //lblFolderName.Text = FileId.ToString();
-            lblFolderName.Text = FileName ;
+            lblFolderName.Text = FileName;
 
             LoadItems();
 
@@ -81,7 +81,7 @@ namespace project_TelegraphicTransfer
 
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

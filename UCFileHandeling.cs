@@ -152,5 +152,10 @@ namespace project_TelegraphicTransfer
             }
 
         }
+
+        private void btn_loadAll_Click(object sender, EventArgs e)
+        {
+            loadItems();
+        }
     }
 }
