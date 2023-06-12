@@ -65,6 +65,7 @@
             tb_userName.Name = "tb_userName";
             tb_userName.Size = new Size(345, 23);
             tb_userName.TabIndex = 1;
+            tb_userName.KeyPress += tb_userName_KeyPress;
             // 
             // tableLayoutPanel1
             // 
@@ -90,6 +91,7 @@
             tb_password.Name = "tb_password";
             tb_password.Size = new Size(345, 23);
             tb_password.TabIndex = 3;
+            tb_password.KeyPress += tb_password_KeyPress;
             // 
             // label2
             // 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -14,6 +15,12 @@ namespace project_TelegraphicTransfer
 {
     public partial class UCTTForm : UserControl
     {
+
+        #region connection
+        SqlConnection connsql = new SqlConnection(connectionString.ConnectionString);
+        #endregion
+
+
 
         #region properties
         private string _lblFormName;
@@ -45,7 +52,7 @@ namespace project_TelegraphicTransfer
             set
             {
                 _fileName = value;
-                
+
             }
         }
 
@@ -372,7 +379,10 @@ namespace project_TelegraphicTransfer
                     string applAddress = lbl_seAddress.Text;
                     string applMail = cb_email1.SelectedItem.ToString() + "," + cb_email2.SelectedItem.ToString();
                     string applPhone = lbl_sePhone.Text;
-                    string beName = tb_beName.Text;
+
+
+                    string beNIC = tb_beNicName.Text;
+                    string beName = lbl_beName.Text;
                     string beAddress = lbl_beAddress.Text;
                     string beCurrType = cb_beCurrency.SelectedItem.ToString();
                     decimal roundedAmount = decimal.Parse(tb_beAmount.Text);
@@ -410,12 +420,89 @@ namespace project_TelegraphicTransfer
 
 
                 }
-            
 
-            }catch(Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+
+
+ 
+        private void tb_beNicName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+            try
+            {
+
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    // Perform your desired action here
+                    string be_name = tb_beNicName.Text;
+
+                    connsql.Open();
+
+                    SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENIFICIARY_MASTER WHERE NIC_NAME = @id", connsql);
+                    cmdItemLoad.Parameters.AddWithValue("@id", be_name);
+
+                    // Execute the query and retrieve the rows
+                    SqlDataReader reader = cmdItemLoad.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+
+                        lbl_beName.Text = reader["NAME"].ToString();
+                        lbl_beAddress.Text = reader["ADDRESS"].ToString();
+                        lbl_beBankname.Text = reader["BANK_NAME"].ToString();
+                        lbl_Branchname.Text = reader["BRANCH_NAME"].ToString();
+                        lbl_beBankCountry.Text = reader["COUNTRY"].ToString();
+                        lbl_beAcc.Text = reader["ACC_NO"].ToString();
+                        lbl_beSort.Text = reader["BRANCH_CODE"].ToString();
+                        lbl_beSwiftCode.Text = reader["SWIFT_CODE"].ToString();
+                        lbl_beCorrespondingBank.Text = reader["INTERMEDIATE_BANK"].ToString();
+    
+
+
+                    }
+
+                    reader.Close();
+
+
+
+
+                }
+
+                
+
+
+
+
+
+
+
+
+
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connsql.Close();
+            }
+
+
+
+
+
+
+           
         }
     }
 }

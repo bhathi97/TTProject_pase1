@@ -31,6 +31,9 @@
             lblFormName = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            tb_beNicName = new TextBox();
+            label32 = new Label();
             panel4 = new Panel();
             tb_spNote = new RichTextBox();
             label33 = new Label();
@@ -52,7 +55,6 @@
             label20 = new Label();
             label21 = new Label();
             tb_beAmount = new TextBox();
-            tb_beName = new TextBox();
             lbl_beAddress = new Label();
             cb_beCurrency = new ComboBox();
             lbl_beBankname = new Label();
@@ -65,6 +67,7 @@
             label26 = new Label();
             rb_beApplicant = new RadioButton();
             rb_beBenificiary = new RadioButton();
+            lbl_beName = new Label();
             label13 = new Label();
             label9 = new Label();
             tlp1 = new TableLayoutPanel();
@@ -102,6 +105,7 @@
             label12 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             panel4.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tlp1.SuspendLayout();
@@ -131,6 +135,7 @@
             // 
             panel2.AutoScroll = true;
             panel2.AutoScrollMargin = new Size(0, 100);
+            panel2.Controls.Add(tableLayoutPanel3);
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(btn_add);
             panel2.Controls.Add(btn_delete);
@@ -145,12 +150,44 @@
             panel2.Size = new Size(737, 510);
             panel2.TabIndex = 5;
             // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.BackColor = Color.FromArgb(194, 194, 239);
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 490F));
+            tableLayoutPanel3.Controls.Add(tb_beNicName, 0, 0);
+            tableLayoutPanel3.Controls.Add(label32, 0, 0);
+            tableLayoutPanel3.Location = new Point(6, 486);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(701, 37);
+            tableLayoutPanel3.TabIndex = 21;
+            // 
+            // tb_beNicName
+            // 
+            tb_beNicName.Location = new Point(214, 3);
+            tb_beNicName.Name = "tb_beNicName";
+            tb_beNicName.Size = new Size(463, 23);
+            tb_beNicName.TabIndex = 17;
+            tb_beNicName.KeyPress += tb_beNicName_KeyPress;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new Point(3, 0);
+            label32.Name = "label32";
+            label32.Size = new Size(76, 15);
+            label32.TabIndex = 1;
+            label32.Text = "  NIC NAME :";
+            // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(194, 194, 239);
             panel4.Controls.Add(tb_spNote);
             panel4.Controls.Add(label33);
-            panel4.Location = new Point(7, 976);
+            panel4.Location = new Point(7, 1003);
             panel4.Name = "panel4";
             panel4.Size = new Size(700, 100);
             panel4.TabIndex = 20;
@@ -169,7 +206,7 @@
             label33.BackColor = Color.FromArgb(11, 12, 71);
             label33.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label33.ForeColor = SystemColors.HighlightText;
-            label33.Location = new Point(0, 0);
+            label33.Location = new Point(0, 1);
             label33.Name = "label33";
             label33.Size = new Size(701, 20);
             label33.TabIndex = 3;
@@ -180,7 +217,7 @@
             btn_add.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_add.IconColor = Color.Black;
             btn_add.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_add.Location = new Point(467, 1091);
+            btn_add.Location = new Point(467, 1118);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(168, 45);
             btn_add.TabIndex = 19;
@@ -193,7 +230,7 @@
             btn_delete.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_delete.IconColor = Color.Black;
             btn_delete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_delete.Location = new Point(278, 1091);
+            btn_delete.Location = new Point(278, 1118);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(168, 45);
             btn_delete.TabIndex = 18;
@@ -205,7 +242,7 @@
             btn_edit.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_edit.IconColor = Color.Black;
             btn_edit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_edit.Location = new Point(90, 1091);
+            btn_edit.Location = new Point(90, 1118);
             btn_edit.Name = "btn_edit";
             btn_edit.Size = new Size(168, 45);
             btn_edit.TabIndex = 17;
@@ -232,7 +269,6 @@
             tableLayoutPanel2.Controls.Add(label20, 0, 6);
             tableLayoutPanel2.Controls.Add(label21, 0, 7);
             tableLayoutPanel2.Controls.Add(tb_beAmount, 1, 3);
-            tableLayoutPanel2.Controls.Add(tb_beName, 1, 0);
             tableLayoutPanel2.Controls.Add(lbl_beAddress, 1, 1);
             tableLayoutPanel2.Controls.Add(cb_beCurrency, 1, 2);
             tableLayoutPanel2.Controls.Add(lbl_beBankname, 1, 5);
@@ -245,7 +281,8 @@
             tableLayoutPanel2.Controls.Add(label26, 0, 12);
             tableLayoutPanel2.Controls.Add(rb_beApplicant, 1, 12);
             tableLayoutPanel2.Controls.Add(rb_beBenificiary, 1, 13);
-            tableLayoutPanel2.Location = new Point(6, 482);
+            tableLayoutPanel2.Controls.Add(lbl_beName, 1, 0);
+            tableLayoutPanel2.Location = new Point(6, 521);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.Padding = new Padding(5);
             tableLayoutPanel2.RowCount = 14;
@@ -396,13 +433,6 @@
             tb_beAmount.TabIndex = 11;
             tb_beAmount.TextChanged += tb_beAmount_TextChanged;
             // 
-            // tb_beName
-            // 
-            tb_beName.Location = new Point(214, 8);
-            tb_beName.Name = "tb_beName";
-            tb_beName.Size = new Size(463, 23);
-            tb_beName.TabIndex = 16;
-            // 
             // lbl_beAddress
             // 
             lbl_beAddress.BackColor = Color.White;
@@ -518,12 +548,22 @@
             rb_beBenificiary.Text = "BENEFICIARY";
             rb_beBenificiary.UseVisualStyleBackColor = true;
             // 
+            // lbl_beName
+            // 
+            lbl_beName.BackColor = SystemColors.ButtonHighlight;
+            lbl_beName.BorderStyle = BorderStyle.FixedSingle;
+            lbl_beName.Location = new Point(214, 5);
+            lbl_beName.Name = "lbl_beName";
+            lbl_beName.Size = new Size(463, 23);
+            lbl_beName.TabIndex = 34;
+            lbl_beName.Text = "label34";
+            // 
             // label13
             // 
             label13.BackColor = Color.FromArgb(11, 12, 71);
             label13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label13.ForeColor = SystemColors.HighlightText;
-            label13.Location = new Point(6, 461);
+            label13.Location = new Point(6, 465);
             label13.Name = "label13";
             label13.Size = new Size(701, 20);
             label13.TabIndex = 2;
@@ -891,6 +931,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
             panel4.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
@@ -940,7 +982,6 @@
         private Label label20;
         private Label label21;
         private TextBox tb_beAmount;
-        private TextBox tb_beName;
         private Label lbl_beAddress;
         private ComboBox cb_beCurrency;
         private Label lbl_amountInWords;
@@ -975,5 +1016,9 @@
         private Panel panel4;
         private RichTextBox tb_spNote;
         private Label label33;
+        private TableLayoutPanel tableLayoutPanel3;
+        private TextBox tb_beNicName;
+        private Label label32;
+        private Label lbl_beName;
     }
 }
