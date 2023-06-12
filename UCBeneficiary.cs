@@ -58,6 +58,8 @@ namespace project_TelegraphicTransfer
                 {
 
                     UCItemToShowBenificieries itms = new UCItemToShowBenificieries();
+
+
                     itms.Name = reader["NAME"].ToString();
                     itms.NicName = reader["NIC_NAME"].ToString();
                     itms.Address = reader["ADDRESS"].ToString();

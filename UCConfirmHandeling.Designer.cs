@@ -33,7 +33,7 @@
             label10 = new Label();
             panel2 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            label2 = new Label();
+            lbl_count = new Label();
             label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -42,6 +42,8 @@
             // 
             // flp_confirmItemLoade
             // 
+            flp_confirmItemLoade.AutoScroll = true;
+            flp_confirmItemLoade.BackColor = SystemColors.Control;
             flp_confirmItemLoade.Dock = DockStyle.Fill;
             flp_confirmItemLoade.Location = new Point(0, 31);
             flp_confirmItemLoade.Name = "flp_confirmItemLoade";
@@ -87,7 +89,7 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.442028F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.557972F));
-            tableLayoutPanel1.Controls.Add(label2, 1, 0);
+            tableLayoutPanel1.Controls.Add(lbl_count, 1, 0);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Location = new Point(3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -96,17 +98,16 @@
             tableLayoutPanel1.Size = new Size(552, 27);
             tableLayoutPanel1.TabIndex = 2;
             // 
-            // label2
+            // lbl_count
             // 
-            label2.AutoSize = true;
-            label2.BorderStyle = BorderStyle.Fixed3D;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(298, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(47, 27);
-            label2.TabIndex = 1;
-            label2.Text = "309";
+            lbl_count.AutoSize = true;
+            lbl_count.BorderStyle = BorderStyle.Fixed3D;
+            lbl_count.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_count.ForeColor = Color.White;
+            lbl_count.Location = new Point(298, 0);
+            lbl_count.Name = "lbl_count";
+            lbl_count.Size = new Size(2, 27);
+            lbl_count.TabIndex = 1;
             // 
             // label1
             // 
@@ -144,7 +145,7 @@
         private Label label10;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;
-        private Label label2;
+        private Label lbl_count;
         private Label label1;
     }
 }
