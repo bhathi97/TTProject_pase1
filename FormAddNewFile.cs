@@ -48,7 +48,7 @@ namespace project_TelegraphicTransfer
                 form.Enabled = true;
             }
 
-            
+
 
         }
 
