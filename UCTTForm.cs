@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace project_TelegraphicTransfer
 {
@@ -57,6 +59,18 @@ namespace project_TelegraphicTransfer
         }
 
 
+        private int _seID;
+        public int SEID
+        {
+            get { return _seID; }
+            set
+            {
+                _seID = value;
+
+            }
+        }
+
+
 
         #endregion
 
@@ -67,7 +81,7 @@ namespace project_TelegraphicTransfer
 
         private void UCTTForm_Load(object sender, EventArgs e)
         {
-
+            loadSeData();
         }
 
         #region amount Convert
@@ -366,7 +380,11 @@ namespace project_TelegraphicTransfer
                 if (formMain != null)
                 {
                     string editor = formMain.Lbluser;
+                    int editorID = formMain.UserID;
+                    DateTime dateTime = DateTime.Now;
+                    string formName = _lblFormName;
                     string fileName = FileName;
+
                     DateTime date = dtp_date.Value;
                     string purpose = tb_purpose.Text;
                     string inv = tb_inv.Text;
@@ -374,12 +392,18 @@ namespace project_TelegraphicTransfer
                     string terms = tb_terms.Text;
                     string goods = cb_goods.SelectedItem.ToString();
                     string hcCode = tb_hc.Text;
-                    string cutrior = tb_curierNo.Text;
-                    string applName = lbl_seName.Text;
-                    string applAddress = lbl_seAddress.Text;
-                    string applMail = cb_email1.SelectedItem.ToString() + "," + cb_email2.SelectedItem.ToString();
-                    string applPhone = lbl_sePhone.Text;
+                    string curior = tb_curierNo.Text;
 
+                    string applName = lbl_seName.Text;
+                    int appID = _seID;
+                    string applAddress = lbl_seAddress.Text;
+                    string appBusiness = lbl_seBusiness.Text;
+                    string applMail = cb_email1.SelectedItem.ToString() + "," + cb_email2.SelectedItem.ToString();
+                    string email1 = cb_email1.SelectedItem.ToString();
+                    string email2 = cb_email2.SelectedItem.ToString();
+
+                    string applPhone = lbl_sePhone.Text;
+                    string appTax = lbl_seVAT.Text;
 
                     string beNIC = tb_beNicName.Text;
                     string beName = lbl_beName.Text;
@@ -396,28 +420,66 @@ namespace project_TelegraphicTransfer
                     string beswiftCode = lbl_beSwiftCode.Text;
                     string beInterBank = lbl_beCorrespondingBank.Text;
 
+                    string charges = "";
                     if (rb_beApplicant.Checked)
                     {
-                        string charges = "Applicant";
+                        charges = "Applicant";
                     }
                     else if (rb_beBenificiary.Checked)
                     {
-                        string charges = "Benificiary";
+                        charges = "Benificiary";
                     }
 
+                    string doEvent = "ADD";
+                    int isConfirmed = 0;
+
+                    connsql.Open();
+                    string sqlQToInsertTo_TOF_Table = "insert into tbl_TRANSFER_ORDER_FORM(FILE_REFERENCE, DOCUMANT, SENDER_ID, SENDER_NAME, SENDER_ADDRESS, SENDER_BUSINESS, SENDER_TAX, SENDER_TPNO, SENDER_EMAIL1, SENDER_EMAIL2, PURPOSE, INV, DESCRIPTION, TRADE_TERMS, GOOD_STATE, HS_CODES, COURIER_NO, BENIFICIARY_NIC_NAME, BENIFICIARY_NAME, BENIFICIARY_ADDRESS, BENIFICIARY_BANK_NAME, BENIFICIARY_BRANCH_NAME, BENIFICIARY_BRANCH_CODE, BENIFICIARY_SWIFT_CODE, BENIFICIARY_COUNTRY, BENIFICIARY_ACC_NO, BENIFICIARY_INTERMEDIATE_BANK, CURRENCY_TYPE, AMOUNT, AMOUNT_WORDS, CHARGES, ADD_EDITOR, ADD_TIME, ADD_EVENT, ISCONFIRMED) values (@FileName, @formName, @appID, @applName, @applAddress, @appBusiness, @appTax, @applPhone, @email1, @email2, @purpose, @inv, @description, @terms, @goods, @hcCode, @curior, @beNIC, @beName, @beAddress, @bebankName, @beBranchName, @beBranchCode, @beswiftCode, @beCountry, @beAccountNo, @beInterBank, @beCurrType, @beAmount, @beAmountInWords, @charges, @editor, @dateTime, @doEvent, @isConfirmed)";
+
+                    using (SqlCommand command = new SqlCommand(sqlQToInsertTo_TOF_Table, connsql))
+                    {
+
+                        command.Parameters.AddWithValue("@FileName", fileName);
+                        command.Parameters.AddWithValue("@formName", formName);
+                        command.Parameters.AddWithValue("@appID", appID);
+                        command.Parameters.AddWithValue("@applName", applName);
+                        command.Parameters.AddWithValue("@applAddress", applAddress);
+                        command.Parameters.AddWithValue("@appBusiness", appBusiness);
+                        command.Parameters.AddWithValue("@appTax", appTax);
+                        command.Parameters.AddWithValue("@applPhone", applPhone);
+                        command.Parameters.AddWithValue("@email1", email1);
+                        command.Parameters.AddWithValue("@email2", email2);
+                        command.Parameters.AddWithValue("@purpose", purpose);
+                        command.Parameters.AddWithValue("@inv", inv);
+                        command.Parameters.AddWithValue("@description", description);
+                        command.Parameters.AddWithValue("@terms", terms);
+                        command.Parameters.AddWithValue("@goods", goods);
+                        command.Parameters.AddWithValue("@hcCode", hcCode);
+                        command.Parameters.AddWithValue("@curior", curior);
+                        command.Parameters.AddWithValue("@beNIC", beNIC);
+                        command.Parameters.AddWithValue("@beName", beName);
+                        command.Parameters.AddWithValue("@beAddress", beAddress);
+                        command.Parameters.AddWithValue("@bebankName", bebankName);
+                        command.Parameters.AddWithValue("@beBranchName", beBranchName);
+                        command.Parameters.AddWithValue("@beBranchCode", beBranchCode);
+                        command.Parameters.AddWithValue("@beswiftCode", beswiftCode);
+                        command.Parameters.AddWithValue("@beCountry", beCountry);
+                        command.Parameters.AddWithValue("@beAccountNo", beAccountNo);
+                        command.Parameters.AddWithValue("@beInterBank", beInterBank);
+                        command.Parameters.AddWithValue("@beCurrType", beCurrType);
+                        command.Parameters.AddWithValue("@beAmount", beAmount);
+                        command.Parameters.AddWithValue("@beAmountInWords", beAmountInWords);
+                        command.Parameters.AddWithValue("@charges", charges);
+                        command.Parameters.AddWithValue("@editor", editor);
+                        command.Parameters.AddWithValue("@dateTime", dateTime);
+                        command.Parameters.AddWithValue("@doEvent", doEvent);
+                        command.Parameters.AddWithValue("@isConfirmed", isConfirmed);
 
 
+                        command.ExecuteNonQuery();
 
-
-
-
-
-
-
-
-
-
-
+                        MessageBox.Show("Successfully Added to the database");
+                    }
 
                 }
 
@@ -427,15 +489,17 @@ namespace project_TelegraphicTransfer
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                connsql.Close();
+            }
         }
 
 
 
- 
+        //TO LOAD BENEFICIARY DATA
         private void tb_beNicName_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-
             try
             {
 
@@ -450,11 +514,13 @@ namespace project_TelegraphicTransfer
                     cmdItemLoad.Parameters.AddWithValue("@id", be_name);
 
                     // Execute the query and retrieve the rows
+
+
                     SqlDataReader reader = cmdItemLoad.ExecuteReader();
 
                     while (reader.Read())
                     {
-
+                        //_seID = int.Parse(reader.GetInt32("ID").ToString());
                         lbl_beName.Text = reader["NAME"].ToString();
                         lbl_beAddress.Text = reader["ADDRESS"].ToString();
                         lbl_beBankname.Text = reader["BANK_NAME"].ToString();
@@ -464,28 +530,12 @@ namespace project_TelegraphicTransfer
                         lbl_beSort.Text = reader["BRANCH_CODE"].ToString();
                         lbl_beSwiftCode.Text = reader["SWIFT_CODE"].ToString();
                         lbl_beCorrespondingBank.Text = reader["INTERMEDIATE_BANK"].ToString();
-    
-
 
                     }
 
                     reader.Close();
 
-
-
-
                 }
-
-                
-
-
-
-
-
-
-
-
-
 
             }
             catch
@@ -496,14 +546,68 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
-
-
-
-
-
-
-           
         }
+
+        //TO LOAD SENDER DETAILS
+        private void loadSeData()
+        {
+            try
+            {
+                string id = "";
+                connsql.Open();
+
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT TOP 1 * FROM tbl_SENDER_MASTER", connsql);
+
+                // Execute the query and retrieve the rows
+                SqlDataReader reader = cmdItemLoad.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = reader["ID"].ToString();
+                    lbl_seName.Text = reader["NAME"].ToString();
+                    lbl_seAddress.Text = reader["ADDRESS"].ToString();
+                    lbl_seBusiness.Text = reader["BUSINESS"].ToString();
+                    lbl_seTIN.Text = reader["TIN"].ToString();
+                    lbl_sePhone.Text = reader["TPNO"].ToString();
+                    lbl_seVAT.Text = reader["TAX"].ToString();
+
+                }
+
+                reader.Close();
+
+                SqlCommand cmdEmailLoad = new SqlCommand("SELECT * FROM tbl_EMAIL_MASTER where FID = @fid", connsql);
+                cmdEmailLoad.Parameters.AddWithValue("fid", id);
+
+                // Execute the query and retrieve the rows
+                SqlDataReader reader1 = cmdEmailLoad.ExecuteReader();
+
+                while (reader1.Read())
+                {
+                    string mails = reader1["EMAIL"].ToString();
+                    cb_email1.Items.Add(mails);
+                    cb_email2.Items.Add(mails);
+
+
+                }
+
+                reader1.Close();
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connsql.Close();
+            }
+        }
+
+        
     }
 }
 

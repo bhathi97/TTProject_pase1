@@ -98,7 +98,10 @@
             cb_email2 = new ComboBox();
             label31 = new Label();
             lbl_sePhone = new Label();
-            panel3 = new Panel();
+            label34 = new Label();
+            lbl_seVAT = new Label();
+            label_seTIN = new Label();
+            lbl_seTIN = new Label();
             label10 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             label11 = new Label();
@@ -147,7 +150,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 39);
             panel2.Name = "panel2";
-            panel2.Size = new Size(737, 510);
+            panel2.Size = new Size(737, 626);
             panel2.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -158,7 +161,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 490F));
             tableLayoutPanel3.Controls.Add(tb_beNicName, 0, 0);
             tableLayoutPanel3.Controls.Add(label32, 0, 0);
-            tableLayoutPanel3.Location = new Point(6, 486);
+            tableLayoutPanel3.Location = new Point(6, 548);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -171,6 +174,8 @@
             tb_beNicName.Name = "tb_beNicName";
             tb_beNicName.Size = new Size(463, 23);
             tb_beNicName.TabIndex = 17;
+            
+
             tb_beNicName.KeyPress += tb_beNicName_KeyPress;
             // 
             // label32
@@ -187,7 +192,7 @@
             panel4.BackColor = Color.FromArgb(194, 194, 239);
             panel4.Controls.Add(tb_spNote);
             panel4.Controls.Add(label33);
-            panel4.Location = new Point(7, 1003);
+            panel4.Location = new Point(7, 1062);
             panel4.Name = "panel4";
             panel4.Size = new Size(700, 100);
             panel4.TabIndex = 20;
@@ -214,15 +219,22 @@
             // 
             // btn_add
             // 
+            btn_add.BackColor = Color.FromArgb(11, 12, 71);
+            btn_add.FlatAppearance.BorderSize = 0;
+            btn_add.FlatAppearance.MouseDownBackColor = Color.White;
+            btn_add.FlatAppearance.MouseOverBackColor = Color.Blue;
+            btn_add.FlatStyle = FlatStyle.Flat;
+            btn_add.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_add.ForeColor = Color.White;
             btn_add.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_add.IconColor = Color.Black;
             btn_add.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_add.Location = new Point(467, 1118);
+            btn_add.Location = new Point(467, 1205);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(168, 45);
             btn_add.TabIndex = 19;
             btn_add.Text = "ADD";
-            btn_add.UseVisualStyleBackColor = true;
+            btn_add.UseVisualStyleBackColor = false;
             btn_add.Click += btn_add_Click;
             // 
             // btn_delete
@@ -230,7 +242,7 @@
             btn_delete.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_delete.IconColor = Color.Black;
             btn_delete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_delete.Location = new Point(278, 1118);
+            btn_delete.Location = new Point(278, 1205);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(168, 45);
             btn_delete.TabIndex = 18;
@@ -239,15 +251,22 @@
             // 
             // btn_edit
             // 
+            btn_edit.BackColor = Color.FromArgb(11, 12, 71);
+            btn_edit.FlatAppearance.BorderSize = 0;
+            btn_edit.FlatAppearance.MouseDownBackColor = Color.White;
+            btn_edit.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 192);
+            btn_edit.FlatStyle = FlatStyle.Flat;
+            btn_edit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_edit.ForeColor = Color.White;
             btn_edit.IconChar = FontAwesome.Sharp.IconChar.None;
             btn_edit.IconColor = Color.Black;
             btn_edit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_edit.Location = new Point(90, 1118);
+            btn_edit.Location = new Point(90, 1205);
             btn_edit.Name = "btn_edit";
             btn_edit.Size = new Size(168, 45);
             btn_edit.TabIndex = 17;
             btn_edit.Text = "EDIT";
-            btn_edit.UseVisualStyleBackColor = true;
+            btn_edit.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel2
             // 
@@ -282,7 +301,7 @@
             tableLayoutPanel2.Controls.Add(rb_beApplicant, 1, 12);
             tableLayoutPanel2.Controls.Add(rb_beBenificiary, 1, 13);
             tableLayoutPanel2.Controls.Add(lbl_beName, 1, 0);
-            tableLayoutPanel2.Location = new Point(6, 521);
+            tableLayoutPanel2.Location = new Point(6, 583);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.Padding = new Padding(5);
             tableLayoutPanel2.RowCount = 14;
@@ -446,6 +465,7 @@
             // cb_beCurrency
             // 
             cb_beCurrency.FormattingEnabled = true;
+            cb_beCurrency.Items.AddRange(new object[] { "United States Dollar (USD)", "Euro (EUR)", "British Pound Sterling (GBP)", "Japanese Yen (JPY)", "Canadian Dollar (CAD)", "Australian Dollar (AUD)", "Swiss Franc (CHF)", "Chinese Yuan (CNY)", "Indian Rupee (INR)", "Singapore Dollar (SGD)", "Sri Lankan Rupee (SLR)" });
             cb_beCurrency.Location = new Point(214, 68);
             cb_beCurrency.Name = "cb_beCurrency";
             cb_beCurrency.Size = new Size(463, 23);
@@ -563,7 +583,7 @@
             label13.BackColor = Color.FromArgb(11, 12, 71);
             label13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label13.ForeColor = SystemColors.HighlightText;
-            label13.Location = new Point(6, 465);
+            label13.Location = new Point(6, 527);
             label13.Name = "label13";
             label13.Size = new Size(701, 20);
             label13.TabIndex = 2;
@@ -613,10 +633,14 @@
             tlp1.Controls.Add(cb_email2, 1, 12);
             tlp1.Controls.Add(label31, 0, 13);
             tlp1.Controls.Add(lbl_sePhone, 1, 13);
+            tlp1.Controls.Add(label34, 0, 14);
+            tlp1.Controls.Add(lbl_seVAT, 1, 14);
+            tlp1.Controls.Add(label_seTIN, 0, 15);
+            tlp1.Controls.Add(lbl_seTIN, 1, 15);
             tlp1.Location = new Point(6, 23);
             tlp1.Name = "tlp1";
             tlp1.Padding = new Padding(5);
-            tlp1.RowCount = 15;
+            tlp1.RowCount = 17;
             tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
@@ -632,7 +656,9 @@
             tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tlp1.Size = new Size(701, 427);
+            tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tlp1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tlp1.Size = new Size(701, 489);
             tlp1.TabIndex = 0;
             // 
             // lbl_seBusiness
@@ -867,14 +893,43 @@
             lbl_sePhone.TabIndex = 27;
             lbl_sePhone.Text = "label22";
             // 
-            // panel3
+            // label34
             // 
-            panel3.BackColor = SystemColors.ActiveBorder;
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 526);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(737, 23);
-            panel3.TabIndex = 6;
+            label34.AutoSize = true;
+            label34.Location = new Point(8, 425);
+            label34.Name = "label34";
+            label34.Size = new Size(160, 15);
+            label34.TabIndex = 28;
+            label34.Text = " INCOME TAX FILE / VAT NO :";
+            // 
+            // lbl_seVAT
+            // 
+            lbl_seVAT.BackColor = Color.White;
+            lbl_seVAT.BorderStyle = BorderStyle.FixedSingle;
+            lbl_seVAT.Location = new Point(215, 425);
+            lbl_seVAT.Name = "lbl_seVAT";
+            lbl_seVAT.Size = new Size(477, 23);
+            lbl_seVAT.TabIndex = 29;
+            lbl_seVAT.Text = "label22";
+            // 
+            // label_seTIN
+            // 
+            label_seTIN.AutoSize = true;
+            label_seTIN.Location = new Point(8, 455);
+            label_seTIN.Name = "label_seTIN";
+            label_seTIN.Size = new Size(52, 15);
+            label_seTIN.TabIndex = 30;
+            label_seTIN.Text = "TIN NO :";
+            // 
+            // lbl_seTIN
+            // 
+            lbl_seTIN.BackColor = Color.White;
+            lbl_seTIN.BorderStyle = BorderStyle.FixedSingle;
+            lbl_seTIN.Location = new Point(215, 455);
+            lbl_seTIN.Name = "lbl_seTIN";
+            lbl_seTIN.Size = new Size(477, 23);
+            lbl_seTIN.TabIndex = 31;
+            lbl_seTIN.Text = "label22";
             // 
             // label10
             // 
@@ -922,11 +977,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "UCTTForm";
-            Size = new Size(737, 549);
+            Size = new Size(737, 665);
             Load += UCTTForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -948,7 +1002,6 @@
         private Label lblFormName;
         private Panel panel1;
         private Panel panel2;
-        private Panel panel3;
         private TableLayoutPanel tlp1;
         private Label label1;
         private Label label2;
@@ -1020,5 +1073,9 @@
         private TextBox tb_beNicName;
         private Label label32;
         private Label lbl_beName;
+        private Label label34;
+        private Label lbl_seVAT;
+        private Label label_seTIN;
+        private Label lbl_seTIN;
     }
 }
