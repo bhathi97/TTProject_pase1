@@ -113,6 +113,7 @@ namespace project_TelegraphicTransfer
                     UCTTItems uCTTItems = new UCTTItems();
                     uCTTItems.FileName = reader["NAME"].ToString();
                     uCTTItems.FName = FileName;
+                   
                     //MessageBox.Show(FileName);
 
                     // Add UCItems1 control to the panel

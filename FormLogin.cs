@@ -95,5 +95,39 @@ namespace project_TelegraphicTransfer
                 connsql.Close();
             }
         }
+
+        private void tb_userName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    tb_password.Focus();
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void tb_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    btn_login.Focus();
+                    btn_login.BackColor = SystemColors.Control;
+                    btn_login.ForeColor = SystemColors.ControlText;
+                   
+                }
+            }
+            catch
+            {
+
+            }
+
+        }
     }
 }

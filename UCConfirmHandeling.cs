@@ -59,7 +59,7 @@ namespace project_TelegraphicTransfer
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENIFICIARY_MASTER ", connsql);
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_TRANSFER_ORDER_FORM where ISCONFIRMED = 0", connsql);
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -69,7 +69,7 @@ namespace project_TelegraphicTransfer
 
                     UCItemsToConfirm itms = new UCItemsToConfirm();
 
-                    itms.FileName = reader["NAME"].ToString();
+                    itms.FileName = reader["FILE_REFERENCE"].ToString();
 
                     // Add UCItems1 control to the panel
                     flp_confirmItemLoade.Controls.Add(itms);
