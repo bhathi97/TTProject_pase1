@@ -24,6 +24,9 @@ namespace project_TelegraphicTransfer
 
         string yssno = "YES/NO";
 
+
+
+        #region properties
         private string _formName;
         public string FormName
         {
@@ -37,6 +40,37 @@ namespace project_TelegraphicTransfer
                 lbl_formName.Text = _formName;
             }
         }
+
+
+        #endregion
+
+
+        #region usercontrol
+
+        private UCPage2 _uCPage2;
+        public UCPage2 UCPage2
+        {
+            get { return _uCPage2; }
+            set { _uCPage2 = value; }
+        }
+
+
+        private USPage2 _uSPage2;
+        public USPage2 USPage2
+        {
+            get { return _uSPage2; }
+            set { _uSPage2 = value; }
+        }
+
+        private UCPage3 _uCPage3;
+        public UCPage3 UCPage3
+        {
+            get { return _uCPage3; }
+            set { _uCPage3 = value; }
+        }
+
+
+        #endregion
 
 
 
@@ -81,8 +115,8 @@ namespace project_TelegraphicTransfer
                         //gfx.DrawString("Dinil Elvitigala", fontphagrafe, XBrushes.Black, new XRect(20, 50, 0, 0), XStringFormats.TopLeft);
 
                         //BOC LOGO and head
-                        XImage image = XImage.FromFile(@"C:\Users\HP\source\repos\TTProject_pase1\resourses\boc.png");
-                        gfx.DrawImage(image, 30, 10, 80, 80);
+                       /* XImage image = XImage.FromFile(@"C:\Users\HP\source\repos\TTProject_pase1\resourses\boc.png");
+                        gfx.DrawImage(image, 30, 10, 80, 80);*/
                         gfx.DrawString("Traval and Remittance", fontphagrafe, XBrushes.Black, new XRect(30, 75, 0, 0), XStringFormats.TopLeft);
                         gfx.DrawString("1st Floor,Bank of Ceylone,", fontphagrafe, XBrushes.Black, new XRect(30, 85, 0, 0), XStringFormats.TopLeft);
                         gfx.DrawString("Head office, Colombo 01", fontphagrafe, XBrushes.Black, new XRect(30, 95, 0, 0), XStringFormats.TopLeft);
@@ -1211,27 +1245,100 @@ namespace project_TelegraphicTransfer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UCPage2 uCPage2 = new UCPage2();
-            uCPage2.Show();
-            uCPage2.Dock = DockStyle.Fill;
+            try
+            {
+                if (_uCPage2 == null)
+                {
+                    UCPage2 = new UCPage2();
 
-            pnlt.Controls.Add(uCPage2);
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnlt.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                UCPage2.Show();
+
+                //change the dock property
+                UCPage2.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnlt.Controls.Add(UCPage2);
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);  
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            pnlt.Controls.Clear();
-            USPage2 uSPage2 = new USPage2();
-            uSPage2.Show();
-            uSPage2.Dock = DockStyle.Fill;
-            pnlt.Controls.Add(uSPage2);
+            try
+            {
+                if (_uSPage2 == null)
+                {
+                    USPage2 = new USPage2();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnlt.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                USPage2.Show();
+
+                //change the dock property
+                USPage2.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnlt.Controls.Add(USPage2);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (_uCPage3 == null)
+                {
+                    UCPage3 = new UCPage3();
 
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnlt.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                UCPage3.Show();
+
+                //change the dock property
+                UCPage3.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnlt.Controls.Add(UCPage3);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FormPrint_FormClosed(object sender, FormClosedEventArgs e)
