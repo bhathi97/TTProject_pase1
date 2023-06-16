@@ -22,6 +22,7 @@ namespace project_TelegraphicTransfer
             InitializeComponent();
         }
 
+        string yssno = "YES/NO";
 
         private string _formName;
         public string FormName
@@ -33,7 +34,7 @@ namespace project_TelegraphicTransfer
             set
             {
                 _formName = value;
-                lbl_formName.Text = _formName;  
+                lbl_formName.Text = _formName;
             }
         }
 
@@ -71,32 +72,29 @@ namespace project_TelegraphicTransfer
                         XFont fontphagrafe = new XFont("Calibri", 10); // Use a different font
                         XFont fz = new XFont("Calibri", 9);
                         XFont fzb = new XFont("Calibri", 10, XFontStyle.Bold);
-
                         XFont body = new XFont("Calibri", 10);
-                        XFont fzsb = new XFont("Calibri", 9,XFontStyle.Bold);
+                        XFont fzsb = new XFont("Calibri", 9, XFontStyle.Bold);
                         XFontStyle fontStyle = XFontStyle.Bold | XFontStyle.Underline;
                         XFont mainPara = new XFont("Calibri", 14, fontStyle);// BOLD AND UNDERLINE
-                        XFont fontmainpara = new XFont("Calibri", 14 );
+                        XFont fontmainpara = new XFont("Calibri", 14);
                         XBrush brush = XBrushes.Black;
                         //gfx.DrawString("Dinil Elvitigala", fontphagrafe, XBrushes.Black, new XRect(20, 50, 0, 0), XStringFormats.TopLeft);
 
                         //BOC LOGO and head
                         XImage image = XImage.FromFile(@"C:\Users\HP\source\repos\TTProject_pase1\resourses\boc.png");
-
-                        gfx.DrawImage(image, 20, 10, 80, 80);
-                        gfx.DrawString("Traval and Remittance", fontphagrafe, XBrushes.Black, new XRect(20, 75, 0, 0), XStringFormats.TopLeft);
-                        gfx.DrawString("1st Floor,Bank of Ceylone,", fontphagrafe, XBrushes.Black, new XRect(20, 85, 0, 0), XStringFormats.TopLeft);
-                        gfx.DrawString("Head office, Colombo 01", fontphagrafe, XBrushes.Black, new XRect(20, 95, 0, 0), XStringFormats.TopLeft);
-                        gfx.DrawString("phone", fontphagrafe, XBrushes.Black, new XRect(20, 105, 0, 0), XStringFormats.TopLeft);
-                        gfx.DrawString("011-2445783", fontphagrafe, XBrushes.Black, new XRect(60, 105, 0, 0), XStringFormats.TopLeft);
-                        gfx.DrawString("011-2203173", fontphagrafe, XBrushes.Black, new XRect(60, 117, 0, 0), XStringFormats.TopLeft);
-                        gfx.DrawString("Email", fontphagrafe, XBrushes.Black, new XRect(20, 130, 0, 0), XStringFormats.TopLeft);
-                        gfx.DrawString("travel@boc.lk", fontphagrafe, XBrushes.Black, new XRect(60, 130, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawImage(image, 30, 10, 80, 80);
+                        gfx.DrawString("Traval and Remittance", fontphagrafe, XBrushes.Black, new XRect(30, 75, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawString("1st Floor,Bank of Ceylone,", fontphagrafe, XBrushes.Black, new XRect(30, 85, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawString("Head office, Colombo 01", fontphagrafe, XBrushes.Black, new XRect(30, 95, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawString("phone", fontphagrafe, XBrushes.Black, new XRect(30, 105, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawString("011-2445783", fontphagrafe, XBrushes.Black, new XRect(70, 105, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawString("011-2203173", fontphagrafe, XBrushes.Black, new XRect(70, 117, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawString("Email", fontphagrafe, XBrushes.Black, new XRect(30, 130, 0, 0), XStringFormats.TopLeft);
+                        gfx.DrawString("travel@boc.lk", fontphagrafe, XBrushes.Black, new XRect(70, 130, 0, 0), XStringFormats.TopLeft);
                         //end logo and details
 
                         //office use only box
-                        XRect recOfficeuse = new XRect(143, 37, 170, 100);
-
+                        XRect recOfficeuse = new XRect(150, 37, 210, 100);
                         XPen pen = new XPen(XColors.Black, 1);
                         gfx.DrawRectangle(pen, recOfficeuse);
 
@@ -109,10 +107,8 @@ namespace project_TelegraphicTransfer
                         XRect textBoundsOffice = new XRect(recOfficeuse.Left, 45, recOfficeuse.Width, recOfficeuse.Height);
                         gfx.DrawString(office, fzb, brush, textBoundsOffice, XStringFormats.TopCenter);
 
-
-                        XRect textBoundsTtref = new XRect(150, 67, 0, 0);
+                        XRect textBoundsTtref = new XRect(157, 67, 0, 0);
                         gfx.DrawString(ttref, fz, brush, textBoundsTtref, XStringFormats.TopLeft);
-
 
                         XRect textBoundsrf = new XRect(157, 82, 0, 0);
                         gfx.DrawString(rf, fz, brush, textBoundsrf, XStringFormats.TopLeft);
@@ -130,14 +126,12 @@ namespace project_TelegraphicTransfer
                         gfx.DrawRectangle(pen, recBranchuse);
 
                         string branch = "BRANCH USE ONLY";
+                        string costCB = "Cost Center  Branch*:............/............................";
+                        string branchRef = "Branch Reference*:............................................";
+                        string conP = "Contact Person*:................................................";
+                        string tp = "Phone No*:........................................................";
 
-                        string costCB = "Cost Center  Branch*:.........../...............";
-                        string branchRef = "Branch Reference*:...............................";
-                        string conP = "Contact Person*:...................................";
-                        string tp = "Phone No*:...........................................";
-
-                        XRect textBoundsBranch = new XRect(355, 45, 0, 0);
-
+                        XRect textBoundsBranch = new XRect(427, 45, 0, 0);
                         gfx.DrawString(branch, fzb, brush, textBoundsBranch, XStringFormats.TopLeft);
 
                         XRect textBoundsCostcenter = new XRect(367, 67, 0, 0);
@@ -162,7 +156,7 @@ namespace project_TelegraphicTransfer
                         //Date box
                         XPen pens = new XPen(XColors.Black, 1);
                         XFont fontDate = new XFont("Arial", 8, XFontStyle.Regular);//font for Date
-                        XBrush brushDate = new XSolidBrush(XColor.FromArgb(169,169,169));//brush for date
+                        XBrush brushDate = new XSolidBrush(XColor.FromArgb(169, 169, 169));//brush for date
                         XRect boxRect = new XRect(482, 167, 15, 15);//create date box D
                         XRect boxRect2 = new XRect(496, 167, 15, 15);//D
                         XRect boxRect3 = new XRect(511.5, 167, 15, 15); //m
@@ -206,12 +200,12 @@ namespace project_TelegraphicTransfer
                         //Doc Body
                         //topic
                         XPen Hbox = new XPen(XColors.Black, 0.01);
-                        XRect mainHeadingsBox = new XRect(30,182,542.5,13);// main heading boxes
+                        XRect mainHeadingsBox = new XRect(30, 182, 542.5, 13);// main heading boxes
                         XBrush brushmaintopic = new XSolidBrush(XColor.FromArgb(0, 0, 0));
                         XFont topic1 = new XFont("Calibri", 10, XFontStyle.Bold);
                         XBrush fillColor = XBrushes.LightGray;
-                        
-                         gfx.DrawRectangle(Hbox, fillColor, mainHeadingsBox);
+
+                        gfx.DrawRectangle(Hbox, fillColor, mainHeadingsBox);
 
                         string Setopic1 = "SENDER (APPLICANT)";
                         XRect textboundTopic1 = new XRect(78, 188, 0, 0); //text aligment
@@ -219,7 +213,7 @@ namespace project_TelegraphicTransfer
                         //END topig
 
                         //Sender
-                        XRect senderName = new XRect(30,195, 542.5, 13);
+                        XRect senderName = new XRect(30, 195, 542.5, 13);
                         gfx.DrawRectangle(Hbox, senderName);
                         string sName = "NAME OF THE APPLICANT*";
                         XRect textboundSname = new XRect(33, 195, 0, 0); //text aligment
@@ -261,7 +255,7 @@ namespace project_TelegraphicTransfer
                         XRect senderPurposeR = new XRect(30, 295, 542.5, 35);
                         gfx.DrawRectangle(Hbox, senderPurposeR);
                         string passportPurposeR = "PURPOSE OF REMITTANCE*";
-                        XRect textboundPurposeR = new XRect(33,297, 0, 0); //text aligment
+                        XRect textboundPurposeR = new XRect(33, 297, 0, 0); //text aligment
                         gfx.DrawString(passportPurposeR, body, brush, textboundPurposeR, XStringFormats.TopLeft);
                         gfx.DrawString("Inv No/Ref No*", body, XBrushes.Black, new XRect(33, 318, 0, 0), XStringFormats.TopLeft);
 
@@ -300,7 +294,7 @@ namespace project_TelegraphicTransfer
                         //TOPiC
                         XRect mainHeadingsBox2 = new XRect(30, 460, 542.5, 13);
                         gfx.DrawRectangle(Hbox, fillColor, mainHeadingsBox2);
-                        
+
                         string Setopic2 = "RECEIVER (BENEFICIARY)";
                         XRect textboundTopic2 = new XRect(85, 465, 0, 0); //text aligment
                         gfx.DrawString(Setopic2, topic1, brushmaintopic, textboundTopic2, XStringFormats.Center);
@@ -329,7 +323,7 @@ namespace project_TelegraphicTransfer
                         XRect reciverBname = new XRect(30, 529, 542.5, 13);
                         gfx.DrawRectangle(Hbox, reciverBname);
                         string rBname = "BANK NAME*";
-                        XRect textboundRbNamee= new XRect(33, 530, 0, 0); //text aligment
+                        XRect textboundRbNamee = new XRect(33, 530, 0, 0); //text aligment
                         gfx.DrawString(rBname, body, brush, textboundRbNamee, XStringFormats.TopLeft);
 
                         XRect reciverBranch = new XRect(30, 542, 542.5, 13);
@@ -374,7 +368,7 @@ namespace project_TelegraphicTransfer
                         XRect mainHeadingsBox3 = new XRect(30, 675, 542.5, 20);
                         gfx.DrawRectangle(Hbox, fillColor, mainHeadingsBox3);
                         string Setopic3 = "SPECIAL INSTRUCTIONS AND REMARKS TO SENT";
-                        XRect textboundTopic3 = new XRect(304, 678  , 0, 0); //text aligment
+                        XRect textboundTopic3 = new XRect(304, 678, 0, 0); //text aligment
                         gfx.DrawString(Setopic3, topic1, brushmaintopic, textboundTopic3, XStringFormats.TopCenter);
                         XRect spacialIbs = new XRect(30, 695, 542.5, 65);
                         gfx.DrawRectangle(Hbox, spacialIbs);//heding under tectangle
@@ -389,11 +383,11 @@ namespace project_TelegraphicTransfer
                         page.Width = XUnit.FromMillimeter(210);
                         page.Height = XUnit.FromMillimeter(297);
                         XGraphics gfx2 = XGraphics.FromPdfPage(page2);
-                        
+
                         gfx2.DrawString("BRANCH REFERENCE*:.............................................", body, XBrushes.Black, new XRect(573, 27, 0, 0), XStringFormats.TopRight);
                         XFont Pfont = new XFont("Calibri", 7.5);
                         XFont Pfont2 = new XFont("Calibri", 7.5);
-                        XFont PfontBold = new XFont("Calibri", 7.5,XFontStyle.Bold);
+                        XFont PfontBold = new XFont("Calibri", 7.5, XFontStyle.Bold);
 
                         XRect termsBox = new XRect(33, 40, 542.5, 200);
                         gfx2.DrawRectangle(Hbox, termsBox);
@@ -510,10 +504,10 @@ namespace project_TelegraphicTransfer
                         gfx2.DrawString(termsRp11, Pfont, brush, paraTextR11, XStringFormats.TopLeft);
 
                         XRect paraTextRb11 = new XRect(450, 155, 0, 0); //pararight11
-                        gfx2.DrawString(termsRpb11,PfontBold, brush, paraTextRb11, XStringFormats.TopLeft);
+                        gfx2.DrawString(termsRpb11, PfontBold, brush, paraTextRb11, XStringFormats.TopLeft);
 
                         XRect paraTextRN11 = new XRect(504, 155, 0, 0); //pararight11
-                        gfx2.DrawString(termsRpN11,  Pfont, brush, paraTextRN11, XStringFormats.TopLeft);
+                        gfx2.DrawString(termsRpN11, Pfont, brush, paraTextRN11, XStringFormats.TopLeft);
 
                         XRect paraTextRN12 = new XRect(330, 164, 0, 0); //pararight11
                         gfx2.DrawString(termsRp12, Pfont, brush, paraTextRN12, XStringFormats.TopLeft);
@@ -527,13 +521,13 @@ namespace project_TelegraphicTransfer
                         XRect paraTextRN14 = new XRect(330, 215, 0, 0); //pararight13
                         gfx2.DrawString(termsRp14, Pfont, brush, paraTextRN14, XStringFormats.TopLeft);
 
-                        string aceptTerms ="I/We hereby confirm our acceptance to the above terms and conditions and any rules and regulations and any Directions and Guidelines issued by Central Bnak of ";
+                        string aceptTerms = "I/We hereby confirm our acceptance to the above terms and conditions and any rules and regulations and any Directions and Guidelines issued by Central Bnak of ";
                         string aceptTermsp1 = "Sri Lanka and statuts enacted by the Government of Sri Lanka and/or any respective authorities for this transaction and I/We pay the Bank in full all amounts";
                         string aaceptTermsp2 = "of this transfer by CASH/CHEQUE (no)......................................................../authorizing the Bank to debit the following Account/Accounts maintained with the bank ";
                         string aaceptTermsp3 = "Account No:............................................At Bank of Ceylon.....................................................Branch";
                         string aaceptTermsp4 = "I/We have read and understood all the above declartions, terms and conditions and signed";
 
-                        XRect termAccept = new XRect(33, 250, 0, 0); 
+                        XRect termAccept = new XRect(33, 250, 0, 0);
                         gfx2.DrawString(aceptTerms, Pfont2, brush, termAccept, XStringFormats.TopLeft);
 
                         XRect termAccept1 = new XRect(33, 260, 0, 0);
@@ -569,7 +563,7 @@ namespace project_TelegraphicTransfer
                         XRect cheakList = new XRect(30, 418, 542.5, 400);
                         gfx2.DrawRectangle(Hbox, cheakList);
 
-                        string ceckListtitle= "FOR BOC BRANCH USE ONLY*";
+                        string ceckListtitle = "FOR BOC BRANCH USE ONLY*";
                         string ceckListtitle2 = "TO: Travel and Remittances Dept";
                         string ceckListtitle3 = "Please issue the above credit on TelegraphicTransfer of SWIFT on behalf of us.";
                         string ceckListtitle4 = "CHECHLIST";
@@ -688,34 +682,34 @@ namespace project_TelegraphicTransfer
 
                         //yesno
                         XRect cheklistys1 = new XRect(520, 470, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys1, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys1, XStringFormats.TopLeft);
 
                         XRect cheklistys2 = new XRect(520, 480, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys2, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys2, XStringFormats.TopLeft);
 
                         XRect cheklistys3 = new XRect(520, 490, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys3, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys3, XStringFormats.TopLeft);
 
                         XRect cheklistys4 = new XRect(520, 510, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys4, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys4, XStringFormats.TopLeft);
 
                         XRect cheklistys5 = new XRect(520, 520, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys5, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys5, XStringFormats.TopLeft);
 
                         XRect cheklistys6 = new XRect(520, 540, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys6, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys6, XStringFormats.TopLeft);
 
                         XRect cheklistys7 = new XRect(520, 550, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys7, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys7, XStringFormats.TopLeft);
 
                         XRect cheklistys8 = new XRect(520, 560, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys8, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys8, XStringFormats.TopLeft);
 
                         XRect cheklistys9 = new XRect(520, 570, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys9, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys9, XStringFormats.TopLeft);
 
                         XRect cheklistys10 = new XRect(520, 590, 0, 0);
-                        gfx2.DrawString(globle.yssno, cList3, brush, cheklistys10, XStringFormats.TopLeft);
+                        gfx2.DrawString(yssno, cList3, brush, cheklistys10, XStringFormats.TopLeft);
 
                         XRect cb1 = new XRect(520, 610, 17, 8);
                         gfx2.DrawRectangle(Hbox, cb1);
@@ -725,7 +719,7 @@ namespace project_TelegraphicTransfer
                         gfx2.DrawRectangle(Hbox, cb3);
                         XRect cb4 = new XRect(520, 640, 17, 8);
                         gfx2.DrawRectangle(Hbox, cb4);
-                        XRect cb5= new XRect(520, 660, 17, 8);
+                        XRect cb5 = new XRect(520, 660, 17, 8);
                         gfx2.DrawRectangle(Hbox, cb5);
                         XRect cb6 = new XRect(520, 680, 17, 8);
                         gfx2.DrawRectangle(Hbox, cb6);
@@ -767,7 +761,7 @@ namespace project_TelegraphicTransfer
                         XRect pTitle = new XRect(170, 40, 0, 0);
                         gfx3.DrawString(ptitle, fo3, brush, pTitle, XStringFormats.TopLeft);
                         XRect pTitle2 = new XRect(200, 60, 0, 0);
-                        gfx3.DrawString(ptitle2, fo3, brush, pTitle2, XStringFormats.TopLeft); 
+                        gfx3.DrawString(ptitle2, fo3, brush, pTitle2, XStringFormats.TopLeft);
                         XRect pTitle3 = new XRect(120, 90, 0, 0);
                         gfx3.DrawString(ptitle3, fo10, brush, pTitle3, XStringFormats.TopLeft);
 
@@ -780,7 +774,7 @@ namespace project_TelegraphicTransfer
                         gfx3.DrawRectangle(mainLins, form1);
 
                         //--Xaxisline
-                        XPoint maintitalS = new XPoint(30, 150); 
+                        XPoint maintitalS = new XPoint(30, 150);
                         XPoint mailtitleE = new XPoint(572, 150);
                         gfx3.DrawLine(mainLins, maintitalS, mailtitleE);
                         string heading2 = "SALE OF FOREIGN EXCHANGE BY AN AUTHORISED DEALER FORM-1";
@@ -789,7 +783,7 @@ namespace project_TelegraphicTransfer
                         //--EndXaxisline
 
                         //--Y axis line
-                        XPoint startPointY = new XPoint(290, 150); 
+                        XPoint startPointY = new XPoint(290, 150);
                         XPoint endPointY = new XPoint(290, 730);
                         gfx3.DrawLine(mainLins, startPointY, endPointY);
                         //--EndYaxis line
@@ -797,7 +791,7 @@ namespace project_TelegraphicTransfer
                         XPoint mainLSx = new XPoint(30, 210);
                         XPoint mainLineEx = new XPoint(572, 210);
                         gfx3.DrawLine(pen5, mainLSx, mainLineEx);
-                      
+
 
                         XPoint subL1S = new XPoint(30, 185);
                         XPoint subL1E = new XPoint(293, 185);
@@ -866,10 +860,10 @@ namespace project_TelegraphicTransfer
                         gfx3.DrawString("Serial", foN10, XBrushes.Black, new XRect(295, 168, 0, 0), XStringFormats.TopLeft);
                         gfx3.DrawString("No.", foN10, XBrushes.Black, new XRect(295, 177, 0, 0), XStringFormats.TopLeft);
 
-                        XPoint seriaL1nSY = new XPoint(340, 150); 
+                        XPoint seriaL1nSY = new XPoint(340, 150);
                         XPoint seriaL1MainEY = new XPoint(340, 210);
                         gfx3.DrawLine(pen5, seriaL1nSY, seriaL1MainEY);
-                        
+
                         XPoint seriaL2nSY = new XPoint(355, 150);
                         XPoint seriaL2MainEY = new XPoint(355, 210);
                         gfx3.DrawLine(pen5, seriaL2nSY, seriaL2MainEY);
@@ -989,7 +983,7 @@ namespace project_TelegraphicTransfer
                         gfx3.DrawLine(mainLins2, subLExamoYs, subLExamoYe);
                         gfx3.DrawString("Applied Foreign", foN10, XBrushes.Black, new XRect(43, 490, 0, 0), XStringFormats.TopLeft);
                         gfx3.DrawString("Exchange Amount", foN10, XBrushes.Black, new XRect(43, 500, 0, 0), XStringFormats.TopLeft);
-                        
+
                         XPoint subLExamoYs1 = new XPoint(148, 445);
                         XPoint subLExamoYe1 = new XPoint(148, 549);
                         gfx3.DrawLine(mainLins2, subLExamoYs1, subLExamoYe1);
@@ -1047,7 +1041,7 @@ namespace project_TelegraphicTransfer
                         // end forign exchange
 
                         //applicant signature
-                        XPoint LapplicntsingS= new XPoint(30, 648);
+                        XPoint LapplicntsingS = new XPoint(30, 648);
                         XPoint LapplicntsingE = new XPoint(572, 648);
                         gfx3.DrawLine(mainLins2, LapplicntsingS, LapplicntsingE);
                         gfx3.DrawString("I declare that all information given by me is true and correct", fo8, XBrushes.Black, new XRect(60, 553, 0, 0), XStringFormats.TopLeft);
@@ -1060,7 +1054,7 @@ namespace project_TelegraphicTransfer
                         gfx3.DrawString("Bank Code", fo8, XBrushes.Black, new XRect(295, 220, 0, 0), XStringFormats.TopLeft);
                         gfx3.DrawString("Branch Code", fo8, XBrushes.Black, new XRect(295, 245, 0, 0), XStringFormats.TopLeft);
                         gfx3.DrawString("Country Code", fo8, XBrushes.Black, new XRect(295, 265, 0, 0), XStringFormats.TopLeft);
-                       
+
                         XPoint bCodeys = new XPoint(340, 210);
                         XPoint bCodeye = new XPoint(340, 285);
                         gfx3.DrawLine(mainLins2, bCodeys, bCodeye);
@@ -1168,7 +1162,7 @@ namespace project_TelegraphicTransfer
                         gfx3.DrawLine(pen5, CcodeXL4S, CcodeXL4E);
 
                         gfx3.DrawString("Currency issuance", fo8, XBrushes.Black, new XRect(295, 528, 0, 0), XStringFormats.TopLeft);
-                        XPoint Ce1xL1S = new XPoint(400,555);// currency inssurence
+                        XPoint Ce1xL1S = new XPoint(400, 555);// currency inssurence
                         XPoint Ce1xL1E = new XPoint(573, 555);
                         gfx3.DrawLine(pen5, Ce1xL1S, Ce1xL1E);
 
@@ -1200,9 +1194,13 @@ namespace project_TelegraphicTransfer
                         string filename = sfd.FileName;
                         doc.Save(filename);
                         doc.Close();
+
+
                     }
                 }
 
+                //if printed
+                MessageBox.Show("Successfully Saved in the given Location");
             }
             catch (Exception ex)
             {
@@ -1244,5 +1242,7 @@ namespace project_TelegraphicTransfer
                 form.Enabled = true;
             }
         }
+
+      
     }
 }

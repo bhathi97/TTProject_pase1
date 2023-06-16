@@ -50,6 +50,7 @@
             iconButton1.TabIndex = 0;
             iconButton1.Text = "iconButton1";
             iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
             // 
             // button1
             // 
@@ -69,6 +70,7 @@
             pnlt.Name = "pnlt";
             pnlt.Size = new Size(841, 545);
             pnlt.TabIndex = 2;
+           
             // 
             // lbl_formName
             // 
