@@ -204,7 +204,7 @@
             // 
             // label8
             // 
-            label8.Location=new Point(363, 309);
+            label8.Location=new Point(361, 309);
             label8.Name="label8";
             label8.Size=new Size(245, 23);
             label8.TabIndex=8;
