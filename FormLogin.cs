@@ -46,18 +46,6 @@ namespace project_TelegraphicTransfer
                     string userName = tb_userName.Text;
                     string password = tb_password.Text;
 
-                    
-                      /*  try
-                        {
-                            connsql.Open();
-                            MessageBox.Show("Connection successful!", "Success");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Connection failed: {ex.Message}", "Error");
-                        }
-                    */
-
                     connsql.Open();
                     SqlCommand cmdLogin = new SqlCommand("SELECT COUNT(*) FROM tbl_LOGIN_MASTER WHERE [NAME] = @name AND PASSWORD = @pw", connsql);
                     cmdLogin.Parameters.AddWithValue("@name", userName);
@@ -65,8 +53,7 @@ namespace project_TelegraphicTransfer
 
                     int count = Convert.ToInt32(cmdLogin.ExecuteScalar());
 
-                    MessageBox.Show(count.ToString());
-
+                 
                     if (count > 0)
                     {
                         SqlCommand cmdUser = new SqlCommand("select * from tbl_LOGIN_MASTER where [NAME] = @name and PASSWORD = @pw", connsql);
@@ -91,10 +78,7 @@ namespace project_TelegraphicTransfer
 
                         }
 
-
                     }
-
-
 
                 }
 

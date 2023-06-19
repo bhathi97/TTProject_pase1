@@ -79,6 +79,10 @@ namespace project_TelegraphicTransfer
                 using (FormPrint newForm = new FormPrint())
                 {
                     newForm.FormName = _fileName;
+                    newForm.Purpose = _purpose;
+                    newForm.InsertBy = _insertBy;
+                    newForm.AddDate = _addDate;
+
                     // Disable all other forms
                     foreach (Form form in Application.OpenForms)
                     {

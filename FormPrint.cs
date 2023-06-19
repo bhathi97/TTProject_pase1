@@ -13,7 +13,7 @@ using PdfSharpCore.Pdf;
 
 namespace project_TelegraphicTransfer
 {
-   
+
     public partial class FormPrint : Form
     {
 
@@ -41,6 +41,17 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        private string _purpose;
+        public string Purpose
+        {
+            get { return _purpose; }
+            set
+            {
+                _purpose = value;
+                lbl_formName.Text = _purpose;
+
+            }
+        }
 
         #endregion
 
@@ -68,6 +79,9 @@ namespace project_TelegraphicTransfer
             get { return _uCPage3; }
             set { _uCPage3 = value; }
         }
+
+        public string InsertBy { get; internal set; }
+        public string AddDate { get; internal set; }
 
 
         #endregion
@@ -115,8 +129,8 @@ namespace project_TelegraphicTransfer
                         //gfx.DrawString("Dinil Elvitigala", fontphagrafe, XBrushes.Black, new XRect(20, 50, 0, 0), XStringFormats.TopLeft);
 
                         //BOC LOGO and head
-                       /* XImage image = XImage.FromFile(@"C:\Users\HP\source\repos\TTProject_pase1\resourses\boc.png");
-                        gfx.DrawImage(image, 30, 10, 80, 80);*/
+                        /* XImage image = XImage.FromFile(@"C:\Users\HP\source\repos\TTProject_pase1\resourses\boc.png");
+                         gfx.DrawImage(image, 30, 10, 80, 80);*/
                         gfx.DrawString("Traval and Remittance", fontphagrafe, XBrushes.Black, new XRect(30, 75, 0, 0), XStringFormats.TopLeft);
                         gfx.DrawString("1st Floor,Bank of Ceylone,", fontphagrafe, XBrushes.Black, new XRect(30, 85, 0, 0), XStringFormats.TopLeft);
                         gfx.DrawString("Head office, Colombo 01", fontphagrafe, XBrushes.Black, new XRect(30, 95, 0, 0), XStringFormats.TopLeft);
@@ -1253,6 +1267,10 @@ namespace project_TelegraphicTransfer
 
                 }
 
+                //Select*;
+                //From;
+                //where;
+
                 // Hide all other controls within panel1
                 foreach (Control control in pnlt.Controls)
                 {
@@ -1269,9 +1287,9 @@ namespace project_TelegraphicTransfer
                 pnlt.Controls.Add(UCPage2);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);  
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -1350,6 +1368,9 @@ namespace project_TelegraphicTransfer
             }
         }
 
-      
+        private void lbl_formName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
