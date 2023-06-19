@@ -153,9 +153,100 @@ namespace project_TelegraphicTransfer
                 connsql.Close();
             }
         }
-    }
-}
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+           try
+                {
+                    // Check if a row is selected
+                    if (dgvUser.SelectedRows.Count == 0)
+                    {
+                        MessageBox.Show("Please select a user to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Get the selected user's ID
+                    string id = dgvUser.SelectedRows[0].Cells["id"].Value.ToString();
+
+                    // Check tbName.Text
+                    if (string.IsNullOrEmpty(tbName.Text))
+                    {
+                        MessageBox.Show("Please enter a name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Check tbName.Text
+                    string name = tbName.Text.Trim();
+
+                    // Validate name using regular expression
+                    if (!Regex.IsMatch(name, "^[a-zA-Z]+$"))
+                    {
+                        MessageBox.Show("Please enter a valid name containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Check tbPW.Text
+                    if (string.IsNullOrEmpty(tbPW.Text))
+                    {
+                        MessageBox.Show("Please enter a password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Check cbUL.SelectedIndex
+                    if (cbUL.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Please select a user level.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    string password = tbPW.Text;
+                    string userLevel = cbUL.SelectedItem.ToString();
+
+                    UpdateUserInDatabase(id, name, password, userLevel);
+
+                    // Refresh the DataGridView with updated data
+                    LoadUserData();
+
+                    // Clear the input fields
+                    tbName.Text = "";
+                    tbPW.Text = "";
+                    cbUL.SelectedIndex = -1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while updating the user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            private void UpdateUserInDatabase(string id, string name, string password, string userLevel)
+            {
+                try
+                {
+                    connsql.Open();
+
+                    // Update the user in the database
+                    SqlCommand updateCmd = new SqlCommand("UPDATE tbl_LOGIN_MASTER SET NAME = @Name, PASSWORD = @Password, USER_LEVEL = @UserLevel WHERE ID = @ID;", connsql);
+                    updateCmd.Parameters.AddWithValue("@Name", name);
+                    updateCmd.Parameters.AddWithValue("@Password", password);
+                    updateCmd.Parameters.AddWithValue("@UserLevel", userLevel);
+                    updateCmd.Parameters.AddWithValue("@ID", id);
+                    updateCmd.ExecuteNonQuery();
+
+                    // Display a success message
+                    MessageBox.Show("User updated successfully!", "User Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while updating the user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connsql.Close();
+                }
+            }
+
+        }
+    }
 // Show confirmation message with OK and Cancel options
 
 
