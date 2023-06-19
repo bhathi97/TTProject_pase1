@@ -607,7 +607,10 @@ namespace project_TelegraphicTransfer
             }
         }
 
-        
+        private void cb_goods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

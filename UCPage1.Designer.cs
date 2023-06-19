@@ -256,7 +256,7 @@
             // label18
             // 
             label18.AutoSize=true;
-            label18.Location=new Point(254, 145);
+            label18.Location=new Point(254, 144);
             label18.Name="label18";
             label18.Size=new Size(215, 15);
             label18.TabIndex=19;
@@ -773,7 +773,7 @@
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
             RightToLeft=RightToLeft.No;
-            Size=new Size(682, 924);
+            Size=new Size(665, 907);
             Load+=UCPage1_Load;
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
