@@ -250,7 +250,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 55F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
-            tableLayoutPanel2.Size = new Size(536, 492);
+            tableLayoutPanel2.Size = new Size(536, 547);
             tableLayoutPanel2.TabIndex = 9;
             // 
             // label1
@@ -468,9 +468,9 @@
             // 
             panel4.Controls.Add(btn_AddNew);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 525);
+            panel4.Location = new Point(0, 580);
             panel4.Name = "panel4";
-            panel4.Size = new Size(536, 133);
+            panel4.Size = new Size(536, 78);
             panel4.TabIndex = 7;
             // 
             // btn_AddNew
@@ -486,7 +486,7 @@
             btn_AddNew.IconColor = Color.White;
             btn_AddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_AddNew.IconSize = 20;
-            btn_AddNew.Location = new Point(98, 48);
+            btn_AddNew.Location = new Point(96, 19);
             btn_AddNew.Name = "btn_AddNew";
             btn_AddNew.Size = new Size(340, 42);
             btn_AddNew.TabIndex = 0;
