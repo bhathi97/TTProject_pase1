@@ -70,6 +70,9 @@ namespace project_TelegraphicTransfer
                     UCItemsToConfirm itms = new UCItemsToConfirm();
 
                     itms.FileName = reader["FILE_REFERENCE"].ToString();
+                    itms.Purpose = reader["PURPOSE"].ToString();
+                    itms.InsertBy = reader["ADD_EDITOR"].ToString();
+                    itms.AddDate = reader["ADD_TIME"].ToString();
 
                     // Add UCItems1 control to the panel
                     flp_confirmItemLoade.Controls.Add(itms);
