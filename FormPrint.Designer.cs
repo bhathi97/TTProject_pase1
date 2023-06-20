@@ -39,6 +39,7 @@
             pnlt.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
+            //dilini
             // 
             // iconButton1
             // 
