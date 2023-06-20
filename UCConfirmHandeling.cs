@@ -82,7 +82,7 @@ namespace project_TelegraphicTransfer
                 reader.Close();
                 connsql.Close();
 
-                
+
 
             }
             catch (Exception ex)
@@ -94,6 +94,11 @@ namespace project_TelegraphicTransfer
                 connsql.Close();
                 this.Count = count;
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            loadItems();
         }
     }
 
