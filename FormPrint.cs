@@ -52,7 +52,7 @@ namespace project_TelegraphicTransfer
             set
             {
                 _purpose = value;
-                lbl_Purpose.Text = _purpose;
+                //lbl_Purpose.Text = _purpose;
             }
         }
 
