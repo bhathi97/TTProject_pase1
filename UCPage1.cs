@@ -12,6 +12,43 @@ namespace project_TelegraphicTransfer
 {
     public partial class UCPage2 : UserControl
     {
+
+
+        #region properties
+        private string _formName;
+        public string FormName
+        {
+            get
+            {
+                return _formName;
+            }
+            set
+            {
+                _formName = value;
+                //lbl_formName.Text = _formName;
+            }
+        }
+
+
+        private string _purpose;
+        public string Purpose
+        {
+            get
+            {
+                return _purpose;
+            }
+            set
+            {
+                _purpose = value;
+                //lbl_Purpose.Text = _purpose;
+            }
+        }
+
+
+
+        #endregion
+
+
         public UCPage2()
         {
             InitializeComponent();
@@ -19,76 +56,18 @@ namespace project_TelegraphicTransfer
 
         private void UCPage1_Load(object sender, EventArgs e)
         {
+            lbl_purpose.Text = _purpose;  
+
+
+            //sql
+            //reader>>>
+            
+
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label41_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox15_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl18_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
