@@ -107,6 +107,7 @@
             this.dgvUser.RowTemplate.Height = 25;
             this.dgvUser.Size = new System.Drawing.Size(607, 552);
             this.dgvUser.TabIndex = 1;
+            this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             // 
             // id
             // 
@@ -208,6 +209,7 @@
             this.UserAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.UserAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.UserAdd.UseVisualStyleBackColor = false;
+            this.UserAdd.Click += new System.EventHandler(this.UserAdd_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -333,6 +335,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UCDatabaseHandeling";
             this.Size = new System.Drawing.Size(1197, 612);
+            this.Load += new System.EventHandler(this.UCDatabaseHandeling_Load);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
