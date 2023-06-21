@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,11 +37,19 @@ namespace project_TelegraphicTransfer
             set { _fName = value; }
         }
 
+        private int _foldId;
+        public int FoldId
+        {
+            get { return _foldId; }
+            set { _foldId = value; }
+        }
 
 
         #endregion
 
-
+        #region connection
+        SqlConnection connsql = new SqlConnection(connectionString.ConnectionString);
+        #endregion
 
         public UCTTItems()
         {
@@ -49,6 +58,8 @@ namespace project_TelegraphicTransfer
 
         private void UCTTItems_Load(object sender, EventArgs e)
         {
+            //MessageBox.Show(FoldId.ToString());
+
             lblFormName.Text = FileName;
         }
 
@@ -75,14 +86,67 @@ namespace project_TelegraphicTransfer
                             uCForms.Dispose();
                         }
 
-                        uCForms = new UCTTForm();
-                        uCForms.LblFormName = FileName;
-                        uCForms.LblFormID = FileId;
-                        uCForms.FileName = FName;
-                        uCForms.Show();
-                        uCForms.Dock = DockStyle.Fill;
+                        //MessageBox.Show(_fileId.ToString());
+                        //-----------------------------------------------
+                        connsql.Open();
+                        SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_TRANSFER_ORDER_FORM WHERE FILE_REFERENCE = @fl and DOCUMANT = @doc AND ISCONFIRMED != 0", connsql);
+                        cmd.Parameters.AddWithValue("@fl", _fName);
+                        cmd.Parameters.AddWithValue("@doc", _fileName);
 
-                        FileHandelingUserControl.UserControlFormShow = uCForms;
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        connsql.Close();
+
+                        if (count > 0)
+                        {
+                            // Value exists
+                            connsql.Open();
+                            SqlCommand cmd1 = new SqlCommand("SELECT * FROM tbl_TRANSFER_ORDER_FORM WHERE FILE_REFERENCE = @fl AND DOCUMANT = @doc AND ISCONFIRMED != 0", connsql);
+                            cmd1.Parameters.AddWithValue("@fl", _fName);
+                            cmd1.Parameters.AddWithValue("@doc", _fileName);
+
+                            using (SqlDataReader reader = cmd1.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+
+                                    //MessageBox.Show(reader["ID"].ToString());
+                                    uCForms = new UCTTForm();
+                                    uCForms.LblFormName = FileName;
+                                    uCForms.LblFormID = FileId;
+                                    uCForms.FileName = FName;
+
+                                    uCForms.senderName = reader["SENDER_NAME"].ToString();
+                                    uCForms.Purpose = reader["PURPOSE"].ToString();
+                                    uCForms.Inv = reader["INV"].ToString();
+                                    uCForms.Desc = reader["DESCRIPTION"].ToString();
+                                    uCForms.Trade = reader["TRADE_TERMS"].ToString();
+
+
+                                    uCForms.BtnState = false;
+
+                                    uCForms.Show();
+                                    uCForms.Dock = DockStyle.Fill;
+
+                                    FileHandelingUserControl.UserControlFormShow = uCForms;
+
+
+
+                                }
+                            }
+
+
+                        }
+                        else
+                        {
+                            uCForms = new UCTTForm();
+                            uCForms.LblFormName = FileName;
+                            uCForms.LblFormID = FileId;
+                            uCForms.FileName = FName;
+                            uCForms.Show();
+                            uCForms.Dock = DockStyle.Fill;
+                            uCForms.BtnState = true;
+                            FileHandelingUserControl.UserControlFormShow = uCForms;
+                        }
 
                     }
 
@@ -94,6 +158,10 @@ namespace project_TelegraphicTransfer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connsql.Close();
             }
         }
     }

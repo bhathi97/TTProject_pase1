@@ -209,6 +209,7 @@
             btn_edit.TextAlign = ContentAlignment.MiddleRight;
             btn_edit.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_edit.UseVisualStyleBackColor = false;
+            btn_edit.Click += btn_edit_Click;
             // 
             // UCItemToShowBenificieries
             // 

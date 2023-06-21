@@ -139,5 +139,33 @@ namespace project_TelegraphicTransfer
         {
             InitializeComponent();
         }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormEditBenificiary formEditBenificiary = new FormEditBenificiary();
+
+                // Disable all other forms
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form != formEditBenificiary)
+                    {
+                        form.Enabled = false;
+                    }
+                }
+
+                formEditBenificiary.ShowDialog();
+
+            }
+            catch 
+            {
+                
+            }
+            finally
+            {
+
+            }
+        }
     }
 }
