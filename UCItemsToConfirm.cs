@@ -47,15 +47,15 @@ namespace project_TelegraphicTransfer
             }
         }
 
-        private string _addDate;
+        private DateTime _addDate;
 
-        public string AddDate
+        public DateTime AddDate
         {
             get { return _addDate; }
             set
             {
                 _addDate = value;
-                lbl_date.Text = value;
+                lbl_date.Text = value.ToString();
             }
 
         }
@@ -80,6 +80,9 @@ namespace project_TelegraphicTransfer
                 {
                     newForm.FormName = _fileName;
                     newForm.Purpose = _purpose;
+                    newForm.InsertBy = _insertBy;
+                    newForm.Date = _addDate;
+
                     // Disable all other forms
                     foreach (Form form in Application.OpenForms)
                     {
