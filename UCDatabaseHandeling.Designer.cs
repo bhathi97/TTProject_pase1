@@ -285,6 +285,7 @@
             // 
             // cbUL
             // 
+            this.cbUL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUL.FormattingEnabled = true;
             this.cbUL.Items.AddRange(new object[] {
             "Data Entry Operator",
