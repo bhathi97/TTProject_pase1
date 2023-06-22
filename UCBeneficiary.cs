@@ -36,9 +36,6 @@ namespace project_TelegraphicTransfer
 
 
 
-
-
-
         //load items
         public void LoadItems()
         {
