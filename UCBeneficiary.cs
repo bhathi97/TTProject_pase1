@@ -104,6 +104,19 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
+                // Check if Nic Name already exists in the database
+                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_BENIFICIARY_MASTER WHERE NIC_NAME = @nic", connsql);
+                checkCmd.Parameters.AddWithValue("@nic", nicName);
+                connsql.Open();
+                int count = (int)checkCmd.ExecuteScalar();
+                connsql.Close();
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Nic Name is already exists in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 string name = tb_name.Text;
 
                 // check name
@@ -186,7 +199,7 @@ namespace project_TelegraphicTransfer
 
 
                 // Confirmation popup
-                DialogResult result = MessageBox.Show("Do you want to add this beneficiary ?", "Confirmation", MessageBoxButtons.OKCancel);
+                DialogResult result = MessageBox.Show("Do you want to add this beneficiary ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
 
