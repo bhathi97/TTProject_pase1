@@ -1407,6 +1407,7 @@ namespace project_TelegraphicTransfer
 
                         MessageBox.Show(_formName + " " + _purpose + " " + _insertBy + " " + _date.ToString());
 
+                        
 
                         connsql.Open();
                         SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_TRANSFER_ORDER_FORM where FILE_REFERENCE = @file and PURPOSE = @pur and ADD_EDITOR = @insert_by ", connsql);
