@@ -124,12 +124,7 @@
             // 
             // label2
             // 
-            label2.AutoSize=true;
-            label2.Location=new Point(10, 52);
-            label2.Name="label2";
-            label2.Size=new Size(128, 15);
-            label2.TabIndex=1;
-            label2.Text="Travel and Remittances";
+
             // 
             // label3
             // 
@@ -294,8 +289,7 @@
             tableLayoutPanel2.Name="tableLayoutPanel2";
             tableLayoutPanel2.RowCount=1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size=new Size(203, 120);
-            tableLayoutPanel2.TabIndex=25;
+
             // 
             // tableLayoutPanel3
             // 
@@ -416,11 +410,7 @@
             // 
             // label41
             // 
-            label41.Location=new Point(4, 237);
-            label41.Name="label41";
-            label41.Size=new Size(246, 31);
-            label41.TabIndex=9;
-            label41.Text="FORING BANK CHARGES TO BE BORNE BY* APPLICANT             BENEFICIARY";
+
             // 
             // label39
             // 
@@ -441,9 +431,7 @@
             tableLayoutPanel5.Name="tableLayoutPanel5";
             tableLayoutPanel5.RowCount=2;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 73F));
-            tableLayoutPanel5.Size=new Size(640, 94);
-            tableLayoutPanel5.TabIndex=26;
+
             // 
             // label42
             // 
@@ -468,19 +456,7 @@
             // 
             // label31
             // 
-            label31.Location=new Point(4, 244);
-            label31.Name="label31";
-            label31.Size=new Size(169, 31);
-            label31.TabIndex=12;
-            label31.Text="FOR STUDENT PAYMENT ONLY STUDENT NAME*";
-            // 
-            // label28
-            // 
-            label28.Location=new Point(4, 165);
-            label28.Name="label28";
-            label28.Size=new Size(169, 31);
-            label28.TabIndex=9;
-            label28.Text="PURPOSE OF REMITTANCE* Inv No/Ref No/*";
+
             // 
             // label27
             // 
@@ -573,10 +549,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 46F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size=new Size(639, 310);
-            tableLayoutPanel1.TabIndex=24;
+
             // 
             // label29
             // 
@@ -708,17 +681,11 @@
             // 
             // lbl_sort
             // 
-            lbl_sort.Location=new Point(202, 679);
-            lbl_sort.Name="lbl_sort";
-            lbl_sort.Size=new Size(155, 21);
-            lbl_sort.TabIndex=52;
+
             // 
             // lbl_Ibank
             // 
-            lbl_Ibank.Location=new Point(330, 709);
-            lbl_Ibank.Name="lbl_Ibank";
-            lbl_Ibank.Size=new Size(333, 21);
-            lbl_Ibank.TabIndex=53;
+
             // 
             // lbl19
             // 
@@ -900,10 +867,7 @@
             Controls.Add(label1);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel3);
-            Name="UCPage2";
-            RightToLeft=RightToLeft.No;
-            Size=new Size(663, 745);
-            Load+=UCPage1_Load;
+
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
