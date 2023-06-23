@@ -56,18 +56,18 @@ namespace project_TelegraphicTransfer
 
         private void UCPage1_Load(object sender, EventArgs e)
         {
-            lbl_purpose.Text = _purpose;  
+            lbl_purpose.Text = _purpose;
 
 
             //sql
             //reader>>>
-            
+
 
 
         }
 
-      
 
-       
+
+
     }
 }

@@ -116,7 +116,6 @@
             label2.Size = new Size(162, 20);
             label2.TabIndex = 1;
             label2.Text = "Travel and Remittances";
-            //label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -284,7 +283,6 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.Size = new Size(232, 160);
             tableLayoutPanel2.TabIndex = 25;
-           // tableLayoutPanel2.Paint += tableLayoutPanel2_Paint;
             // 
             // tableLayoutPanel3
             // 
@@ -412,7 +410,6 @@
             label41.Size = new Size(281, 41);
             label41.TabIndex = 9;
             label41.Text = "FORING BANK CHARGES TO BE BORNE BY* APPLICANT             BENEFICIARY";
-            //label41.Click += label41_Click;
             // 
             // label39
             // 
@@ -437,7 +434,6 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 97F));
             tableLayoutPanel5.Size = new Size(731, 125);
             tableLayoutPanel5.TabIndex = 26;
-            //tableLayoutPanel5.Paint += tableLayoutPanel5_Paint;
             // 
             // label42
             // 
@@ -467,7 +463,6 @@
             label31.Size = new Size(193, 41);
             label31.TabIndex = 12;
             label31.Text = "FOR STUDENT PAYMENT ONLY STUDENT NAME*";
-            //label31.Click += label31_Click;
             // 
             // label28
             // 
@@ -476,7 +471,6 @@
             label28.Size = new Size(193, 41);
             label28.TabIndex = 9;
             label28.Text = "PURPOSE OF REMITTANCE* Inv No/Ref No/*";
-            //label28.Click += label28_Click;
             // 
             // label27
             // 
@@ -574,7 +568,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
             tableLayoutPanel1.Size = new Size(730, 413);
             tableLayoutPanel1.TabIndex = 24;
-            //tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // label29
             // 
@@ -708,7 +701,7 @@
             // 
             lbl17.Location = new Point(231, 905);
             lbl17.Name = "lbl17";
-            lbl17.Size = new Size(527, 28);
+            lbl17.Size = new Size(508, 28);
             lbl17.TabIndex = 52;
             // 
             // lbl18
@@ -717,7 +710,6 @@
             lbl18.Name = "lbl18";
             lbl18.Size = new Size(381, 28);
             lbl18.TabIndex = 53;
-           // lbl18.Click += lbl18_Click;
             // 
             // lbl19
             // 
@@ -779,7 +771,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "UCPage2";
             RightToLeft = RightToLeft.No;
-            Size = new Size(739, 1188);
+            Size = new Size(718, 1167);
             Load += UCPage1_Load;
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
