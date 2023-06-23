@@ -71,6 +71,7 @@
             splitContainerToShowFiles.Dock = DockStyle.Fill;
             splitContainerToShowFiles.ForeColor = SystemColors.ControlText;
             splitContainerToShowFiles.Location = new Point(0, 0);
+            splitContainerToShowFiles.Margin = new Padding(3, 4, 3, 4);
             splitContainerToShowFiles.Name = "splitContainerToShowFiles";
             // 
             // splitContainerToShowFiles.Panel1
@@ -83,8 +84,9 @@
             // 
             splitContainerToShowFiles.Panel2.BackColor = Color.White;
             splitContainerToShowFiles.Panel2.Controls.Add(splitContainerTTHandleing);
-            splitContainerToShowFiles.Size = new Size(781, 505);
-            splitContainerToShowFiles.SplitterDistance = 150;
+            splitContainerToShowFiles.Size = new Size(893, 673);
+            splitContainerToShowFiles.SplitterDistance = 171;
+            splitContainerToShowFiles.SplitterWidth = 5;
             splitContainerToShowFiles.TabIndex = 0;
             // 
             // pnlFilesShow
@@ -92,10 +94,11 @@
             pnlFilesShow.BackColor = SystemColors.Control;
             pnlFilesShow.Controls.Add(flp_fileItemsShowingPanel);
             pnlFilesShow.Dock = DockStyle.Fill;
-            pnlFilesShow.Location = new Point(0, 137);
+            pnlFilesShow.Location = new Point(0, 183);
+            pnlFilesShow.Margin = new Padding(3, 4, 3, 4);
             pnlFilesShow.Name = "pnlFilesShow";
-            pnlFilesShow.Padding = new Padding(3);
-            pnlFilesShow.Size = new Size(146, 364);
+            pnlFilesShow.Padding = new Padding(3, 4, 3, 4);
+            pnlFilesShow.Size = new Size(167, 486);
             pnlFilesShow.TabIndex = 1;
             // 
             // flp_fileItemsShowingPanel
@@ -103,9 +106,10 @@
             flp_fileItemsShowingPanel.AutoScroll = true;
             flp_fileItemsShowingPanel.BackColor = SystemColors.Control;
             flp_fileItemsShowingPanel.Dock = DockStyle.Fill;
-            flp_fileItemsShowingPanel.Location = new Point(3, 3);
+            flp_fileItemsShowingPanel.Location = new Point(3, 4);
+            flp_fileItemsShowingPanel.Margin = new Padding(3, 4, 3, 4);
             flp_fileItemsShowingPanel.Name = "flp_fileItemsShowingPanel";
-            flp_fileItemsShowingPanel.Size = new Size(140, 358);
+            flp_fileItemsShowingPanel.Size = new Size(161, 478);
             flp_fileItemsShowingPanel.TabIndex = 0;
             // 
             // panel1
@@ -115,9 +119,10 @@
             panel1.Controls.Add(panel3);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Padding = new Padding(5);
-            panel1.Size = new Size(146, 137);
+            panel1.Padding = new Padding(6, 7, 6, 7);
+            panel1.Size = new Size(167, 183);
             panel1.TabIndex = 0;
             // 
             // panel4
@@ -125,9 +130,10 @@
             panel4.Controls.Add(panel7);
             panel4.Controls.Add(panel5);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(5, 5);
+            panel4.Location = new Point(6, 7);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(136, 82);
+            panel4.Size = new Size(155, 109);
             panel4.TabIndex = 3;
             // 
             // panel7
@@ -136,8 +142,9 @@
             panel7.Controls.Add(label1);
             panel7.Dock = DockStyle.Top;
             panel7.Location = new Point(0, 0);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(136, 35);
+            panel7.Size = new Size(155, 47);
             panel7.TabIndex = 4;
             // 
             // btn_loadAll
@@ -152,9 +159,10 @@
             btn_loadAll.IconColor = Color.Black;
             btn_loadAll.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_loadAll.IconSize = 30;
-            btn_loadAll.Location = new Point(96, 0);
+            btn_loadAll.Location = new Point(109, 0);
+            btn_loadAll.Margin = new Padding(3, 4, 3, 4);
             btn_loadAll.Name = "btn_loadAll";
-            btn_loadAll.Size = new Size(40, 35);
+            btn_loadAll.Size = new Size(46, 47);
             btn_loadAll.TabIndex = 4;
             btn_loadAll.UseVisualStyleBackColor = false;
             btn_loadAll.Click += btn_loadAll_Click;
@@ -166,7 +174,7 @@
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(56, 30);
+            label1.Size = new Size(74, 37);
             label1.TabIndex = 4;
             label1.Text = "Files";
             // 
@@ -175,9 +183,10 @@
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(btn_search);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 41);
+            panel5.Location = new Point(0, 54);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(136, 41);
+            panel5.Size = new Size(155, 55);
             panel5.TabIndex = 3;
             // 
             // panel6
@@ -185,17 +194,19 @@
             panel6.Controls.Add(tb_search);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(0, 0);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Padding = new Padding(0, 0, 5, 5);
-            panel6.Size = new Size(96, 41);
+            panel6.Padding = new Padding(0, 0, 6, 7);
+            panel6.Size = new Size(109, 55);
             panel6.TabIndex = 3;
             // 
             // tb_search
             // 
             tb_search.Dock = DockStyle.Fill;
             tb_search.Location = new Point(0, 0);
+            tb_search.Margin = new Padding(3, 4, 3, 4);
             tb_search.Name = "tb_search";
-            tb_search.Size = new Size(91, 23);
+            tb_search.Size = new Size(103, 27);
             tb_search.TabIndex = 1;
             // 
             // btn_search
@@ -211,9 +222,10 @@
             btn_search.IconColor = Color.White;
             btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_search.IconSize = 28;
-            btn_search.Location = new Point(96, 0);
+            btn_search.Location = new Point(109, 0);
+            btn_search.Margin = new Padding(3, 4, 3, 4);
             btn_search.Name = "btn_search";
-            btn_search.Size = new Size(40, 41);
+            btn_search.Size = new Size(46, 55);
             btn_search.TabIndex = 2;
             btn_search.TextAlign = ContentAlignment.BottomCenter;
             btn_search.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -224,9 +236,10 @@
             panel3.BackColor = SystemColors.Control;
             panel3.Controls.Add(btn_CreateNEwTTs);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(5, 93);
+            panel3.Location = new Point(6, 124);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(136, 39);
+            panel3.Size = new Size(155, 52);
             panel3.TabIndex = 2;
             // 
             // btn_CreateNEwTTs
@@ -245,8 +258,9 @@
             btn_CreateNEwTTs.IconSize = 25;
             btn_CreateNEwTTs.ImageAlign = ContentAlignment.MiddleLeft;
             btn_CreateNEwTTs.Location = new Point(0, 0);
+            btn_CreateNEwTTs.Margin = new Padding(3, 4, 3, 4);
             btn_CreateNEwTTs.Name = "btn_CreateNEwTTs";
-            btn_CreateNEwTTs.Size = new Size(136, 39);
+            btn_CreateNEwTTs.Size = new Size(155, 52);
             btn_CreateNEwTTs.TabIndex = 1;
             btn_CreateNEwTTs.Text = "New File";
             btn_CreateNEwTTs.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -272,8 +286,9 @@
             // 
             splitContainerTTHandleing.Panel2.BackColor = SystemColors.Control;
             splitContainerTTHandleing.Panel2.Controls.Add(lblTest);
-            splitContainerTTHandleing.Size = new Size(627, 505);
-            splitContainerTTHandleing.SplitterDistance = 150;
+            splitContainerTTHandleing.Size = new Size(717, 673);
+            splitContainerTTHandleing.SplitterDistance = 171;
+            splitContainerTTHandleing.SplitterWidth = 5;
             splitContainerTTHandleing.TabIndex = 0;
             // 
             // panel2
@@ -282,17 +297,18 @@
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Padding = new Padding(5);
-            panel2.Size = new Size(146, 40);
+            panel2.Padding = new Padding(6, 7, 6, 7);
+            panel2.Size = new Size(167, 53);
             panel2.TabIndex = 0;
             // 
             // label2
             // 
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(8, 9);
+            label2.Location = new Point(9, 12);
             label2.Name = "label2";
-            label2.Size = new Size(223, 31);
+            label2.Size = new Size(255, 41);
             label2.TabIndex = 0;
             label2.Text = "Telegraphic Transfer Orders";
             // 
@@ -300,18 +316,19 @@
             // 
             lblTest.AutoSize = true;
             lblTest.Font = new Font("Showcard Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTest.Location = new Point(104, 110);
+            lblTest.Location = new Point(119, 147);
             lblTest.Name = "lblTest";
-            lblTest.Size = new Size(0, 27);
+            lblTest.Size = new Size(0, 33);
             lblTest.TabIndex = 0;
             // 
             // UCFileHandeling
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainerToShowFiles);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UCFileHandeling";
-            Size = new Size(781, 505);
+            Size = new Size(893, 673);
             Load += UCFileHandeling_Load;
             splitContainerToShowFiles.Panel1.ResumeLayout(false);
             splitContainerToShowFiles.Panel2.ResumeLayout(false);

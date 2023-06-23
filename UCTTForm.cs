@@ -74,6 +74,59 @@ namespace project_TelegraphicTransfer
 
         #endregion
 
+        #region labelLoad
+
+        public string senderName 
+        {
+            set 
+            {
+                lbl_seName.Text = value;
+            }        
+        }
+
+        public string Purpose
+        {
+            set
+            {
+                tb_purpose.Text = value;
+            }
+        }
+
+        private bool _btnState;
+        public bool BtnState
+        {
+            set
+            {
+                _btnState = value;
+            }
+        }
+
+        public string Inv
+        {
+            set
+            {
+                tb_inv.Text = value;
+            }
+        }
+
+        public string Desc
+        {
+            set
+            {
+                tb_description.Text = value;
+            }
+        }
+
+        public string Trade
+        {
+            set
+            {
+                tb_terms.Text = value;
+            }
+        }
+
+        #endregion
+
         public UCTTForm()
         {
             InitializeComponent();
@@ -82,6 +135,10 @@ namespace project_TelegraphicTransfer
         private void UCTTForm_Load(object sender, EventArgs e)
         {
             loadSeData();
+            if(_btnState == false)
+            {
+                btn_add.Visible = false;
+            }
         }
 
         #region amount Convert
