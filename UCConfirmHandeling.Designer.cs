@@ -35,6 +35,7 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             lbl_count = new Label();
             label1 = new Label();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -53,6 +54,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(label10);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -120,6 +122,23 @@
             label1.TabIndex = 0;
             label1.Text = "Number of Telegraphic Transfer Forms To Confirm :";
             // 
+            // iconButton1
+            // 
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatAppearance.MouseDownBackColor = Color.Navy;
+            iconButton1.FlatAppearance.MouseOverBackColor = Color.White;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate;
+            iconButton1.IconColor = Color.Black;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.IconSize = 20;
+            iconButton1.Location = new Point(4, 2);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Size = new Size(24, 23);
+            iconButton1.TabIndex = 1;
+            iconButton1.UseVisualStyleBackColor = true;
+            iconButton1.Click += iconButton1_Click;
+            // 
             // UCConfirmHandeling
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -147,5 +166,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label lbl_count;
         private Label label1;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

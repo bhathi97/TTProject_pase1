@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PdfSharpCore.Pdf.Content.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,17 +28,16 @@ namespace project_TelegraphicTransfer
         {
             try
             {
-
-                //check the fields are empty or not
+                // Check if the fields are empty
                 if (string.IsNullOrEmpty(tb_userName.Text))
                 {
-                    MessageBox.Show("User Name Is Required");
+                    MessageBox.Show("User Name is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tb_userName.Focus();
                     return;
                 }
                 else if (string.IsNullOrEmpty(tb_password.Text))
                 {
-                    MessageBox.Show("Password Is Required");
+                    MessageBox.Show("Password is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tb_password.Focus();
                     return;
                 }
@@ -53,10 +53,12 @@ namespace project_TelegraphicTransfer
 
                     int count = Convert.ToInt32(cmdLogin.ExecuteScalar());
 
-                 
                     if (count > 0)
                     {
-                        SqlCommand cmdUser = new SqlCommand("select * from tbl_LOGIN_MASTER where [NAME] = @name and PASSWORD = @pw", connsql);
+                        // User credentials are valid
+                        MessageBox.Show(userName + "  SUCCESSFULLY LOGIN ...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        SqlCommand cmdUser = new SqlCommand("SELECT * FROM tbl_LOGIN_MASTER WHERE [NAME] = @name AND PASSWORD = @pw", connsql);
                         cmdUser.Parameters.AddWithValue("@name", userName);
                         cmdUser.Parameters.AddWithValue("@pw", password);
 
@@ -75,26 +77,31 @@ namespace project_TelegraphicTransfer
                             this.tb_userName.Text = "";
                             this.tb_password.Text = "";
                             this.Hide();
-
                         }
-
                     }
-
+                    else
+                    {
+                        // Username and password are incorrect
+                        MessageBox.Show("Username and password are incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb_userName.Focus();
+                        tb_userName.SelectAll();
+                        tb_password.Clear();
+                    }
                 }
-
-
-
-
             }
             catch (Exception ex)
             {
-
+                // Handle exceptions
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 connsql.Close();
             }
         }
+
+        
+               
 
         private void tb_userName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -128,6 +135,18 @@ namespace project_TelegraphicTransfer
 
             }
 
+        }
+        //hide password when user typing password 
+        private void chb_showPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chb_showPassword.Checked == true) 
+            {
+                tb_password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tb_password.UseSystemPasswordChar = true;
+            }
         }
     }
 }

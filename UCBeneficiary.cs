@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -32,9 +33,6 @@ namespace project_TelegraphicTransfer
         {
             LoadItems();
         }
-
-
-
 
 
 
@@ -91,38 +89,137 @@ namespace project_TelegraphicTransfer
 
         private void btn_AddNew_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string nicName = tb_nic.Text;
-                string name = tb_name.Text;
-                string address = tb_address.Text;
-                string bankName = tb_bank.Text;
-                string branchName = tb_branchName.Text;
-                string country = cb_country.Text;
-                string account = tb_accountNo.Text;
-                string sort = tb_sort.Text; //branch code
-                string swift = tb_swiftCode.Text;
-                string corBank = tb_corBank.Text;
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENIFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
-                cmd.Parameters.AddWithValue("@nic", nicName);
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@addr", address);
-                cmd.Parameters.AddWithValue("@bankName", bankName);
-                cmd.Parameters.AddWithValue("@brName", branchName);
-                cmd.Parameters.AddWithValue("@brCode", sort);
-                cmd.Parameters.AddWithValue("@swftCode", swift);
-                cmd.Parameters.AddWithValue("@country", country);
-                cmd.Parameters.AddWithValue("@acc", account);
-                cmd.Parameters.AddWithValue("@interBank", corBank);
+                // Check Nic Name
+                if (string.IsNullOrEmpty(nicName))
+                {
+                    MessageBox.Show("Please enter a Nic Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
+                // Check if Nic Name already exists in the database
+                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_BENIFICIARY_MASTER WHERE NIC_NAME = @nic", connsql);
+                checkCmd.Parameters.AddWithValue("@nic", nicName);
                 connsql.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show(name + " IS SUCCESSFULLY ADDED TO THE DATABASE");
+                int count = (int)checkCmd.ExecuteScalar();
                 connsql.Close();
 
+                if (count > 0)
+                {
+                    MessageBox.Show("Nic Name is already exists in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                LoadItems();
+                string name = tb_name.Text;
+
+                // check name
+                if (string.IsNullOrEmpty(name))
+                {
+                    MessageBox.Show("Please enter a Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+               
+                string address = tb_address.Text;
+
+                if (string.IsNullOrEmpty(address))
+                {
+                    MessageBox.Show("Please enter Address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                
+                string bankName = tb_bank.Text;
+
+
+                if (string.IsNullOrEmpty(bankName))
+                {
+                    MessageBox.Show("Please enter a Bank Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Regex.IsMatch(bankName, "^[a-zA-Z]+$"))
+                {
+                    MessageBox.Show("Please enter a valid Bank Name containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string branchName = tb_branchName.Text;
+                string country = cb_country.Text;
+
+                if (string.IsNullOrEmpty(country))
+                {
+                    MessageBox.Show("Please enter a Country.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Regex.IsMatch(country, "^[a-zA-Z]+$"))
+                {
+                    MessageBox.Show("Please enter a valid Country containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string account = tb_accountNo.Text;
+
+                if (string.IsNullOrEmpty(account))
+                {
+                    MessageBox.Show("Please enter a Country.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Regex.IsMatch(account, "^[0-9]+$"))
+                {
+                    MessageBox.Show("Please enter a valid Account number containing only numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string sort = tb_sort.Text; //branch code
+                string swift = tb_swiftCode.Text;
+
+
+                if (string.IsNullOrEmpty(swift))
+                {
+                    MessageBox.Show("Please enter a Country.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Regex.IsMatch(swift, "^[a-zA-Z0-9]+$"))
+                {
+                    MessageBox.Show("Swift Code should contain only numbers, uppercase letters, or lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string corBank = tb_corBank.Text;
+
+
+                // Confirmation popup
+                DialogResult result = MessageBox.Show("Do you want to add this beneficiary ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENIFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
+                    cmd.Parameters.AddWithValue("@nic", nicName);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@addr", address);
+                    cmd.Parameters.AddWithValue("@bankName", bankName);
+                    cmd.Parameters.AddWithValue("@brName", branchName);
+                    cmd.Parameters.AddWithValue("@brCode", sort);
+                    cmd.Parameters.AddWithValue("@swftCode", swift);
+                    cmd.Parameters.AddWithValue("@country", country);
+                    cmd.Parameters.AddWithValue("@acc", account);
+                    cmd.Parameters.AddWithValue("@interBank", corBank);
+
+                    connsql.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show(name + " IS SUCCESSFULLY ADDED TO THE DATABASE");
+                    connsql.Close();
+
+
+                    LoadItems();
+                }
             }
             catch (Exception ex)
             {
@@ -132,6 +229,8 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
+            }
         }
     }
-}
+
+

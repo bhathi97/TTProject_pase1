@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,9 @@ namespace project_TelegraphicTransfer
 
         string yssno = "YES/NO";
 
-
+        #region connection
+        SqlConnection connsql = new SqlConnection(connectionString.ConnectionString);
+        #endregion
 
         #region properties
         private string _formName;
@@ -52,10 +55,31 @@ namespace project_TelegraphicTransfer
             set
             {
                 _purpose = value;
-                lbl_Purpose.Text = _purpose;
+                //lbl_Purpose.Text = _purpose;
             }
         }
 
+
+        private string _insertBy;
+        public string InsertBy
+        {
+           
+            set
+            {
+                _insertBy = value;
+     
+            }
+        }
+
+        private DateTime _date;
+        public DateTime Date
+        {
+            set
+            {
+                _date = value;
+
+            }
+        }
 
 
         #endregion
@@ -1374,10 +1398,57 @@ namespace project_TelegraphicTransfer
             try
             {
                 if (_uCPage2 == null)
-                {
-                    UCPage2 = new UCPage2();
 
-                    UCPage2.Purpose = this.Purpose;
+                {
+
+
+                    try
+                    {
+
+                        MessageBox.Show(_formName + " " + _purpose + " " + _insertBy + " " + _date.ToString());
+
+
+                        connsql.Open();
+                        SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_TRANSFER_ORDER_FORM where FILE_REFERENCE = @file and PURPOSE = @pur and ADD_EDITOR = @insert_by ", connsql);
+                        cmd.Parameters.AddWithValue("@file", _formName);
+                        cmd.Parameters.AddWithValue("@pur", _purpose);
+                        cmd.Parameters.AddWithValue("@insert_by", _insertBy);
+                        cmd.Parameters.AddWithValue("@date", _date);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                UCPage2 = new UCPage2();
+                                UCPage2.Name = reader["SENDER_NAME"].ToString();
+                                UCPage2.Address = reader["SENDER_ADDRESS"].ToString();
+                                //UCPage2.Business = reader["SENDER_BUSINESS"].ToString();
+                                UCPage2.Phone = reader["SENDER_TPNO"].ToString();
+                                UCPage2.Purpose = reader["PURPOSE"].ToString();
+
+
+
+
+                            }
+
+
+
+
+                        }
+
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        connsql.Close();
+                    }
+
+
+
+                   // UCPage2.Purpose = this.Purpose;
 
 
                 }

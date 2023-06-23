@@ -57,7 +57,9 @@ namespace project_TelegraphicTransfer
         {
             try
             {
+                
                 FormAddNewForm formAddNewForm = new FormAddNewForm();
+
                 formAddNewForm.FileName = FileName;
                 formAddNewForm.FileID = FileId;
 
@@ -112,6 +114,8 @@ namespace project_TelegraphicTransfer
                 {
                     UCTTItems uCTTItems = new UCTTItems();
                     uCTTItems.FileName = reader["NAME"].ToString();
+                    uCTTItems.FoldId = int.Parse(reader["ID"].ToString());
+
                     uCTTItems.FName = FileName;
                    
                     //MessageBox.Show(FileName);

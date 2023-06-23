@@ -72,7 +72,7 @@ namespace project_TelegraphicTransfer
                     itms.FileName = reader["FILE_REFERENCE"].ToString();
                     itms.Purpose = reader["PURPOSE"].ToString();
                     itms.InsertBy = reader["ADD_EDITOR"].ToString();
-                    itms.AddDate = reader["ADD_TIME"].ToString();
+                    itms.AddDate = DateTime.Parse(reader["ADD_TIME"].ToString());
 
                     // Add UCItems1 control to the panel
                     flp_confirmItemLoade.Controls.Add(itms);
@@ -82,7 +82,7 @@ namespace project_TelegraphicTransfer
                 reader.Close();
                 connsql.Close();
 
-                
+
 
             }
             catch (Exception ex)
@@ -94,6 +94,11 @@ namespace project_TelegraphicTransfer
                 connsql.Close();
                 this.Count = count;
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            loadItems();
         }
     }
 

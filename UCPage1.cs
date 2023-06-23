@@ -30,8 +30,51 @@ namespace project_TelegraphicTransfer
         }
 
 
-        private string _purpose;
+        public string Name
+        {
+            set
+            {
+                lbl_name.Text = value;
+            }
+        }
+
+
+        public string Address
+        {
+            set
+            {
+                lbl_address.Text = value;
+            }
+        }
+
+        public string business
+        {
+            set
+            {
+                lbl_business.Text = value;
+            }
+        }
+
+        public string Phone
+        {
+            set
+            {
+                ldl_phone.Text = value;
+            }
+        }
+
         public string Purpose
+        {
+            set
+            {
+                lbl_purpose.Text = value;
+            }
+        }
+
+
+
+        private string _purpose;
+        public string purpose
         {
             get
             {
@@ -40,13 +83,33 @@ namespace project_TelegraphicTransfer
             set
             {
                 _purpose = value;
-                //lbl_Purpose.Text = _purpose;
+                lbl_purpose.Text = _purpose;
+            }
+        }
+
+
+        private string _insert_by;
+        public string INSERT_BY
+        {
+            get
+            {
+                return _insert_by;
+            }
+            set
+            {
+                _insert_by = value;
+                //lbl_Purpose.Text = _insert_by;
             }
         }
 
 
 
+
+
+
         #endregion
+
+
 
 
         public UCPage2()
@@ -65,8 +128,6 @@ namespace project_TelegraphicTransfer
 
 
         }
-
-
 
 
     }
