@@ -126,7 +126,14 @@ namespace project_TelegraphicTransfer
         }
 
 
+        //File button
+        private UCFileEditsHandeling _fileControl;
+        public UCFileEditsHandeling FileControl
+        {
+            get { return _fileControl; }
+            set { _fileControl = value; }
 
+        }
 
 
 
@@ -344,6 +351,11 @@ namespace project_TelegraphicTransfer
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void btn_formsControl_Click(object sender, EventArgs e)
+        {
 
         }
     }
