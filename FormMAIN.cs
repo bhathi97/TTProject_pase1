@@ -356,6 +356,36 @@ namespace project_TelegraphicTransfer
 
         private void btn_formsControl_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (_fileControl == null)
+                {
+                    FileControl = new UCFileEditsHandeling();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnllLoadSpace.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                FileControl.Show();
+
+                //change the dock property
+                FileControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(FileControl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
 
         }
     }
