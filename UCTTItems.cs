@@ -89,7 +89,7 @@ namespace project_TelegraphicTransfer
                         //MessageBox.Show(_fileId.ToString());
                         //-----------------------------------------------
                         connsql.Open();
-                        SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_TRANSFER_ORDER_FORM WHERE FILE_REFERENCE = @fl and DOCUMANT = @doc AND ISCONFIRMED != 0", connsql);
+                        SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_TRANSFER_ORDER_FORM WHERE FILE_REFERENCE = @fl and DOCUMENT = @doc AND ISCONFIRMED != 0", connsql);
                         cmd.Parameters.AddWithValue("@fl", _fName);
                         cmd.Parameters.AddWithValue("@doc", _fileName);
 

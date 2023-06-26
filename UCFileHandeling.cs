@@ -76,7 +76,7 @@ namespace project_TelegraphicTransfer
                 // Create a SqlCommand to retrieve the rows
 
 
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_FILE ORDER BY DATE_TIME DESC", connsql);
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT TOP 10 * FROM tbl_FILE ORDER BY DATE_TIME DESC", connsql);
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -112,6 +112,9 @@ namespace project_TelegraphicTransfer
 
         private void btn_CreateNEwTTs_Click(object sender, EventArgs e)
         {
+
+            
+
             try
             {
                 //find user

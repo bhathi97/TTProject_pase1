@@ -14,8 +14,13 @@ namespace project_TelegraphicTransfer
         {
             get
             {
-                return "Data Source=192.168.100.70; Initial Catalog=db_TTProject; User Id=sa; Password=cpt@109";
+                return "Data Source=DESKTOP-8S284IC;Initial Catalog=db_TTProject;User ID=sa;Password=BSvu6ZDj;";
             }
+
+
+
+            //"Data Source=192.168.100.70; Initial Catalog=db_TTProject; User Id=sa; Password=cpt@109"
+            //"Data Source=ServerName;Initial Catalog=DatabaseName;User ID=Username;Password=Password;"
         }
     }
 }

@@ -110,6 +110,7 @@ namespace project_TelegraphicTransfer
                 if (e.KeyChar == (char)Keys.Enter)
                 {
                     tb_password.Focus();
+
                 }
             }
             catch
