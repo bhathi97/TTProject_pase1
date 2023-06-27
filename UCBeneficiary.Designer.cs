@@ -477,25 +477,7 @@
             // 
             // btn_AddNew
             // 
-            btn_AddNew.BackColor = Color.FromArgb(11, 12, 71);
-            btn_AddNew.FlatAppearance.BorderSize = 0;
-            btn_AddNew.FlatAppearance.MouseDownBackColor = Color.White;
-            btn_AddNew.FlatAppearance.MouseOverBackColor = Color.Green;
-            btn_AddNew.FlatStyle = FlatStyle.Flat;
-            btn_AddNew.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_AddNew.ForeColor = Color.White;
-            btn_AddNew.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            btn_AddNew.IconColor = Color.White;
-            btn_AddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_AddNew.IconSize = 20;
-            btn_AddNew.Location = new Point(96, 19);
-            btn_AddNew.Name = "btn_AddNew";
-            btn_AddNew.Size = new Size(340, 42);
-            btn_AddNew.TabIndex = 0;
-            btn_AddNew.Text = "ADD NEW BENIFICIARY TO THE DATABASE";
-            btn_AddNew.TextAlign = ContentAlignment.MiddleRight;
-            btn_AddNew.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_AddNew.UseVisualStyleBackColor = false;
+
             // 
             // panel2
             // 
@@ -597,35 +579,7 @@
             // 
             // UCBeneficiary
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(194, 194, 239);
-            Controls.Add(splitContainer1);
-            Controls.Add(panel1);
-            Name = "UCBeneficiary";
-            Size = new Size(1891, 1083);
-            panel1.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel2.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
-            panel4.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
-            panel6.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ResumeLayout(false);
+
         }
 
         #endregion

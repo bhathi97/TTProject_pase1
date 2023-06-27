@@ -29,39 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMAIN));
-            panelmain = new Panel();
-            panelbody = new Panel();
-            pnllLoadSpace = new Panel();
-            pnlButtons = new Panel();
-            btn_formsControl = new FontAwesome.Sharp.IconButton();
-            btn_Logout = new FontAwesome.Sharp.IconButton();
-            btn_DatabaseSender = new FontAwesome.Sharp.IconButton();
-            btnDatabaseBenificiary = new FontAwesome.Sharp.IconButton();
-            btnDataBaseUser = new FontAwesome.Sharp.IconButton();
-            btnConfirmRecord = new FontAwesome.Sharp.IconButton();
-            btnNewRecord = new FontAwesome.Sharp.IconButton();
-            panelheader = new Panel();
-            panel1 = new Panel();
-            pnlUserShowing = new Panel();
-            panel2 = new Panel();
-            lbl_User = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            lbl_TTNameShowing = new Label();
-            lblFormNameShow = new Label();
-            lblSystemName = new Label();
-            panellogo = new Panel();
-            pbLOGO = new PictureBox();
-            panelmain.SuspendLayout();
-            panelbody.SuspendLayout();
-            pnlButtons.SuspendLayout();
-            panelheader.SuspendLayout();
-            panel1.SuspendLayout();
-            pnlUserShowing.SuspendLayout();
-            panel2.SuspendLayout();
-            panellogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbLOGO).BeginInit();
-            SuspendLayout();
+
             // 
             // panelmain
             // 
@@ -128,6 +96,24 @@
             btn_formsControl.UseVisualStyleBackColor = true;
             btn_formsControl.Click += btn_formsControl_Click;
             // 
+            // btn_formsControl
+            // 
+            this.btn_formsControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_formsControl.FlatAppearance.BorderSize = 0;
+            this.btn_formsControl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_formsControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
+            this.btn_formsControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_formsControl.IconChar = FontAwesome.Sharp.IconChar.FileCircleQuestion;
+            this.btn_formsControl.IconColor = System.Drawing.Color.White;
+            this.btn_formsControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_formsControl.IconSize = 30;
+            this.btn_formsControl.Location = new System.Drawing.Point(0, 344);
+            this.btn_formsControl.Name = "btn_formsControl";
+            this.btn_formsControl.Size = new System.Drawing.Size(65, 65);
+            this.btn_formsControl.TabIndex = 6;
+            this.btn_formsControl.UseVisualStyleBackColor = true;
+            this.btn_formsControl.Click += new System.EventHandler(this.btn_formsControl_Click);
+            // 
             // btn_Logout
             // 
             btn_Logout.Cursor = Cursors.Hand;
@@ -147,93 +133,7 @@
             // 
             // btn_DatabaseSender
             // 
-            btn_DatabaseSender.Cursor = Cursors.Hand;
-            btn_DatabaseSender.FlatAppearance.BorderSize = 0;
-            btn_DatabaseSender.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
-            btn_DatabaseSender.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
-            btn_DatabaseSender.FlatStyle = FlatStyle.Flat;
-            btn_DatabaseSender.IconChar = FontAwesome.Sharp.IconChar.Building;
-            btn_DatabaseSender.IconColor = Color.White;
-            btn_DatabaseSender.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_DatabaseSender.IconSize = 30;
-            btn_DatabaseSender.Location = new Point(0, 277);
-            btn_DatabaseSender.Name = "btn_DatabaseSender";
-            btn_DatabaseSender.Size = new Size(65, 65);
-            btn_DatabaseSender.TabIndex = 4;
-            btn_DatabaseSender.UseVisualStyleBackColor = true;
-            btn_DatabaseSender.Click += btnDataBase_Click;
-            // 
-            // btnDatabaseBenificiary
-            // 
-            btnDatabaseBenificiary.Cursor = Cursors.Hand;
-            btnDatabaseBenificiary.FlatAppearance.BorderSize = 0;
-            btnDatabaseBenificiary.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
-            btnDatabaseBenificiary.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
-            btnDatabaseBenificiary.FlatStyle = FlatStyle.Flat;
-            btnDatabaseBenificiary.IconChar = FontAwesome.Sharp.IconChar.HandshakeAlt;
-            btnDatabaseBenificiary.IconColor = Color.White;
-            btnDatabaseBenificiary.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnDatabaseBenificiary.IconSize = 37;
-            btnDatabaseBenificiary.Location = new Point(0, 208);
-            btnDatabaseBenificiary.Name = "btnDatabaseBenificiary";
-            btnDatabaseBenificiary.Size = new Size(65, 65);
-            btnDatabaseBenificiary.TabIndex = 3;
-            btnDatabaseBenificiary.UseVisualStyleBackColor = true;
-            btnDatabaseBenificiary.Click += btnDatabaseBenificiary_Click;
-            // 
-            // btnDataBaseUser
-            // 
-            btnDataBaseUser.Cursor = Cursors.Hand;
-            btnDataBaseUser.FlatAppearance.BorderSize = 0;
-            btnDataBaseUser.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
-            btnDataBaseUser.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
-            btnDataBaseUser.FlatStyle = FlatStyle.Flat;
-            btnDataBaseUser.IconChar = FontAwesome.Sharp.IconChar.UserTag;
-            btnDataBaseUser.IconColor = Color.White;
-            btnDataBaseUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnDataBaseUser.IconSize = 35;
-            btnDataBaseUser.Location = new Point(0, 137);
-            btnDataBaseUser.Name = "btnDataBaseUser";
-            btnDataBaseUser.Size = new Size(65, 65);
-            btnDataBaseUser.TabIndex = 2;
-            btnDataBaseUser.UseVisualStyleBackColor = true;
-            btnDataBaseUser.Click += btn_DatabaseSender_Click;
-            // 
-            // btnConfirmRecord
-            // 
-            btnConfirmRecord.Cursor = Cursors.Hand;
-            btnConfirmRecord.FlatAppearance.BorderSize = 0;
-            btnConfirmRecord.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
-            btnConfirmRecord.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
-            btnConfirmRecord.FlatStyle = FlatStyle.Flat;
-            btnConfirmRecord.IconChar = FontAwesome.Sharp.IconChar.Tags;
-            btnConfirmRecord.IconColor = Color.White;
-            btnConfirmRecord.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnConfirmRecord.IconSize = 35;
-            btnConfirmRecord.Location = new Point(0, 69);
-            btnConfirmRecord.Name = "btnConfirmRecord";
-            btnConfirmRecord.Size = new Size(65, 65);
-            btnConfirmRecord.TabIndex = 1;
-            btnConfirmRecord.UseVisualStyleBackColor = true;
-            btnConfirmRecord.Click += btnConfirmRecord_Click;
-            // 
-            // btnNewRecord
-            // 
-            btnNewRecord.Cursor = Cursors.Hand;
-            btnNewRecord.FlatAppearance.BorderSize = 0;
-            btnNewRecord.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
-            btnNewRecord.FlatAppearance.MouseOverBackColor = Color.MediumBlue;
-            btnNewRecord.FlatStyle = FlatStyle.Flat;
-            btnNewRecord.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
-            btnNewRecord.IconColor = Color.White;
-            btnNewRecord.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnNewRecord.IconSize = 28;
-            btnNewRecord.Location = new Point(0, 0);
-            btnNewRecord.Name = "btnNewRecord";
-            btnNewRecord.Size = new Size(65, 65);
-            btnNewRecord.TabIndex = 0;
-            btnNewRecord.UseVisualStyleBackColor = true;
-            btnNewRecord.Click += btnNewRecord_Click;
+
             // 
             // panelheader
             // 
@@ -363,38 +263,7 @@
             // 
             // pbLOGO
             // 
-            pbLOGO.Image = (Image)resources.GetObject("pbLOGO.Image");
-            pbLOGO.Location = new Point(5, 8);
-            pbLOGO.Name = "pbLOGO";
-            pbLOGO.Padding = new Padding(5, 5, 5, 5);
-            pbLOGO.Size = new Size(55, 50);
-            pbLOGO.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbLOGO.TabIndex = 0;
-            pbLOGO.TabStop = false;
-            // 
-            // FormMAIN
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 550);
-            Controls.Add(panelmain);
-            Name = "FormMAIN";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "HOME";
-            Load += FormMAIN_Load;
-            panelmain.ResumeLayout(false);
-            panelbody.ResumeLayout(false);
-            pnlButtons.ResumeLayout(false);
-            panelheader.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            pnlUserShowing.ResumeLayout(false);
-            pnlUserShowing.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panellogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbLOGO).EndInit();
-            ResumeLayout(false);
+
         }
 
         #endregion

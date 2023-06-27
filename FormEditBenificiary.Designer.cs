@@ -415,6 +415,7 @@
             this.Controls.Add(this.lbl10);
             this.Name = "FormEditBenificiary";
             this.Text = "Benificiary Edit";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormEditBenificiary_FormClosed);
             this.pnl5.ResumeLayout(false);
             this.pnl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();

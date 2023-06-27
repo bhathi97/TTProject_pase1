@@ -567,7 +567,7 @@ namespace project_TelegraphicTransfer
 
                     connsql.Open();
 
-                    SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENIFICIARY_MASTER WHERE NIC_NAME = @id", connsql);
+                    SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENEFICIARY_MASTER WHERE NIC_NAME = @id", connsql);
                     cmdItemLoad.Parameters.AddWithValue("@id", be_name);
 
                     // Execute the query and retrieve the rows
