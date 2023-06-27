@@ -33,6 +33,7 @@
             this.panelbody = new System.Windows.Forms.Panel();
             this.pnllLoadSpace = new System.Windows.Forms.Panel();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.btn_formsControl = new FontAwesome.Sharp.IconButton();
             this.btn_Logout = new FontAwesome.Sharp.IconButton();
             this.btn_DatabaseSender = new FontAwesome.Sharp.IconButton();
             this.btnDatabaseBenificiary = new FontAwesome.Sharp.IconButton();
@@ -51,7 +52,6 @@
             this.lblSystemName = new System.Windows.Forms.Label();
             this.panellogo = new System.Windows.Forms.Panel();
             this.pbLOGO = new System.Windows.Forms.PictureBox();
-            this.btn_formsControl = new FontAwesome.Sharp.IconButton();
             this.panelmain.SuspendLayout();
             this.panelbody.SuspendLayout();
             this.pnlButtons.SuspendLayout();
@@ -110,6 +110,24 @@
             this.pnlButtons.Size = new System.Drawing.Size(65, 485);
             this.pnlButtons.TabIndex = 1;
             // 
+            // btn_formsControl
+            // 
+            this.btn_formsControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_formsControl.FlatAppearance.BorderSize = 0;
+            this.btn_formsControl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_formsControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
+            this.btn_formsControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_formsControl.IconChar = FontAwesome.Sharp.IconChar.FileCircleQuestion;
+            this.btn_formsControl.IconColor = System.Drawing.Color.White;
+            this.btn_formsControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_formsControl.IconSize = 30;
+            this.btn_formsControl.Location = new System.Drawing.Point(0, 344);
+            this.btn_formsControl.Name = "btn_formsControl";
+            this.btn_formsControl.Size = new System.Drawing.Size(65, 65);
+            this.btn_formsControl.TabIndex = 6;
+            this.btn_formsControl.UseVisualStyleBackColor = true;
+            this.btn_formsControl.Click += new System.EventHandler(this.btn_formsControl_Click);
+            // 
             // btn_Logout
             // 
             this.btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -143,6 +161,7 @@
             this.btn_DatabaseSender.Size = new System.Drawing.Size(65, 65);
             this.btn_DatabaseSender.TabIndex = 4;
             this.btn_DatabaseSender.UseVisualStyleBackColor = true;
+            this.btn_DatabaseSender.Click += new System.EventHandler(this.btn_DatabaseSender_Click);
             // 
             // btnDatabaseBenificiary
             // 
@@ -160,6 +179,7 @@
             this.btnDatabaseBenificiary.Size = new System.Drawing.Size(65, 65);
             this.btnDatabaseBenificiary.TabIndex = 3;
             this.btnDatabaseBenificiary.UseVisualStyleBackColor = true;
+            this.btnDatabaseBenificiary.Click += new System.EventHandler(this.btnDatabaseBenificiary_Click);
             // 
             // btnDataBaseUser
             // 
@@ -177,6 +197,7 @@
             this.btnDataBaseUser.Size = new System.Drawing.Size(65, 65);
             this.btnDataBaseUser.TabIndex = 2;
             this.btnDataBaseUser.UseVisualStyleBackColor = true;
+            this.btnDataBaseUser.Click += new System.EventHandler(this.btnDataBase_Click);
             // 
             // btnConfirmRecord
             // 
@@ -194,6 +215,7 @@
             this.btnConfirmRecord.Size = new System.Drawing.Size(65, 65);
             this.btnConfirmRecord.TabIndex = 1;
             this.btnConfirmRecord.UseVisualStyleBackColor = true;
+            this.btnConfirmRecord.Click += new System.EventHandler(this.btnConfirmRecord_Click);
             // 
             // btnNewRecord
             // 
@@ -211,6 +233,7 @@
             this.btnNewRecord.Size = new System.Drawing.Size(65, 65);
             this.btnNewRecord.TabIndex = 0;
             this.btnNewRecord.UseVisualStyleBackColor = true;
+            this.btnNewRecord.Click += new System.EventHandler(this.btnNewRecord_Click);
             // 
             // panelheader
             // 
@@ -349,24 +372,6 @@
             this.pbLOGO.TabIndex = 0;
             this.pbLOGO.TabStop = false;
             // 
-            // btn_formsControl
-            // 
-            this.btn_formsControl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_formsControl.FlatAppearance.BorderSize = 0;
-            this.btn_formsControl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_formsControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
-            this.btn_formsControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_formsControl.IconChar = FontAwesome.Sharp.IconChar.FileCircleQuestion;
-            this.btn_formsControl.IconColor = System.Drawing.Color.White;
-            this.btn_formsControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_formsControl.IconSize = 30;
-            this.btn_formsControl.Location = new System.Drawing.Point(0, 344);
-            this.btn_formsControl.Name = "btn_formsControl";
-            this.btn_formsControl.Size = new System.Drawing.Size(65, 65);
-            this.btn_formsControl.TabIndex = 6;
-            this.btn_formsControl.UseVisualStyleBackColor = true;
-            this.btn_formsControl.Click += new System.EventHandler(this.btn_formsControl_Click);
-            // 
             // FormMAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -375,6 +380,8 @@
             this.Controls.Add(this.panelmain);
             this.Name = "FormMAIN";
             this.Text = "HOME";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMAIN_FormClosed);
+            this.Load += new System.EventHandler(this.FormMAIN_Load);
             this.panelmain.ResumeLayout(false);
             this.panelbody.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);

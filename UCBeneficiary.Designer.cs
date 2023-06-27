@@ -515,6 +515,7 @@
             this.btn_AddNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_AddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_AddNew.UseVisualStyleBackColor = false;
+            this.btn_AddNew.Click += new System.EventHandler(this.btn_AddNew_Click);
             // 
             // panel2
             // 
@@ -623,6 +624,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UCBeneficiary";
             this.Size = new System.Drawing.Size(1210, 693);
+            this.Load += new System.EventHandler(this.UCBeneficiary_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

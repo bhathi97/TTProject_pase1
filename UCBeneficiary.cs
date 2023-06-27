@@ -47,7 +47,7 @@ namespace project_TelegraphicTransfer
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENIFICIARY_MASTER ", connsql);
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENEFICIARY_MASTER", connsql);
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -102,7 +102,7 @@ namespace project_TelegraphicTransfer
                 }
 
                 // Check if Nic Name already exists in the database
-                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_BENIFICIARY_MASTER WHERE NIC_NAME = @nic", connsql);
+                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_BENEFICIARY_MASTER WHERE NIC_NAME = @nic", connsql);
                 checkCmd.Parameters.AddWithValue("@nic", nicName);
                 connsql.Open();
                 int count = (int)checkCmd.ExecuteScalar();
@@ -200,7 +200,7 @@ namespace project_TelegraphicTransfer
                 if (result == DialogResult.OK)
                 {
 
-                    SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENIFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENEFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
                     cmd.Parameters.AddWithValue("@nic", nicName);
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@addr", address);
