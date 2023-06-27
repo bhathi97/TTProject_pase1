@@ -14,13 +14,14 @@ namespace project_TelegraphicTransfer
         {
             get
             {
-                return "Data Source=DINIL-PC;Initial Catalog=db_TTProject;Integrated Security=True;";
+                return "Data Source=LAPTOP-IDQLNRRJ;Initial Catalog=db_TTProject;Integrated Security=True;";
             }
 
 
             //"Data Source=DINIL-PC;Initial Catalog=db_TTProject;Integrated Security=True;"
             //"Data Source=192.168.100.70; Initial Catalog=db_TTProject; User Id=sa; Password=cpt@109"
             //"Data Source=DESKTOP-8S284IC;Initial Catalog=db_TTProject;User ID=sa;Password=BSvu6ZDj;"
+            //"Data Source=LAPTOP-IDQLNRRJ;Initial Catalog=db_TTProject;Integrated Security=True;"
         }
     }
 }
