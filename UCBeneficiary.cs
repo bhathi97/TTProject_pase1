@@ -20,8 +20,8 @@ namespace project_TelegraphicTransfer
         #endregion
 
 
-        //test
-
+rbNew1
+        //tesr
 
 
 
@@ -38,6 +38,9 @@ namespace project_TelegraphicTransfer
 
 
 
+
+
+
         //load items
         public void LoadItems()
         {
@@ -49,7 +52,7 @@ namespace project_TelegraphicTransfer
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENEFICIARY_MASTER", connsql);
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENIFICIARY_MASTER ", connsql);
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -91,8 +94,8 @@ namespace project_TelegraphicTransfer
 
         private void btn_AddNew_Click(object sender, EventArgs e)
         {
-            try
 
+            try
             {
                 string nicName = tb_nic.Text;
 
@@ -100,19 +103,6 @@ namespace project_TelegraphicTransfer
                 if (string.IsNullOrEmpty(nicName))
                 {
                     MessageBox.Show("Please enter a Nic Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Check if Nic Name already exists in the database
-                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_BENEFICIARY_MASTER WHERE NIC_NAME = @nic", connsql);
-                checkCmd.Parameters.AddWithValue("@nic", nicName);
-                connsql.Open();
-                int count = (int)checkCmd.ExecuteScalar();
-                connsql.Close();
-
-                if (count > 0)
-                {
-                    MessageBox.Show("Nic Name is already exists in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -125,7 +115,7 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-
+               
                 string address = tb_address.Text;
 
                 if (string.IsNullOrEmpty(address))
@@ -134,7 +124,7 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-
+                
                 string bankName = tb_bank.Text;
 
 
@@ -144,12 +134,11 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                if (Regex.IsMatch(bankName, @"[\d\W]"))
+                if (!Regex.IsMatch(bankName, "^[a-zA-Z]+$"))
                 {
                     MessageBox.Show("Please enter a valid Bank Name containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
 
                 string branchName = tb_branchName.Text;
                 string country = cb_country.Text;
@@ -160,12 +149,17 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-               
+                if (!Regex.IsMatch(country, "^[a-zA-Z]+$"))
+                {
+                    MessageBox.Show("Please enter a valid Country containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 string account = tb_accountNo.Text;
 
                 if (string.IsNullOrEmpty(account))
                 {
-                    MessageBox.Show("Please enter a Account No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please enter a Country.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -185,15 +179,20 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
+                if (!Regex.IsMatch(swift, "^[a-zA-Z0-9]+$"))
+                {
+                    MessageBox.Show("Swift Code should contain only numbers, uppercase letters, or lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 string corBank = tb_corBank.Text;
 
 
                 // Confirmation popup
-                DialogResult result = MessageBox.Show("Do you want to add this beneficiary ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Do you want to add this beneficiary ?", "Confirmation", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 {
 
-                    SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENEFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENIFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
                     cmd.Parameters.AddWithValue("@nic", nicName);
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@addr", address);
@@ -222,10 +221,8 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
+            }
         }
-
-
     }
-}
 
 

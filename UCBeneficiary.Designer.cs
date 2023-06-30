@@ -97,7 +97,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1891, 31);
+            panel1.Size = new Size(1210, 31);
             panel1.TabIndex = 0;
             // 
             // label10
@@ -108,7 +108,7 @@
             label10.ForeColor = Color.White;
             label10.Location = new Point(0, 0);
             label10.Name = "label10";
-            label10.Size = new Size(1887, 27);
+            label10.Size = new Size(1206, 27);
             label10.TabIndex = 0;
             label10.Text = "BENEFICIARY HANDLING";
             label10.TextAlign = ContentAlignment.MiddleCenter;
@@ -193,8 +193,8 @@
             // 
             splitContainer1.Panel2.Controls.Add(flp_LoadItems);
             splitContainer1.Panel2.Controls.Add(panel6);
-            splitContainer1.Size = new Size(1891, 1052);
-            splitContainer1.SplitterDistance = 1318;
+            splitContainer1.Size = new Size(1210, 662);
+            splitContainer1.SplitterDistance = 540;
             splitContainer1.TabIndex = 5;
             // 
             // panel3
@@ -205,7 +205,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1314, 1048);
+            panel3.Size = new Size(536, 658);
             panel3.TabIndex = 5;
             // 
             // tableLayoutPanel2
@@ -237,7 +237,7 @@
             tableLayoutPanel2.Controls.Add(tb_corBank, 1, 9);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.ForeColor = SystemColors.ActiveCaptionText;
-            tableLayoutPanel2.Location = new Point(0, 51);
+            tableLayoutPanel2.Location = new Point(0, 33);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 10;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
@@ -250,7 +250,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 55F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
-            tableLayoutPanel2.Size = new Size(1314, 874);
+            tableLayoutPanel2.Size = new Size(536, 547);
             tableLayoutPanel2.TabIndex = 9;
             // 
             // label1
@@ -265,7 +265,7 @@
             // 
             // tb_nic
             // 
-            tb_nic.Location = new Point(510, 5);
+            tb_nic.Location = new Point(211, 5);
             tb_nic.Name = "tb_nic";
             tb_nic.Size = new Size(319, 23);
             tb_nic.TabIndex = 9;
@@ -292,7 +292,7 @@
             // 
             // tb_name
             // 
-            tb_name.Location = new Point(510, 37);
+            tb_name.Location = new Point(211, 37);
             tb_name.Multiline = true;
             tb_name.Name = "tb_name";
             tb_name.Size = new Size(319, 54);
@@ -300,7 +300,7 @@
             // 
             // tb_address
             // 
-            tb_address.Location = new Point(510, 99);
+            tb_address.Location = new Point(211, 99);
             tb_address.Multiline = true;
             tb_address.Name = "tb_address";
             tb_address.Size = new Size(319, 54);
@@ -308,7 +308,7 @@
             // 
             // tb_bank
             // 
-            tb_bank.Location = new Point(510, 161);
+            tb_bank.Location = new Point(211, 161);
             tb_bank.Multiline = true;
             tb_bank.Name = "tb_bank";
             tb_bank.Size = new Size(319, 41);
@@ -316,7 +316,7 @@
             // 
             // tb_branchName
             // 
-            tb_branchName.Location = new Point(510, 213);
+            tb_branchName.Location = new Point(211, 213);
             tb_branchName.Multiline = true;
             tb_branchName.Name = "tb_branchName";
             tb_branchName.Size = new Size(319, 41);
@@ -354,10 +354,9 @@
             // 
             // cb_country
             // 
-            cb_country.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_country.FormattingEnabled = true;
             cb_country.Items.AddRange(new object[] { "United States", "Canada", "United Kingdom", "Germany", "France", "Italy", "Spain", "Australia", "Japan", "China", "India", "Brazil", "Mexico", "Argentina", "South Korea", "Russia", "Netherlands", "Switzerland", "Sweden", "South Africa" });
-            cb_country.Location = new Point(510, 265);
+            cb_country.Location = new Point(211, 265);
             cb_country.Name = "cb_country";
             cb_country.Size = new Size(319, 23);
             cb_country.TabIndex = 18;
@@ -374,7 +373,7 @@
             // 
             // tb_accountNo
             // 
-            tb_accountNo.Location = new Point(510, 302);
+            tb_accountNo.Location = new Point(211, 302);
             tb_accountNo.Name = "tb_accountNo";
             tb_accountNo.Size = new Size(319, 23);
             tb_accountNo.TabIndex = 15;
@@ -385,13 +384,13 @@
             label15.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label15.Location = new Point(5, 336);
             label15.Name = "label15";
-            label15.Size = new Size(397, 17);
+            label15.Size = new Size(191, 51);
             label15.TabIndex = 19;
             label15.Text = "SORT / ROUTING / FEDWIRE / ABA / BSB / BANK-BRANCH CODE";
             // 
             // tb_sort
             // 
-            tb_sort.Location = new Point(510, 339);
+            tb_sort.Location = new Point(211, 339);
             tb_sort.Name = "tb_sort";
             tb_sort.Size = new Size(319, 23);
             tb_sort.TabIndex = 20;
@@ -408,7 +407,7 @@
             // 
             // tb_swiftCode
             // 
-            tb_swiftCode.Location = new Point(510, 396);
+            tb_swiftCode.Location = new Point(211, 396);
             tb_swiftCode.Name = "tb_swiftCode";
             tb_swiftCode.Size = new Size(319, 23);
             tb_swiftCode.TabIndex = 16;
@@ -419,13 +418,13 @@
             label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label9.Location = new Point(5, 430);
             label9.Name = "label9";
-            label9.Size = new Size(258, 17);
+            label9.Size = new Size(137, 34);
             label9.TabIndex = 8;
             label9.Text = "CORRESPONDING / INTERMEDIATE BANK";
             // 
             // tb_corBank
             // 
-            tb_corBank.Location = new Point(510, 433);
+            tb_corBank.Location = new Point(211, 433);
             tb_corBank.Multiline = true;
             tb_corBank.Name = "tb_corBank";
             tb_corBank.Size = new Size(319, 32);
@@ -439,7 +438,7 @@
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1314, 51);
+            panel5.Size = new Size(536, 33);
             panel5.TabIndex = 8;
             // 
             // label16
@@ -469,15 +468,33 @@
             // 
             panel4.Controls.Add(btn_AddNew);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 925);
+            panel4.Location = new Point(0, 580);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1314, 123);
+            panel4.Size = new Size(536, 78);
             panel4.TabIndex = 7;
-            panel4.Click += btn_AddNew_Click;
             // 
             // btn_AddNew
             // 
-
+            btn_AddNew.BackColor = Color.FromArgb(11, 12, 71);
+            btn_AddNew.FlatAppearance.BorderSize = 0;
+            btn_AddNew.FlatAppearance.MouseDownBackColor = Color.White;
+            btn_AddNew.FlatAppearance.MouseOverBackColor = Color.Green;
+            btn_AddNew.FlatStyle = FlatStyle.Flat;
+            btn_AddNew.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_AddNew.ForeColor = Color.White;
+            btn_AddNew.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            btn_AddNew.IconColor = Color.White;
+            btn_AddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_AddNew.IconSize = 20;
+            btn_AddNew.Location = new Point(96, 19);
+            btn_AddNew.Name = "btn_AddNew";
+            btn_AddNew.Size = new Size(340, 42);
+            btn_AddNew.TabIndex = 0;
+            btn_AddNew.Text = "ADD NEW BENIFICIARY TO THE DATABASE";
+            btn_AddNew.TextAlign = ContentAlignment.MiddleRight;
+            btn_AddNew.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_AddNew.UseVisualStyleBackColor = false;
+            btn_AddNew.Click += btn_AddNew_Click;
             // 
             // panel2
             // 
@@ -486,7 +503,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1314, 1048);
+            panel2.Size = new Size(536, 658);
             panel2.TabIndex = 4;
             // 
             // iconPictureBox1
@@ -509,9 +526,9 @@
             flp_LoadItems.AutoScrollMargin = new Size(0, 200);
             flp_LoadItems.BackColor = SystemColors.Control;
             flp_LoadItems.Dock = DockStyle.Fill;
-            flp_LoadItems.Location = new Point(0, 95);
+            flp_LoadItems.Location = new Point(0, 61);
             flp_LoadItems.Name = "flp_LoadItems";
-            flp_LoadItems.Size = new Size(565, 953);
+            flp_LoadItems.Size = new Size(662, 597);
             flp_LoadItems.TabIndex = 5;
             // 
             // panel6
@@ -520,7 +537,7 @@
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(565, 95);
+            panel6.Size = new Size(662, 61);
             panel6.TabIndex = 4;
             // 
             // panel7
@@ -529,9 +546,9 @@
             panel7.Controls.Add(tb_search);
             panel7.Controls.Add(btn_search);
             panel7.Dock = DockStyle.Right;
-            panel7.Location = new Point(-193, 0);
+            panel7.Location = new Point(177, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(758, 95);
+            panel7.Size = new Size(485, 61);
             panel7.TabIndex = 3;
             // 
             // btn_loadAll
@@ -579,7 +596,36 @@
             // 
             // UCBeneficiary
             // 
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(194, 194, 239);
+            Controls.Add(splitContainer1);
+            Controls.Add(panel1);
+            Name = "UCBeneficiary";
+            Size = new Size(1210, 693);
+            Load += UCBeneficiary_Load;
+            panel1.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
+            panel4.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            panel6.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
