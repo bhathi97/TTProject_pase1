@@ -20,7 +20,7 @@ namespace project_TelegraphicTransfer
         #endregion
 
 
-rbNew1
+
         //tesr
 
 
@@ -52,7 +52,7 @@ rbNew1
                 connsql.Open();
 
                 // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENIFICIARY_MASTER ", connsql);
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENEFICIARY_MASTER ", connsql);
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -103,6 +103,20 @@ rbNew1
                 if (string.IsNullOrEmpty(nicName))
                 {
                     MessageBox.Show("Please enter a Nic Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Check if the NIC name already exists
+                connsql.Open();
+                SqlCommand cmdCheckNIC = new SqlCommand("SELECT COUNT(*) FROM tbl_BENEFICIARY_MASTER WHERE NIC_NAME = @nic", connsql);
+                cmdCheckNIC.Parameters.AddWithValue("@nic", nicName);
+                int nicCount = Convert.ToInt32(cmdCheckNIC.ExecuteScalar());
+                connsql.Close();
+
+                if (nicCount > 0)
+                {
+                    // NIC name already exists in the database
+                    MessageBox.Show("NIC name already exists. Please choose a different name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -192,7 +206,7 @@ rbNew1
                 if (result == DialogResult.OK)
                 {
 
-                    SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENIFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO tbl_BENEFICIARY_MASTER (NIC_NAME, [NAME], [ADDRESS], BANK_NAME, BRANCH_NAME, BRANCH_CODE, SWIFT_CODE, COUNTRY, ACC_NO, INTERMEDIATE_BANK) VALUES (@nic, @name, @addr, @bankName, @brName , @brCode , @swftCode, @country, @acc, @interBank); ", connsql);
                     cmd.Parameters.AddWithValue("@nic", nicName);
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@addr", address);
@@ -223,6 +237,8 @@ rbNew1
             }
             }
         }
+
+
     }
 
 
