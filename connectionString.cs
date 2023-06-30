@@ -14,7 +14,7 @@ namespace project_TelegraphicTransfer
         {
             get
             {
-
+                return "Data Source=DESKTOP-KHI8921;Initial Catalog=db_TTProject;Integrated Security=True;";
             }
 
 
