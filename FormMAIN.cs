@@ -315,6 +315,7 @@ namespace project_TelegraphicTransfer
 
 
             }
+            //exception handling
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
