@@ -123,7 +123,7 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-               
+
                 string address = tb_address.Text;
 
                 if (string.IsNullOrEmpty(address))
@@ -132,7 +132,7 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                
+
                 string bankName = tb_bank.Text;
 
 
@@ -220,8 +220,10 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
-            }
         }
+
+
     }
+}
 
 

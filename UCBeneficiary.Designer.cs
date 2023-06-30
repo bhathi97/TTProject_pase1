@@ -28,625 +28,557 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tb_nic = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tb_name = new System.Windows.Forms.TextBox();
-            this.tb_address = new System.Windows.Forms.TextBox();
-            this.tb_bank = new System.Windows.Forms.TextBox();
-            this.tb_branchName = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cb_country = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tb_accountNo = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tb_sort = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tb_swiftCode = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_corBank = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_AddNew = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.flp_LoadItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btn_loadAll = new FontAwesome.Sharp.IconButton();
-            this.tb_search = new System.Windows.Forms.TextBox();
-            this.btn_search = new FontAwesome.Sharp.IconButton();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            label10 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            label2 = new Label();
+            label4 = new Label();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            label13 = new Label();
+            label14 = new Label();
+            splitContainer1 = new SplitContainer();
+            panel3 = new Panel();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            label1 = new Label();
+            tb_nic = new TextBox();
+            label3 = new Label();
+            label5 = new Label();
+            tb_name = new TextBox();
+            tb_address = new TextBox();
+            tb_bank = new TextBox();
+            tb_branchName = new TextBox();
+            label12 = new Label();
+            label11 = new Label();
+            label6 = new Label();
+            cb_country = new ComboBox();
+            label7 = new Label();
+            tb_accountNo = new TextBox();
+            label15 = new Label();
+            tb_sort = new TextBox();
+            label8 = new Label();
+            tb_swiftCode = new TextBox();
+            label9 = new Label();
+            tb_corBank = new TextBox();
+            panel5 = new Panel();
+            label16 = new Label();
+            iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            panel4 = new Panel();
+            btn_AddNew = new FontAwesome.Sharp.IconButton();
+            panel2 = new Panel();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            flp_LoadItems = new FlowLayoutPanel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            btn_loadAll = new FontAwesome.Sharp.IconButton();
+            tb_search = new TextBox();
+            btn_search = new FontAwesome.Sharp.IconButton();
+            panel1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            panel3.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
+            panel4.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1210, 31);
-            this.panel1.TabIndex = 0;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(label10);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1891, 31);
+            panel1.TabIndex = 0;
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(1206, 27);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "BENEFICIARY HANDLING";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label10.BackColor = Color.FromArgb(11, 12, 71);
+            label10.Dock = DockStyle.Top;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(0, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(1887, 27);
+            label10.TabIndex = 0;
+            label10.Text = "BENEFICIARY HANDLING";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.85034F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.14966F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.85034F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 74.14966F));
+            tableLayoutPanel1.Controls.Add(label2, 0, 2);
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.Size = new Size(200, 100);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 34);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ADDRESS";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(42, 34);
+            label2.TabIndex = 1;
+            label2.Text = "ADDRESS";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(3, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 34);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "BANK NAME";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(3, 34);
+            label4.Name = "label4";
+            label4.Size = new Size(45, 34);
+            label4.TabIndex = 3;
+            label4.Text = "BANK NAME";
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.85034F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.14966F));
-            this.tableLayoutPanel3.Controls.Add(this.label13, 0, 2);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 9;
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel3.TabIndex = 0;
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.85034F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 74.14966F));
+            tableLayoutPanel3.Controls.Add(label13, 0, 2);
+            tableLayoutPanel3.Location = new Point(0, 0);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 9;
+            tableLayoutPanel3.Size = new Size(200, 100);
+            tableLayoutPanel3.TabIndex = 0;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 34);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "ADDRESS";
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(3, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(42, 34);
+            label13.TabIndex = 1;
+            label13.Text = "ADDRESS";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(3, 34);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 34);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "BANK NAME";
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(3, 34);
+            label14.Name = "label14";
+            label14.Size = new Size(45, 34);
+            label14.TabIndex = 3;
+            label14.Text = "BANK NAME";
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 31);
-            this.splitContainer1.Name = "splitContainer1";
+            splitContainer1.BorderStyle = BorderStyle.Fixed3D;
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 31);
+            splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel3);
-            this.splitContainer1.Panel1.Controls.Add(this.panel2);
+            splitContainer1.Panel1.Controls.Add(panel3);
+            splitContainer1.Panel1.Controls.Add(panel2);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.flp_LoadItems);
-            this.splitContainer1.Panel2.Controls.Add(this.panel6);
-            this.splitContainer1.Size = new System.Drawing.Size(1210, 662);
-            this.splitContainer1.SplitterDistance = 540;
-            this.splitContainer1.TabIndex = 5;
+            splitContainer1.Panel2.Controls.Add(flp_LoadItems);
+            splitContainer1.Panel2.Controls.Add(panel6);
+            splitContainer1.Size = new Size(1891, 1052);
+            splitContainer1.SplitterDistance = 1318;
+            splitContainer1.TabIndex = 5;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(536, 658);
-            this.panel3.TabIndex = 5;
+            panel3.Controls.Add(tableLayoutPanel2);
+            panel3.Controls.Add(panel5);
+            panel3.Controls.Add(panel4);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1314, 1048);
+            panel3.TabIndex = 5;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.51992F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.48008F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.tb_nic, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.tb_name, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tb_address, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.tb_bank, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.tb_branchName, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.cb_country, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.tb_accountNo, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.tb_sort, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.tb_swiftCode, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.tb_corBank, 1, 9);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 33);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(536, 547);
-            this.tableLayoutPanel2.TabIndex = 9;
+            tableLayoutPanel2.BackColor = SystemColors.ActiveCaption;
+            tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Outset;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.51992F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 61.48008F));
+            tableLayoutPanel2.Controls.Add(label1, 0, 2);
+            tableLayoutPanel2.Controls.Add(tb_nic, 1, 0);
+            tableLayoutPanel2.Controls.Add(label3, 0, 3);
+            tableLayoutPanel2.Controls.Add(label5, 0, 4);
+            tableLayoutPanel2.Controls.Add(tb_name, 1, 1);
+            tableLayoutPanel2.Controls.Add(tb_address, 1, 2);
+            tableLayoutPanel2.Controls.Add(tb_bank, 1, 3);
+            tableLayoutPanel2.Controls.Add(tb_branchName, 1, 4);
+            tableLayoutPanel2.Controls.Add(label12, 0, 1);
+            tableLayoutPanel2.Controls.Add(label11, 0, 0);
+            tableLayoutPanel2.Controls.Add(label6, 0, 5);
+            tableLayoutPanel2.Controls.Add(cb_country, 1, 5);
+            tableLayoutPanel2.Controls.Add(label7, 0, 6);
+            tableLayoutPanel2.Controls.Add(tb_accountNo, 1, 6);
+            tableLayoutPanel2.Controls.Add(label15, 0, 7);
+            tableLayoutPanel2.Controls.Add(tb_sort, 1, 7);
+            tableLayoutPanel2.Controls.Add(label8, 0, 8);
+            tableLayoutPanel2.Controls.Add(tb_swiftCode, 1, 8);
+            tableLayoutPanel2.Controls.Add(label9, 0, 9);
+            tableLayoutPanel2.Controls.Add(tb_corBank, 1, 9);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.ForeColor = SystemColors.ActiveCaptionText;
+            tableLayoutPanel2.Location = new Point(0, 51);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 10;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 55F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            tableLayoutPanel2.Size = new Size(1314, 874);
+            tableLayoutPanel2.TabIndex = 9;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(5, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ADDRESS";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(5, 96);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 17);
+            label1.TabIndex = 1;
+            label1.Text = "ADDRESS";
             // 
             // tb_nic
             // 
-            this.tb_nic.Location = new System.Drawing.Point(211, 5);
-            this.tb_nic.Name = "tb_nic";
-            this.tb_nic.Size = new System.Drawing.Size(319, 23);
-            this.tb_nic.TabIndex = 9;
+            tb_nic.Location = new Point(510, 5);
+            tb_nic.Name = "tb_nic";
+            tb_nic.Size = new Size(319, 23);
+            tb_nic.TabIndex = 9;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(5, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "BANK NAME";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(5, 158);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 17);
+            label3.TabIndex = 3;
+            label3.Text = "BANK NAME";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(5, 210);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "BRANCH NAME";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(5, 210);
+            label5.Name = "label5";
+            label5.Size = new Size(103, 17);
+            label5.TabIndex = 4;
+            label5.Text = "BRANCH NAME";
             // 
             // tb_name
             // 
-            this.tb_name.Location = new System.Drawing.Point(211, 37);
-            this.tb_name.Multiline = true;
-            this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(319, 54);
-            this.tb_name.TabIndex = 10;
+            tb_name.Location = new Point(510, 37);
+            tb_name.Multiline = true;
+            tb_name.Name = "tb_name";
+            tb_name.Size = new Size(319, 54);
+            tb_name.TabIndex = 10;
             // 
             // tb_address
             // 
-            this.tb_address.Location = new System.Drawing.Point(211, 99);
-            this.tb_address.Multiline = true;
-            this.tb_address.Name = "tb_address";
-            this.tb_address.Size = new System.Drawing.Size(319, 54);
-            this.tb_address.TabIndex = 11;
+            tb_address.Location = new Point(510, 99);
+            tb_address.Multiline = true;
+            tb_address.Name = "tb_address";
+            tb_address.Size = new Size(319, 54);
+            tb_address.TabIndex = 11;
             // 
             // tb_bank
             // 
-            this.tb_bank.Location = new System.Drawing.Point(211, 161);
-            this.tb_bank.Multiline = true;
-            this.tb_bank.Name = "tb_bank";
-            this.tb_bank.Size = new System.Drawing.Size(319, 41);
-            this.tb_bank.TabIndex = 12;
+            tb_bank.Location = new Point(510, 161);
+            tb_bank.Multiline = true;
+            tb_bank.Name = "tb_bank";
+            tb_bank.Size = new Size(319, 41);
+            tb_bank.TabIndex = 12;
             // 
             // tb_branchName
             // 
-            this.tb_branchName.Location = new System.Drawing.Point(211, 213);
-            this.tb_branchName.Multiline = true;
-            this.tb_branchName.Name = "tb_branchName";
-            this.tb_branchName.Size = new System.Drawing.Size(319, 41);
-            this.tb_branchName.TabIndex = 13;
+            tb_branchName.Location = new Point(510, 213);
+            tb_branchName.Multiline = true;
+            tb_branchName.Name = "tb_branchName";
+            tb_branchName.Size = new Size(319, 41);
+            tb_branchName.TabIndex = 13;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(5, 34);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 17);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "NAME";
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(5, 34);
+            label12.Name = "label12";
+            label12.Size = new Size(46, 17);
+            label12.TabIndex = 2;
+            label12.Text = "NAME";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(5, 2);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 17);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "NIC NAME";
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Location = new Point(5, 2);
+            label11.Name = "label11";
+            label11.Size = new Size(72, 17);
+            label11.TabIndex = 0;
+            label11.Text = "NIC NAME";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(5, 262);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "COUNTRY";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(5, 262);
+            label6.Name = "label6";
+            label6.Size = new Size(68, 17);
+            label6.TabIndex = 5;
+            label6.Text = "COUNTRY";
             // 
             // cb_country
             // 
-            this.cb_country.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_country.FormattingEnabled = true;
-            this.cb_country.Items.AddRange(new object[] {
-            "United States",
-            "Canada",
-            "United Kingdom",
-            "Germany",
-            "France",
-            "Italy",
-            "Spain",
-            "Australia",
-            "Japan",
-            "China",
-            "India",
-            "Brazil",
-            "Mexico",
-            "Argentina",
-            "South Korea",
-            "Russia",
-            "Netherlands",
-            "Switzerland",
-            "Sweden",
-            "South Africa"});
-            this.cb_country.Location = new System.Drawing.Point(211, 265);
-            this.cb_country.Name = "cb_country";
-            this.cb_country.Size = new System.Drawing.Size(319, 23);
-            this.cb_country.TabIndex = 18;
+            cb_country.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb_country.FormattingEnabled = true;
+            cb_country.Items.AddRange(new object[] { "United States", "Canada", "United Kingdom", "Germany", "France", "Italy", "Spain", "Australia", "Japan", "China", "India", "Brazil", "Mexico", "Argentina", "South Korea", "Russia", "Netherlands", "Switzerland", "Sweden", "South Africa" });
+            cb_country.Location = new Point(510, 265);
+            cb_country.Name = "cb_country";
+            cb_country.Size = new Size(319, 23);
+            cb_country.TabIndex = 18;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(5, 299);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "ACCOUNT NO / IBAN NO";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(5, 299);
+            label7.Name = "label7";
+            label7.Size = new Size(161, 17);
+            label7.TabIndex = 6;
+            label7.Text = "ACCOUNT NO / IBAN NO";
             // 
             // tb_accountNo
             // 
-            this.tb_accountNo.Location = new System.Drawing.Point(211, 302);
-            this.tb_accountNo.Name = "tb_accountNo";
-            this.tb_accountNo.Size = new System.Drawing.Size(319, 23);
-            this.tb_accountNo.TabIndex = 15;
+            tb_accountNo.Location = new Point(510, 302);
+            tb_accountNo.Name = "tb_accountNo";
+            tb_accountNo.Size = new Size(319, 23);
+            tb_accountNo.TabIndex = 15;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(5, 336);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(191, 51);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "SORT / ROUTING / FEDWIRE / ABA / BSB / BANK-BRANCH CODE";
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(5, 336);
+            label15.Name = "label15";
+            label15.Size = new Size(397, 17);
+            label15.TabIndex = 19;
+            label15.Text = "SORT / ROUTING / FEDWIRE / ABA / BSB / BANK-BRANCH CODE";
             // 
             // tb_sort
             // 
-            this.tb_sort.Location = new System.Drawing.Point(211, 339);
-            this.tb_sort.Name = "tb_sort";
-            this.tb_sort.Size = new System.Drawing.Size(319, 23);
-            this.tb_sort.TabIndex = 20;
+            tb_sort.Location = new Point(510, 339);
+            tb_sort.Name = "tb_sort";
+            tb_sort.Size = new Size(319, 23);
+            tb_sort.TabIndex = 20;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(5, 393);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "SWIFT CODE";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(5, 393);
+            label8.Name = "label8";
+            label8.Size = new Size(84, 17);
+            label8.TabIndex = 7;
+            label8.Text = "SWIFT CODE";
             // 
             // tb_swiftCode
             // 
-            this.tb_swiftCode.Location = new System.Drawing.Point(211, 396);
-            this.tb_swiftCode.Name = "tb_swiftCode";
-            this.tb_swiftCode.Size = new System.Drawing.Size(319, 23);
-            this.tb_swiftCode.TabIndex = 16;
+            tb_swiftCode.Location = new Point(510, 396);
+            tb_swiftCode.Name = "tb_swiftCode";
+            tb_swiftCode.Size = new Size(319, 23);
+            tb_swiftCode.TabIndex = 16;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(5, 430);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 34);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "CORRESPONDING / INTERMEDIATE BANK";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(5, 430);
+            label9.Name = "label9";
+            label9.Size = new Size(258, 17);
+            label9.TabIndex = 8;
+            label9.Text = "CORRESPONDING / INTERMEDIATE BANK";
             // 
             // tb_corBank
             // 
-            this.tb_corBank.Location = new System.Drawing.Point(211, 433);
-            this.tb_corBank.Multiline = true;
-            this.tb_corBank.Name = "tb_corBank";
-            this.tb_corBank.Size = new System.Drawing.Size(319, 32);
-            this.tb_corBank.TabIndex = 17;
+            tb_corBank.Location = new Point(510, 433);
+            tb_corBank.Multiline = true;
+            tb_corBank.Name = "tb_corBank";
+            tb_corBank.Size = new Size(319, 32);
+            tb_corBank.TabIndex = 17;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.iconPictureBox2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(536, 33);
-            this.panel5.TabIndex = 8;
+            panel5.BackColor = Color.FromArgb(76, 175, 80);
+            panel5.Controls.Add(label16);
+            panel5.Controls.Add(iconPictureBox2);
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1314, 51);
+            panel5.TabIndex = 8;
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(36, 6);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(153, 20);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Add New Beneficiary";
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(36, 6);
+            label16.Name = "label16";
+            label16.Size = new Size(153, 20);
+            label16.TabIndex = 1;
+            label16.Text = "Add New Beneficiary";
             // 
             // iconPictureBox2
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(3, 1);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox2.TabIndex = 0;
-            this.iconPictureBox2.TabStop = false;
+            iconPictureBox2.BackColor = Color.FromArgb(76, 175, 80);
+            iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Add;
+            iconPictureBox2.IconColor = Color.White;
+            iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox2.Location = new Point(3, 1);
+            iconPictureBox2.Name = "iconPictureBox2";
+            iconPictureBox2.Size = new Size(32, 32);
+            iconPictureBox2.TabIndex = 0;
+            iconPictureBox2.TabStop = false;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btn_AddNew);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 580);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(536, 78);
-            this.panel4.TabIndex = 7;
+            panel4.Controls.Add(btn_AddNew);
+            panel4.Dock = DockStyle.Bottom;
+            panel4.Location = new Point(0, 925);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1314, 123);
+            panel4.TabIndex = 7;
+            panel4.Click += btn_AddNew_Click;
             // 
             // btn_AddNew
             // 
-            this.btn_AddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
-            this.btn_AddNew.FlatAppearance.BorderSize = 0;
-            this.btn_AddNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btn_AddNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btn_AddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddNew.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_AddNew.ForeColor = System.Drawing.Color.White;
-            this.btn_AddNew.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btn_AddNew.IconColor = System.Drawing.Color.White;
-            this.btn_AddNew.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_AddNew.IconSize = 20;
-            this.btn_AddNew.Location = new System.Drawing.Point(96, 19);
-            this.btn_AddNew.Name = "btn_AddNew";
-            this.btn_AddNew.Size = new System.Drawing.Size(340, 42);
-            this.btn_AddNew.TabIndex = 0;
-            this.btn_AddNew.Text = "ADD NEW BENIFICIARY TO THE DATABASE";
-            this.btn_AddNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_AddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_AddNew.UseVisualStyleBackColor = false;
-            this.btn_AddNew.Click += new System.EventHandler(this.btn_AddNew_Click);
+
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.iconPictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(536, 658);
-            this.panel2.TabIndex = 4;
+            panel2.BackColor = Color.FromArgb(76, 175, 80);
+            panel2.Controls.Add(iconPictureBox1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1314, 1048);
+            panel2.TabIndex = 4;
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 21;
-            this.iconPictureBox1.Location = new System.Drawing.Point(8, 5);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(33, 21);
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
+            iconPictureBox1.BackColor = Color.FromArgb(76, 175, 80);
+            iconPictureBox1.ForeColor = SystemColors.ButtonHighlight;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Add;
+            iconPictureBox1.IconColor = SystemColors.ButtonHighlight;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 21;
+            iconPictureBox1.Location = new Point(8, 5);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(33, 21);
+            iconPictureBox1.TabIndex = 0;
+            iconPictureBox1.TabStop = false;
             // 
             // flp_LoadItems
             // 
-            this.flp_LoadItems.AutoScroll = true;
-            this.flp_LoadItems.AutoScrollMargin = new System.Drawing.Size(0, 200);
-            this.flp_LoadItems.BackColor = System.Drawing.SystemColors.Control;
-            this.flp_LoadItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flp_LoadItems.Location = new System.Drawing.Point(0, 61);
-            this.flp_LoadItems.Name = "flp_LoadItems";
-            this.flp_LoadItems.Size = new System.Drawing.Size(662, 597);
-            this.flp_LoadItems.TabIndex = 5;
+            flp_LoadItems.AutoScroll = true;
+            flp_LoadItems.AutoScrollMargin = new Size(0, 200);
+            flp_LoadItems.BackColor = SystemColors.Control;
+            flp_LoadItems.Dock = DockStyle.Fill;
+            flp_LoadItems.Location = new Point(0, 95);
+            flp_LoadItems.Name = "flp_LoadItems";
+            flp_LoadItems.Size = new Size(565, 953);
+            flp_LoadItems.TabIndex = 5;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(662, 61);
-            this.panel6.TabIndex = 4;
+            panel6.Controls.Add(panel7);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(565, 95);
+            panel6.TabIndex = 4;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btn_loadAll);
-            this.panel7.Controls.Add(this.tb_search);
-            this.panel7.Controls.Add(this.btn_search);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(177, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(485, 61);
-            this.panel7.TabIndex = 3;
+            panel7.Controls.Add(btn_loadAll);
+            panel7.Controls.Add(tb_search);
+            panel7.Controls.Add(btn_search);
+            panel7.Dock = DockStyle.Right;
+            panel7.Location = new Point(-193, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(758, 95);
+            panel7.TabIndex = 3;
             // 
             // btn_loadAll
             // 
-            this.btn_loadAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_loadAll.FlatAppearance.BorderSize = 0;
-            this.btn_loadAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_loadAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btn_loadAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_loadAll.IconChar = FontAwesome.Sharp.IconChar.Globe;
-            this.btn_loadAll.IconColor = System.Drawing.Color.Black;
-            this.btn_loadAll.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_loadAll.IconSize = 30;
-            this.btn_loadAll.Location = new System.Drawing.Point(435, 9);
-            this.btn_loadAll.Name = "btn_loadAll";
-            this.btn_loadAll.Size = new System.Drawing.Size(40, 40);
-            this.btn_loadAll.TabIndex = 2;
-            this.btn_loadAll.UseVisualStyleBackColor = false;
+            btn_loadAll.BackColor = Color.FromArgb(224, 224, 224);
+            btn_loadAll.FlatAppearance.BorderSize = 0;
+            btn_loadAll.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 64, 64);
+            btn_loadAll.FlatAppearance.MouseOverBackColor = Color.White;
+            btn_loadAll.FlatStyle = FlatStyle.Flat;
+            btn_loadAll.IconChar = FontAwesome.Sharp.IconChar.Globe;
+            btn_loadAll.IconColor = Color.Black;
+            btn_loadAll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_loadAll.IconSize = 30;
+            btn_loadAll.Location = new Point(435, 9);
+            btn_loadAll.Name = "btn_loadAll";
+            btn_loadAll.Size = new Size(40, 40);
+            btn_loadAll.TabIndex = 2;
+            btn_loadAll.UseVisualStyleBackColor = false;
             // 
             // tb_search
             // 
-            this.tb_search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_search.Location = new System.Drawing.Point(25, 19);
-            this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(352, 23);
-            this.tb_search.TabIndex = 0;
+            tb_search.Cursor = Cursors.IBeam;
+            tb_search.Location = new Point(25, 19);
+            tb_search.Name = "tb_search";
+            tb_search.Size = new Size(352, 23);
+            tb_search.TabIndex = 0;
             // 
             // btn_search
             // 
-            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
-            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_search.FlatAppearance.BorderSize = 0;
-            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_search.IconColor = System.Drawing.Color.White;
-            this.btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_search.IconSize = 30;
-            this.btn_search.Location = new System.Drawing.Point(389, 9);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(40, 40);
-            this.btn_search.TabIndex = 1;
-            this.btn_search.UseVisualStyleBackColor = false;
+            btn_search.BackColor = Color.FromArgb(11, 12, 71);
+            btn_search.Cursor = Cursors.Hand;
+            btn_search.FlatAppearance.BorderSize = 0;
+            btn_search.FlatAppearance.MouseDownBackColor = Color.Red;
+            btn_search.FlatAppearance.MouseOverBackColor = Color.Maroon;
+            btn_search.FlatStyle = FlatStyle.Flat;
+            btn_search.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            btn_search.IconColor = Color.White;
+            btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_search.IconSize = 30;
+            btn_search.Location = new Point(389, 9);
+            btn_search.Name = "btn_search";
+            btn_search.Size = new Size(40, 40);
+            btn_search.TabIndex = 1;
+            btn_search.UseVisualStyleBackColor = false;
             // 
             // UCBeneficiary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(239)))));
-            this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.panel1);
-            this.Name = "UCBeneficiary";
-            this.Size = new System.Drawing.Size(1210, 693);
-            this.Load += new System.EventHandler(this.UCBeneficiary_Load);
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.ResumeLayout(false);
 
         }
 
