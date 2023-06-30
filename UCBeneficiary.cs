@@ -89,8 +89,8 @@ namespace project_TelegraphicTransfer
 
         private void btn_AddNew_Click(object sender, EventArgs e)
         {
-
             try
+
             {
                 string nicName = tb_nic.Text;
 
@@ -142,11 +142,12 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                if (!Regex.IsMatch(bankName, "^[a-zA-Z]+$"))
+                if (Regex.IsMatch(bankName, @"[\d\W]"))
                 {
                     MessageBox.Show("Please enter a valid Bank Name containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
 
                 string branchName = tb_branchName.Text;
                 string country = cb_country.Text;
@@ -157,17 +158,12 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                if (!Regex.IsMatch(country, "^[a-zA-Z]+$"))
-                {
-                    MessageBox.Show("Please enter a valid Country containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
+               
                 string account = tb_accountNo.Text;
 
                 if (string.IsNullOrEmpty(account))
                 {
-                    MessageBox.Show("Please enter a Country.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please enter a Account No.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -187,11 +183,6 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                if (!Regex.IsMatch(swift, "^[a-zA-Z0-9]+$"))
-                {
-                    MessageBox.Show("Swift Code should contain only numbers, uppercase letters, or lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 string corBank = tb_corBank.Text;
 
 
