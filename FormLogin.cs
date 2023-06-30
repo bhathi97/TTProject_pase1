@@ -55,8 +55,7 @@ namespace project_TelegraphicTransfer
 
                     if (count > 0)
                     {
-                        // User credentials are valid
-                        MessageBox.Show(userName + "  SUCCESSFULLY LOGIN ...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       
 
                         SqlCommand cmdUser = new SqlCommand("SELECT * FROM tbl_LOGIN_MASTER WHERE [NAME] = @name AND PASSWORD = @pw", connsql);
                         cmdUser.Parameters.AddWithValue("@name", userName);
@@ -100,10 +99,7 @@ namespace project_TelegraphicTransfer
             }
         }
 
-        
-               
-
-        private void tb_userName_KeyPress(object sender, KeyPressEventArgs e)
+            private void tb_userName_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {

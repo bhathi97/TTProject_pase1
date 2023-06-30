@@ -490,8 +490,12 @@ namespace project_TelegraphicTransfer
                     string doEvent = "ADD";
                     int isConfirmed = 0;
 
-                    connsql.Open();
-                    string sqlQToInsertTo_TOF_Table = "insert into tbl_TRANSFER_ORDER_FORM(FILE_REFERENCE, DOCUMANT, SENDER_ID, SENDER_NAME, SENDER_ADDRESS, SENDER_BUSINESS, SENDER_TAX, SENDER_TPNO, SENDER_EMAIL1, SENDER_EMAIL2, PURPOSE, INV, DESCRIPTION, TRADE_TERMS, GOOD_STATE, HS_CODES, COURIER_NO, BENIFICIARY_NIC_NAME, BENIFICIARY_NAME, BENIFICIARY_ADDRESS, BENIFICIARY_BANK_NAME, BENIFICIARY_BRANCH_NAME, BENIFICIARY_BRANCH_CODE, BENIFICIARY_SWIFT_CODE, BENIFICIARY_COUNTRY, BENIFICIARY_ACC_NO, BENIFICIARY_INTERMEDIATE_BANK, CURRENCY_TYPE, AMOUNT, AMOUNT_WORDS, CHARGES, ADD_EDITOR, ADD_TIME, ADD_EVENT, ISCONFIRMED) values (@FileName, @formName, @appID, @applName, @applAddress, @appBusiness, @appTax, @applPhone, @email1, @email2, @purpose, @inv, @description, @terms, @goods, @hcCode, @curior, @beNIC, @beName, @beAddress, @bebankName, @beBranchName, @beBranchCode, @beswiftCode, @beCountry, @beAccountNo, @beInterBank, @beCurrType, @beAmount, @beAmountInWords, @charges, @editor, @dateTime, @doEvent, @isConfirmed)";
+                    DialogResult result = MessageBox.Show("Are you sure you want to add the record to the database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        connsql.Open();
+                       string sqlQToInsertTo_TOF_Table = "insert into tbl_TRANSFER_ORDER_FORM(FILE_REFERENCE, DOCUMENT, SENDER_ID, SENDER_NAME, SENDER_ADDRESS, SENDER_BUSINESS, SENDER_TAX, SENDER_TPNO, SENDER_EMAIL1, SENDER_EMAIL2, PURPOSE, INV, DESCRIPTION, TRADE_TERMS, GOOD_STATE, HS_CODES, COURIER_NO, BENEFICIARY_NIC_NAME, BENEFICIARY_NAME, BENEFICIARY_ADDRESS, BENEFICIARY_BANK_NAME, BENEFICIARY_BRANCH_NAME, BENEFICIARY_BRANCH_CODE, BENEFICIARY_SWIFT_CODE, BENEFICIARY_COUNTRY, BENEFICIARY_ACC_NO, BENEFICIARY_INTERMEDIATE_BANK, CURRENCY_TYPE, AMOUNT, AMOUNT_WORDS, CHARGES, ADD_EDITOR, ADD_TIME, ADD_EVENT, ISCONFIRMED) values (@FileName, @formName, @appID, @applName, @applAddress, @appBusiness, @appTax, @applPhone, @email1, @email2, @purpose, @inv, @description, @terms, @goods, @hcCode, @curior, @beNIC, @beName, @beAddress, @bebankName, @beBranchName, @beBranchCode, @beswiftCode, @beCountry, @beAccountNo, @beInterBank, @beCurrType, @beAmount, @beAmountInWords, @charges, @editor, @dateTime, @doEvent, @isConfirmed)";
 
                     using (SqlCommand command = new SqlCommand(sqlQToInsertTo_TOF_Table, connsql))
                     {
@@ -537,6 +541,11 @@ namespace project_TelegraphicTransfer
 
                         MessageBox.Show("Successfully Added to the database");
                     }
+
+                }
+             }
+                else
+                {
 
                 }
 
