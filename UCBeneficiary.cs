@@ -20,7 +20,9 @@ namespace project_TelegraphicTransfer
         #endregion
 
 
+rbNew1
         //tesr
+
 
 
         public UCBeneficiary()
