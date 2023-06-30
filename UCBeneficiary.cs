@@ -28,7 +28,7 @@ namespace project_TelegraphicTransfer
             InitializeComponent();
         }
 
-
+        //beneficiary lode
         private void UCBeneficiary_Load(object sender, EventArgs e)
         {
             LoadItems();
