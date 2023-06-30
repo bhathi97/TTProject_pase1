@@ -359,7 +359,9 @@ namespace project_TelegraphicTransfer
         {
             try
             {
-
+                if (_fileHandelingUserControl == null)
+                {
+                    FileHandelingUserControl = new UCFileHandeling();
 
                 }
 
@@ -370,14 +372,19 @@ namespace project_TelegraphicTransfer
                 }
 
                 //show this
+                FileHandelingUserControl.Show();
 
+                //change the dock property
+                FileHandelingUserControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(FileHandelingUserControl);
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
 
 
         }
