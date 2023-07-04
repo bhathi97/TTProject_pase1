@@ -134,6 +134,9 @@ namespace project_TelegraphicTransfer
 
         }
 
+        private void UCPage2_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

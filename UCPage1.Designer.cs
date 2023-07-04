@@ -91,7 +91,6 @@
             lbl_accountno=new Label();
             lbl_sort=new Label();
             lbl_Ibank=new Label();
-            lbl19=new Label();
             lBL_phone=new Label();
             ldl_phone=new Label();
             label26=new Label();
@@ -110,7 +109,6 @@
             label47=new Label();
             label49=new Label();
             label50=new Label();
-            lbl_email2=new Label();
             tableLayoutPanel7=new TableLayoutPanel();
             tableLayoutPanel8=new TableLayoutPanel();
             label51=new Label();
@@ -357,7 +355,7 @@
             tableLayoutPanel4.Controls.Add(label23, 0, 0);
             tableLayoutPanel4.Controls.Add(label41, 0, 9);
             tableLayoutPanel4.Controls.Add(label39, 0, 7);
-            tableLayoutPanel4.Location=new Point(30, 576);
+            tableLayoutPanel4.Location=new Point(30, 636);
             tableLayoutPanel4.Name="tableLayoutPanel4";
             tableLayoutPanel4.RowCount=10;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -467,7 +465,7 @@
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel5.Controls.Add(label42, 0, 0);
-            tableLayoutPanel5.Location=new Point(27, 854);
+            tableLayoutPanel5.Location=new Point(27, 908);
             tableLayoutPanel5.Name="tableLayoutPanel5";
             tableLayoutPanel5.RowCount=2;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -490,7 +488,7 @@
             // label30
             // 
             label30.Enabled=false;
-            label30.Location=new Point(29, 440);
+            label30.Location=new Point(29, 498);
             label30.Name="label30";
             label30.Size=new Size(169, 45);
             label30.TabIndex=11;
@@ -513,7 +511,7 @@
             // label27
             // 
             label27.AutoSize=true;
-            label27.Location=new Point(30, 361);
+            label27.Location=new Point(30, 422);
             label27.Name="label27";
             label27.Size=new Size(149, 15);
             label27.TabIndex=8;
@@ -521,7 +519,7 @@
             // 
             // label24
             // 
-            label24.Location=new Point(32, 316);
+            label24.Location=new Point(32, 395);
             label24.Name="label24";
             label24.Size=new Size(176, 20);
             label24.TabIndex=4;
@@ -530,7 +528,7 @@
             // lbl_email
             // 
             lbl_email.AutoSize=true;
-            lbl_email.Location=new Point(33, 241);
+            lbl_email.Location=new Point(33, 329);
             lbl_email.Name="lbl_email";
             lbl_email.Size=new Size(46, 15);
             lbl_email.TabIndex=6;
@@ -539,7 +537,7 @@
             // label22
             // 
             label22.AutoSize=true;
-            label22.Location=new Point(30, 199);
+            label22.Location=new Point(30, 277);
             label22.Name="label22";
             label22.Size=new Size(201, 15);
             label22.TabIndex=2;
@@ -548,7 +546,7 @@
             // label20
             // 
             label20.AutoSize=true;
-            label20.Location=new Point(30, 138);
+            label20.Location=new Point(34, 228);
             label20.Name="label20";
             label20.Size=new Size(133, 15);
             label20.TabIndex=0;
@@ -557,7 +555,7 @@
             // label21
             // 
             label21.AutoSize=true;
-            label21.Location=new Point(31, 123);
+            label21.Location=new Point(31, 251);
             label21.Name="label21";
             label21.Size=new Size(164, 15);
             label21.TabIndex=1;
@@ -566,7 +564,7 @@
             // label25
             // 
             label25.AutoSize=true;
-            label25.Location=new Point(4, 31);
+            label25.Location=new Point(32, 302);
             label25.Name="label25";
             label25.Size=new Size(61, 15);
             label25.TabIndex=5;
@@ -578,21 +576,20 @@
             tableLayoutPanel1.ColumnCount=1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(label29, 0, 10);
-            tableLayoutPanel1.Controls.Add(label25, 0, 2);
-            tableLayoutPanel1.Location=new Point(27, 170);
+            tableLayoutPanel1.Location=new Point(27, 227);
             tableLayoutPanel1.Name="tableLayoutPanel1";
             tableLayoutPanel1.RowCount=13;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 9F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 31F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 18F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 22F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 26F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 24F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 29F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 47F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 67F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 23F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 21F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 58F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 39F));
             tableLayoutPanel1.Size=new Size(640, 401);
@@ -601,14 +598,14 @@
             // label29
             // 
             label29.AutoSize=true;
-            label29.Location=new Point(4, 255);
+            label29.Location=new Point(4, 264);
             label29.Name="label29";
             label29.Size=new Size(0, 15);
             label29.TabIndex=10;
             // 
             // label32
             // 
-            label32.Location=new Point(30, 538);
+            label32.Location=new Point(30, 594);
             label32.Name="label32";
             label32.Size=new Size(275, 31);
             label32.TabIndex=35;
@@ -644,7 +641,7 @@
             // 
             // lbl_nic
             // 
-            lbl_nic.Location=new Point(182, 309);
+            lbl_nic.Location=new Point(182, 396);
             lbl_nic.Name="lbl_nic";
             lbl_nic.Size=new Size(461, 18);
             lbl_nic.TabIndex=40;
@@ -658,7 +655,7 @@
             // 
             // lbl_purpose
             // 
-            lbl_purpose.Location=new Point(255, 381);
+            lbl_purpose.Location=new Point(244, 449);
             lbl_purpose.Name="lbl_purpose";
             lbl_purpose.Size=new Size(403, 38);
             lbl_purpose.TabIndex=42;
@@ -672,7 +669,7 @@
             // 
             // lbl_sname
             // 
-            lbl_sname.Location=new Point(202, 220);
+            lbl_sname.Location=new Point(202, 553);
             lbl_sname.Name="lbl_sname";
             lbl_sname.Size=new Size(154, 31);
             lbl_sname.TabIndex=44;
@@ -686,28 +683,28 @@
             // 
             // lbl_bname
             // 
-            lbl_bname.Location=new Point(200, 213);
+            lbl_bname.Location=new Point(200, 249);
             lbl_bname.Name="lbl_bname";
             lbl_bname.Size=new Size(465, 17);
             lbl_bname.TabIndex=46;
             // 
             // lbl_baddress
             // 
-            lbl_baddress.Location=new Point(117, 233);
+            lbl_baddress.Location=new Point(117, 299);
             lbl_baddress.Name="lbl_baddress";
             lbl_baddress.Size=new Size(546, 21);
             lbl_baddress.TabIndex=47;
             // 
             // lbl_bank
             // 
-            lbl_bank.Location=new Point(118, 682);
+            lbl_bank.Location=new Point(118, 741);
             lbl_bank.Name="lbl_bank";
             lbl_bank.Size=new Size(547, 21);
             lbl_bank.TabIndex=49;
             // 
             // lbl_accountno
             // 
-            lbl_accountno.Location=new Point(177, 729);
+            lbl_accountno.Location=new Point(177, 788);
             lbl_accountno.Name="lbl_accountno";
             lbl_accountno.Size=new Size(489, 21);
             lbl_accountno.TabIndex=51;
@@ -726,17 +723,10 @@
             lbl_Ibank.Size=new Size(100, 23);
             lbl_Ibank.TabIndex=73;
             // 
-            // lbl19
-            // 
-            lbl19.Location=new Point(271, 471);
-            lbl19.Name="lbl19";
-            lbl19.Size=new Size(392, 21);
-            lbl19.TabIndex=54;
-            // 
             // lBL_phone
             // 
             lBL_phone.AutoSize=true;
-            lBL_phone.Location=new Point(34, 293);
+            lBL_phone.Location=new Point(34, 373);
             lBL_phone.Name="lBL_phone";
             lBL_phone.Size=new Size(47, 15);
             lBL_phone.TabIndex=55;
@@ -752,7 +742,7 @@
             // label26
             // 
             label26.AutoSize=true;
-            label26.Location=new Point(366, 663);
+            label26.Location=new Point(366, 715);
             label26.Name="label26";
             label26.Size=new Size(53, 15);
             label26.TabIndex=57;
@@ -760,7 +750,7 @@
             // 
             // lbl_words
             // 
-            lbl_words.Location=new Point(428, 654);
+            lbl_words.Location=new Point(428, 715);
             lbl_words.Name="lbl_words";
             lbl_words.Size=new Size(234, 18);
             lbl_words.TabIndex=58;
@@ -768,7 +758,7 @@
             // label43
             // 
             label43.AutoSize=true;
-            label43.Location=new Point(363, 709);
+            label43.Location=new Point(363, 767);
             label43.Name="label43";
             label43.Size=new Size(66, 15);
             label43.TabIndex=59;
@@ -776,7 +766,7 @@
             // 
             // lbl_country
             // 
-            lbl_country.Location=new Point(449, 628);
+            lbl_country.Location=new Point(449, 766);
             lbl_country.Name="lbl_country";
             lbl_country.Size=new Size(212, 18);
             lbl_country.TabIndex=60;
@@ -784,7 +774,7 @@
             // label44
             // 
             label44.AutoSize=true;
-            label44.Location=new Point(362, 759);
+            label44.Location=new Point(362, 823);
             label44.Name="label44";
             label44.Size=new Size(78, 15);
             label44.TabIndex=61;
@@ -792,7 +782,7 @@
             // 
             // lbl_swiftcode
             // 
-            lbl_swiftcode.Location=new Point(448, 474);
+            lbl_swiftcode.Location=new Point(443, 821);
             lbl_swiftcode.Name="lbl_swiftcode";
             lbl_swiftcode.Size=new Size(212, 18);
             lbl_swiftcode.TabIndex=62;
@@ -800,7 +790,7 @@
             // 
             // label46
             // 
-            label46.Location=new Point(368, 443);
+            label46.Location=new Point(368, 499);
             label46.Name="label46";
             label46.Size=new Size(156, 46);
             label46.TabIndex=63;
@@ -808,14 +798,14 @@
             // 
             // lbl_codes
             // 
-            lbl_codes.Location=new Point(505, 367);
+            lbl_codes.Location=new Point(505, 500);
             lbl_codes.Name="lbl_codes";
             lbl_codes.Size=new Size(154, 43);
             lbl_codes.TabIndex=64;
             // 
             // label45
             // 
-            label45.Location=new Point(366, 497);
+            label45.Location=new Point(366, 554);
             label45.Name="label45";
             label45.Size=new Size(134, 30);
             label45.TabIndex=65;
@@ -823,14 +813,14 @@
             // 
             // lbl_permitNo
             // 
-            lbl_permitNo.Location=new Point(221, 392);
+            lbl_permitNo.Location=new Point(499, 553);
             lbl_permitNo.Name="lbl_permitNo";
             lbl_permitNo.Size=new Size(154, 30);
             lbl_permitNo.TabIndex=66;
             // 
             // label48
             // 
-            label48.Location=new Point(367, 538);
+            label48.Location=new Point(367, 594);
             label48.Name="label48";
             label48.Size=new Size(171, 30);
             label48.TabIndex=67;
@@ -838,7 +828,7 @@
             // 
             // lbl_tax
             // 
-            lbl_tax.Location=new Point(544, 468);
+            lbl_tax.Location=new Point(540, 597);
             lbl_tax.Name="lbl_tax";
             lbl_tax.Size=new Size(113, 24);
             lbl_tax.TabIndex=68;
@@ -878,18 +868,11 @@
             // label50
             // 
             label50.AutoSize=true;
-            label50.Location=new Point(34, 271);
+            label50.Location=new Point(34, 350);
             label50.Name="label50";
             label50.Size=new Size(46, 15);
             label50.TabIndex=69;
             label50.Text="EMAIL*";
-            // 
-            // lbl_email2
-            // 
-            lbl_email2.Location=new Point(101, 251);
-            lbl_email2.Name="lbl_email2";
-            lbl_email2.Size=new Size(179, 18);
-            lbl_email2.TabIndex=70;
             // 
             // tableLayoutPanel7
             // 
@@ -897,7 +880,7 @@
             tableLayoutPanel7.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel7.ColumnCount=1;
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel7.Location=new Point(434, 19);
+            tableLayoutPanel7.Location=new Point(434, 40);
             tableLayoutPanel7.Name="tableLayoutPanel7";
             tableLayoutPanel7.RowCount=1;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -909,7 +892,7 @@
             tableLayoutPanel8.CellBorderStyle=TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel8.ColumnCount=1;
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel8.Location=new Point(214, 22);
+            tableLayoutPanel8.Location=new Point(211, 40);
             tableLayoutPanel8.Name="tableLayoutPanel8";
             tableLayoutPanel8.RowCount=1;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -919,7 +902,7 @@
             // label51
             // 
             label51.AutoSize=true;
-            label51.Location=new Point(26, 31);
+            label51.Location=new Point(26, 84);
             label51.Name="label51";
             label51.Size=new Size(128, 15);
             label51.TabIndex=81;
@@ -928,7 +911,7 @@
             // label52
             // 
             label52.AutoSize=true;
-            label52.Location=new Point(26, 43);
+            label52.Location=new Point(26, 99);
             label52.Name="label52";
             label52.Size=new Size(141, 15);
             label52.TabIndex=82;
@@ -937,7 +920,7 @@
             // label53
             // 
             label53.AutoSize=true;
-            label53.Location=new Point(28, 56);
+            label53.Location=new Point(28, 112);
             label53.Name="label53";
             label53.Size=new Size(139, 15);
             label53.TabIndex=83;
@@ -946,7 +929,7 @@
             // label54
             // 
             label54.AutoSize=true;
-            label54.Location=new Point(28, 68);
+            label54.Location=new Point(28, 125);
             label54.Name="label54";
             label54.Size=new Size(41, 15);
             label54.TabIndex=84;
@@ -955,7 +938,7 @@
             // label55
             // 
             label55.AutoSize=true;
-            label55.Location=new Point(88, 70);
+            label55.Location=new Point(88, 125);
             label55.Name="label55";
             label55.Size=new Size(75, 15);
             label55.TabIndex=85;
@@ -964,7 +947,7 @@
             // label56
             // 
             label56.AutoSize=true;
-            label56.Location=new Point(87, 82);
+            label56.Location=new Point(87, 140);
             label56.Name="label56";
             label56.Size=new Size(75, 15);
             label56.TabIndex=86;
@@ -973,7 +956,7 @@
             // label57
             // 
             label57.AutoSize=true;
-            label57.Location=new Point(26, 94);
+            label57.Location=new Point(26, 152);
             label57.Name="label57";
             label57.Size=new Size(141, 15);
             label57.TabIndex=87;
@@ -982,7 +965,7 @@
             // label58
             // 
             label58.AutoSize=true;
-            label58.Location=new Point(262, 133);
+            label58.Location=new Point(264, 170);
             label58.Name="label58";
             label58.Size=new Size(215, 15);
             label58.TabIndex=88;
@@ -991,7 +974,7 @@
             // label59
             // 
             label59.AutoSize=true;
-            label59.Location=new Point(248, 150);
+            label59.Location=new Point(248, 191);
             label59.Name="label59";
             label59.Size=new Size(254, 15);
             label59.TabIndex=89;
@@ -1018,7 +1001,7 @@
             // label62
             // 
             label62.AutoSize=true;
-            label62.Location=new Point(249, 42);
+            label62.Location=new Point(229, 60);
             label62.Name="label62";
             label62.Size=new Size(42, 15);
             label62.TabIndex=0;
@@ -1027,7 +1010,7 @@
             // label63
             // 
             label63.AutoSize=true;
-            label63.Location=new Point(247, 66);
+            label63.Location=new Point(229, 78);
             label63.Name="label63";
             label63.Size=new Size(56, 15);
             label63.TabIndex=0;
@@ -1036,7 +1019,7 @@
             // label64
             // 
             label64.AutoSize=true;
-            label64.Location=new Point(248, 82);
+            label64.Location=new Point(230, 97);
             label64.Name="label64";
             label64.Size=new Size(55, 15);
             label64.TabIndex=0;
@@ -1045,7 +1028,7 @@
             // label65
             // 
             label65.AutoSize=true;
-            label65.Location=new Point(248, 105);
+            label65.Location=new Point(229, 117);
             label65.Name="label65";
             label65.Size=new Size(57, 15);
             label65.TabIndex=91;
@@ -1054,7 +1037,7 @@
             // label66
             // 
             label66.AutoSize=true;
-            label66.Location=new Point(458, 34);
+            label66.Location=new Point(452, 70);
             label66.Name="label66";
             label66.Size=new Size(123, 15);
             label66.TabIndex=92;
@@ -1063,7 +1046,7 @@
             // label67
             // 
             label67.AutoSize=true;
-            label67.Location=new Point(459, 50);
+            label67.Location=new Point(453, 87);
             label67.Name="label67";
             label67.Size=new Size(107, 15);
             label67.TabIndex=93;
@@ -1072,7 +1055,7 @@
             // label68
             // 
             label68.AutoSize=true;
-            label68.Location=new Point(459, 68);
+            label68.Location=new Point(453, 102);
             label68.Name="label68";
             label68.Size=new Size(96, 15);
             label68.TabIndex=94;
@@ -1081,7 +1064,7 @@
             // label69
             // 
             label69.AutoSize=true;
-            label69.Location=new Point(461, 90);
+            label69.Location=new Point(455, 119);
             label69.Name="label69";
             label69.Size=new Size(68, 15);
             label69.TabIndex=95;
@@ -1090,7 +1073,7 @@
             // pictureBox1
             // 
             pictureBox1.Image=Properties.Resources.boc_logo;
-            pictureBox1.Location=new Point(30, -28);
+            pictureBox1.Location=new Point(30, 24);
             pictureBox1.Name="pictureBox1";
             pictureBox1.Size=new Size(114, 59);
             pictureBox1.SizeMode=PictureBoxSizeMode.StretchImage;
@@ -1099,35 +1082,35 @@
             // 
             // lb_address
             // 
-            lb_address.Location=new Point(135, 184);
+            lb_address.Location=new Point(123, 305);
             lb_address.Name="lb_address";
             lb_address.Size=new Size(529, 12);
             lb_address.TabIndex=11;
             // 
             // lb_profession
             // 
-            lb_profession.Location=new Point(237, 208);
+            lb_profession.Location=new Point(218, 667);
             lb_profession.Name="lb_profession";
             lb_profession.Size=new Size(423, 12);
             lb_profession.TabIndex=97;
             // 
             // lb_email1
             // 
-            lb_email1.Location=new Point(129, 254);
+            lb_email1.Location=new Point(129, 328);
             lb_email1.Name="lb_email1";
             lb_email1.Size=new Size(423, 12);
             lb_email1.TabIndex=98;
             // 
             // lb_email2
             // 
-            lb_email2.Location=new Point(125, 275);
+            lb_email2.Location=new Point(125, 352);
             lb_email2.Name="lb_email2";
             lb_email2.Size=new Size(423, 12);
             lb_email2.TabIndex=99;
             // 
             // lb_phone
             // 
-            lb_phone.Location=new Point(137, 294);
+            lb_phone.Location=new Point(137, 374);
             lb_phone.Name="lb_phone";
             lb_phone.Size=new Size(423, 12);
             lb_phone.TabIndex=100;
@@ -1135,7 +1118,7 @@
             // label70
             // 
             label70.Enabled=false;
-            label70.Location=new Point(30, 388);
+            label70.Location=new Point(30, 452);
             label70.Name="label70";
             label70.Size=new Size(165, 37);
             label70.TabIndex=101;
@@ -1144,7 +1127,7 @@
             // label71
             // 
             label71.Enabled=false;
-            label71.Location=new Point(32, 498);
+            label71.Location=new Point(32, 552);
             label71.Name="label71";
             label71.Size=new Size(165, 34);
             label71.TabIndex=102;
@@ -1157,6 +1140,7 @@
             AutoScroll=true;
             AutoScrollMargin=new Size(0, 100);
             Controls.Add(label71);
+            Controls.Add(label25);
             Controls.Add(label70);
             Controls.Add(lb_phone);
             Controls.Add(lbl_purpose);
@@ -1187,7 +1171,6 @@
             Controls.Add(label51);
             Controls.Add(tableLayoutPanel8);
             Controls.Add(tableLayoutPanel7);
-            Controls.Add(lbl_email2);
             Controls.Add(lbl_nic);
             Controls.Add(label24);
             Controls.Add(label50);
@@ -1213,7 +1196,6 @@
             Controls.Add(lbl_words);
             Controls.Add(label26);
             Controls.Add(ldl_phone);
-            Controls.Add(lbl19);
             Controls.Add(lbl_Ibank);
             Controls.Add(lbl_sort);
             Controls.Add(lbl_accountno);
@@ -1253,7 +1235,8 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
-            Size=new Size(689, 967);
+            Size=new Size(655, 950);
+            Load+=UCPage2_Load;
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
@@ -1332,7 +1315,6 @@
         private Label lbl_accountno;
         private Label lbl_sort;
         private Label lbl_Ibank;
-        private Label lbl19;
         private Label lBL_phone;
         private Label ldl_phone;
         private Label label26;
@@ -1351,7 +1333,6 @@
         private Label label47;
         private Label label49;
         private Label label50;
-        private Label lbl_email2;
         private TableLayoutPanel tableLayoutPanel7;
         private TableLayoutPanel tableLayoutPanel8;
         private Label label51;
