@@ -14,7 +14,7 @@ namespace project_TelegraphicTransfer
         {
             get
             {
-                return "Data Source=DESKTOP-8S284IC;Initial Catalog=db_TTProject;User ID=sa;Password=BSvu6ZDj;";
+                return "Data Source=LAPTOP-IDQLNRRJ;Initial Catalog=db_TTProject;Integrated Security=True;";
             }
 
 
