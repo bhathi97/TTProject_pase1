@@ -148,12 +148,7 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                if (!Regex.IsMatch(bankName, "^[a-zA-Z]+$"))
-                {
-                    MessageBox.Show("Please enter a valid Bank Name containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
+               
                 string branchName = tb_branchName.Text;
                 string country = cb_country.Text;
 
@@ -163,12 +158,7 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                if (!Regex.IsMatch(country, "^[a-zA-Z]+$"))
-                {
-                    MessageBox.Show("Please enter a valid Country containing only uppercase and lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
+                
                 string account = tb_accountNo.Text;
 
                 if (string.IsNullOrEmpty(account))
@@ -193,16 +183,11 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
-                if (!Regex.IsMatch(swift, "^[a-zA-Z0-9]+$"))
-                {
-                    MessageBox.Show("Swift Code should contain only numbers, uppercase letters, or lowercase letters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 string corBank = tb_corBank.Text;
 
 
                 // Confirmation popup
-                DialogResult result = MessageBox.Show("Do you want to add this beneficiary ?", "Confirmation", MessageBoxButtons.OKCancel);
+                DialogResult result = MessageBox.Show("Do you want to add this beneficiary ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
 
