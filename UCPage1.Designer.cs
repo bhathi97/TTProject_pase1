@@ -138,6 +138,21 @@
             lb_phone=new Label();
             label70=new Label();
             label71=new Label();
+            label72=new Label();
+            label73=new Label();
+            lbl_profession=new Label();
+            lbl_tin=new Label();
+            label74=new Label();
+            label75=new Label();
+            lbl_vat=new Label();
+            lbl_incotern=new Label();
+            lbl_spp=new Label();
+            lb_badress=new Label();
+            lbl_amount=new Label();
+            lbl_branch=new Label();
+            lbl_bcode=new Label();
+            lb_ibank=new Label();
+            label76=new Label();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -537,7 +552,7 @@
             // label22
             // 
             label22.AutoSize=true;
-            label22.Location=new Point(30, 277);
+            label22.Location=new Point(4, 44);
             label22.Name="label22";
             label22.Size=new Size(201, 15);
             label22.TabIndex=2;
@@ -576,6 +591,8 @@
             tableLayoutPanel1.ColumnCount=1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(label29, 0, 10);
+            tableLayoutPanel1.Controls.Add(label22, 0, 2);
+            tableLayoutPanel1.Controls.Add(label74, 0, 8);
             tableLayoutPanel1.Location=new Point(27, 227);
             tableLayoutPanel1.Name="tableLayoutPanel1";
             tableLayoutPanel1.RowCount=13;
@@ -1001,7 +1018,7 @@
             // label62
             // 
             label62.AutoSize=true;
-            label62.Location=new Point(229, 60);
+            label62.Location=new Point(232, 71);
             label62.Name="label62";
             label62.Size=new Size(42, 15);
             label62.TabIndex=0;
@@ -1010,7 +1027,7 @@
             // label63
             // 
             label63.AutoSize=true;
-            label63.Location=new Point(229, 78);
+            label63.Location=new Point(230, 89);
             label63.Name="label63";
             label63.Size=new Size(56, 15);
             label63.TabIndex=0;
@@ -1019,7 +1036,7 @@
             // label64
             // 
             label64.AutoSize=true;
-            label64.Location=new Point(230, 97);
+            label64.Location=new Point(230, 105);
             label64.Name="label64";
             label64.Size=new Size(55, 15);
             label64.TabIndex=0;
@@ -1028,7 +1045,7 @@
             // label65
             // 
             label65.AutoSize=true;
-            label65.Location=new Point(229, 117);
+            label65.Location=new Point(229, 123);
             label65.Name="label65";
             label65.Size=new Size(57, 15);
             label65.TabIndex=91;
@@ -1037,7 +1054,7 @@
             // label66
             // 
             label66.AutoSize=true;
-            label66.Location=new Point(452, 70);
+            label66.Location=new Point(449, 73);
             label66.Name="label66";
             label66.Size=new Size(123, 15);
             label66.TabIndex=92;
@@ -1046,7 +1063,7 @@
             // label67
             // 
             label67.AutoSize=true;
-            label67.Location=new Point(453, 87);
+            label67.Location=new Point(450, 90);
             label67.Name="label67";
             label67.Size=new Size(107, 15);
             label67.TabIndex=93;
@@ -1055,7 +1072,7 @@
             // label68
             // 
             label68.AutoSize=true;
-            label68.Location=new Point(453, 102);
+            label68.Location=new Point(448, 107);
             label68.Name="label68";
             label68.Size=new Size(96, 15);
             label68.TabIndex=94;
@@ -1064,7 +1081,7 @@
             // label69
             // 
             label69.AutoSize=true;
-            label69.Location=new Point(455, 119);
+            label69.Location=new Point(448, 125);
             label69.Name="label69";
             label69.Size=new Size(68, 15);
             label69.TabIndex=95;
@@ -1133,12 +1150,141 @@
             label71.TabIndex=102;
             label71.Text="FOR STUDENT PAYMENTS ONLY STUDENT NAME*";
             // 
+            // label72
+            // 
+            label72.AutoSize=true;
+            label72.Location=new Point(282, 45);
+            label72.Name="label72";
+            label72.Size=new Size(101, 15);
+            label72.TabIndex=103;
+            label72.Text="OFFICE USE ONLY";
+            // 
+            // label73
+            // 
+            label73.AutoSize=true;
+            label73.Location=new Point(489, 47);
+            label73.Name="label73";
+            label73.Size=new Size(111, 15);
+            label73.TabIndex=104;
+            label73.Text="BRANCH USE ONLY";
+            // 
+            // lbl_profession
+            // 
+            lbl_profession.Location=new Point(232, 271);
+            lbl_profession.Name="lbl_profession";
+            lbl_profession.Size=new Size(429, 23);
+            lbl_profession.TabIndex=105;
+            // 
+            // lbl_tin
+            // 
+            lbl_tin.Location=new Point(185, 422);
+            lbl_tin.Name="lbl_tin";
+            lbl_tin.Size=new Size(171, 19);
+            lbl_tin.TabIndex=106;
+            // 
+            // label74
+            // 
+            label74.AutoSize=true;
+            label74.Location=new Point(4, 192);
+            label74.Name="label74";
+            label74.Size=new Size(44, 15);
+            label74.TabIndex=11;
+            label74.Text="label74";
+            // 
+            // label75
+            // 
+            label75.AutoSize=true;
+            label75.Location=new Point(374, 423);
+            label75.Name="label75";
+            label75.Size=new Size(127, 15);
+            label75.TabIndex=107;
+            label75.Text="VAT REGISTRATION NO";
+            // 
+            // lbl_vat
+            // 
+            lbl_vat.Location=new Point(499, 424);
+            lbl_vat.Name="lbl_vat";
+            lbl_vat.Size=new Size(158, 17);
+            lbl_vat.TabIndex=108;
+            // 
+            // lbl_incotern
+            // 
+            lbl_incotern.Location=new Point(198, 500);
+            lbl_incotern.Name="lbl_incotern";
+            lbl_incotern.Size=new Size(158, 43);
+            lbl_incotern.TabIndex=109;
+            // 
+            // lbl_spp
+            // 
+            lbl_spp.Location=new Point(301, 595);
+            lbl_spp.Name="lbl_spp";
+            lbl_spp.Size=new Size(56, 23);
+            lbl_spp.TabIndex=110;
+            // 
+            // lb_badress
+            // 
+            lb_badress.Location=new Point(123, 686);
+            lb_badress.Name="lb_badress";
+            lb_badress.Size=new Size(485, 21);
+            lb_badress.TabIndex=111;
+            // 
+            // lbl_amount
+            // 
+            lbl_amount.Location=new Point(174, 712);
+            lbl_amount.Name="lbl_amount";
+            lbl_amount.Size=new Size(162, 23);
+            lbl_amount.TabIndex=112;
+            // 
+            // lbl_branch
+            // 
+            lbl_branch.Location=new Point(95, 767);
+            lbl_branch.Name="lbl_branch";
+            lbl_branch.Size=new Size(241, 15);
+            lbl_branch.TabIndex=113;
+            // 
+            // lbl_bcode
+            // 
+            lbl_bcode.Location=new Point(218, 818);
+            lbl_bcode.Name="lbl_bcode";
+            lbl_bcode.Size=new Size(118, 23);
+            lbl_bcode.TabIndex=114;
+            // 
+            // lb_ibank
+            // 
+            lb_ibank.Location=new Point(341, 849);
+            lb_ibank.Name="lb_ibank";
+            lb_ibank.Size=new Size(320, 21);
+            lb_ibank.TabIndex=115;
+            // 
+            // label76
+            // 
+            label76.AutoSize=true;
+            label76.Location=new Point(38, 880);
+            label76.Name="label76";
+            label76.Size=new Size(381, 15);
+            label76.TabIndex=116;
+            label76.Text="FORIGN BANK CHARGES TO BE BORNE BY* APPLICANT    BENEFICIARY";
+            // 
             // UCPage2
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
             AutoScroll=true;
             AutoScrollMargin=new Size(0, 100);
+            Controls.Add(label76);
+            Controls.Add(lb_ibank);
+            Controls.Add(lbl_bcode);
+            Controls.Add(lbl_branch);
+            Controls.Add(lbl_amount);
+            Controls.Add(lb_badress);
+            Controls.Add(lbl_spp);
+            Controls.Add(lbl_incotern);
+            Controls.Add(lbl_vat);
+            Controls.Add(label75);
+            Controls.Add(lbl_tin);
+            Controls.Add(lbl_profession);
+            Controls.Add(label73);
+            Controls.Add(label72);
             Controls.Add(label71);
             Controls.Add(label25);
             Controls.Add(label70);
@@ -1181,7 +1327,6 @@
             Controls.Add(label21);
             Controls.Add(label48);
             Controls.Add(lbl_permitNo);
-            Controls.Add(label22);
             Controls.Add(label45);
             Controls.Add(lbl_codes);
             Controls.Add(lbl_email);
@@ -1235,7 +1380,7 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
-            Size=new Size(655, 950);
+            Size=new Size(672, 755);
             Load+=UCPage2_Load;
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
@@ -1362,5 +1507,20 @@
         private Label lb_phone;
         private Label label70;
         private Label label71;
+        private Label label72;
+        private Label label73;
+        private Label lbl_profession;
+        private Label lbl_tin;
+        private Label label74;
+        private Label label75;
+        private Label lbl_vat;
+        private Label lbl_incotern;
+        private Label lbl_spp;
+        private Label lb_badress;
+        private Label lbl_amount;
+        private Label lbl_branch;
+        private Label lbl_bcode;
+        private Label lb_ibank;
+        private Label label76;
     }
 }
