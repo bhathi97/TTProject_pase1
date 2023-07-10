@@ -82,5 +82,10 @@ namespace project_TelegraphicTransfer
                 this.Close();
             }
         }
+
+
+
+
+
     }
 }

@@ -32,9 +32,12 @@
             this.panelmain = new System.Windows.Forms.Panel();
             this.panelbody = new System.Windows.Forms.Panel();
             this.pnllLoadSpace = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pnlButtons = new System.Windows.Forms.Panel();
+            this.btnEmail = new FontAwesome.Sharp.IconButton();
             this.btn_formsControl = new FontAwesome.Sharp.IconButton();
             this.btn_Logout = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btn_DatabaseSender = new FontAwesome.Sharp.IconButton();
             this.btnDatabaseBenificiary = new FontAwesome.Sharp.IconButton();
             this.btnDataBaseUser = new FontAwesome.Sharp.IconButton();
@@ -54,6 +57,7 @@
             this.pbLOGO = new System.Windows.Forms.PictureBox();
             this.panelmain.SuspendLayout();
             this.panelbody.SuspendLayout();
+            this.pnllLoadSpace.SuspendLayout();
             this.pnlButtons.SuspendLayout();
             this.panelheader.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,7 +75,7 @@
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmain.Location = new System.Drawing.Point(0, 0);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(800, 550);
+            this.panelmain.Size = new System.Drawing.Size(800, 651);
             this.panelmain.TabIndex = 0;
             // 
             // panelbody
@@ -81,23 +85,43 @@
             this.panelbody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelbody.Location = new System.Drawing.Point(0, 65);
             this.panelbody.Name = "panelbody";
-            this.panelbody.Size = new System.Drawing.Size(800, 485);
+            this.panelbody.Size = new System.Drawing.Size(800, 586);
             this.panelbody.TabIndex = 2;
             // 
             // pnllLoadSpace
             // 
+            this.pnllLoadSpace.Controls.Add(this.iconButton1);
             this.pnllLoadSpace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnllLoadSpace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnllLoadSpace.Location = new System.Drawing.Point(65, 0);
             this.pnllLoadSpace.Name = "pnllLoadSpace";
-            this.pnllLoadSpace.Size = new System.Drawing.Size(735, 485);
+            this.pnllLoadSpace.Size = new System.Drawing.Size(735, 586);
             this.pnllLoadSpace.TabIndex = 2;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserTag;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 35;
+            this.iconButton1.Location = new System.Drawing.Point(-53, 98);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(65, 65);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // pnlButtons
             // 
             this.pnlButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.pnlButtons.Controls.Add(this.btnEmail);
             this.pnlButtons.Controls.Add(this.btn_formsControl);
             this.pnlButtons.Controls.Add(this.btn_Logout);
+            this.pnlButtons.Controls.Add(this.iconButton2);
             this.pnlButtons.Controls.Add(this.btn_DatabaseSender);
             this.pnlButtons.Controls.Add(this.btnDatabaseBenificiary);
             this.pnlButtons.Controls.Add(this.btnDataBaseUser);
@@ -107,8 +131,26 @@
             this.pnlButtons.ForeColor = System.Drawing.Color.White;
             this.pnlButtons.Location = new System.Drawing.Point(0, 0);
             this.pnlButtons.Name = "pnlButtons";
-            this.pnlButtons.Size = new System.Drawing.Size(65, 485);
+            this.pnlButtons.Size = new System.Drawing.Size(65, 586);
             this.pnlButtons.TabIndex = 1;
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmail.FlatAppearance.BorderSize = 0;
+            this.btnEmail.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
+            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmail.IconChar = FontAwesome.Sharp.IconChar.EnvelopeOpen;
+            this.btnEmail.IconColor = System.Drawing.Color.White;
+            this.btnEmail.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmail.IconSize = 30;
+            this.btnEmail.Location = new System.Drawing.Point(0, 335);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(65, 65);
+            this.btnEmail.TabIndex = 7;
+            this.btnEmail.UseVisualStyleBackColor = true;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
             // btn_formsControl
             // 
@@ -121,7 +163,7 @@
             this.btn_formsControl.IconColor = System.Drawing.Color.White;
             this.btn_formsControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_formsControl.IconSize = 30;
-            this.btn_formsControl.Location = new System.Drawing.Point(0, 344);
+            this.btn_formsControl.Location = new System.Drawing.Point(0, 404);
             this.btn_formsControl.Name = "btn_formsControl";
             this.btn_formsControl.Size = new System.Drawing.Size(65, 65);
             this.btn_formsControl.TabIndex = 6;
@@ -139,11 +181,29 @@
             this.btn_Logout.IconColor = System.Drawing.Color.White;
             this.btn_Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Logout.IconSize = 30;
-            this.btn_Logout.Location = new System.Drawing.Point(0, 415);
+            this.btn_Logout.Location = new System.Drawing.Point(0, 473);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(65, 65);
             this.btn_Logout.TabIndex = 5;
             this.btn_Logout.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Building;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 30;
+            this.iconButton2.Location = new System.Drawing.Point(0, 273);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(65, 65);
+            this.iconButton2.TabIndex = 4;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.btn_DatabaseSender_Click);
             // 
             // btn_DatabaseSender
             // 
@@ -376,13 +436,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ClientSize = new System.Drawing.Size(800, 651);
             this.Controls.Add(this.panelmain);
             this.Name = "FormMAIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMAIN_FormClosed);
+            this.Load += new System.EventHandler(this.FormMAIN_Load);
             this.panelmain.ResumeLayout(false);
             this.panelbody.ResumeLayout(false);
+            this.pnllLoadSpace.ResumeLayout(false);
             this.pnlButtons.ResumeLayout(false);
             this.panelheader.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -422,5 +485,8 @@
         private Panel panel2;
         private Label lbl_User;
         private FontAwesome.Sharp.IconButton btn_formsControl;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnEmail;
     }
 }

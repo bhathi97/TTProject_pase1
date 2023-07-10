@@ -136,6 +136,15 @@ namespace project_TelegraphicTransfer
         }
 
 
+        //Email button
+        private UCEmailHandling _emailHandlingUserControl;
+
+        public UCEmailHandling EmailHandlingUserControl
+        {
+            get { return _emailHandlingUserControl; }
+            set { _emailHandlingUserControl = value; }
+        }
+
 
         #endregion
 
@@ -387,6 +396,41 @@ namespace project_TelegraphicTransfer
             }
 
 
+        }
+
+        
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                if (_emailHandlingUserControl == null)
+                {
+                    EmailHandlingUserControl = new UCEmailHandling();
+
+                }
+
+                // Hide all other controls within panel1
+                foreach (Control control in pnllLoadSpace.Controls)
+                {
+                    control.Visible = false;
+                }
+
+                //show this
+                EmailHandlingUserControl.Show();
+
+                //change the dock property
+                EmailHandlingUserControl.Dock = DockStyle.Fill;
+
+                //add to the panal
+                pnllLoadSpace.Controls.Add(EmailHandlingUserControl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

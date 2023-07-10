@@ -28,133 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flp_confirmItemLoade = new FlowLayoutPanel();
-            panel1 = new Panel();
-            label10 = new Label();
-            panel2 = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            lbl_count = new Label();
-            label1 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
-            SuspendLayout();
+            this.flp_confirmItemLoade = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_count = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // flp_confirmItemLoade
             // 
-            flp_confirmItemLoade.AutoScroll = true;
-            flp_confirmItemLoade.BackColor = SystemColors.Control;
-            flp_confirmItemLoade.Dock = DockStyle.Fill;
-            flp_confirmItemLoade.Location = new Point(0, 31);
-            flp_confirmItemLoade.Name = "flp_confirmItemLoade";
-            flp_confirmItemLoade.Size = new Size(713, 435);
-            flp_confirmItemLoade.TabIndex = 0;
+            this.flp_confirmItemLoade.AutoScroll = true;
+            this.flp_confirmItemLoade.BackColor = System.Drawing.SystemColors.Control;
+            this.flp_confirmItemLoade.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flp_confirmItemLoade.Location = new System.Drawing.Point(0, 31);
+            this.flp_confirmItemLoade.Name = "flp_confirmItemLoade";
+            this.flp_confirmItemLoade.Size = new System.Drawing.Size(713, 435);
+            this.flp_confirmItemLoade.TabIndex = 0;
             // 
             // panel1
             // 
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(iconButton1);
-            panel1.Controls.Add(label10);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(713, 31);
-            panel1.TabIndex = 1;
-            // 
-            // label10
-            // 
-            label10.BackColor = Color.FromArgb(11, 12, 71);
-            label10.Dock = DockStyle.Top;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(0, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(709, 27);
-            label10.TabIndex = 0;
-            label10.Text = "CONFORMATION HANDLING";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(11, 12, 71);
-            panel2.BorderStyle = BorderStyle.Fixed3D;
-            panel2.Controls.Add(tableLayoutPanel1);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 466);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(713, 42);
-            panel2.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.442028F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.557972F));
-            tableLayoutPanel1.Controls.Add(lbl_count, 1, 0);
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Location = new Point(3, 4);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(552, 27);
-            tableLayoutPanel1.TabIndex = 2;
-            // 
-            // lbl_count
-            // 
-            lbl_count.AutoSize = true;
-            lbl_count.BorderStyle = BorderStyle.Fixed3D;
-            lbl_count.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_count.ForeColor = Color.White;
-            lbl_count.Location = new Point(298, 0);
-            lbl_count.Name = "lbl_count";
-            lbl_count.Size = new Size(2, 27);
-            lbl_count.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(289, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Number of Telegraphic Transfer Forms To Confirm :";
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(713, 31);
+            this.panel1.TabIndex = 1;
             // 
             // iconButton1
             // 
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatAppearance.MouseDownBackColor = Color.Navy;
-            iconButton1.FlatAppearance.MouseOverBackColor = Color.White;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 20;
-            iconButton1.Location = new Point(4, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(24, 23);
-            iconButton1.TabIndex = 1;
-            iconButton1.UseVisualStyleBackColor = true;
-            iconButton1.Click += iconButton1_Click;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRightRotate;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(4, 2);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(24, 23);
+            this.iconButton1.TabIndex = 1;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(709, 27);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "CONFORMATION HANDLING";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 466);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(713, 42);
+            this.panel2.TabIndex = 2;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.44203F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.55797F));
+            this.tableLayoutPanel1.Controls.Add(this.lbl_count, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(552, 27);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // lbl_count
+            // 
+            this.lbl_count.AutoSize = true;
+            this.lbl_count.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_count.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_count.ForeColor = System.Drawing.Color.White;
+            this.lbl_count.Location = new System.Drawing.Point(298, 0);
+            this.lbl_count.Name = "lbl_count";
+            this.lbl_count.Size = new System.Drawing.Size(2, 27);
+            this.lbl_count.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(289, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Number of Telegraphic Transfer Forms To Confirm :";
             // 
             // UCConfirmHandeling
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            Controls.Add(flp_confirmItemLoade);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Name = "UCConfirmHandeling";
-            Size = new Size(713, 508);
-            Load += UCConfirmHandeling_Load;
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.flp_confirmItemLoade);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Name = "UCConfirmHandeling";
+            this.Size = new System.Drawing.Size(713, 508);
+            this.Load += new System.EventHandler(this.UCConfirmHandeling_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

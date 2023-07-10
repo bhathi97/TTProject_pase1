@@ -208,8 +208,19 @@ namespace project_TelegraphicTransfer
                     MessageBox.Show(name + " IS SUCCESSFULLY ADDED TO THE DATABASE");
                     connsql.Close();
 
+                    // Clear the data in the fields
+                    tb_nic.Text = string.Empty;
+                    tb_name.Text = string.Empty;
+                    tb_address.Text = string.Empty;
+                    tb_bank.Text = string.Empty;
+                    tb_branchName.Text = string.Empty;
+                    cb_country.SelectedIndex = -1;
+                    tb_accountNo.Text = string.Empty;
+                    tb_sort.Text = string.Empty;
+                    tb_swiftCode.Text = string.Empty;
+                    tb_corBank.Text = string.Empty;
 
-                    LoadItems();
+                  LoadItems();
                 }
             }
             catch (Exception ex)
