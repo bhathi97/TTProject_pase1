@@ -71,7 +71,7 @@ namespace project_TelegraphicTransfer
                 FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
 
                 if (formMain != null)
-                { 
+                {
                     formMain.LblTTName = FileName; //to display file name  
 
                     // FormMAIN is open, check for UCFileHandeling user control
@@ -79,7 +79,7 @@ namespace project_TelegraphicTransfer
 
                     if (FileHandelingUserControl != null)
                     {
-                        UCTTForm uCForms= FileHandelingUserControl.UserControlFormShow as UCTTForm;
+                        UCTTForm uCForms = FileHandelingUserControl.UserControlFormShow as UCTTForm;
 
                         if (uCForms != null && !uCForms.IsDisposed)
                         {
@@ -165,4 +165,6 @@ namespace project_TelegraphicTransfer
             }
         }
     }
+
 }
+

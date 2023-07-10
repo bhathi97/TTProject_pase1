@@ -34,6 +34,7 @@ namespace project_TelegraphicTransfer
 
         }
 
+        
         private void btn_editTTs_Click(object sender, EventArgs e)
         {
             try
@@ -80,6 +81,8 @@ namespace project_TelegraphicTransfer
 
             }
         }
+
+
 
 
 

@@ -28,102 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            lblFormName = new Label();
-            btn_editForms = new FontAwesome.Sharp.IconButton();
-            panel2 = new Panel();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
-            panel2.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.lblFormName = new System.Windows.Forms.Label();
+            this.btn_editForms = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(iconPictureBox1);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(48, 50);
-            panel1.TabIndex = 0;
+            this.panel1.Controls.Add(this.iconPictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(48, 50);
+            this.panel1.TabIndex = 0;
             // 
             // iconPictureBox1
             // 
-            iconPictureBox1.BackColor = Color.FromArgb(1, 12, 71);
-            iconPictureBox1.ForeColor = SystemColors.Window;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FileText;
-            iconPictureBox1.IconColor = SystemColors.Window;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 25;
-            iconPictureBox1.Location = new Point(9, 14);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(25, 28);
-            iconPictureBox1.TabIndex = 0;
-            iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FileText;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.Window;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 25;
+            this.iconPictureBox1.Location = new System.Drawing.Point(9, 14);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(25, 28);
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
             // 
             // lblFormName
             // 
-            lblFormName.AutoSize = true;
-            lblFormName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblFormName.ForeColor = SystemColors.ButtonHighlight;
-            lblFormName.Location = new Point(46, 14);
-            lblFormName.Name = "lblFormName";
-            lblFormName.Size = new Size(57, 21);
-            lblFormName.TabIndex = 1;
-            lblFormName.Text = "label1";
+            this.lblFormName.AutoSize = true;
+            this.lblFormName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFormName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFormName.Location = new System.Drawing.Point(46, 14);
+            this.lblFormName.Name = "lblFormName";
+            this.lblFormName.Size = new System.Drawing.Size(57, 21);
+            this.lblFormName.TabIndex = 1;
+            this.lblFormName.Text = "label1";
             // 
             // btn_editForms
             // 
-            btn_editForms.BackColor = Color.FromArgb(194, 194, 239);
-            btn_editForms.BackgroundImageLayout = ImageLayout.Center;
-            btn_editForms.Cursor = Cursors.Hand;
-            btn_editForms.Dock = DockStyle.Fill;
-            btn_editForms.FlatAppearance.BorderColor = Color.FromArgb(102, 102, 255);
-            btn_editForms.FlatAppearance.BorderSize = 0;
-            btn_editForms.FlatAppearance.MouseDownBackColor = Color.DeepSkyBlue;
-            btn_editForms.FlatAppearance.MouseOverBackColor = SystemColors.ControlLightLight;
-            btn_editForms.FlatStyle = FlatStyle.Flat;
-            btn_editForms.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_editForms.ForeColor = Color.Coral;
-            btn_editForms.IconChar = FontAwesome.Sharp.IconChar.PenClip;
-            btn_editForms.IconColor = Color.FromArgb(0, 0, 26);
-            btn_editForms.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_editForms.IconSize = 20;
-            btn_editForms.Location = new Point(8, 8);
-            btn_editForms.Name = "btn_editForms";
-            btn_editForms.Size = new Size(33, 34);
-            btn_editForms.TabIndex = 2;
-            btn_editForms.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_editForms.UseVisualStyleBackColor = false;
-            btn_editForms.Click += btn_editForms_Click;
+            this.btn_editForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(239)))));
+            this.btn_editForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_editForms.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_editForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_editForms.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btn_editForms.FlatAppearance.BorderSize = 0;
+            this.btn_editForms.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_editForms.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_editForms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editForms.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_editForms.ForeColor = System.Drawing.Color.Coral;
+            this.btn_editForms.IconChar = FontAwesome.Sharp.IconChar.PenClip;
+            this.btn_editForms.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            this.btn_editForms.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_editForms.IconSize = 20;
+            this.btn_editForms.Location = new System.Drawing.Point(8, 8);
+            this.btn_editForms.Name = "btn_editForms";
+            this.btn_editForms.Size = new System.Drawing.Size(33, 34);
+            this.btn_editForms.TabIndex = 2;
+            this.btn_editForms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_editForms.UseVisualStyleBackColor = false;
+            this.btn_editForms.Click += new System.EventHandler(this.btn_editForms_Click);
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(1, 12, 71);
-            panel2.Controls.Add(btn_editForms);
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(161, 0);
-            panel2.Name = "panel2";
-            panel2.Padding = new Padding(8);
-            panel2.Size = new Size(49, 50);
-            panel2.TabIndex = 5;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.panel2.Controls.Add(this.btn_editForms);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(161, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(8);
+            this.panel2.Size = new System.Drawing.Size(49, 50);
+            this.panel2.TabIndex = 5;
             // 
             // UCTTItems
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(1, 12, 71);
-            Controls.Add(panel2);
-            Controls.Add(lblFormName);
-            Controls.Add(panel1);
-            Name = "UCTTItems";
-            Size = new Size(210, 50);
-            Load += UCTTItems_Load;
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
-            panel2.ResumeLayout(false);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.lblFormName);
+            this.Controls.Add(this.panel1);
+            this.Name = "UCTTItems";
+            this.Size = new System.Drawing.Size(210, 50);
+            this.Load += new System.EventHandler(this.UCTTItems_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
