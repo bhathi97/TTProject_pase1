@@ -626,7 +626,7 @@ namespace projectTelegraphicTransfer
                 connsql.Open();
 
                 SqlCommand cmdItemLoad = new SqlCommand("SELECT TOP 1 * FROM tbl_SENDER_MASTER", connsql);
-                MessageBox.Show("iiiiiiiiiiii");
+                
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
