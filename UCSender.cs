@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     public partial class UCSender : UserControl
     {

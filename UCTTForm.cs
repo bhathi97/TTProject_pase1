@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     public partial class UCTTForm : UserControl
     {
@@ -430,6 +430,9 @@ namespace project_TelegraphicTransfer
         //add table to the database
         private void btn_add_Click(object sender, EventArgs e)
         {
+            UCPage1 uCPage = new UCPage1();
+            UCPage1.hs_code= tb_hc.Text;
+            UCPage1.showDialog();
             try
             {
                 FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
@@ -623,6 +626,7 @@ namespace project_TelegraphicTransfer
                 connsql.Open();
 
                 SqlCommand cmdItemLoad = new SqlCommand("SELECT TOP 1 * FROM tbl_SENDER_MASTER", connsql);
+                MessageBox.Show("iiiiiiiiiiii");
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -633,9 +637,9 @@ namespace project_TelegraphicTransfer
                     lbl_seName.Text = reader["NAME"].ToString();
                     lbl_seAddress.Text = reader["ADDRESS"].ToString();
                     lbl_seBusiness.Text = reader["BUSINESS"].ToString();
-                    lbl_seTIN.Text = reader["TIN"].ToString();
-                    lbl_sePhone.Text = reader["TPNO"].ToString();
                     lbl_seVAT.Text = reader["TAX"].ToString();
+                    lbl_sePhone.Text = reader["TPNO"].ToString();
+                    lbl_seTIN.Text = reader["TIN"].ToString();
 
                 }
 
