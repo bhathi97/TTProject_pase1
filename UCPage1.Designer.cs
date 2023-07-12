@@ -1,4 +1,4 @@
-﻿namespace project_TelegraphicTransfer
+﻿namespace projectTelegraphicTransfer
 {
     partial class UCPage2
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPage2));
             label1=new Label();
             label2=new Label();
             label3=new Label();
@@ -74,6 +75,7 @@
             label25=new Label();
             tableLayoutPanel1=new TableLayoutPanel();
             label29=new Label();
+            label74=new Label();
             label32=new Label();
             lbl_name=new Label();
             lbl_business=new Label();
@@ -132,7 +134,7 @@
             label69=new Label();
             pictureBox1=new PictureBox();
             lb_address=new Label();
-            lb_profession=new Label();
+            lb_bname=new Label();
             lb_email1=new Label();
             lb_email2=new Label();
             lb_phone=new Label();
@@ -142,7 +144,6 @@
             label73=new Label();
             lbl_profession=new Label();
             lbl_tin=new Label();
-            label74=new Label();
             label75=new Label();
             lbl_vat=new Label();
             lbl_incotern=new Label();
@@ -620,6 +621,15 @@
             label29.Size=new Size(0, 15);
             label29.TabIndex=10;
             // 
+            // label74
+            // 
+            label74.AutoSize=true;
+            label74.Location=new Point(4, 192);
+            label74.Name="label74";
+            label74.Size=new Size(44, 15);
+            label74.TabIndex=11;
+            label74.Text="label74";
+            // 
             // label32
             // 
             label32.Location=new Point(30, 594);
@@ -803,7 +813,6 @@
             lbl_swiftcode.Name="lbl_swiftcode";
             lbl_swiftcode.Size=new Size(212, 18);
             lbl_swiftcode.TabIndex=62;
-            lbl_swiftcode.Click+=lbl_swiftcode_Click;
             // 
             // label46
             // 
@@ -1089,7 +1098,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image=Properties.Resources.boc_logo;
+            pictureBox1.Image=(Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location=new Point(30, 24);
             pictureBox1.Name="pictureBox1";
             pictureBox1.Size=new Size(114, 59);
@@ -1104,12 +1113,13 @@
             lb_address.Size=new Size(529, 12);
             lb_address.TabIndex=11;
             // 
-            // lb_profession
+            // lb_bname
             // 
-            lb_profession.Location=new Point(218, 667);
-            lb_profession.Name="lb_profession";
-            lb_profession.Size=new Size(423, 12);
-            lb_profession.TabIndex=97;
+            lb_bname.Location=new Point(218, 667);
+            lb_bname.Name="lb_bname";
+            lb_bname.Size=new Size(423, 12);
+            lb_bname.TabIndex=97;
+            
             // 
             // lb_email1
             // 
@@ -1181,15 +1191,6 @@
             lbl_tin.Name="lbl_tin";
             lbl_tin.Size=new Size(171, 19);
             lbl_tin.TabIndex=106;
-            // 
-            // label74
-            // 
-            label74.AutoSize=true;
-            label74.Location=new Point(4, 192);
-            label74.Name="label74";
-            label74.Size=new Size(44, 15);
-            label74.TabIndex=11;
-            label74.Text="label74";
             // 
             // label75
             // 
@@ -1292,7 +1293,7 @@
             Controls.Add(lbl_purpose);
             Controls.Add(lb_email2);
             Controls.Add(lb_email1);
-            Controls.Add(lb_profession);
+            Controls.Add(lb_bname);
             Controls.Add(pictureBox1);
             Controls.Add(lb_address);
             Controls.Add(lbl_bname);
@@ -1380,8 +1381,7 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
-            Size=new Size(672, 755);
-            Load+=UCPage2_Load;
+            Size=new Size(621, 704);
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
@@ -1501,7 +1501,7 @@
         private Label label69;
         private PictureBox pictureBox1;
         private Label lb_address;
-        private Label lb_profession;
+        private Label lb_bname;
         private Label lb_email1;
         private Label lb_email2;
         private Label lb_phone;

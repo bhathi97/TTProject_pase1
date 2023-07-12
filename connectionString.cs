@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     public static class connectionString
     {

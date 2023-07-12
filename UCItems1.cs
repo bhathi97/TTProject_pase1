@@ -1,6 +1,6 @@
 ﻿
 
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     public partial class UCItems1 : UserControl
     {

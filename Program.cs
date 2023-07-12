@@ -1,4 +1,4 @@
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     internal static class Program
     {

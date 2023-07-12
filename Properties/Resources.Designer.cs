@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace project_TelegraphicTransfer.Properties {
+namespace projectTelegraphicTransfer.Properties {
     using System;
     
     

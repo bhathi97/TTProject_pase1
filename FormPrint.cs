@@ -12,7 +12,7 @@ using PdfSharpCore;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
 
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
 
     public partial class FormPrint : Form

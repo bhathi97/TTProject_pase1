@@ -1,7 +1,7 @@
 ﻿
 using System.Data.SqlClient;
 
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     public partial class FormAddNewFile : Form
     {

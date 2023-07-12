@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     public partial class FormLogin : Form
     {

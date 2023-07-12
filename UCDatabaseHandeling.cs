@@ -1,7 +1,7 @@
 ﻿
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-namespace project_TelegraphicTransfer
+namespace projectTelegraphicTransfer
 {
     public partial class UCDatabaseHandeling : UserControl
     {
