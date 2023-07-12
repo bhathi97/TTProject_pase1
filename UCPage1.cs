@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace projectTelegraphicTransfer
 
@@ -230,8 +233,80 @@ namespace projectTelegraphicTransfer
             }
         }
 
+        private string _amount;
+        public string amount
+        {
+            get
+            {
+                return _amount;
+            }
+            set
+            {
+                _amount = value;
+                lbl_amount.Text = _amount;
+            }
+        }
+
+        private string _words;
+        public string words
+        {
+            get
+            {
+                return _words;
+            }
+            set
+            {
+                _words = value;
+                lbl_words.Text = _words;
+            }
+        }
+
+        private string _bank;
+        public string bank
+        {
+            get
+            {
+                return _bank;
+            }
+            set
+            {
+                _bank = value;
+                lbl_words.Text = _bank;
+            }
+        }
+
+        private string _branch;
+        public string branch
+        {
+            get
+            {
+                return _branch;
+            }
+            set
+            {
+                _branch = value;
+                lbl_branch.Text = _branch;
+            }
+        }
+
+        private string _country;
+        public string country
+        {
+            get
+            {
+                return _country;
+            }
+            set
+            {
+                _country = value;
+                lbl_country.Text = _country;
+            }
+        }
+
 
         private string _insert_by;
+        private SqlConnection connsql;
+
         public string INSERTBY
         {
             get
@@ -244,6 +319,8 @@ namespace projectTelegraphicTransfer
                 //lbl_Purpose.Text = _insert_by;
             }
         }
+
+        public object NIC { get; private set; }
 
 
 
@@ -271,8 +348,18 @@ namespace projectTelegraphicTransfer
             lbl_tin.Text = _tin;
             lb_email1.Text = _email1;
             lb_email2.Text = _email2;
+
+            SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENEFICIART_TABLE WHERE FID = @nic ORDER BY DATE_TIME DESC", connsql);
+            cmdItemLoad.Parameters.AddWithValue("@nic", NIC);
+
             lb_bname.Text = _bname;
             lb_badress.Text = _badress;
+            lbl_amount.Text = _amount;
+            lbl_words.Text = _words;
+            lbl_bank.Text = _bank;
+            lbl_branch.Text = _branch;
+            lbl_country.Text = _country;
+
             //sql
             //reader>>>
 
