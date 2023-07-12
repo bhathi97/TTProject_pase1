@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -30,10 +31,8 @@ namespace project_TelegraphicTransfer
             dgvEmail.Columns[2].Name = "epf";
             dgvEmail.Columns[3].Name = "fid";
 
-
             // Load data from the database
             LoadEmailData();
-
         }
 
         private void LoadEmailData()
@@ -41,7 +40,9 @@ namespace project_TelegraphicTransfer
             try
             {
                 connsql.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_EMAIL_MASTER;", connsql);
+                SqlCommand cmd = new SqlCommand("SELECT E.ID, E.EMAIL, E.EPF, S.ID AS FID FROM tbl_EMAIL_MASTER E, tbl_SENDER_MASTER S;", connsql);
+
+
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 // Clear existing data in DataGridView
@@ -51,11 +52,11 @@ namespace project_TelegraphicTransfer
                 while (reader.Read())
                 {
                     string id = reader["ID"].ToString();
-                    string emaill = reader["EMAIL"].ToString();
-                    string epff = reader["EPF"].ToString();
-                    string fiid = reader["FID"].ToString();
+                    string email = reader["EMAIL"].ToString();
+                    string epf = reader["EPF"].ToString();
+                    string fid = reader["FID"].ToString();
 
-                    dgvEmail.Rows.Add(id, emaill, epff, fiid);
+                    dgvEmail.Rows.Add(id, email, epf, fid);
                 }
 
                 reader.Close();
@@ -71,21 +72,91 @@ namespace project_TelegraphicTransfer
         }
 
 
+
+
+
         private void btnEAdd_Click(object sender, EventArgs e)
         {
-            
-            
+            try
+            {
+                if (string.IsNullOrEmpty(tbMail.Text))
+                {
+                    MessageBox.Show("Please enter an email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
+                if (string.IsNullOrEmpty(tBepf.Text))
+                {
+                    MessageBox.Show("Please enter an EPF.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string email = tbMail.Text;
+                string epf = tBepf.Text;
+
+                InsertDatabase(email, epf);
+
+                // Refresh the DataGridView with updated data
+                LoadEmailData();
+
+                // Clear the input fields
+                tbMail.Text = "";
+                tBepf.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void InsertDatabase(string email, string epf)
         {
+            try
+            {
+                connsql.Open();
+                SqlCommand insertCmd = new SqlCommand("INSERT INTO tbl_EMAIL_MASTER (EMAIL, EPF) VALUES (@email, @epf); SELECT SCOPE_IDENTITY();", connsql);
+                insertCmd.Parameters.AddWithValue("@email", email);
+                insertCmd.Parameters.AddWithValue("@epf", epf);
 
+                int insertedId = Convert.ToInt32(insertCmd.ExecuteScalar());
+
+                // Check if the ID exists in tbl_SENDER_MASTER
+                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_SENDER_MASTER WHERE ID = @id", connsql);
+                checkCmd.Parameters.AddWithValue("@id", insertedId);
+                int idCount = (int)checkCmd.ExecuteScalar();
+
+                if (idCount > 0)
+                {
+                    // ID exists in tbl_SENDER_MASTER, retrieve it as FID
+                    SqlCommand fidCmd = new SqlCommand("SELECT ID FROM tbl_SENDER_MASTER WHERE ID = @id", connsql);
+                    fidCmd.Parameters.AddWithValue("@id", insertedId);
+                    int fid = (int)fidCmd.ExecuteScalar();
+
+                    // Display a success message
+                    MessageBox.Show("Data added successfully! FID: " + fid, "Data Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Add the new row to the DataGridView
+                    dgvEmail.Rows.Add(insertedId, email, epf, fid);
+                }
+                else
+                {
+                    // ID does not exist in tbl_SENDER_MASTER
+                    MessageBox.Show("ID does not exist in tbl_SENDER_MASTER.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while inserting the data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connsql.Close();
+            }
         }
 
-        private void dgvEmail_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
+
+
+
     }
 }

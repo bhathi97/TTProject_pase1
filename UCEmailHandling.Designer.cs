@@ -33,8 +33,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.tbName = new System.Windows.Forms.TextBox();
-            this.tBaddres = new System.Windows.Forms.TextBox();
+            this.tbMail = new System.Windows.Forms.TextBox();
+            this.tBepf = new System.Windows.Forms.TextBox();
             this.btnEAdd = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -71,8 +71,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.65392F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tbName, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tBaddres, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tbMail, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tBepf, 1, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(14, 56);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -102,21 +102,21 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "EMAIL";
             // 
-            // tbName
+            // tbMail
             // 
-            this.tbName.Location = new System.Drawing.Point(117, 3);
-            this.tbName.Multiline = true;
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(317, 32);
-            this.tbName.TabIndex = 16;
+            this.tbMail.Location = new System.Drawing.Point(117, 3);
+            this.tbMail.Multiline = true;
+            this.tbMail.Name = "tbMail";
+            this.tbMail.Size = new System.Drawing.Size(317, 32);
+            this.tbMail.TabIndex = 16;
             // 
-            // tBaddres
+            // tBepf
             // 
-            this.tBaddres.Location = new System.Drawing.Point(117, 51);
-            this.tBaddres.Multiline = true;
-            this.tBaddres.Name = "tBaddres";
-            this.tBaddres.Size = new System.Drawing.Size(317, 30);
-            this.tBaddres.TabIndex = 17;
+            this.tBepf.Location = new System.Drawing.Point(117, 51);
+            this.tBepf.Multiline = true;
+            this.tBepf.Name = "tBepf";
+            this.tBepf.Size = new System.Drawing.Size(317, 30);
+            this.tBepf.TabIndex = 17;
             // 
             // btnEAdd
             // 
@@ -147,7 +147,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(531, 569);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -237,6 +236,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UCEmailHandling";
             this.Size = new System.Drawing.Size(1128, 569);
+            this.Load += new System.EventHandler(this.UCEmailHandling_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -253,8 +253,8 @@
         private TableLayoutPanel tableLayoutPanel2;
         private Label label1;
         private Label label12;
-        private TextBox tbName;
-        private TextBox tBaddres;
+        private TextBox tbMail;
+        private TextBox tBepf;
         private FontAwesome.Sharp.IconButton btnEAdd;
         private Panel panel1;
         private Panel panel2;
