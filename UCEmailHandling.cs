@@ -71,10 +71,6 @@ namespace project_TelegraphicTransfer
             }
         }
 
-
-
-
-
         private void btnEAdd_Click(object sender, EventArgs e)
         {
             try
@@ -85,9 +81,21 @@ namespace project_TelegraphicTransfer
                     return;
                 }
 
+                if (!ValidateUsingRegex(tbMail.Text))
+                {
+                    MessageBox.Show("Please enter a valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (string.IsNullOrEmpty(tBepf.Text))
                 {
                     MessageBox.Show("Please enter an EPF.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!IsNumeric(tBepf.Text))
+                {
+                    MessageBox.Show("EPF number should contain only numeric digits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -109,11 +117,30 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        public bool ValidateUsingRegex(string email)
+        {
+            var pattern = @"^[a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$";
+
+            var regex = new Regex(pattern);
+
+            return regex.IsMatch(email);
+        }
+
+        private bool IsNumeric(string value)
+        {
+            // Check if the value contains only numeric digits
+            return int.TryParse(value, out _);
+        }
+
+
+
         private void InsertDatabase(string email, string epf)
         {
             try
             {
                 connsql.Open();
+
+                // Insert the data into tbl_EMAIL_MASTER
                 SqlCommand insertCmd = new SqlCommand("INSERT INTO tbl_EMAIL_MASTER (EMAIL, EPF) VALUES (@email, @epf); SELECT SCOPE_IDENTITY();", connsql);
                 insertCmd.Parameters.AddWithValue("@email", email);
                 insertCmd.Parameters.AddWithValue("@epf", epf);
@@ -121,28 +148,15 @@ namespace project_TelegraphicTransfer
                 int insertedId = Convert.ToInt32(insertCmd.ExecuteScalar());
 
                 // Check if the ID exists in tbl_SENDER_MASTER
-                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_SENDER_MASTER WHERE ID = @id", connsql);
+                SqlCommand checkCmd = new SqlCommand("SELECT ID FROM tbl_SENDER_MASTER WHERE ID = @id", connsql);
                 checkCmd.Parameters.AddWithValue("@id", insertedId);
-                int idCount = (int)checkCmd.ExecuteScalar();
+                object fid = checkCmd.ExecuteScalar();
 
-                if (idCount > 0)
-                {
-                    // ID exists in tbl_SENDER_MASTER, retrieve it as FID
-                    SqlCommand fidCmd = new SqlCommand("SELECT ID FROM tbl_SENDER_MASTER WHERE ID = @id", connsql);
-                    fidCmd.Parameters.AddWithValue("@id", insertedId);
-                    int fid = (int)fidCmd.ExecuteScalar();
+                // Display a success message
+                MessageBox.Show("Data added successfully! FID: " + (fid ?? DBNull.Value), "Data Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Display a success message
-                    MessageBox.Show("Data added successfully! FID: " + fid, "Data Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Add the new row to the DataGridView
-                    dgvEmail.Rows.Add(insertedId, email, epf, fid);
-                }
-                else
-                {
-                    // ID does not exist in tbl_SENDER_MASTER
-                    MessageBox.Show("ID does not exist in tbl_SENDER_MASTER.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                // Add the new row to the DataGridView
+                dgvEmail.Rows.Add(insertedId, email, epf, fid ?? DBNull.Value);
             }
             catch (Exception ex)
             {
@@ -153,6 +167,7 @@ namespace project_TelegraphicTransfer
                 connsql.Close();
             }
         }
+
 
 
 
