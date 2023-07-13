@@ -795,6 +795,7 @@
             this.tb_inv.Name = "tb_inv";
             this.tb_inv.Size = new System.Drawing.Size(477, 23);
             this.tb_inv.TabIndex = 10;
+            this.tb_inv.TextChanged += new System.EventHandler(this.tb_inv_TextChanged);
             // 
             // tb_description
             // 

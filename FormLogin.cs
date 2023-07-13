@@ -81,7 +81,7 @@ namespace project_TelegraphicTransfer
                     else
                     {
                         // Username and password are incorrect
-                        MessageBox.Show("Username and password are incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Username or password are incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         tb_userName.Focus();
                         tb_userName.SelectAll();
                         tb_password.Clear();
@@ -99,7 +99,7 @@ namespace project_TelegraphicTransfer
             }
         }
 
-            private void tb_userName_KeyPress(object sender, KeyPressEventArgs e)
+        private void tb_userName_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
             {
@@ -124,7 +124,7 @@ namespace project_TelegraphicTransfer
                     btn_login.Focus();
                     btn_login.BackColor = SystemColors.Control;
                     btn_login.ForeColor = SystemColors.ControlText;
-                   
+
                 }
             }
             catch
@@ -133,6 +133,8 @@ namespace project_TelegraphicTransfer
             }
 
         }
+
+
         //hide password when user typing password 
         private void chb_showPassword_CheckedChanged(object sender, EventArgs e)
         {

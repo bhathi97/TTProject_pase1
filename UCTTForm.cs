@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
@@ -445,6 +446,14 @@ namespace project_TelegraphicTransfer
                     DateTime date = dtp_date.Value;
                     string purpose = tb_purpose.Text;
                     string inv = tb_inv.Text;
+
+                    // Validation for tb_inv.Text
+                    if (!HasAlphanumericCharacter(tb_inv.Text))
+                    {
+                        MessageBox.Show("Invalid reference number. Please enter at least one alphanumeric character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     string description = tb_description.Text;
                     string terms = tb_terms.Text;
                     string goods = cb_goods.SelectedItem.ToString();
@@ -512,7 +521,13 @@ namespace project_TelegraphicTransfer
                         command.Parameters.AddWithValue("@email2", email2);
                         command.Parameters.AddWithValue("@purpose", purpose);
                         command.Parameters.AddWithValue("@inv", inv);
-                        command.Parameters.AddWithValue("@description", description);
+
+                            if (!HasAlphanumericCharacter(tb_inv.Text))
+                            {
+                                MessageBox.Show("Invalid reference number. Please enter at least one alphanumeric character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            command.Parameters.AddWithValue("@description", description);
                         command.Parameters.AddWithValue("@terms", terms);
                         command.Parameters.AddWithValue("@goods", goods);
                         command.Parameters.AddWithValue("@hcCode", hcCode);
@@ -559,6 +574,12 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
+        }
+
+        private bool HasAlphanumericCharacter(string input)
+        {
+            // Check if the input contains at least one alphanumeric character
+            return Regex.IsMatch(input, @"[a-zA-Z0-9]");
         }
 
 
@@ -674,6 +695,11 @@ namespace project_TelegraphicTransfer
         }
 
         private void cb_goods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_inv_TextChanged(object sender, EventArgs e)
         {
 
         }
