@@ -186,7 +186,7 @@ namespace projectTelegraphicTransfer
                     tbTin.Text = string.Empty;
 
                     LoadSender();
-                }
+                } 
             }
 
             catch (Exception ex)

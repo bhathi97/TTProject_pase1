@@ -62,15 +62,26 @@ namespace projectTelegraphicTransfer
                 string number = tb_number.Text;
                 string year = cb_year.Text;
 
-
                 string fileName = code + "/" + number + "/" + year;
-                //MessageBox.Show(code + "/" + number + "/" + year);
-                SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_FILE (NAME,DATE_TIME,EDITOR) values (@name,@time,@editor)", connsql);
-                cmdItemInsert.Parameters.AddWithValue("@name", fileName);
-                cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
-                cmdItemInsert.Parameters.AddWithValue(@"editor", CreatorID);
-                cmdItemInsert.ExecuteNonQuery();
 
+                // Check if the fileName already exists in the database
+                SqlCommand cmdCheckDuplicate = new SqlCommand("SELECT COUNT(*) FROM tbl_FILE WHERE NAME = @name", connsql);
+                cmdCheckDuplicate.Parameters.AddWithValue("@name", fileName);
+                int duplicateCount = (int)cmdCheckDuplicate.ExecuteScalar();
+
+                if (duplicateCount > 0)
+                {
+                    MessageBox.Show("A file with the same name already exists.");
+                }
+                else
+                {
+                    SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_FILE (NAME, DATE_TIME, EDITOR) VALUES (@name, @time, @editor)", connsql);
+                    cmdItemInsert.Parameters.AddWithValue("@name", fileName);
+                    cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
+                    cmdItemInsert.Parameters.AddWithValue("@editor", CreatorID);
+                    cmdItemInsert.ExecuteNonQuery();
+                    MessageBox.Show("File created successfully.");
+                }
             }
             catch (Exception ex)
             {
@@ -82,6 +93,7 @@ namespace projectTelegraphicTransfer
                 this.Close();
             }
         }
+
 
 
 

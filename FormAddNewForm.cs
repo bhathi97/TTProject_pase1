@@ -81,31 +81,36 @@ namespace projectTelegraphicTransfer
         {
             try
             {
-
                 FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
                 if (formMain != null)
                 {
-
                     string formName = tb_formName.Text;
                     int editorID = formMain.UserID;
 
                     connsql.Open();
-                    SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_TRANSACTION (NAME,DATE_TIME,FID,EDITOR) values (@name,@time,@fid,@edit)", connsql);
-                    cmdItemInsert.Parameters.AddWithValue("@name", formName);
-                    cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
-                    cmdItemInsert.Parameters.AddWithValue("@fid", FileID);
-                    cmdItemInsert.Parameters.AddWithValue("@edit", editorID);
-                    cmdItemInsert.ExecuteNonQuery();
 
+                    // Check if the formName already exists in the database
+                    SqlCommand cmdCheckDuplicate = new SqlCommand("SELECT COUNT(*) FROM tbl_TRANSACTION WHERE NAME = @name", connsql);
+                    cmdCheckDuplicate.Parameters.AddWithValue("@name", formName);
+                    int duplicateCount = (int)cmdCheckDuplicate.ExecuteScalar();
 
+                    if (duplicateCount > 0)
+                    {
+                        MessageBox.Show("A form with the same name already exists.");
+                    }
+                    else
+                    {
+                        SqlCommand cmdItemInsert = new SqlCommand("INSERT INTO tbl_TRANSACTION (NAME, DATE_TIME, FID, EDITOR) VALUES (@name, @time, @fid, @edit)", connsql);
+                        cmdItemInsert.Parameters.AddWithValue("@name", formName);
+                        cmdItemInsert.Parameters.AddWithValue("@time", DateTime.Now);
+                        cmdItemInsert.Parameters.AddWithValue("@fid", FileID);
+                        cmdItemInsert.Parameters.AddWithValue("@edit", editorID);
+                        cmdItemInsert.ExecuteNonQuery();
+                        MessageBox.Show("Form added successfully.");
+                    }
                 }
-
-
-
-
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -115,5 +120,8 @@ namespace projectTelegraphicTransfer
                 this.Close();
             }
         }
+
+
+
     }
 }
