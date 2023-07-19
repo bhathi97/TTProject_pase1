@@ -28,310 +28,309 @@
         /// </summary>
         private void InitializeComponent()
         {
-            splitContainerToShowFiles=new SplitContainer();
-            pnlFilesShow=new Panel();
-            flp_fileItemsShowingPanel=new FlowLayoutPanel();
-            panel1=new Panel();
-            panel4=new Panel();
-            panel7=new Panel();
-            btn_loadAll=new FontAwesome.Sharp.IconButton();
-            label1=new Label();
-            panel5=new Panel();
-            panel6=new Panel();
-            tb_search=new TextBox();
-            btn_search=new FontAwesome.Sharp.IconButton();
-            panel3=new Panel();
-            btn_CreateNEwTTs=new FontAwesome.Sharp.IconButton();
-            splitContainerTTHandleing=new SplitContainer();
-            panel2=new Panel();
-            label2=new Label();
-            lblTest=new Label();
-            ((System.ComponentModel.ISupportInitialize)splitContainerToShowFiles).BeginInit();
-            splitContainerToShowFiles.Panel1.SuspendLayout();
-            splitContainerToShowFiles.Panel2.SuspendLayout();
-            splitContainerToShowFiles.SuspendLayout();
-            pnlFilesShow.SuspendLayout();
-            panel1.SuspendLayout();
-            panel4.SuspendLayout();
-            panel7.SuspendLayout();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainerTTHandleing).BeginInit();
-            splitContainerTTHandleing.Panel1.SuspendLayout();
-            splitContainerTTHandleing.Panel2.SuspendLayout();
-            splitContainerTTHandleing.SuspendLayout();
-            panel2.SuspendLayout();
-            SuspendLayout();
+            this.splitContainerToShowFiles = new System.Windows.Forms.SplitContainer();
+            this.pnlFilesShow = new System.Windows.Forms.Panel();
+            this.flp_fileItemsShowingPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_loadAll = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tb_search = new System.Windows.Forms.TextBox();
+            this.btn_search = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_CreateNEwTTs = new FontAwesome.Sharp.IconButton();
+            this.splitContainerTTHandleing = new System.Windows.Forms.SplitContainer();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTest = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerToShowFiles)).BeginInit();
+            this.splitContainerToShowFiles.Panel1.SuspendLayout();
+            this.splitContainerToShowFiles.Panel2.SuspendLayout();
+            this.splitContainerToShowFiles.SuspendLayout();
+            this.pnlFilesShow.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerTTHandleing)).BeginInit();
+            this.splitContainerTTHandleing.Panel1.SuspendLayout();
+            this.splitContainerTTHandleing.Panel2.SuspendLayout();
+            this.splitContainerTTHandleing.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // splitContainerToShowFiles
             // 
-            splitContainerToShowFiles.BackColor=Color.FromArgb(194, 194, 239);
-            splitContainerToShowFiles.BorderStyle=BorderStyle.Fixed3D;
-            splitContainerToShowFiles.Dock=DockStyle.Fill;
-            splitContainerToShowFiles.ForeColor=SystemColors.ControlText;
-            splitContainerToShowFiles.Location=new Point(0, 0);
-            splitContainerToShowFiles.Name="splitContainerToShowFiles";
+            this.splitContainerToShowFiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(239)))));
+            this.splitContainerToShowFiles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainerToShowFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerToShowFiles.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.splitContainerToShowFiles.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerToShowFiles.Name = "splitContainerToShowFiles";
             // 
             // splitContainerToShowFiles.Panel1
             // 
-            splitContainerToShowFiles.Panel1.BackColor=Color.Silver;
-            splitContainerToShowFiles.Panel1.Controls.Add(pnlFilesShow);
-            splitContainerToShowFiles.Panel1.Controls.Add(panel1);
+            this.splitContainerToShowFiles.Panel1.BackColor = System.Drawing.Color.Silver;
+            this.splitContainerToShowFiles.Panel1.Controls.Add(this.pnlFilesShow);
+            this.splitContainerToShowFiles.Panel1.Controls.Add(this.panel1);
             // 
             // splitContainerToShowFiles.Panel2
             // 
-            splitContainerToShowFiles.Panel2.BackColor=Color.White;
-            splitContainerToShowFiles.Panel2.Controls.Add(splitContainerTTHandleing);
-            splitContainerToShowFiles.Size=new Size(781, 505);
-            splitContainerToShowFiles.SplitterDistance=149;
-            splitContainerToShowFiles.TabIndex=0;
+            this.splitContainerToShowFiles.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainerToShowFiles.Panel2.Controls.Add(this.splitContainerTTHandleing);
+            this.splitContainerToShowFiles.Size = new System.Drawing.Size(781, 505);
+            this.splitContainerToShowFiles.SplitterDistance = 149;
+            this.splitContainerToShowFiles.TabIndex = 0;
             // 
             // pnlFilesShow
             // 
-            pnlFilesShow.BackColor=SystemColors.Control;
-            pnlFilesShow.Controls.Add(flp_fileItemsShowingPanel);
-            pnlFilesShow.Dock=DockStyle.Fill;
-            pnlFilesShow.Location=new Point(0, 137);
-            pnlFilesShow.Name="pnlFilesShow";
-            pnlFilesShow.Padding=new Padding(3);
-            pnlFilesShow.Size=new Size(145, 364);
-            pnlFilesShow.TabIndex=1;
+            this.pnlFilesShow.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlFilesShow.Controls.Add(this.flp_fileItemsShowingPanel);
+            this.pnlFilesShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFilesShow.Location = new System.Drawing.Point(0, 137);
+            this.pnlFilesShow.Name = "pnlFilesShow";
+            this.pnlFilesShow.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlFilesShow.Size = new System.Drawing.Size(145, 364);
+            this.pnlFilesShow.TabIndex = 1;
             // 
             // flp_fileItemsShowingPanel
             // 
-            flp_fileItemsShowingPanel.AutoScroll=true;
-            flp_fileItemsShowingPanel.BackColor=SystemColors.Control;
-            flp_fileItemsShowingPanel.Dock=DockStyle.Fill;
-            flp_fileItemsShowingPanel.Location=new Point(3, 3);
-            flp_fileItemsShowingPanel.Name="flp_fileItemsShowingPanel";
-            flp_fileItemsShowingPanel.Size=new Size(139, 358);
-            flp_fileItemsShowingPanel.TabIndex=0;
+            this.flp_fileItemsShowingPanel.AutoScroll = true;
+            this.flp_fileItemsShowingPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.flp_fileItemsShowingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flp_fileItemsShowingPanel.Location = new System.Drawing.Point(3, 3);
+            this.flp_fileItemsShowingPanel.Name = "flp_fileItemsShowingPanel";
+            this.flp_fileItemsShowingPanel.Size = new System.Drawing.Size(139, 358);
+            this.flp_fileItemsShowingPanel.TabIndex = 0;
             // 
             // panel1
             // 
-            panel1.BackColor=SystemColors.Control;
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel3);
-            panel1.Dock=DockStyle.Top;
-            panel1.Location=new Point(0, 0);
-            panel1.Name="panel1";
-            panel1.Padding=new Padding(5);
-            panel1.Size=new Size(145, 137);
-            panel1.TabIndex=0;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(145, 137);
+            this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
-            panel4.Controls.Add(panel7);
-            panel4.Controls.Add(panel5);
-            panel4.Dock=DockStyle.Top;
-            panel4.Location=new Point(5, 5);
-            panel4.Name="panel4";
-            panel4.Size=new Size(135, 82);
-            panel4.TabIndex=3;
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(5, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(135, 82);
+            this.panel4.TabIndex = 3;
             // 
             // panel7
             // 
-            panel7.Controls.Add(btn_loadAll);
-            panel7.Controls.Add(label1);
-            panel7.Dock=DockStyle.Top;
-            panel7.Location=new Point(0, 0);
-            panel7.Name="panel7";
-            panel7.Size=new Size(135, 35);
-            panel7.TabIndex=4;
+            this.panel7.Controls.Add(this.btn_loadAll);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(135, 35);
+            this.panel7.TabIndex = 4;
             // 
             // btn_loadAll
             // 
-            btn_loadAll.BackColor=Color.FromArgb(224, 224, 224);
-            btn_loadAll.Dock=DockStyle.Right;
-            btn_loadAll.FlatAppearance.BorderSize=0;
-            btn_loadAll.FlatAppearance.MouseDownBackColor=Color.FromArgb(64, 64, 64);
-            btn_loadAll.FlatAppearance.MouseOverBackColor=Color.White;
-            btn_loadAll.FlatStyle=FlatStyle.Flat;
-            btn_loadAll.IconChar=FontAwesome.Sharp.IconChar.Globe;
-            btn_loadAll.IconColor=Color.Black;
-            btn_loadAll.IconFont=FontAwesome.Sharp.IconFont.Auto;
-            btn_loadAll.IconSize=30;
-            btn_loadAll.Location=new Point(95, 0);
-            btn_loadAll.Name="btn_loadAll";
-            btn_loadAll.Size=new Size(40, 35);
-            btn_loadAll.TabIndex=4;
-            btn_loadAll.UseVisualStyleBackColor=false;
+            this.btn_loadAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_loadAll.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_loadAll.FlatAppearance.BorderSize = 0;
+            this.btn_loadAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_loadAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn_loadAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_loadAll.IconChar = FontAwesome.Sharp.IconChar.Globe;
+            this.btn_loadAll.IconColor = System.Drawing.Color.Black;
+            this.btn_loadAll.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_loadAll.IconSize = 30;
+            this.btn_loadAll.Location = new System.Drawing.Point(95, 0);
+            this.btn_loadAll.Name = "btn_loadAll";
+            this.btn_loadAll.Size = new System.Drawing.Size(40, 35);
+            this.btn_loadAll.TabIndex = 4;
+            this.btn_loadAll.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            label1.AutoSize=true;
-            label1.Dock=DockStyle.Left;
-            label1.Font=new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location=new Point(0, 0);
-            label1.Name="label1";
-            label1.Size=new Size(56, 30);
-            label1.TabIndex=4;
-            label1.Text="Files";
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 30);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Files";
             // 
             // panel5
             // 
-            panel5.Controls.Add(panel6);
-            panel5.Controls.Add(btn_search);
-            panel5.Dock=DockStyle.Bottom;
-            panel5.Location=new Point(0, 41);
-            panel5.Name="panel5";
-            panel5.Size=new Size(135, 41);
-            panel5.TabIndex=3;
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.btn_search);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 41);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(135, 41);
+            this.panel5.TabIndex = 3;
             // 
             // panel6
             // 
-            panel6.Controls.Add(tb_search);
-            panel6.Dock=DockStyle.Fill;
-            panel6.Location=new Point(0, 0);
-            panel6.Name="panel6";
-            panel6.Padding=new Padding(0, 0, 5, 5);
-            panel6.Size=new Size(95, 41);
-            panel6.TabIndex=3;
+            this.panel6.Controls.Add(this.tb_search);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 5, 5);
+            this.panel6.Size = new System.Drawing.Size(95, 41);
+            this.panel6.TabIndex = 3;
             // 
             // tb_search
             // 
-            tb_search.Dock=DockStyle.Fill;
-            tb_search.Location=new Point(0, 0);
-            tb_search.Name="tb_search";
-            tb_search.Size=new Size(90, 23);
-            tb_search.TabIndex=1;
+            this.tb_search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_search.Location = new System.Drawing.Point(0, 0);
+            this.tb_search.Name = "tb_search";
+            this.tb_search.Size = new System.Drawing.Size(90, 23);
+            this.tb_search.TabIndex = 1;
             // 
             // btn_search
             // 
-            btn_search.BackColor=Color.FromArgb(11, 12, 71);
-            btn_search.Dock=DockStyle.Right;
-            btn_search.FlatAppearance.BorderSize=0;
-            btn_search.FlatAppearance.MouseDownBackColor=Color.White;
-            btn_search.FlatAppearance.MouseOverBackColor=Color.FromArgb(0, 0, 192);
-            btn_search.FlatStyle=FlatStyle.Flat;
-            btn_search.ForeColor=Color.White;
-            btn_search.IconChar=FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            btn_search.IconColor=Color.White;
-            btn_search.IconFont=FontAwesome.Sharp.IconFont.Auto;
-            btn_search.IconSize=28;
-            btn_search.Location=new Point(95, 0);
-            btn_search.Name="btn_search";
-            btn_search.Size=new Size(40, 41);
-            btn_search.TabIndex=2;
-            btn_search.TextAlign=ContentAlignment.BottomCenter;
-            btn_search.TextImageRelation=TextImageRelation.ImageAboveText;
-            btn_search.UseVisualStyleBackColor=false;
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.btn_search.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_search.FlatAppearance.BorderSize = 0;
+            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.ForeColor = System.Drawing.Color.White;
+            this.btn_search.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_search.IconColor = System.Drawing.Color.White;
+            this.btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_search.IconSize = 28;
+            this.btn_search.Location = new System.Drawing.Point(95, 0);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(40, 41);
+            this.btn_search.TabIndex = 2;
+            this.btn_search.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_search.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_search.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
-            panel3.BackColor=SystemColors.Control;
-            panel3.Controls.Add(btn_CreateNEwTTs);
-            panel3.Dock=DockStyle.Bottom;
-            panel3.Location=new Point(5, 93);
-            panel3.Name="panel3";
-            panel3.Size=new Size(135, 39);
-            panel3.TabIndex=2;
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.btn_CreateNEwTTs);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(5, 93);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(135, 39);
+            this.panel3.TabIndex = 2;
             // 
             // btn_CreateNEwTTs
             // 
-            btn_CreateNEwTTs.BackColor=Color.FromArgb(76, 175, 80);
-            btn_CreateNEwTTs.Dock=DockStyle.Fill;
-            btn_CreateNEwTTs.FlatAppearance.BorderSize=0;
-            btn_CreateNEwTTs.FlatAppearance.MouseDownBackColor=Color.FromArgb(128, 255, 128);
-            btn_CreateNEwTTs.FlatAppearance.MouseOverBackColor=Color.DarkGreen;
-            btn_CreateNEwTTs.FlatStyle=FlatStyle.Flat;
-            btn_CreateNEwTTs.Font=new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_CreateNEwTTs.ForeColor=Color.White;
-            btn_CreateNEwTTs.IconChar=FontAwesome.Sharp.IconChar.PlusCircle;
-            btn_CreateNEwTTs.IconColor=Color.White;
-            btn_CreateNEwTTs.IconFont=FontAwesome.Sharp.IconFont.Auto;
-            btn_CreateNEwTTs.IconSize=25;
-            btn_CreateNEwTTs.ImageAlign=ContentAlignment.MiddleLeft;
-            btn_CreateNEwTTs.Location=new Point(0, 0);
-            btn_CreateNEwTTs.Name="btn_CreateNEwTTs";
-            btn_CreateNEwTTs.Size=new Size(135, 39);
-            btn_CreateNEwTTs.TabIndex=1;
-            btn_CreateNEwTTs.Text="New File";
-            btn_CreateNEwTTs.TextImageRelation=TextImageRelation.ImageBeforeText;
-            btn_CreateNEwTTs.UseVisualStyleBackColor=false;
-            btn_CreateNEwTTs.Click+=btn_CreateNEwTTs_Click;
+            this.btn_CreateNEwTTs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btn_CreateNEwTTs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_CreateNEwTTs.FlatAppearance.BorderSize = 0;
+            this.btn_CreateNEwTTs.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_CreateNEwTTs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btn_CreateNEwTTs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CreateNEwTTs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_CreateNEwTTs.ForeColor = System.Drawing.Color.White;
+            this.btn_CreateNEwTTs.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btn_CreateNEwTTs.IconColor = System.Drawing.Color.White;
+            this.btn_CreateNEwTTs.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_CreateNEwTTs.IconSize = 25;
+            this.btn_CreateNEwTTs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_CreateNEwTTs.Location = new System.Drawing.Point(0, 0);
+            this.btn_CreateNEwTTs.Name = "btn_CreateNEwTTs";
+            this.btn_CreateNEwTTs.Size = new System.Drawing.Size(135, 39);
+            this.btn_CreateNEwTTs.TabIndex = 1;
+            this.btn_CreateNEwTTs.Text = "New File";
+            this.btn_CreateNEwTTs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_CreateNEwTTs.UseVisualStyleBackColor = false;
             // 
             // splitContainerTTHandleing
             // 
-            splitContainerTTHandleing.BackColor=Color.FromArgb(194, 194, 239);
-            splitContainerTTHandleing.BorderStyle=BorderStyle.Fixed3D;
-            splitContainerTTHandleing.Dock=DockStyle.Fill;
-            splitContainerTTHandleing.ImeMode=ImeMode.Alpha;
-            splitContainerTTHandleing.Location=new Point(0, 0);
-            splitContainerTTHandleing.Margin=new Padding(0);
-            splitContainerTTHandleing.Name="splitContainerTTHandleing";
+            this.splitContainerTTHandleing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(239)))));
+            this.splitContainerTTHandleing.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainerTTHandleing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerTTHandleing.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.splitContainerTTHandleing.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerTTHandleing.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainerTTHandleing.Name = "splitContainerTTHandleing";
             // 
             // splitContainerTTHandleing.Panel1
             // 
-            splitContainerTTHandleing.Panel1.BackColor=SystemColors.Control;
-            splitContainerTTHandleing.Panel1.Controls.Add(panel2);
+            this.splitContainerTTHandleing.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainerTTHandleing.Panel1.Controls.Add(this.panel2);
             // 
             // splitContainerTTHandleing.Panel2
             // 
-            splitContainerTTHandleing.Panel2.BackColor=SystemColors.Control;
-            splitContainerTTHandleing.Panel2.Controls.Add(lblTest);
-            splitContainerTTHandleing.Size=new Size(628, 505);
-            splitContainerTTHandleing.SplitterDistance=149;
-            splitContainerTTHandleing.TabIndex=0;
+            this.splitContainerTTHandleing.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainerTTHandleing.Panel2.Controls.Add(this.lblTest);
+            this.splitContainerTTHandleing.Size = new System.Drawing.Size(628, 505);
+            this.splitContainerTTHandleing.SplitterDistance = 149;
+            this.splitContainerTTHandleing.TabIndex = 0;
             // 
             // panel2
             // 
-            panel2.BackColor=SystemColors.Control;
-            panel2.Controls.Add(label2);
-            panel2.Dock=DockStyle.Top;
-            panel2.Location=new Point(0, 0);
-            panel2.Name="panel2";
-            panel2.Padding=new Padding(5);
-            panel2.Size=new Size(145, 40);
-            panel2.TabIndex=0;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.panel2.Size = new System.Drawing.Size(145, 40);
+            this.panel2.TabIndex = 0;
             // 
             // label2
             // 
-            label2.Font=new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location=new Point(8, 9);
-            label2.Name="label2";
-            label2.Size=new Size(223, 31);
-            label2.TabIndex=0;
-            label2.Text="Telegraphic Transfer Orders";
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(8, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(223, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Telegraphic Transfer Orders";
             // 
             // lblTest
             // 
-            lblTest.AutoSize=true;
-            lblTest.Font=new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTest.Location=new Point(104, 110);
-            lblTest.Name="lblTest";
-            lblTest.Size=new Size(0, 25);
-            lblTest.TabIndex=0;
+            this.lblTest.AutoSize = true;
+            this.lblTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTest.Location = new System.Drawing.Point(104, 110);
+            this.lblTest.Name = "lblTest";
+            this.lblTest.Size = new System.Drawing.Size(0, 25);
+            this.lblTest.TabIndex = 0;
             // 
             // UCFileHandeling
             // 
-            AutoScaleDimensions=new SizeF(7F, 15F);
-            AutoScaleMode=AutoScaleMode.Font;
-            Controls.Add(splitContainerToShowFiles);
-            Name="UCFileHandeling";
-            Size=new Size(781, 505);
-            Load+=UCFileHandeling_Load;
-            splitContainerToShowFiles.Panel1.ResumeLayout(false);
-            splitContainerToShowFiles.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainerToShowFiles).EndInit();
-            splitContainerToShowFiles.ResumeLayout(false);
-            pnlFilesShow.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel3.ResumeLayout(false);
-            splitContainerTTHandleing.Panel1.ResumeLayout(false);
-            splitContainerTTHandleing.Panel2.ResumeLayout(false);
-            splitContainerTTHandleing.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainerTTHandleing).EndInit();
-            splitContainerTTHandleing.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.splitContainerToShowFiles);
+            this.Name = "UCFileHandeling";
+            this.Size = new System.Drawing.Size(781, 505);
+            this.splitContainerToShowFiles.Panel1.ResumeLayout(false);
+            this.splitContainerToShowFiles.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerToShowFiles)).EndInit();
+            this.splitContainerToShowFiles.ResumeLayout(false);
+            this.pnlFilesShow.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.splitContainerTTHandleing.Panel1.ResumeLayout(false);
+            this.splitContainerTTHandleing.Panel2.ResumeLayout(false);
+            this.splitContainerTTHandleing.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerTTHandleing)).EndInit();
+            this.splitContainerTTHandleing.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

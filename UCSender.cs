@@ -1,4 +1,5 @@
 ﻿using PdfSharpCore.Pdf.Content.Objects;
+using project_TelegraphicTransfer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
