@@ -150,7 +150,7 @@ namespace projectTelegraphicTransfer
         }
 
         private string _vat;
-        public string vat
+        public string Vat
         {
             get
             {
@@ -164,7 +164,7 @@ namespace projectTelegraphicTransfer
         }
 
         private string _tin;
-        public string tin
+        public string Tin
         {
             get
             {
@@ -206,7 +206,7 @@ namespace projectTelegraphicTransfer
         }
 
         private string _bname;
-        public string bname
+        public string Bname
         {
             get
             {
@@ -220,7 +220,7 @@ namespace projectTelegraphicTransfer
         }
 
         private string _badress;
-        public string badress
+        public string Badress
         {
             get
             {
@@ -234,7 +234,7 @@ namespace projectTelegraphicTransfer
         }
 
         private string _amount;
-        public string amount
+        public string Amount
         {
             get
             {
@@ -349,9 +349,6 @@ namespace projectTelegraphicTransfer
             lb_email1.Text = _email1;
             lb_email2.Text = _email2;
 
-            SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENEFICIART_TABLE WHERE FID = @nic ORDER BY DATE_TIME DESC", connsql);
-            cmdItemLoad.Parameters.AddWithValue("@nic", NIC);
-
             lb_bname.Text = _bname;
             lb_badress.Text = _badress;
             lbl_amount.Text = _amount;
@@ -359,6 +356,11 @@ namespace projectTelegraphicTransfer
             lbl_bank.Text = _bank;
             lbl_branch.Text = _branch;
             lbl_country.Text = _country;
+
+            //SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_BENEFICIART_TABLE WHERE FID = @nic ORDER BY DATE_TIME DESC", connsql);
+            // cmdItemLoad.Parameters.AddWithValue("@nic", NIC);
+
+
 
             //sql
             //reader>>>
