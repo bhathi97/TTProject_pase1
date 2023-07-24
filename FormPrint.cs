@@ -1423,11 +1423,14 @@ namespace projectTelegraphicTransfer
                                 UCPage2 = new UCPage2();
                                 UCPage2.Name = reader["SENDER_NAME"].ToString();
                                 UCPage2.Address = reader["SENDER_ADDRESS"].ToString();
-                                //UCPage2.Business = reader["SENDER_BUSINESS"].ToString();
+                                UCPage2.Business = reader["SENDER_BUSINESS"].ToString();
                                 UCPage2.Phone = reader["SENDER_TPNO"].ToString();
                                 UCPage2.Purpose = reader["PURPOSE"].ToString();
-
-
+                                UCPage2.Vat = reader["VAT"].ToString();
+                                UCPage2.Tin = reader["TIN"].ToString();
+                                UCPage2.Bname = reader["BName"].ToString();
+                                UCPage2.Badress= reader["BAdress"].ToString();
+                                UCPage2.Amount = reader["AMOUNT"].ToString();
 
 
                             }

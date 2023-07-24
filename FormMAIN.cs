@@ -408,7 +408,7 @@ namespace projectTelegraphicTransfer
 
                 if (_emailHandlingUserControl == null)
                 {
-                    EmailHandlingUserControl = new UCEmailHandli+9ng();
+                    EmailHandlingUserControl = new UCEmailHandling();
 
                 }
 
