@@ -11,6 +11,8 @@ namespace projectTelegraphicTransfer
         public UCDatabaseHandeling()
         {
             InitializeComponent();
+            dgvUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
         }
 
 
@@ -320,6 +322,68 @@ namespace projectTelegraphicTransfer
                 ClearFormFields();
             }
         }
+
+        //================================= delete user
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Check if a row is selected
+                if (dgvUser.SelectedRows.Count != 1)
+                {
+                    MessageBox.Show("Please select a user to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Get the selected user's ID
+                string id = dgvUser.SelectedRows[0].Cells["id"].Value.ToString();
+
+                // Display a confirmation dialog
+                DialogResult result = MessageBox.Show("Are you sure you want to delete the user?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Call the method to delete the user from the database
+                    DeleteUserFromDatabase(id);
+
+                    // Refresh the DataGridView with updated data
+                    LoadUserData();
+
+                    // Clear the form fields
+                    ClearFormFields();
+
+                    MessageBox.Show("User deleted successfully!", "User Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while deleting the user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DeleteUserFromDatabase(string id)
+        {
+            try
+            {
+                connsql.Open();
+
+                // Delete the user from the database
+                SqlCommand deleteCmd = new SqlCommand("DELETE FROM tbl_LOGIN_MASTER WHERE ID = @ID;", connsql);
+                deleteCmd.Parameters.AddWithValue("@ID", id);
+
+                deleteCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while deleting the user from the database: " + ex.Message);
+            }
+            finally
+            {
+                connsql.Close();
+            }
+        }
+
 
     }
 }
