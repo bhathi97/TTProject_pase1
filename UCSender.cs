@@ -80,7 +80,7 @@ namespace project_TelegraphicTransfer
 
         }
 
-       
+       //create sender
         private void btnSAdd_Click(object sender, EventArgs e)
         {
             try
@@ -395,6 +395,69 @@ namespace project_TelegraphicTransfer
             }
         }
 
+        //========================= delete sender
+
+        private void btnSDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Check if a row is selected
+                if (dgvSender.SelectedRows.Count != 1)
+                {
+                    MessageBox.Show("Please select a sender to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Get the selected user's ID
+                string id = dgvSender.SelectedRows[0].Cells["id"].Value.ToString();
+
+                // Display a confirmation dialog
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this sender ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Call the method to delete the user from the database
+                    DeleteUserFromDatabase(id);
+
+                    // Refresh the DataGridView with updated data
+                    LoadSender();
+
+                    // Clear the form fields
+                    ClearFormFields();
+
+                    MessageBox.Show("Sender deleted successfully!", "User Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while deleting the user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void DeleteUserFromDatabase(string id)
+        {
+            try
+            {
+                connsql.Open();
+
+                // Delete the user from the database
+                SqlCommand deleteCmd = new SqlCommand("DELETE FROM tbl_SENDER_MASTER WHERE ID = @ID;", connsql);
+                deleteCmd.Parameters.AddWithValue("@ID", id);
+
+                deleteCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while deleting the user from the database: " + ex.Message);
+            }
+            finally
+            {
+                connsql.Close();
+            }
+        }
+
+
         private void dgvSender_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -404,6 +467,8 @@ namespace project_TelegraphicTransfer
         {
 
         }
+
+        
     }
 }
 

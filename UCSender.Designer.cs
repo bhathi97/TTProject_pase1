@@ -120,6 +120,7 @@
             this.btnSDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSDelete.UseVisualStyleBackColor = false;
+            this.btnSDelete.Click += new System.EventHandler(this.btnSDelete_Click);
             // 
             // btnSAdd
             // 
