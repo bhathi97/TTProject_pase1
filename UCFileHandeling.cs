@@ -73,10 +73,9 @@ namespace project_TelegraphicTransfer
             {
                 flp_fileItemsShowingPanel.Controls.Clear();
                 connsql.Open();
-                // Create a SqlCommand to retrieve the rows
 
-
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT TOP 10 * FROM tbl_FILE ORDER BY DATE_TIME DESC", connsql);
+                // Create a SqlCommand to retrieve all rows from tbl_FILE
+                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_FILE ORDER BY DATE_TIME DESC", connsql);
 
                 // Execute the query and retrieve the rows
                 SqlDataReader reader = cmdItemLoad.ExecuteReader();
@@ -101,8 +100,8 @@ namespace project_TelegraphicTransfer
             {
                 connsql.Close();
             }
-
         }
+
 
         private void UCFileHandeling_Load(object sender, EventArgs e)
         {

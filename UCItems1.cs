@@ -24,17 +24,16 @@ namespace project_TelegraphicTransfer
             set { _fileId = value; }
         }
 
-       
+
 
         #endregion
 
         private void UCItems1_Load(object sender, EventArgs e)
         {
             lblFileNameShowing.Text = FileName;
-
         }
 
-        
+
         private void btn_editTTs_Click(object sender, EventArgs e)
         {
             try

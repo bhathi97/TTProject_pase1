@@ -138,5 +138,10 @@ namespace project_TelegraphicTransfer
             }
 
         }
+
+        private void flp_ItemViewver_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
