@@ -12,6 +12,9 @@ namespace project_TelegraphicTransfer
 {
     public partial class FormEditBenificiary : Form
     {
+        
+        
+
         public FormEditBenificiary()
         {
             InitializeComponent();
@@ -32,5 +35,7 @@ namespace project_TelegraphicTransfer
                 MessageBox.Show(ex.Message);
             }
         }
+
+   
     }
 }

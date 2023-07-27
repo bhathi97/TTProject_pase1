@@ -23,10 +23,21 @@ namespace project_TelegraphicTransfer
         public UCSender()
         {
             InitializeComponent();
+            dgvSender.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         //sender lode
         private void UCSender_Load(object sender, EventArgs e)
         {
+            // Set up the DataGridView columns
+            dgvSender.ColumnCount = 7;
+            dgvSender.Columns[0].Name = "id";
+            dgvSender.Columns[1].Name = "name";
+            dgvSender.Columns[2].Name = "address";
+            dgvSender.Columns[3].Name = "business";
+            dgvSender.Columns[4].Name = "tax";
+            dgvSender.Columns[5].Name = "tpno"; 
+            dgvSender.Columns[6].Name = "tin"; 
+            
             LoadSender();
         }
 
@@ -35,40 +46,32 @@ namespace project_TelegraphicTransfer
         {
             try
             {
-                flpLoadSender .Controls.Clear();
-
                 connsql.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_SENDER_MASTER;", connsql);
+                SqlDataReader reader = cmd.ExecuteReader();
 
-                // Create a SqlCommand to retrieve the rows
-                SqlCommand cmdItemLoad = new SqlCommand("SELECT * FROM tbl_SENDER_MASTER", connsql);
+                // Clear existing data in DataGridView
+                dgvSender.Rows.Clear();
 
-                // Execute the query and retrieve the rows
-                SqlDataReader reader = cmdItemLoad.ExecuteReader();
-
-            
-
+                // Loop through the data reader and add rows to the DataGridView
                 while (reader.Read())
                 {
+                    string id = reader["ID"].ToString();
+                    string name = reader["NAME"].ToString();
+                    string address = reader["ADDRESS"].ToString();
+                    string business = reader["BUSINESS"].ToString();
+                    string tax = reader["TAX"].ToString();
+                    string tpno = reader["TPNO"].ToString();
+                    string tin = reader["TIN"].ToString();
 
-                    UCItemToShowSender itms = new UCItemToShowSender();
-
-                    itms.Name = reader["NAME"].ToString();
-                    itms.Address = reader["ADDRESS"].ToString();
-                    itms.Busines = reader["BUSINESS"].ToString();
-                    itms.Tax = reader["TAX"].ToString();
-                    itms.Tpno = reader["TPNO"].ToString();
-                    itms.Tinno = reader["TIN"].ToString();
-
-
-                    // Add UCItems1 control to the panel
-                    flpLoadSender.Controls.Add(itms);
+                    dgvSender.Rows.Add(id, name, address, business, tax, tpno, tin);
                 }
 
                 reader.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("An error occurred while loading  data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -77,16 +80,7 @@ namespace project_TelegraphicTransfer
 
         }
 
-        private void AddDataRecord()
-        {
-            // Code to add the data record to the database
-
-            // Call the LoadSender method to refresh the data in the flpLoadSender control
-            LoadSender();
-        }
-
-
-
+       
         private void btnSAdd_Click(object sender, EventArgs e)
         {
             try
@@ -199,12 +193,214 @@ namespace project_TelegraphicTransfer
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+
+        //========================= update sender
+        private void btnSUpdate_Click(object sender, EventArgs e)
         {
-            LoadSender();
+            try
+            {
+                // Check if a row is selected
+                if (dgvSender.SelectedRows.Count != 1)
+                {
+                    MessageBox.Show("Please select a sender to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Get the selected user's ID
+                string id = dgvSender.SelectedRows[0].Cells["id"].Value.ToString();
+
+                // Check tbName.Text
+                if (string.IsNullOrEmpty(tbName.Text))
+                {
+                    MessageBox.Show("Please enter a name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+              
+                if (string.IsNullOrEmpty(tBaddres.Text))
+                {
+                    MessageBox.Show("Please enter a address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(tbBusiness.Text))
+                {
+                    MessageBox.Show("Please enter a business.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(tBtax.Text))
+                {
+                    MessageBox.Show("Please enter a tax.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(tbTN.Text))
+                {
+                    MessageBox.Show("Please enter a telephone no.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string TelNo = tbTN.Text;
+                if (!Regex.IsMatch(TelNo, @"^0[0-9]{9}$") || Regex.IsMatch(TelNo, @"(\d)\1{9}"))
+                {
+                    MessageBox.Show("Please enter a valid telephone number consisting of 10 digits starting with 0, without repeating the same digit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                if (string.IsNullOrEmpty(tbTin.Text))
+                {
+                    MessageBox.Show("Please enter a tin no.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                
+
+                string name = tbName.Text;
+                string address = tBaddres.Text;
+                string busi = tbBusiness.Text;
+                string tax = tBtax.Text;
+                string tpno = tbTN.Text;
+                string tin = tbTin.Text;
+
+
+              
+
+                // Display confirmation dialog
+                DialogResult result = MessageBox.Show("Are you sure you want to update the user?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    UpdateSenderInDatabase(id, name, address, busi, tax, tpno, tin);
+
+                    // Refresh the DataGridView with updated data
+                    LoadSender();
+
+                    // Clear the input fields
+                    ClearFormFields();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while updating the user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
-        private void tbTN_TextChanged(object sender, EventArgs e)
+        private void dgvSender_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // Check if a row is selected
+                if (dgvSender.SelectedRows.Count == 0)
+                {
+                    // Clear the form fields if no row is selected
+                    ClearFormFields();
+                    return;
+                }
+
+                // Get the selected user's data
+                string id = dgvSender.SelectedRows[0].Cells["id"].Value.ToString();
+                string name = dgvSender.SelectedRows[1].Cells["name"].Value.ToString();
+                string address = dgvSender.SelectedRows[2].Cells["address"].Value.ToString();
+                string busi = dgvSender.SelectedRows[3].Cells["business"].Value.ToString();
+                string tax = dgvSender.SelectedRows[4].Cells["tax"].Value.ToString();
+                string tpno = dgvSender.SelectedRows[5].Cells["tpno"].Value.ToString();
+                string tin = dgvSender.SelectedRows[6].Cells["tin"].Value.ToString();
+
+                // Display the data in the form fields
+                tbName.Text = name;
+                tBaddres.Text = address;
+                tbBusiness.Text =  busi;
+                tBtax.Text = tax;
+                tbTN.Text = tpno;
+                tbTin.Text = tin;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading  data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ClearFormFields()
+        {
+            tbName.Text = "";
+            tBaddres.Text = "";
+            tbBusiness.Text = "";
+            tBtax.Text = "";
+            tbTN.Text = "";
+            tbTin.Text = "";
+        }
+
+        private void UpdateSenderInDatabase(string id, string name, string address, string business, string tax, string telNo, string tin)
+        {
+            try
+            {
+                connsql.Open();
+
+                // Update the user in the database
+                SqlCommand updateCmd = new SqlCommand("UPDATE tbl_SENDER_MASTER SET NAME = @Name, ADDRESS = @addr, BUSINESS = @busi, TAX = @tax, TPNO = @tpno, TIN = @tin WHERE ID = @ID;", connsql);
+                updateCmd.Parameters.AddWithValue("@Name", name);
+                updateCmd.Parameters.AddWithValue("@addr", address);
+                updateCmd.Parameters.AddWithValue("@busi", business);
+                updateCmd.Parameters.AddWithValue("@tax", tax);
+                updateCmd.Parameters.AddWithValue("@tpno", telNo);
+                updateCmd.Parameters.AddWithValue("@tin", tin);
+                updateCmd.Parameters.AddWithValue("@ID", id);
+
+                updateCmd.ExecuteNonQuery();
+
+                // Display a success message
+                MessageBox.Show("Data updated successfully!", "Sender Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while updating the data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connsql.Close();
+            }
+        }
+
+
+        private void dgvSender_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgvSender.Rows.Count)
+            {
+                DataGridViewRow row = dgvSender.Rows[e.RowIndex];
+
+                // Get the selected user's data
+                string id = row.Cells["id"].Value.ToString();
+                string name = row.Cells["name"].Value.ToString();
+                string address = row.Cells["address"].Value.ToString();
+                string busi = row.Cells["business"].Value.ToString();
+                string tax = row.Cells["tax"].Value.ToString();
+                string tpno = row.Cells["tpno"].Value.ToString();
+                string tin = row.Cells["tin"].Value.ToString();
+
+                // Display the data in the form fields
+                tbName.Text = name;
+                tBaddres.Text = address;
+                tbBusiness.Text = busi;
+                tBtax.Text = tax;
+                tbTN.Text = tpno;
+                tbTin.Text = tin;
+            }
+        
+            else
+            {
+                // Clear the form fields if no row is selected or an invalid row index is clicked
+                ClearFormFields();
+            }
+        }
+
+        private void dgvSender_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

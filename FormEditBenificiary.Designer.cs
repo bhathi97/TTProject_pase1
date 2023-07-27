@@ -38,25 +38,27 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNic1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tb_name = new System.Windows.Forms.TextBox();
-            this.tb_address = new System.Windows.Forms.TextBox();
-            this.tb_bank = new System.Windows.Forms.TextBox();
-            this.tb_branchName = new System.Windows.Forms.TextBox();
+            this.tb_name1 = new System.Windows.Forms.TextBox();
+            this.tb_address1 = new System.Windows.Forms.TextBox();
+            this.tb_bankName1 = new System.Windows.Forms.TextBox();
+            this.tb_branchName1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cb_country = new System.Windows.Forms.ComboBox();
+            this.cb_country1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tb_accountNo = new System.Windows.Forms.TextBox();
+            this.tb_accountNo1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.tb_sort = new System.Windows.Forms.TextBox();
+            this.tb_sort1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tb_swiftCode = new System.Windows.Forms.TextBox();
+            this.tb_swiftCode1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.tb_corBank = new System.Windows.Forms.TextBox();
+            this.tb_corBank1 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditBeneficiary = new FontAwesome.Sharp.IconButton();
             this.pnl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -64,6 +66,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl10
@@ -150,14 +153,13 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 60);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1194, 594);
+            this.splitContainer1.Size = new System.Drawing.Size(1194, 488);
             this.splitContainer1.SplitterDistance = 469;
             this.splitContainer1.TabIndex = 10;
             // 
@@ -169,30 +171,30 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.76405F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.23595F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tbNic1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.tb_name, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tb_address, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tb_bank, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tb_branchName, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tb_name1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tb_address1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tb_bankName1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tb_branchName1, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cb_country, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.cb_country1, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.tb_accountNo, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tb_accountNo1, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.tb_sort, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.tb_sort1, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.tb_swiftCode, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.tb_swiftCode1, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.tb_corBank, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.tb_corBank1, 1, 9);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 11;
+            this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
@@ -204,7 +206,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(469, 594);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(469, 488);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // label2
@@ -217,12 +219,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "ADDRESS";
             // 
-            // textBox1
+            // tbNic1
             // 
-            this.textBox1.Location = new System.Drawing.Point(232, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 23);
-            this.textBox1.TabIndex = 9;
+            this.tbNic1.Location = new System.Drawing.Point(232, 5);
+            this.tbNic1.Name = "tbNic1";
+            this.tbNic1.Size = new System.Drawing.Size(232, 23);
+            this.tbNic1.TabIndex = 9;
             // 
             // label3
             // 
@@ -244,37 +246,37 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "BRANCH NAME";
             // 
-            // tb_name
+            // tb_name1
             // 
-            this.tb_name.Location = new System.Drawing.Point(232, 37);
-            this.tb_name.Multiline = true;
-            this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(232, 54);
-            this.tb_name.TabIndex = 10;
+            this.tb_name1.Location = new System.Drawing.Point(232, 37);
+            this.tb_name1.Multiline = true;
+            this.tb_name1.Name = "tb_name1";
+            this.tb_name1.Size = new System.Drawing.Size(232, 54);
+            this.tb_name1.TabIndex = 10;
             // 
-            // tb_address
+            // tb_address1
             // 
-            this.tb_address.Location = new System.Drawing.Point(232, 99);
-            this.tb_address.Multiline = true;
-            this.tb_address.Name = "tb_address";
-            this.tb_address.Size = new System.Drawing.Size(232, 54);
-            this.tb_address.TabIndex = 11;
+            this.tb_address1.Location = new System.Drawing.Point(232, 99);
+            this.tb_address1.Multiline = true;
+            this.tb_address1.Name = "tb_address1";
+            this.tb_address1.Size = new System.Drawing.Size(232, 54);
+            this.tb_address1.TabIndex = 11;
             // 
-            // tb_bank
+            // tb_bankName1
             // 
-            this.tb_bank.Location = new System.Drawing.Point(232, 162);
-            this.tb_bank.Multiline = true;
-            this.tb_bank.Name = "tb_bank";
-            this.tb_bank.Size = new System.Drawing.Size(232, 41);
-            this.tb_bank.TabIndex = 12;
+            this.tb_bankName1.Location = new System.Drawing.Point(232, 162);
+            this.tb_bankName1.Multiline = true;
+            this.tb_bankName1.Name = "tb_bankName1";
+            this.tb_bankName1.Size = new System.Drawing.Size(232, 41);
+            this.tb_bankName1.TabIndex = 12;
             // 
-            // tb_branchName
+            // tb_branchName1
             // 
-            this.tb_branchName.Location = new System.Drawing.Point(232, 213);
-            this.tb_branchName.Multiline = true;
-            this.tb_branchName.Name = "tb_branchName";
-            this.tb_branchName.Size = new System.Drawing.Size(232, 41);
-            this.tb_branchName.TabIndex = 13;
+            this.tb_branchName1.Location = new System.Drawing.Point(232, 213);
+            this.tb_branchName1.Multiline = true;
+            this.tb_branchName1.Name = "tb_branchName1";
+            this.tb_branchName1.Size = new System.Drawing.Size(232, 41);
+            this.tb_branchName1.TabIndex = 13;
             // 
             // label12
             // 
@@ -306,11 +308,11 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "COUNTRY";
             // 
-            // cb_country
+            // cb_country1
             // 
-            this.cb_country.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_country.FormattingEnabled = true;
-            this.cb_country.Items.AddRange(new object[] {
+            this.cb_country1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_country1.FormattingEnabled = true;
+            this.cb_country1.Items.AddRange(new object[] {
             "United States",
             "Canada",
             "United Kingdom",
@@ -331,10 +333,10 @@
             "Switzerland",
             "Sweden",
             "South Africa"});
-            this.cb_country.Location = new System.Drawing.Point(232, 265);
-            this.cb_country.Name = "cb_country";
-            this.cb_country.Size = new System.Drawing.Size(232, 23);
-            this.cb_country.TabIndex = 18;
+            this.cb_country1.Location = new System.Drawing.Point(232, 265);
+            this.cb_country1.Name = "cb_country1";
+            this.cb_country1.Size = new System.Drawing.Size(232, 23);
+            this.cb_country1.TabIndex = 18;
             // 
             // label7
             // 
@@ -346,12 +348,12 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "ACCOUNT NO / IBAN NO";
             // 
-            // tb_accountNo
+            // tb_accountNo1
             // 
-            this.tb_accountNo.Location = new System.Drawing.Point(232, 302);
-            this.tb_accountNo.Name = "tb_accountNo";
-            this.tb_accountNo.Size = new System.Drawing.Size(232, 23);
-            this.tb_accountNo.TabIndex = 15;
+            this.tb_accountNo1.Location = new System.Drawing.Point(232, 302);
+            this.tb_accountNo1.Name = "tb_accountNo1";
+            this.tb_accountNo1.Size = new System.Drawing.Size(232, 23);
+            this.tb_accountNo1.TabIndex = 15;
             // 
             // label15
             // 
@@ -363,12 +365,12 @@
             this.label15.TabIndex = 19;
             this.label15.Text = "SORT / ROUTING / FEDWIRE / ABA / BSB / BANK-BRANCH CODE";
             // 
-            // tb_sort
+            // tb_sort1
             // 
-            this.tb_sort.Location = new System.Drawing.Point(232, 339);
-            this.tb_sort.Name = "tb_sort";
-            this.tb_sort.Size = new System.Drawing.Size(232, 23);
-            this.tb_sort.TabIndex = 20;
+            this.tb_sort1.Location = new System.Drawing.Point(232, 339);
+            this.tb_sort1.Name = "tb_sort1";
+            this.tb_sort1.Size = new System.Drawing.Size(232, 23);
+            this.tb_sort1.TabIndex = 20;
             // 
             // label8
             // 
@@ -380,12 +382,12 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "SWIFT CODE";
             // 
-            // tb_swiftCode
+            // tb_swiftCode1
             // 
-            this.tb_swiftCode.Location = new System.Drawing.Point(232, 396);
-            this.tb_swiftCode.Name = "tb_swiftCode";
-            this.tb_swiftCode.Size = new System.Drawing.Size(232, 23);
-            this.tb_swiftCode.TabIndex = 16;
+            this.tb_swiftCode1.Location = new System.Drawing.Point(232, 396);
+            this.tb_swiftCode1.Name = "tb_swiftCode1";
+            this.tb_swiftCode1.Size = new System.Drawing.Size(232, 23);
+            this.tb_swiftCode1.TabIndex = 16;
             // 
             // label9
             // 
@@ -397,19 +399,51 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "CORRESPONDING / INTERMEDIATE BANK";
             // 
-            // tb_corBank
+            // tb_corBank1
             // 
-            this.tb_corBank.Location = new System.Drawing.Point(232, 433);
-            this.tb_corBank.Multiline = true;
-            this.tb_corBank.Name = "tb_corBank";
-            this.tb_corBank.Size = new System.Drawing.Size(232, 29);
-            this.tb_corBank.TabIndex = 17;
+            this.tb_corBank1.Location = new System.Drawing.Point(232, 433);
+            this.tb_corBank1.Multiline = true;
+            this.tb_corBank1.Name = "tb_corBank1";
+            this.tb_corBank1.Size = new System.Drawing.Size(232, 29);
+            this.tb_corBank1.TabIndex = 17;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnEditBeneficiary);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 554);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1194, 100);
+            this.panel1.TabIndex = 24;
+            // 
+            // btnEditBeneficiary
+            // 
+            this.btnEditBeneficiary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
+            this.btnEditBeneficiary.FlatAppearance.BorderSize = 0;
+            this.btnEditBeneficiary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEditBeneficiary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnEditBeneficiary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditBeneficiary.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditBeneficiary.ForeColor = System.Drawing.Color.White;
+            this.btnEditBeneficiary.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnEditBeneficiary.IconColor = System.Drawing.Color.White;
+            this.btnEditBeneficiary.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditBeneficiary.IconSize = 20;
+            this.btnEditBeneficiary.Location = new System.Drawing.Point(96, 19);
+            this.btnEditBeneficiary.Name = "btnEditBeneficiary";
+            this.btnEditBeneficiary.Size = new System.Drawing.Size(340, 42);
+            this.btnEditBeneficiary.TabIndex = 1;
+            this.btnEditBeneficiary.Text = "EDIT NEW BENEFICIARY TO THE DATABASE";
+            this.btnEditBeneficiary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditBeneficiary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditBeneficiary.UseVisualStyleBackColor = false;
             // 
             // FormEditBenificiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 654);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pnl5);
             this.Controls.Add(this.lbl10);
@@ -426,6 +460,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -442,24 +477,26 @@
         private SplitContainer splitContainer1;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox tbNic1;
         private Label label3;
         private Label label5;
-        private TextBox tb_name;
-        private TextBox tb_address;
-        private TextBox tb_bank;
-        private TextBox tb_branchName;
+        private TextBox tb_name1;
+        private TextBox tb_address1;
+        private TextBox tb_bankName1;
+        private TextBox tb_branchName1;
         private Label label12;
         private Label label11;
         private Label label6;
-        private ComboBox cb_country;
+        private ComboBox cb_country1;
         private Label label7;
-        private TextBox tb_accountNo;
+        private TextBox tb_accountNo1;
         private Label label15;
-        private TextBox tb_sort;
+        private TextBox tb_sort1;
         private Label label8;
-        private TextBox tb_swiftCode;
+        private TextBox tb_swiftCode1;
         private Label label9;
-        private TextBox tb_corBank;
+        private TextBox tb_corBank1;
+        private Panel panel1;
+        private FontAwesome.Sharp.IconButton btnEditBeneficiary;
     }
 }

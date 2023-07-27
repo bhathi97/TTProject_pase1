@@ -31,7 +31,7 @@
             this.lbl_name = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.lbl_nicName = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flp_beneficiary = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_corBank = new System.Windows.Forms.Label();
             this.lbl_branchName = new System.Windows.Forms.Label();
             this.lbl_bankName = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.lbl_swift = new System.Windows.Forms.Label();
             this.btn_edit = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.flp_beneficiary.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_name
@@ -80,31 +80,31 @@
             this.lbl_nicName.TabIndex = 2;
             this.lbl_nicName.Text = "nic name";
             // 
-            // tableLayoutPanel1
+            // flp_beneficiary
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.lbl_corBank, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_branchName, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_bankName, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_addr, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_country, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_accNo, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_branchCode, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_swift, 0, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 60);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(518, 162);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.flp_beneficiary.ColumnCount = 1;
+            this.flp_beneficiary.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.flp_beneficiary.Controls.Add(this.lbl_corBank, 0, 7);
+            this.flp_beneficiary.Controls.Add(this.lbl_branchName, 0, 4);
+            this.flp_beneficiary.Controls.Add(this.lbl_bankName, 0, 3);
+            this.flp_beneficiary.Controls.Add(this.lbl_addr, 0, 0);
+            this.flp_beneficiary.Controls.Add(this.lbl_country, 0, 1);
+            this.flp_beneficiary.Controls.Add(this.lbl_accNo, 0, 2);
+            this.flp_beneficiary.Controls.Add(this.lbl_branchCode, 0, 5);
+            this.flp_beneficiary.Controls.Add(this.lbl_swift, 0, 6);
+            this.flp_beneficiary.Location = new System.Drawing.Point(26, 60);
+            this.flp_beneficiary.Name = "flp_beneficiary";
+            this.flp_beneficiary.RowCount = 8;
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.flp_beneficiary.Size = new System.Drawing.Size(518, 162);
+            this.flp_beneficiary.TabIndex = 3;
             // 
             // lbl_corBank
             // 
@@ -218,16 +218,15 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(71)))));
             this.Controls.Add(this.btn_edit);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.flp_beneficiary);
             this.Controls.Add(this.lbl_nicName);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.lbl_name);
             this.Name = "UCItemToShowBenificieries";
             this.Size = new System.Drawing.Size(636, 235);
-           
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.flp_beneficiary.ResumeLayout(false);
+            this.flp_beneficiary.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +237,7 @@
         private Label lbl_name;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Label lbl_nicName;
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel flp_beneficiary;
         private Label lbl_addr;
         private Label lbl_country;
         private Label lbl_accNo;

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace project_TelegraphicTransfer
 {
     public partial class UCItemToShowBenificieries : UserControl
     {
+        
+       
 
 
         #region connection
@@ -144,7 +147,9 @@ namespace project_TelegraphicTransfer
         {
             try
             {
+                
                 FormEditBenificiary formEditBenificiary = new FormEditBenificiary();
+              
 
                 // Disable all other forms
                 foreach (Form form in Application.OpenForms)
