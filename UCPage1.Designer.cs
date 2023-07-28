@@ -102,7 +102,7 @@
             label44=new Label();
             lbl_swiftcode=new Label();
             label46=new Label();
-            lbl_codes=new Label();
+            lbl_goods=new Label();
             label45=new Label();
             lbl_permitNo=new Label();
             label48=new Label();
@@ -154,6 +154,10 @@
             lbl_bcode=new Label();
             lb_ibank=new Label();
             label76=new Label();
+            lbl_code=new Label();
+            lbl_courier=new Label();
+            lbl_Ivno=new Label();
+            lbl_trade=new Label();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -668,9 +672,10 @@
             // 
             // lbl_nic
             // 
-            lbl_nic.Location=new Point(182, 396);
+            lbl_nic.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_nic.Location=new Point(185, 396);
             lbl_nic.Name="lbl_nic";
-            lbl_nic.Size=new Size(461, 18);
+            lbl_nic.Size=new Size(458, 18);
             lbl_nic.TabIndex=40;
             // 
             // lbl_incomeTax
@@ -682,9 +687,10 @@
             // 
             // lbl_purpose
             // 
-            lbl_purpose.Location=new Point(244, 449);
+            lbl_purpose.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_purpose.Location=new Point(240, 449);
             lbl_purpose.Name="lbl_purpose";
-            lbl_purpose.Size=new Size(403, 38);
+            lbl_purpose.Size=new Size(403, 13);
             lbl_purpose.TabIndex=42;
             // 
             // lbl_description
@@ -698,7 +704,7 @@
             // 
             lbl_sname.Location=new Point(202, 553);
             lbl_sname.Name="lbl_sname";
-            lbl_sname.Size=new Size(154, 31);
+            lbl_sname.Size=new Size(136, 31);
             lbl_sname.TabIndex=44;
             // 
             // lbl10
@@ -710,9 +716,10 @@
             // 
             // lbl_bname
             // 
-            lbl_bname.Location=new Point(200, 249);
+            lbl_bname.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_bname.Location=new Point(244, 249);
             lbl_bname.Name="lbl_bname";
-            lbl_bname.Size=new Size(465, 17);
+            lbl_bname.Size=new Size(397, 17);
             lbl_bname.TabIndex=46;
             // 
             // lbl_baddress
@@ -724,16 +731,18 @@
             // 
             // lbl_bank
             // 
-            lbl_bank.Location=new Point(118, 741);
+            lbl_bank.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_bank.Location=new Point(174, 741);
             lbl_bank.Name="lbl_bank";
-            lbl_bank.Size=new Size(547, 21);
+            lbl_bank.Size=new Size(491, 21);
             lbl_bank.TabIndex=49;
             // 
             // lbl_accountno
             // 
-            lbl_accountno.Location=new Point(177, 788);
+            lbl_accountno.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_accountno.Location=new Point(218, 788);
             lbl_accountno.Name="lbl_accountno";
-            lbl_accountno.Size=new Size(489, 21);
+            lbl_accountno.Size=new Size(437, 21);
             lbl_accountno.TabIndex=51;
             // 
             // lbl_sort
@@ -777,6 +786,7 @@
             // 
             // lbl_words
             // 
+            lbl_words.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_words.Location=new Point(428, 715);
             lbl_words.Name="lbl_words";
             lbl_words.Size=new Size(234, 18);
@@ -793,9 +803,10 @@
             // 
             // lbl_country
             // 
-            lbl_country.Location=new Point(449, 766);
+            lbl_country.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_country.Location=new Point(452, 766);
             lbl_country.Name="lbl_country";
-            lbl_country.Size=new Size(212, 18);
+            lbl_country.Size=new Size(209, 18);
             lbl_country.TabIndex=60;
             // 
             // label44
@@ -809,9 +820,10 @@
             // 
             // lbl_swiftcode
             // 
-            lbl_swiftcode.Location=new Point(443, 821);
+            lbl_swiftcode.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_swiftcode.Location=new Point(474, 821);
             lbl_swiftcode.Name="lbl_swiftcode";
-            lbl_swiftcode.Size=new Size(212, 18);
+            lbl_swiftcode.Size=new Size(181, 18);
             lbl_swiftcode.TabIndex=62;
             // 
             // label46
@@ -822,12 +834,13 @@
             label46.TabIndex=63;
             label46.Text="GOODS CLEARED /NOT CLEARED* HS CODES* CUSTDEC/COURIER NO";
             // 
-            // lbl_codes
+            // lbl_goods
             // 
-            lbl_codes.Location=new Point(505, 500);
-            lbl_codes.Name="lbl_codes";
-            lbl_codes.Size=new Size(154, 43);
-            lbl_codes.TabIndex=64;
+            lbl_goods.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_goods.Location=new Point(521, 496);
+            lbl_goods.Name="lbl_goods";
+            lbl_goods.Size=new Size(131, 10);
+            lbl_goods.TabIndex=64;
             // 
             // label45
             // 
@@ -839,9 +852,9 @@
             // 
             // lbl_permitNo
             // 
-            lbl_permitNo.Location=new Point(499, 553);
+            lbl_permitNo.Location=new Point(521, 553);
             lbl_permitNo.Name="lbl_permitNo";
-            lbl_permitNo.Size=new Size(154, 30);
+            lbl_permitNo.Size=new Size(122, 30);
             lbl_permitNo.TabIndex=66;
             // 
             // label48
@@ -1108,21 +1121,23 @@
             // 
             // lb_address
             // 
-            lb_address.Location=new Point(123, 305);
+            lb_address.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_address.Location=new Point(229, 305);
             lb_address.Name="lb_address";
-            lb_address.Size=new Size(529, 12);
+            lb_address.Size=new Size(423, 12);
             lb_address.TabIndex=11;
             // 
             // lb_bname
             // 
+            lb_bname.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lb_bname.Location=new Point(218, 667);
             lb_bname.Name="lb_bname";
             lb_bname.Size=new Size(423, 12);
             lb_bname.TabIndex=97;
-            
             // 
             // lb_email1
             // 
+            lb_email1.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lb_email1.Location=new Point(129, 328);
             lb_email1.Name="lb_email1";
             lb_email1.Size=new Size(423, 12);
@@ -1130,6 +1145,7 @@
             // 
             // lb_email2
             // 
+            lb_email2.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lb_email2.Location=new Point(125, 352);
             lb_email2.Name="lb_email2";
             lb_email2.Size=new Size(423, 12);
@@ -1137,9 +1153,10 @@
             // 
             // lb_phone
             // 
-            lb_phone.Location=new Point(137, 374);
+            lb_phone.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_phone.Location=new Point(125, 374);
             lb_phone.Name="lb_phone";
-            lb_phone.Size=new Size(423, 12);
+            lb_phone.Size=new Size(435, 12);
             lb_phone.TabIndex=100;
             // 
             // label70
@@ -1180,16 +1197,18 @@
             // 
             // lbl_profession
             // 
-            lbl_profession.Location=new Point(232, 271);
+            lbl_profession.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_profession.Location=new Point(244, 271);
             lbl_profession.Name="lbl_profession";
-            lbl_profession.Size=new Size(429, 23);
+            lbl_profession.Size=new Size(387, 23);
             lbl_profession.TabIndex=105;
             // 
             // lbl_tin
             // 
-            lbl_tin.Location=new Point(185, 422);
+            lbl_tin.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_tin.Location=new Point(198, 422);
             lbl_tin.Name="lbl_tin";
-            lbl_tin.Size=new Size(171, 19);
+            lbl_tin.Size=new Size(158, 19);
             lbl_tin.TabIndex=106;
             // 
             // label75
@@ -1203,16 +1222,18 @@
             // 
             // lbl_vat
             // 
-            lbl_vat.Location=new Point(499, 424);
+            lbl_vat.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_vat.Location=new Point(507, 424);
             lbl_vat.Name="lbl_vat";
-            lbl_vat.Size=new Size(158, 17);
+            lbl_vat.Size=new Size(145, 17);
             lbl_vat.TabIndex=108;
             // 
             // lbl_incotern
             // 
-            lbl_incotern.Location=new Point(198, 500);
+            lbl_incotern.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_incotern.Location=new Point(204, 496);
             lbl_incotern.Name="lbl_incotern";
-            lbl_incotern.Size=new Size(158, 43);
+            lbl_incotern.Size=new Size(134, 18);
             lbl_incotern.TabIndex=109;
             // 
             // lbl_spp
@@ -1224,13 +1245,15 @@
             // 
             // lb_badress
             // 
-            lb_badress.Location=new Point(123, 686);
+            lb_badress.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_badress.Location=new Point(218, 686);
             lb_badress.Name="lb_badress";
-            lb_badress.Size=new Size(485, 21);
+            lb_badress.Size=new Size(390, 21);
             lb_badress.TabIndex=111;
             // 
             // lbl_amount
             // 
+            lbl_amount.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_amount.Location=new Point(174, 712);
             lbl_amount.Name="lbl_amount";
             lbl_amount.Size=new Size(162, 23);
@@ -1238,13 +1261,15 @@
             // 
             // lbl_branch
             // 
-            lbl_branch.Location=new Point(95, 767);
+            lbl_branch.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_branch.Location=new Point(153, 767);
             lbl_branch.Name="lbl_branch";
-            lbl_branch.Size=new Size(241, 15);
+            lbl_branch.Size=new Size(183, 15);
             lbl_branch.TabIndex=113;
             // 
             // lbl_bcode
             // 
+            lbl_bcode.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_bcode.Location=new Point(218, 818);
             lbl_bcode.Name="lbl_bcode";
             lbl_bcode.Size=new Size(118, 23);
@@ -1252,9 +1277,10 @@
             // 
             // lb_ibank
             // 
-            lb_ibank.Location=new Point(341, 849);
+            lb_ibank.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_ibank.Location=new Point(362, 849);
             lb_ibank.Name="lb_ibank";
-            lb_ibank.Size=new Size(320, 21);
+            lb_ibank.Size=new Size(279, 21);
             lb_ibank.TabIndex=115;
             // 
             // label76
@@ -1266,12 +1292,48 @@
             label76.TabIndex=116;
             label76.Text="FORIGN BANK CHARGES TO BE BORNE BY* APPLICANT    BENEFICIARY";
             // 
+            // lbl_code
+            // 
+            lbl_code.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_code.Location=new Point(514, 521);
+            lbl_code.Name="lbl_code";
+            lbl_code.Size=new Size(131, 10);
+            lbl_code.TabIndex=117;
+            // 
+            // lbl_courier
+            // 
+            lbl_courier.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_courier.Location=new Point(508, 531);
+            lbl_courier.Name="lbl_courier";
+            lbl_courier.Size=new Size(131, 10);
+            lbl_courier.TabIndex=118;
+            // 
+            // lbl_Ivno
+            // 
+            lbl_Ivno.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Ivno.Location=new Point(211, 468);
+            lbl_Ivno.Name="lbl_Ivno";
+            lbl_Ivno.Size=new Size(403, 13);
+            lbl_Ivno.TabIndex=119;
+            // 
+            // lbl_trade
+            // 
+            lbl_trade.Font=new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_trade.Location=new Point(209, 522);
+            lbl_trade.Name="lbl_trade";
+            lbl_trade.Size=new Size(134, 18);
+            lbl_trade.TabIndex=120;
+            // 
             // UCPage2
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
             AutoScroll=true;
             AutoScrollMargin=new Size(0, 100);
+            Controls.Add(lbl_trade);
+            Controls.Add(lbl_Ivno);
+            Controls.Add(lbl_courier);
+            Controls.Add(lbl_code);
             Controls.Add(label76);
             Controls.Add(lb_ibank);
             Controls.Add(lbl_bcode);
@@ -1329,7 +1391,7 @@
             Controls.Add(label48);
             Controls.Add(lbl_permitNo);
             Controls.Add(label45);
-            Controls.Add(lbl_codes);
+            Controls.Add(lbl_goods);
             Controls.Add(lbl_email);
             Controls.Add(label46);
             Controls.Add(label28);
@@ -1381,7 +1443,7 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
-            Size=new Size(621, 704);
+            Size=new Size(609, 594);
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
@@ -1469,7 +1531,7 @@
         private Label label44;
         private Label lbl_swiftcode;
         private Label label46;
-        private Label lbl_codes;
+        private Label lbl_goods;
         private Label label45;
         private Label lbl_permitNo;
         private Label label48;
@@ -1522,5 +1584,9 @@
         private Label lbl_bcode;
         private Label lb_ibank;
         private Label label76;
+        private Label lbl_code;
+        private Label lbl_courier;
+        private Label lbl_Ivno;
+        private Label lbl_trade;
     }
 }

@@ -250,6 +250,7 @@
             btn_CreateNEwTTs.Text="New File";
             btn_CreateNEwTTs.TextImageRelation=TextImageRelation.ImageBeforeText;
             btn_CreateNEwTTs.UseVisualStyleBackColor=false;
+            btn_CreateNEwTTs.Click+=btn_CreateNEwTTs_Click;
             // 
             // splitContainerTTHandleing
             // 
@@ -310,6 +311,7 @@
             Controls.Add(splitContainerToShowFiles);
             Name="UCFileHandeling";
             Size=new Size(781, 505);
+            Load+=UCFileHandeling_Load;
             splitContainerToShowFiles.Panel1.ResumeLayout(false);
             splitContainerToShowFiles.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainerToShowFiles).EndInit();
