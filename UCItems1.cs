@@ -24,7 +24,7 @@ namespace projectTelegraphicTransfer
             set { _fileId = value; }
         }
 
-       
+
 
         #endregion
 
@@ -34,7 +34,7 @@ namespace projectTelegraphicTransfer
 
         }
 
-        
+
         private void btn_editTTs_Click(object sender, EventArgs e)
         {
             try
@@ -82,10 +82,14 @@ namespace projectTelegraphicTransfer
             }
         }
 
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-
-
+        }
     }
 }

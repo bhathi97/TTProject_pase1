@@ -150,7 +150,7 @@ namespace projectTelegraphicTransfer
         }
 
         private string _vat;
-        public string Vat
+        public string vat
         {
             get
             {
@@ -229,7 +229,7 @@ namespace projectTelegraphicTransfer
             set
             {
                 _badress = value;
-                lb_bname.Text = _badress;
+                lb_badress.Text = _badress;
             }
         }
 
@@ -262,7 +262,7 @@ namespace projectTelegraphicTransfer
         }
 
         private string _bank;
-        public string bank
+        public string Bank
         {
             get
             {
@@ -271,7 +271,7 @@ namespace projectTelegraphicTransfer
             set
             {
                 _bank = value;
-                lbl_words.Text = _bank;
+                lbl_bank.Text = _bank;
             }
         }
 
@@ -288,6 +288,108 @@ namespace projectTelegraphicTransfer
                 lbl_branch.Text = _branch;
             }
         }
+
+
+        private string _BBCode;
+        public string BBCode
+        {
+            get
+            {
+                return _BBCode;
+            }
+            set
+            {
+                _BBCode = value;
+                lbl_bcode.Text = _BBCode;
+            }
+        }
+
+        private string _BSCode;
+        public string BSCode
+        {
+            get
+            {
+                return _BSCode;
+            }
+            set
+            {
+                _BSCode = value;
+                lbl_swiftcode.Text = _BSCode;
+            }
+        }
+
+        private string _BCountry;
+        public string BCountry
+        {
+            get
+            {
+                return _BCountry;
+            }
+            set
+            {
+                _BCountry = value;
+                lbl_country.Text = _BCountry;
+            }
+        }
+
+        private string _BANo;
+        public string BANo
+        {
+            get
+            {
+                return _BANo;
+            }
+            set
+            {
+                _BANo = value;
+                lbl_accountno.Text = _BANo;
+            }
+        }
+
+        private string _BIBank;
+        public string BIBank
+        {
+            get
+            {
+                return _BIBank;
+            }
+            set
+            {
+                _BIBank = value;
+                lb_ibank.Text = _BIBank;
+            }
+        }
+
+        private string _CType;
+        public string CType
+        {
+            get
+            {
+                return _CType;
+            }
+            set
+            {
+                _CType = value;
+                lbl_amount.Text = _CType;
+            }
+        }
+
+        private string _AWords;
+        public string AWords
+        {
+            get
+            {
+                return _AWords;
+            }
+            set
+            {
+                _AWords= value;
+                lbl_words.Text = _AWords;
+            }
+        }
+
+
+
 
         private string _country;
         public string country
@@ -380,6 +482,6 @@ namespace projectTelegraphicTransfer
 
         }
 
-       
+
     }
 }

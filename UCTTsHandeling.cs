@@ -57,7 +57,7 @@ namespace projectTelegraphicTransfer
         {
             try
             {
-                
+
                 FormAddNewForm formAddNewForm = new FormAddNewForm();
 
                 formAddNewForm.FileName = FileName;
@@ -117,7 +117,7 @@ namespace projectTelegraphicTransfer
                     uCTTItems.FoldId = int.Parse(reader["ID"].ToString());
 
                     uCTTItems.FName = FileName;
-                   
+
                     //MessageBox.Show(FileName);
 
                     // Add UCItems1 control to the panel

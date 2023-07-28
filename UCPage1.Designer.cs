@@ -668,9 +668,9 @@
             // 
             // lbl_nic
             // 
-            lbl_nic.Location=new Point(182, 396);
+            lbl_nic.Location=new Point(185, 396);
             lbl_nic.Name="lbl_nic";
-            lbl_nic.Size=new Size(461, 18);
+            lbl_nic.Size=new Size(458, 18);
             lbl_nic.TabIndex=40;
             // 
             // lbl_incomeTax
@@ -698,7 +698,7 @@
             // 
             lbl_sname.Location=new Point(202, 553);
             lbl_sname.Name="lbl_sname";
-            lbl_sname.Size=new Size(154, 31);
+            lbl_sname.Size=new Size(136, 31);
             lbl_sname.TabIndex=44;
             // 
             // lbl10
@@ -710,9 +710,9 @@
             // 
             // lbl_bname
             // 
-            lbl_bname.Location=new Point(200, 249);
+            lbl_bname.Location=new Point(244, 249);
             lbl_bname.Name="lbl_bname";
-            lbl_bname.Size=new Size(465, 17);
+            lbl_bname.Size=new Size(397, 17);
             lbl_bname.TabIndex=46;
             // 
             // lbl_baddress
@@ -724,16 +724,16 @@
             // 
             // lbl_bank
             // 
-            lbl_bank.Location=new Point(118, 741);
+            lbl_bank.Location=new Point(174, 741);
             lbl_bank.Name="lbl_bank";
-            lbl_bank.Size=new Size(547, 21);
+            lbl_bank.Size=new Size(491, 21);
             lbl_bank.TabIndex=49;
             // 
             // lbl_accountno
             // 
-            lbl_accountno.Location=new Point(177, 788);
+            lbl_accountno.Location=new Point(218, 788);
             lbl_accountno.Name="lbl_accountno";
-            lbl_accountno.Size=new Size(489, 21);
+            lbl_accountno.Size=new Size(448, 21);
             lbl_accountno.TabIndex=51;
             // 
             // lbl_sort
@@ -809,9 +809,9 @@
             // 
             // lbl_swiftcode
             // 
-            lbl_swiftcode.Location=new Point(443, 821);
+            lbl_swiftcode.Location=new Point(474, 821);
             lbl_swiftcode.Name="lbl_swiftcode";
-            lbl_swiftcode.Size=new Size(212, 18);
+            lbl_swiftcode.Size=new Size(181, 18);
             lbl_swiftcode.TabIndex=62;
             // 
             // label46
@@ -824,9 +824,9 @@
             // 
             // lbl_codes
             // 
-            lbl_codes.Location=new Point(505, 500);
+            lbl_codes.Location=new Point(521, 500);
             lbl_codes.Name="lbl_codes";
-            lbl_codes.Size=new Size(154, 43);
+            lbl_codes.Size=new Size(131, 43);
             lbl_codes.TabIndex=64;
             // 
             // label45
@@ -839,9 +839,9 @@
             // 
             // lbl_permitNo
             // 
-            lbl_permitNo.Location=new Point(499, 553);
+            lbl_permitNo.Location=new Point(521, 553);
             lbl_permitNo.Name="lbl_permitNo";
-            lbl_permitNo.Size=new Size(154, 30);
+            lbl_permitNo.Size=new Size(122, 30);
             lbl_permitNo.TabIndex=66;
             // 
             // label48
@@ -1108,9 +1108,9 @@
             // 
             // lb_address
             // 
-            lb_address.Location=new Point(123, 305);
+            lb_address.Location=new Point(229, 305);
             lb_address.Name="lb_address";
-            lb_address.Size=new Size(529, 12);
+            lb_address.Size=new Size(423, 12);
             lb_address.TabIndex=11;
             // 
             // lb_bname
@@ -1119,7 +1119,6 @@
             lb_bname.Name="lb_bname";
             lb_bname.Size=new Size(423, 12);
             lb_bname.TabIndex=97;
-            
             // 
             // lb_email1
             // 
@@ -1137,9 +1136,9 @@
             // 
             // lb_phone
             // 
-            lb_phone.Location=new Point(137, 374);
+            lb_phone.Location=new Point(125, 374);
             lb_phone.Name="lb_phone";
-            lb_phone.Size=new Size(423, 12);
+            lb_phone.Size=new Size(435, 12);
             lb_phone.TabIndex=100;
             // 
             // label70
@@ -1180,16 +1179,16 @@
             // 
             // lbl_profession
             // 
-            lbl_profession.Location=new Point(232, 271);
+            lbl_profession.Location=new Point(244, 271);
             lbl_profession.Name="lbl_profession";
-            lbl_profession.Size=new Size(429, 23);
+            lbl_profession.Size=new Size(387, 23);
             lbl_profession.TabIndex=105;
             // 
             // lbl_tin
             // 
-            lbl_tin.Location=new Point(185, 422);
+            lbl_tin.Location=new Point(198, 422);
             lbl_tin.Name="lbl_tin";
-            lbl_tin.Size=new Size(171, 19);
+            lbl_tin.Size=new Size(158, 19);
             lbl_tin.TabIndex=106;
             // 
             // label75
@@ -1203,16 +1202,16 @@
             // 
             // lbl_vat
             // 
-            lbl_vat.Location=new Point(499, 424);
+            lbl_vat.Location=new Point(507, 424);
             lbl_vat.Name="lbl_vat";
-            lbl_vat.Size=new Size(158, 17);
+            lbl_vat.Size=new Size(145, 17);
             lbl_vat.TabIndex=108;
             // 
             // lbl_incotern
             // 
-            lbl_incotern.Location=new Point(198, 500);
+            lbl_incotern.Location=new Point(204, 500);
             lbl_incotern.Name="lbl_incotern";
-            lbl_incotern.Size=new Size(158, 43);
+            lbl_incotern.Size=new Size(134, 43);
             lbl_incotern.TabIndex=109;
             // 
             // lbl_spp
@@ -1224,9 +1223,9 @@
             // 
             // lb_badress
             // 
-            lb_badress.Location=new Point(123, 686);
+            lb_badress.Location=new Point(218, 686);
             lb_badress.Name="lb_badress";
-            lb_badress.Size=new Size(485, 21);
+            lb_badress.Size=new Size(390, 21);
             lb_badress.TabIndex=111;
             // 
             // lbl_amount
@@ -1238,9 +1237,9 @@
             // 
             // lbl_branch
             // 
-            lbl_branch.Location=new Point(95, 767);
+            lbl_branch.Location=new Point(153, 767);
             lbl_branch.Name="lbl_branch";
-            lbl_branch.Size=new Size(241, 15);
+            lbl_branch.Size=new Size(183, 15);
             lbl_branch.TabIndex=113;
             // 
             // lbl_bcode
@@ -1252,9 +1251,9 @@
             // 
             // lb_ibank
             // 
-            lb_ibank.Location=new Point(341, 849);
+            lb_ibank.Location=new Point(362, 849);
             lb_ibank.Name="lb_ibank";
-            lb_ibank.Size=new Size(320, 21);
+            lb_ibank.Size=new Size(279, 21);
             lb_ibank.TabIndex=115;
             // 
             // label76
@@ -1381,7 +1380,7 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
-            Size=new Size(621, 704);
+            Size=new Size(680, 705);
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);

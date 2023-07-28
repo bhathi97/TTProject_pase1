@@ -89,8 +89,6 @@
             label36=new Label();
             label50=new Label();
             label51=new Label();
-            label52=new Label();
-            label53=new Label();
             label54=new Label();
             label55=new Label();
             label56=new Label();
@@ -598,27 +596,11 @@
             // 
             // label51
             // 
-            label51.Location=new Point(305, 390);
+            label51.Location=new Point(305, 388);
             label51.Name="label51";
             label51.Size=new Size(132, 18);
             label51.TabIndex=62;
             label51.Text="..........................................";
-            // 
-            // label52
-            // 
-            label52.Location=new Point(341, 406);
-            label52.Name="label52";
-            label52.Size=new Size(96, 15);
-            label52.TabIndex=63;
-            label52.Text="..............................";
-            // 
-            // label53
-            // 
-            label53.Location=new Point(544, 405);
-            label53.Name="label53";
-            label53.Size=new Size(98, 15);
-            label53.TabIndex=64;
-            label53.Text="................................";
             // 
             // label54
             // 
@@ -706,8 +688,6 @@
             Controls.Add(label56);
             Controls.Add(label54);
             Controls.Add(label55);
-            Controls.Add(label53);
-            Controls.Add(label52);
             Controls.Add(label51);
             Controls.Add(label50);
             Controls.Add(label36);
@@ -837,8 +817,6 @@
         private Label label36;
         private Label label50;
         private Label label51;
-        private Label label52;
-        private Label label53;
         private Label label54;
         private Label label55;
         private Label label56;

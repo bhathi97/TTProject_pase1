@@ -431,9 +431,7 @@ namespace projectTelegraphicTransfer
         //add table to the database
         private void btn_add_Click(object sender, EventArgs e)
         {
-            UCPage1 uCPage = new UCPage1();
-            UCPage1.hs_code= tb_hc.Text;
-            UCPage1.showDialog();
+            
             try
             {
                 FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
