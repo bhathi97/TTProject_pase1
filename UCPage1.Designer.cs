@@ -733,7 +733,7 @@
             // 
             lbl_accountno.Location=new Point(218, 788);
             lbl_accountno.Name="lbl_accountno";
-            lbl_accountno.Size=new Size(448, 21);
+            lbl_accountno.Size=new Size(437, 21);
             lbl_accountno.TabIndex=51;
             // 
             // lbl_sort
