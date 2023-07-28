@@ -793,9 +793,9 @@
             // 
             // lbl_country
             // 
-            lbl_country.Location=new Point(449, 766);
+            lbl_country.Location=new Point(452, 766);
             lbl_country.Name="lbl_country";
-            lbl_country.Size=new Size(212, 18);
+            lbl_country.Size=new Size(209, 18);
             lbl_country.TabIndex=60;
             // 
             // label44
@@ -1380,7 +1380,7 @@
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel3);
             Name="UCPage2";
-            Size=new Size(680, 705);
+            Size=new Size(663, 688);
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
