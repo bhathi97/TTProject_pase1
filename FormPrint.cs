@@ -1426,6 +1426,7 @@ namespace projectTelegraphicTransfer
                                 UCPage2.Business = reader["SENDER_BUSINESS"].ToString();
                                 UCPage2.Phone = reader["SENDER_TPNO"].ToString();
                                 UCPage2.Purpose = reader["PURPOSE"].ToString();
+                                UCPage2.InNo = reader["INV"].ToString();
                                 UCPage2.vat = reader["SENDER_TAX"].ToString();
                                 UCPage2.Tin = reader["SENDER_TAX"].ToString();
                                 UCPage2.Bname = reader["BENEFICIARY_NAME"].ToString();
@@ -1442,7 +1443,11 @@ namespace projectTelegraphicTransfer
                                 UCPage2.AWords = reader["AMOUNT_WORDS"].ToString();
                                 UCPage2.Bank= reader["BENEFICIARY_BANK_NAME"].ToString();
                                 UCPage2.branch = reader["BENEFICIARY_BRANCH_NAME"].ToString();
-                                //UCPage2.Charges = reader["CHARGES"].ToString();
+                                UCPage2.goods = reader["GOOD_STATE"].ToString();
+                                UCPage2.code= reader["HS_CODES"].ToString();
+                                UCPage2.courier = reader["COURIER_NO"].ToString();
+                                UCPage2.Trede = reader["TRADE_TERMS"].ToString();
+                                UCPage2.Description = reader["DESCRIPTION"].ToString();
                                 //UCPage2..... = reader["ISCONFIRMED"].ToString();
                                 //UCPage2.addevent= reader["ADD_EVENT"].ToString();
                                 //UCPage2.addtime = reader["ADD_TIME"].ToString();

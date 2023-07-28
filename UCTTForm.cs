@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using PdfSharpCore.Pdf.Content.Objects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -436,6 +438,15 @@ namespace projectTelegraphicTransfer
             {
                 FormMAIN formMain = Application.OpenForms.OfType<FormMAIN>().FirstOrDefault();
 
+
+                // Check all are need to fill
+                //if (string.IsNullOrEmpty(purpose, inv,))
+                //{
+                 //   MessageBox.Show("Please fill the all information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+
+
                 if (formMain != null)
                 {
                     string editor = formMain.Lbluser;
@@ -456,10 +467,49 @@ namespace projectTelegraphicTransfer
                     }
 
                     string description = tb_description.Text;
+
+                    // Validation for tb_description.Text;
+                    if (!HasAlphanumericCharacter(tb_description.Text))
+                    {
+                        MessageBox.Show("Invalid description. Please enter description.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     string terms = tb_terms.Text;
+
+                    // Validation for tb_terms.Text;
+                    if (!HasAlphanumericCharacter(tb_terms.Text))
+                    {
+                        MessageBox.Show("Invalid terms. Please enter terms.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     string goods = cb_goods.SelectedItem.ToString();
+
+                    // Validation for cb_goods.SelectedItem;
+                    if (!HasAlphanumericCharacter(cb_goods.SelectedItem.ToString()))
+                    {
+                        MessageBox.Show("Invalid goods. Please enter goods.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     string hcCode = tb_hc.Text;
+
+                    // Validation for tb_hc.Text;
+                    if (!HasAlphanumericCharacter(tb_hc.Text))
+                    {
+                        MessageBox.Show("Invalid hcCode. Please enter hcCode.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     string curior = tb_curierNo.Text;
+
+                    // Validation for tb_curierNo.Text;
+                    if (!HasAlphanumericCharacter(tb_curierNo.Text))
+                    {
+                        MessageBox.Show("Invalid curior. Please enter curior.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
                     string applName = lbl_seName.Text;
                     int appID = _seID;
@@ -478,6 +528,14 @@ namespace projectTelegraphicTransfer
                     string beCurrType = cb_beCurrency.SelectedItem.ToString();
                     decimal roundedAmount = decimal.Parse(tb_beAmount.Text);
                     decimal beAmount = Math.Round(roundedAmount, 2); //---->
+
+                    // Validation for Math.Round(roundedAmount, 2);
+                    if (!HasAlphanumericCharacter(tb_terms.Text))
+                    {
+                        MessageBox.Show("Invalid Amount. Please enter Amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
                     string beAmountInWords = lbl_amountInWords.Text;
                     string bebankName = lbl_beBankname.Text;
                     string beBranchName = lbl_Branchname.Text;
@@ -523,12 +581,8 @@ namespace projectTelegraphicTransfer
                         command.Parameters.AddWithValue("@purpose", purpose);
                         command.Parameters.AddWithValue("@inv", inv);
 
-                            if (!HasAlphanumericCharacter(tb_inv.Text))
-                            {
-                                MessageBox.Show("Invalid reference number. Please enter at least one alphanumeric character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                            command.Parameters.AddWithValue("@description", description);
+                            
+                        command.Parameters.AddWithValue("@description", description);
                         command.Parameters.AddWithValue("@terms", terms);
                         command.Parameters.AddWithValue("@goods", goods);
                         command.Parameters.AddWithValue("@hcCode", hcCode);
